@@ -83,6 +83,20 @@ Sede Regional San Carlos
       - [Cuenta compartida por portal y administración](#cuenta-compartida-por-portal-y-administración)
         - [Mi cuenta](#mi-cuenta)
     - [Comprobaciones del sistema](#comprobaciones-del-sistema)
+  - [Cronograma general del proyecto](#cronograma-general-del-proyecto)
+    - [Ciclo de vida y organización del equipo](#ciclo-de-vida-y-organización-del-equipo)
+      - [Fases del ciclo de vida](#fases-del-ciclo-de-vida)
+      - [Organización del equipo y roles](#organización-del-equipo-y-roles)
+    - [Base del cronograma y calendario del curso](#base-del-cronograma-y-calendario-del-curso)
+    - [Objetivos e incrementos por Sprint (Gestión del proyecto)](#objetivos-e-incrementos-por-sprint-gestión-del-proyecto)
+    - [Plan técnico de trabajo e implementación del sistema](#plan-técnico-de-trabajo-e-implementación-del-sistema)
+      - [Cálculo de capacidad técnica](#cálculo-de-capacidad-técnica)
+      - [Páginas que agrupan las tareas técnicas](#páginas-que-agrupan-las-tareas-técnicas)
+      - [Tareas, responsables y dependencias](#tareas-responsables-y-dependencias)
+      - [Distribución del backlog en fases técnicas de desarrollo (Releases técnicos)](#distribución-del-backlog-en-fases-técnicas-de-desarrollo-releases-técnicos)
+      - [Criterios de terminación de tareas (Definition of Done - DoD)](#criterios-de-terminación-de-tareas-definition-of-done---dod)
+      - [Dinámica de trabajo y ceremonias Scrum](#dinámica-de-trabajo-y-ceremonias-scrum)
+      - [Seguimiento, control y gestión de cambios](#seguimiento-control-y-gestión-de-cambios)
 
 ---
 
@@ -1709,3 +1723,301 @@ Cada grupo reúne situaciones relacionadas. Se comprueba el resultado junto con 
 | Continuidad de canales y entrega | [Mis atenciones](#mis-atenciones); [Atenciones](#atenciones); [Cobros y documentos](#cobros-y-documentos) | Portal y WhatsApp conservan una solicitud u orden y un registro del dinero. Entregar documentos no exige cuenta; asociarla después conserva los mismos archivos. Adjuntar o descargar no registra entrega ni lectura. |
 | Resumen de pagos | [Pagos y reportes del cliente](#pagos-y-reportes-del-cliente) | Se suman solo confirmados del periodo y lugares autorizados, con CRC y USD separados; pendientes y facturas quedan fuera. |
 | Uso general | Todas las páginas. | Repetir envíos no duplica registros. Teclado y pantalla pequeña permiten completar las tareas. César prueba los recorridos en ambos dispositivos y se anotan dificultades para corregirlas. |
+
+---
+
+## Cronograma general del proyecto
+
+> **Nota metodológica:** Este cronograma general se formula durante la Semana 3 como parte fundamental del proceso de planeamiento del proyecto. Sin embargo, debido a su naturaleza integradora y transversal, organiza, articula y da seguimiento a todo el horizonte temporal del curso (Semanas 1 a 14) y a los cuatro Sprints principales de gestión.
+
+---
+
+### Ciclo de vida y organización del equipo
+
+#### Fases del ciclo de vida
+
+El proyecto adopta un ciclo de vida híbrido (predictivo-adaptativo). La estructura académica y los hitos de entrega se rigen por el calendario de 14 semanas del curso, mientras que la definición de requisitos, el alcance funcional, el diseño de la solución y la simulación de la gestión se articulan bajo el marco ágil Scrum en ciclos de dos semanas (Sprints).
+
+| Etapa | Descripción y resultado | Semanas del curso |
+| --- | --- | --- |
+| **Definición e inicio** | Identificación del problema de negocio de RYC, propuesta de valor, objetivos general y específicos, análisis de contexto, restricciones y matriz de interesados documentados. | Semanas 1 y 2 |
+| **Planeamiento e integración** | Definición detallada del alcance, catálogo de necesidades (N01–N15), especificación de las 16 páginas, reglas de negocio, ciclo de vida, cronograma del proyecto y backlog técnico (T001–T115). | Semanas 3 y 4 |
+| **Tiempo, costos, calidad y riesgos** | Estimación de esfuerzo, presupuesto y costos del proyecto, línea base de tiempo, plan de aseguramiento de calidad y matriz de gestión de riesgos. | Semanas 5 y 6 |
+| **Recursos, comunicaciones y adquisiciones** | Plan de asignación de recursos, matriz RACI, plan de comunicaciones con César y usuarios, adquisiciones tecnológicas y liderazgo de equipos. | Semanas 7 y 8 |
+| **Simulación y control integrado** | Negociación de cambios, resolución de conflictos, integración, seguimiento y simulación de la gestión del proyecto. | Semanas 9 a 11 |
+| **Evaluación, entrega y cierre del proyecto** | Evaluación teórica de la materia (Semana 12). Entrega final del proyecto integrado, validación de resultados con César, informe ejecutivo, lecciones aprendidas y cierre del proyecto (Semana 13). | Semanas 12 y 13 |
+| **Cierre del curso** | Entrega de actas y notas por parte de la cátedra. | Semana 14 |
+
+---
+
+#### Organización del equipo y roles
+
+El equipo de proyecto está conformado por dos estudiantes de la carrera de Ingeniería del Software de la Universidad Técnica Nacional, en coordinación directa con el propietario de la empresa como cliente e interesado principal.
+
+| Integrante o interesado | Rol en el proyecto | Responsabilidades principales |
+| --- | --- | --- |
+| **Brian Rodríguez Pérez** | Product Owner y Desarrollador | Gestiona y prioriza los requerimientos del producto; canaliza las decisiones de negocio con César; responsable de redactar, estructurar y dar seguimiento al cronograma del proyecto y la gestión del tiempo. |
+| **Jeremy Rodríguez Esquivel** | Scrum Master y Desarrollador | Facilita la aplicación del marco Scrum, remueve impedimentos y asegura la disciplina metodológica; responsable de redactar y estructurar el planeamiento del proyecto, la arquitectura funcional y los criterios de aceptación. |
+| **Ambos integrantes** | Equipo de Desarrollo y Gestión | Analizan requerimientos, diseñan las soluciones técnicas, definen dependencias y criterios de comprobación, revisan mutuamente el trabajo (peer review) y coordinan la integración final. |
+| **César Rodríguez Corrales** | Interesado clave / Dueño del negocio (Sponsor) | Propietario de RYC Control de Plagas. Aporta el conocimiento operativo del negocio, valida requerimientos y flujos de trabajo, y evalúa la pertinencia de las soluciones propuestas. |
+
+##### Dinámica de comunicación y coordinación
+
+- **Seguimiento en cada día de trabajo del equipo (Daily Standup):** Reunión breve de sincronización (10–15 minutos) entre Brian y Jeremy en cada jornada coordinada de trabajo para revisar avances, plan del día y bloqueos.
+- **Consulta semanal con César:** Sesión de aproximadamente 20 minutos para resolver dudas operativas, verificar tarifas, flujos de atención y documentos comerciales.
+- **Demostración y revisión de Sprint (Sprint Review):** Sesión de aproximadamente 30 minutos al cierre de cada ciclo para validar los incrementos documentales y prototipos con César, según su disponibilidad.
+
+---
+
+### Base del cronograma y calendario del curso
+
+El cronograma del proyecto está alineado con la duración oficial de **14 semanas** del curso de Administración de Proyectos Informáticos (UTN - Sede Regional San Carlos).
+
+De acuerdo con las indicaciones de la cátedra, el trabajo se estructura en **cuatro Sprints principales de dos semanas** para la fase medular de formulación, planeamiento y gestión, seguidos por las fases de simulación integral, evaluación, entrega final y cierre:
+
+| Parámetro | Detalle |
+| --- | --- |
+| **Duración total del curso** | 14 semanas. |
+| **Marco de trabajo** | Scrum adaptado al entorno académico y de proyectos de TI. |
+| **Periodo de Sprints principales** | Semanas 1 a 8 del curso (4 Sprints de 2 semanas cada uno). |
+| **Sprint 1 (Completado)** | Semanas 1 y 2: Definición del proyecto, contexto y gestión de interesados. |
+| **Sprint 2 (En cierre / Actual)** | Semanas 3 y 4: Planeamiento del proyecto, alcance, arquitectura funcional, cronograma e integración. |
+| **Sprint 3 (Próximo)** | Semanas 5 y 6: Gestión del tiempo, estimación de esfuerzo, costos, calidad y riesgos. |
+| **Sprint 4 (Posterior)** | Semanas 7 y 8: Recursos, comunicaciones, adquisiciones y liderazgo de equipos. |
+| **Fase de simulación y negociación** | Semanas 9 a 11: Simulación de la gestión del proyecto, negociación de cambios y resolución de conflictos. |
+| **Evaluación teórica** | Semana 12: Comprobación de conocimientos de la materia. |
+| **Entrega final y cierre del proyecto** | Semana 13: Presentación integral de la documentación, prototipos, validación con César, informe de lecciones aprendidas y cierre formal del proyecto. |
+| **Cierre del curso** | Semana 14: Entrega de actas y notas por parte de la cátedra. |
+| **Responsable del cronograma** | Brian Rodríguez Pérez. |
+| **Pendientes de estimación** | Horas semanales disponibles y esfuerzo estimado por tarea técnica (a definirse formalmente en el Sprint 3, Semana 5: Tiempo y Costos, según la técnica indicada por la cátedra). |
+
+---
+
+### Objetivos e incrementos por Sprint (Gestión del proyecto)
+
+| Sprint y semanas | Estado | Objetivo del Sprint | Áreas del proyecto y entregables | Incremento / Hito al cierre |
+| --- | --- | --- | --- | --- |
+| **Sprint 1**<br>(Semanas 1–2) | **Completado** | Establecer las bases estratégicas del proyecto, delimitando el problema de negocio, los objetivos de la intervención y el mapa de partes interesadas. | - Problema de negocio de RYC.<br>- Proyecto propuesto y valor esperado.<br>- Objetivo general y específicos.<br>- Contexto y restricciones.<br>- Registro y justificación de interesados.<br>- Matriz Poder-Interés y análisis de interesados críticos.<br>- Enfoque de gestión del proyecto. | **Hito M1:** *Acta y Marco de Inicio del Proyecto* documentados y consolidados en el expediente del proyecto (README). |
+| **Sprint 2**<br>(Semanas 3–4) | **En cierre / Actual** | Desarrollar el planeamiento integral del proyecto: alcance, necesidades de usuario, especificación de la solución, ciclo de vida, cronograma y backlog técnico. | - Alcance y organización de la información.<br>- Catálogo de necesidades (N01–N15).<br>- Flujos de atención con cuenta y sin cuenta.<br>- Especificación funcional de las 16 páginas del sistema.<br>- Reglas de negocio y casos de comprobación.<br>- Ciclo de vida y organización del equipo.<br>- Cronograma del proyecto y backlog técnico (T001–T115). | **Hito M2:** *Plan Integral del Proyecto y Especificación del Sistema* integrado en el README, con estructura de trabajo y cronograma de referencia. |
+| **Sprint 3**<br>(Semanas 5–6) | **Próximo** | Formular la línea base de tiempo, costos, calidad y riesgos aplicados al proyecto y a la solución técnica de RYC. | - Estimación de esfuerzo del backlog técnico según técnica de clase.<br>- Capacidad real y horas asignadas.<br>- Presupuesto del proyecto y costos de tecnología/operación.<br>- Métricas de calidad y criterios de aceptación.<br>- Matriz de riesgos, impacto, probabilidad y planes de respuesta. | **Hito M3:** *Línea Base de Tiempo, Costos, Calidad y Gestión de Riesgos* documentada y articulada con el backlog técnico. |
+| **Sprint 4**<br>(Semanas 7–8) | **Posterior** | Planificar la gestión de personas, comunicaciones internas y externas, adquisiciones de servicios y estrategias de liderazgo de equipo. | - Matriz de asignación de responsabilidades (RACI).<br>- Plan de comunicaciones (César, clientes, equipo, profesor).<br>- Plan de adquisiciones (hosting, dominio web, correo, almacenamiento u otros servicios necesarios; sin pasarelas de pago).<br>- Estrategias de liderazgo y acuerdos de equipo de alto desempeño. | **Hito M4:** *Plan de Recursos, Comunicaciones, Adquisiciones y Liderazgo* consolidado en el expediente. |
+
+#### Fases posteriores al ciclo de Sprints principales
+
+- **Semanas 9 a 11 (Simulación, conflictos y negociación):** Práctica integrada de control del proyecto, atención de solicitudes de cambio de alcance, resolución de desvíos en la simulación y dinámicas de negociación en la gestión del proyecto.
+- **Semana 12 (Evaluación teórica):** Comprobación individual o grupal de conocimientos del curso.
+- **Semana 13 (Entrega final y cierre del proyecto):** Presentación del expediente completo del proyecto, validación de resultados con César, informe de lecciones aprendidas y cierre formal del proyecto.
+- **Semana 14 (Cierre del curso):** Entrega de actas y notas finales por parte del docente.
+
+---
+
+### Plan técnico de trabajo e implementación del sistema
+
+> **Nota sobre el alcance y la naturaleza del plan técnico:**  
+> Las tareas descritas a continuación (**T001–T115**) representan el desglose analítico de trabajo (Work Breakdown Structure / Product Backlog) que requeriría la construcción técnica integral del software en un escenario de ejecución real.  
+> Para efectos del curso académico de *Administración de Proyectos Informáticos*, este catálogo constituye la **base técnica simulada** para planificar, estimar esfuerzo, calcular capacidades, analizar rutas críticas de dependencias, asignar roles y aplicar con rigor profesional las ceremonias de Scrum. Su inclusión en el expediente demuestra la viabilidad técnica y el nivel de detalle de la solución, sin que implique que los estudiantes deban programar la totalidad de los 115 componentes durante las semanas lectivas.
+
+---
+
+#### Cálculo de capacidad técnica
+
+Para la estimación de capacidad en la simulación de desarrollo técnico se establece el siguiente modelo de cálculo por Sprint:
+
+| Parámetro | Fórmula / Definición | Propósito |
+| --- | --- | --- |
+| **Horas disponibles por Sprint** | 2 × (Horas semanales de Jeremy + Horas semanales de Brian) | Total de horas brutas que el equipo dispone en un ciclo de 2 semanas. |
+| **Reserva para ajustes e imprevistos** | 20% de las horas disponibles | Amortiguador (buffer) para contingencias, consultas imprevistas y bloqueos técnicos. |
+| **Capacidad efectiva para tareas** | 80% de las horas disponibles | Esfuerzo neto asignable a tareas de análisis, diseño, código, pruebas y documentación. |
+| **Capacidad total del horizonte técnico** | 8 × (Horas semanales de Jeremy + Horas semanales de Brian) | Capacidad agregada para el conjunto de 4 iteraciones técnicas de referencia. |
+
+*Nota metodológica:* El esfuerzo de cada tarea comprende desarrollo, pruebas unitarias, revisión cruzada, integración y documentación. La asignación numérica del esfuerzo se completará durante la Semana 5 (Gestión del tiempo y estimación), aplicando la técnica y escala que establezca la cátedra.
+
+---
+
+#### Páginas que agrupan las tareas técnicas
+
+El backlog técnico se articula alrededor de las **16 páginas** definidas en la arquitectura del sistema:
+
+| Área funcional | Páginas del sistema |
+| --- | --- |
+| **Pública y acceso** | 1. Página pública de RYC (Landing page)<br>2. Inicio de sesión<br>3. Crear cuenta<br>4. Recuperar acceso<br>5. Cambiar contraseña por recuperación |
+| **Portal del cliente** | 6. Inicio del portal<br>7. Mis atenciones<br>8. Pagos y documentos |
+| **Administración (César)** | 9. Inicio administrativo<br>10. Atenciones<br>11. Clientes<br>12. Calendario<br>13. Catálogos<br>14. Cobros y documentos<br>15. Configuración |
+| **Transversal / Compartida** | 16. Mi cuenta (con vistas adaptadas para clientes y para César) |
+
+---
+
+#### Tareas, responsables y dependencias
+
+**T** identifica cada tarea de implementación, diseño o comprobación técnica. Cada registro especifica responsable, resultado tangible y dependencias de precedencia.
+
+| ID | Tarea | Responsable | Resultado comprobable | Depende de |
+| --- | --- | --- | --- | --- |
+| T001 | Preparar el proyecto y fijar las versiones de sus dependencias. | Ambos | Se registran las versiones utilizadas de Laravel, PHP y componentes de la interfaz. | — |
+| T002 | Definir las relaciones de cuentas, clientes, ubicaciones, solicitudes, órdenes, servicios, pagos, documentos y borradores. | Ambos | Se distinguen cuenta, cliente, sede, alcance, origen del contacto, atención, versión de borrador y entrega de documentos. | T001 |
+| T003 | Definir los estilos comunes de colores, tipografía, controles y espacios. | Ambos | Los valores coinciden con la sección de diseño. | T001 |
+| T004 | Construir la distribución adaptable de las páginas de acceso. | Jeremy | Inicio de sesión, Crear cuenta y recuperación respetan sus anchos, espacios y desplazamiento. | T003 |
+| T005 | Construir el menú y la estructura adaptable de administración y portal. | Ambos | Portal: Inicio, Mis atenciones, Pagos y documentos, Mi cuenta y WhatsApp. Administración: Inicio, Atenciones, Clientes, Calendario, Catálogos, Cobros y documentos, Configuración y Mi cuenta. Se aplican los comportamientos definidos para los anchos de 640 y 1024 px. | T003 |
+| T006 | Configurar la cuenta administrativa de César. | Brian | El registro público no puede otorgar este permiso. | T002 |
+| T007 | Construir el formulario de registro. | Jeremy | Presenta los cinco campos descritos y sus etiquetas. | T002, T004 |
+| T008 | Validar y guardar una cuenta pública. | Jeremy | Se comprueban nombre, correo único, teléfono opcional, contraseña y confirmación. | T007 |
+| T009 | Implementar la verificación del correo de la cuenta. | Jeremy | El aviso y el reenvío se muestran dentro de Inicio del portal; las solicitudes y la información asociada requieren correo verificado. | T008 |
+| T010 | Construir el formulario de inicio de sesión. | Jeremy | Incluye correo, contraseña, mostrar u ocultar, recuperación y registro. | T004 |
+| T011 | Comprobar las credenciales y limitar los intentos de acceso. | Jeremy | Se aplican el mensaje definido y cinco fallos por minuto por correo e IP. | T008, T010 |
+| T012 | Implementar la recuperación de contraseña. | Jeremy | El enlace es de un solo uso y vence a los 30 minutos. | T008 |
+| T013 | Configurar el segundo factor del acceso administrativo. | Jeremy | César introduce el código de su aplicación autenticadora dentro de Inicio de sesión y configura el segundo factor y los códigos de recuperación en Mi cuenta. | T006, T011 |
+| T014 | Mostrar el ID de cuenta y gestionar su sesión. | Jeremy | Mi cuenta muestra Copiar ID; existe cierre de sesión e inactividad de 60 minutos. | T011 |
+| T015 | Construir el formulario de cliente particular. | Brian | Presenta los campos, obligatoriedad y longitudes definidos. | T002, T005, T006 |
+| T016 | Construir el formulario de empresa. | Brian | Presenta razón social, contacto y los demás campos definidos. | T002, T005, T006 |
+| T017 | Guardar y modificar los registros de cliente. | Brian | César puede registrar particulares y empresas sin una cuenta de portal. | T015, T016 |
+| T018 | Listar y desactivar registros de cliente. | Brian | La desactivación conserva sus datos e historial. | T017 |
+| T019 | Construir el formulario de ubicación. | Brian | Presenta los datos definidos y el cliente al que pertenece. | T017 |
+| T020 | Guardar y gestionar las ubicaciones de un cliente. | Brian | Cada visita puede distinguir el lugar atendido y las ubicaciones se pueden desactivar. | T019 |
+| T021 | Buscar una cuenta por su ID desde la ficha de cliente. | Ambos | Se muestran nombre y correo verificado de la cuenta encontrada. | T014, T017 |
+| T022 | Guardar una asociación autorizada entre cuenta y cliente. | Ambos | Se registra autorización, responsable, fecha, cuenta, cliente, alcance y sede; cambios de alcance conservan seguimiento. | T021, T020, T081 |
+| T023 | Retirar una asociación incorrecta. | Ambos | Se conserva el registro del cambio y se retira el acceso al historial. | T022 |
+| T024 | Construir el formulario de consultoría con identificación territorial. | Jeremy | El formulario se despliega en Mis atenciones e incluye campos y selectores dependientes para determinar el lugar; el texto distingue solicitud y visita. | T005, T009, T080 |
+| T025 | Validar y registrar una solicitud de consultoría. | Jeremy | Se conserva solicitante y ubicación autorizada; la fecha preferida no confirma una visita. | T024 |
+| T026 | Mostrar las solicitudes en administración. | Brian | El listado de Atenciones reúne solicitudes del portal y contactos registrados desde WhatsApp; abrir una fila despliega su ficha, sin filas originadas por un enlace público no enviado. | T025, T105 |
+| T027 | Gestionar los estados y la cancelación de una consultoría. | Brian | Se conserva el seguimiento y las decisiones de costo y trabajo; la visita cobrada requiere confirmar el 100% antes de realizarse. | T026, T029, T082, T083, T091 |
+| T028 | Construir el formulario administrativo de una visita. | Brian | El formulario se despliega en la ficha de Atenciones y se prepara para reutilizarlo en Calendario; incluye cliente, ubicación, tipo, orden para atención con cobro, inicio, duración y descripción. | T020, T005 |
+| T029 | Guardar la programación de una visita. | Brian | Se comprueban fecha, duración y ausencia de solapamiento en la agenda de César. | T028 |
+| T030 | Registrar cambios de fecha y cancelaciones de visitas. | Brian | Se conserva la programación anterior y el motivo del cambio. | T029 |
+| T031 | Registrar y mostrar la propuesta básica del servicio. | Brian | La propuesta se prepara dentro de Atenciones y presenta condiciones del trabajo para compartir por WhatsApp y consultar en Mis atenciones; no exige cuenta al cliente. | T027, T017 |
+| T032 | Registrar la aceptación del servicio desde el portal. | Jeremy | Confirmar desde el detalle de Mis atenciones guarda la decisión y crea la orden una sola vez; no confirma pago. Los pagos de la orden se despliegan en ese mismo detalle. | T031, T025, T009, T084 |
+| T033 | Registrar una decisión recibida fuera del portal. | Brian | César conserva aceptación, fecha y forma de recepción; también el resultado no aceptado. | T031, T084 |
+| T034 | Enviar una solicitud de nueva visita desde una cuenta asociada. | Jeremy | El formulario se despliega en Mis atenciones y solo admite ubicaciones activas dentro del alcance de cliente y sede; al guardar muestra el detalle y al cancelar conserva la sección. | T022, T020 |
+| T035 | Revisar y programar una nueva visita solicitada. | Brian | César confirma fecha y condiciones; para nuevo trabajo con cobro registra propuesta, aceptación y orden antes de iniciarlo. | T034, T029, T031, T084 |
+| T036 | Construir el formulario del catálogo de plagas. | Brian | Incluye nombre, descripción y estado. | T005, T006 |
+| T037 | Guardar y desactivar elementos del catálogo de plagas. | Brian | Los elementos desactivados conservan su referencia en el historial. | T036 |
+| T038 | Construir el formulario del catálogo de productos. | Brian | Incluye nombre comercial, ingrediente, referencia, nota y estado. | T005, T006 |
+| T039 | Guardar y desactivar elementos del catálogo de productos. | Brian | Los elementos desactivados conservan su referencia en los tratamientos. | T038 |
+| T040 | Registrar los datos generales de un servicio realizado. | Brian | Relaciona cliente, ubicación, orden y visita para atención nueva con cobro; conserva excepción para historia anterior. | T017, T020, T029, T084, T091 |
+| T041 | Registrar las plagas y los productos utilizados. | Brian | Cada producto conserva cantidad positiva y unidad; se contempla el tratamiento preventivo. | T037, T039, T040 |
+| T042 | Registrar la descripción y el método del tratamiento. | Brian | Se conserva lo realmente aplicado y la zona atendida. | T041 |
+| T043 | Registrar recomendaciones y observaciones internas. | Brian | El portal consulta las recomendaciones; las observaciones internas quedan en administración. | T040 |
+| T044 | Finalizar y publicar una atención. | Brian | Publica lo realizado y habilita cobro del saldo; la publicación no depende de tener el saldo completo. | T042, T043, T091 |
+| T045 | Mostrar el historial del cliente asociado en el portal. | Jeremy | La sección Historial de Mis atenciones muestra una línea de tiempo con solo servicios publicados del cliente y sedes autorizadas. | T022, T044 |
+| T046 | Consultar el detalle de un servicio en el portal. | Jeremy | El detalle se despliega dentro de Mis atenciones; solo las cuentas autorizadas consultan plagas, productos, tratamiento y recomendaciones. | T045 |
+| T047 | Construir la carga administrativa de un recibo no fiscal. | Brian | El formulario se utiliza dentro de Cobros y documentos o la ficha de Atenciones, con cliente, orden, pago confirmado y servicio opcional; admite anticipo antes de ejecutar el trabajo. | T084, T089, T006 |
+| T048 | Validar y almacenar el archivo de un recibo. | Brian | Se comprueban PDF/JPG/PNG y 5 MiB; el archivo tiene nombre generado y almacenamiento privado. | T047 |
+| T049 | Relacionar el recibo con la orden, el pago y el cliente. | Brian | Los documentos nuevos se enlazan al cobro; los históricos permiten conservar solo los datos disponibles. | T048 |
+| T050 | Consultar y descargar recibos desde una cuenta autorizada. | Jeremy | Los recibos se consultan en Pagos y documentos o desde el detalle autorizado de Mis atenciones; cada consulta y descarga comprueba cliente, sede o pertenencia exclusiva a una orden de solicitud propia. | T022, T049 |
+| T051 | Conservar versiones al sustituir un recibo no fiscal. | Brian | Se guarda motivo y versión anterior; no se sustituye así una factura emitida. | T049 |
+| T052 | Construir las vistas administrativas del calendario. | Brian | Calendario muestra mes, semana y lista en America/Costa_Rica; datos y acciones de la visita se despliegan en la página y reutilizan el formulario de programación. | T029, T030 |
+| T053 | Mostrar las próximas visitas en el portal. | Jeremy | La sección Próximas visitas de Mis atenciones permite a la cuenta asociada consultar fecha, hora, lugar y estado. | T022, T029 |
+| T054 | Sugerir una próxima visita según la frecuencia en días. | Brian | César confirma la creación; la sugerencia no reserva la agenda. | T029, T044, T076 |
+| T055 | Recibir solicitudes de cambio de una visita desde el portal. | Jeremy | El formulario de cambio se despliega junto a la visita en Mis atenciones; la programación se conserva hasta que César confirme la modificación de la agenda. | T053, T030 |
+| T056 | Registrar servicios anteriores con datos incompletos. | Brian | Se conserva la información conocida, su origen histórico y los datos no registrados. | T040 |
+| T057 | Relacionar recibos e historial anteriores con el registro de cliente. | Ambos | Una asociación posterior permite consultar registros por alcance sin duplicar; documentos empresariales sin sede se reservan al acceso principal. | T056, T049, T022, T096 |
+| T058 | Preparar los datos ficticios de la demostración. | Ambos | Se pueden recorrer los flujos con cuenta, sin cuenta y asociación posterior. | T057 |
+| T059 | Comprobar el aislamiento entre clientes y entre sedes de una empresa. | Ambos | Se verifica aislamiento de servicios, visitas, pagos y XML/PDF; órdenes propias no abren otro historial. | T046, T050, T053, T095, T096 |
+| T060 | Comprobar los flujos completos de atención. | Ambos | Se recorre contacto público sin cuenta, consulta gratis o cobrada, decisiones, anticipo, atención, saldo, entrega e historial opcional. | T032, T033, T035, T044, T050, T098, T115 |
+| T061 | Comprobar la interfaz en los tamaños y medios de navegación definidos. | Ambos | Se revisan adaptación, teclado, foco, etiquetas y áreas táctiles; abrir, guardar o cancelar formularios de atención conserva el registro, los datos y los filtros de la página. | T004, T005, T052, T053 |
+| T062 | Publicar la aplicación de demostración mediante HTTPS. | Brian | La versión entregada es accesible y ejecuta los flujos acordados. | T001, T058 |
+| T063 | Configurar el correo del entorno de entrega. | Brian | La verificación y la recuperación funcionan mediante el servicio SMTP. | T062, T009, T012 |
+| T064 | Configurar la persistencia privada de los documentos. | Brian | Comprobantes, recibos, XML, respuestas y PDF se conservan privados y persistentes. | T062, T048, T088, T094 |
+| T065 | Configurar el respaldo diario de los datos y documentos. | Ambos | Se mantienen siete copias diarias y cuatro semanales; su rotación no elimina archivo fiscal. | T062, T064 |
+| T066 | Preparar la copia semanal cifrada fuera del alojamiento. | Ambos | RYC dispone de una copia bajo su control. | T065 |
+| T067 | Comprobar la restauración de una copia de seguridad. | Ambos | Se recuperan datos y documentos de una copia válida. | T065, T066 |
+| T068 | Preparar la guía breve de uso para César. | Ambos | Explica las páginas de administración y el trabajo dentro de la ficha de Atenciones: contacto por WhatsApp, registro rápido, borradores en ambos dispositivos, asociación por sede, cobros, entrega y respaldo. | T060, T052, T067, T114 |
+| T069 | Validar la entrega con César. | Ambos | Se validan tareas reales en ambos dispositivos, funciones, permisos, entrega independiente de cuenta y respaldos. | T059, T060, T061, T063, T064, T067, T068, T114, T115 |
+| T070 | Documentar el cierre del proyecto. | Ambos | Se conservan aceptación, resultados y lecciones aprendidas. | T069 |
+| T071 | Editar los datos permitidos de Mi cuenta. | Jeremy | Nombre y teléfono se actualizan con sus validaciones; correo e ID permanecen de solo lectura. | T014 |
+| T072 | Construir Inicio del portal. | Jeremy | Inicio del portal muestra resumen y accesos según verificación y asociación; el aviso de correo sin verificar y sus acciones permanecen dentro de Inicio. | T009, T014, T022 |
+| T073 | Mostrar el listado y detalle de solicitudes propias. | Jeremy | Solicitudes es una sección de Mis atenciones; el listado, detalle y propuesta pertenecen a esa página. La cuenta consulta únicamente las solicitudes que emitió y su seguimiento. | T025, T034 |
+| T074 | Registrar el rechazo de una propuesta desde el portal. | Jeremy | La decisión pendiente cambia a No aceptada después de confirmar; no se duplica el resultado. | T031, T025 |
+| T075 | Construir Inicio administrativo. | Brian | Inicio administrativo muestra visitas de hoy, contactos pendientes, revisión de pagos, saldos y entrega; sus accesos abren el registro correspondiente con sus datos. Los borradores se conectan al incorporarse T107. | T026, T029, T089, T094, T110 |
+| T076 | Registrar la frecuencia de seguimiento de una ubicación. | Brian | El valor es opcional y admite enteros de 1 a 365 días. | T020 |
+| T077 | Registrar bloqueos de agenda y comprobar sus conflictos. | Brian | Se conserva la indisponibilidad con su motivo; las visitas nuevas no se superponen con ella. | T029, T052 |
+| T078 | Revisar y resolver solicitudes de cambios de visita. | Brian | César registra Aplicada o No aplicada y solo modifica la agenda al confirmar. | T055, T030 |
+| T079 | Conservar el seguimiento de correcciones de servicios publicados. | Brian | La corrección exige motivo y conserva cuándo se realizó. | T044 |
+| T080 | Preparar selectores de provincia, cantón y distrito. | Ambos | Las solicitudes y ubicaciones comparten un catálogo territorial coherente y niveles dependientes. | T002, T005 |
+| T081 | Aplicar el alcance de empresa o sede en las autorizaciones. | Ambos | Una cuenta principal accede a toda su empresa; una de sede solo a esa sede; la regla rige consultas y archivos. | T002, T020, T009 |
+| T082 | Calcular y revisar el costo territorial de la consultoría. | Brian | San Carlos produce costo cero; fuera se conserva cálculo y total revisados para una solicitud recibida por cualquier canal. | T025, T105, T086, T099 |
+| T083 | Registrar aceptación o rechazo del costo de consultoría. | Jeremy | La decisión de la solicitud propia queda registrada; aceptar permite crear la orden de esa consulta. | T082, T084 |
+| T084 | Crear y conservar la orden de una atención aceptada. | Ambos | Se registra cliente, sede, solicitante cuando exista, total, moneda y condiciones; una cuenta es opcional para crear la orden. | T017, T020, T025, T105 |
+| T085 | Calcular obligaciones, montos confirmados y saldo. | Brian | Se distingue 100% de consulta, anticipo del 50% y saldo; pendientes y facturas no reducen la deuda. | T084 |
+| T086 | Configurar los medios e instrucciones reales de cobro. | Brian | SINPE, efectivo y transferencia tienen datos revisados; no se ofrecen medios incompletos. | T006, T005 |
+| T087 | Construir y guardar el reporte de pago del portal. | Jeremy | Informar pago se despliega dentro del detalle de la orden autorizada en Pagos y documentos o Mis atenciones; conserva concepto, medio, monto, fecha, referencia y comentario y queda pendiente. | T085, T081, T086 |
+| T088 | Validar y almacenar el comprobante del reporte. | Jeremy | Los medios de banco exigen PDF/JPG/PNG de hasta 5 MiB y almacenamiento privado; efectivo no exige archivo. | T087 |
+| T089 | Revisar, confirmar o rechazar los reportes de pago. | Brian | Solo confirmaciones verificadas afectan el saldo; rechazo registra motivo y se evitan referencias duplicadas. | T088, T085 |
+| T090 | Registrar pagos recibidos fuera del portal y en efectivo. | Brian | César registra dinero y comprobantes recibidos por WhatsApp o en efectivo en la misma orden; evita duplicar un reporte del portal. | T089 |
+| T091 | Comprobar el pago requerido antes de iniciar la atención. | Brian | Se bloquea consulta cobrada sin el 100% y trabajo sin el anticipo; no se omite al finalizar directamente. | T029, T089, T085 |
+| T092 | Mostrar avisos internos del flujo financiero. | Jeremy | Reportes, resultados y documentos nuevos aparecen con enlace, fecha y marca de lectura. | T089, T094 |
+| T093 | Recoger y revisar datos de facturación de la orden. | Jeremy | El formulario de la orden se utiliza en Pagos y documentos o Mis atenciones para el cliente autorizado y dentro de la orden administrativa para César; se revisa sin alterar automáticamente el registro del cliente. | T084, T081 |
+| T094 | Adjuntar y revisar documentos fiscales externos. | Brian | El formulario de Cobros y documentos se reutiliza dentro de Atenciones; conserva clave, consecutivo, total, XML, PDF y respuesta; no se declara aceptación sin respuesta. | T084, T048, T093 |
+| T095 | Mostrar el estado financiero y descargar documentos por permiso. | Jeremy | Pagos y documentos muestra órdenes, confirmados, pendientes y saldo; el detalle de Mis atenciones consulta los mismos registros autorizados. Las descargas respetan empresa, sede u orden propia. | T089, T094, T050, T081 |
+| T096 | Clasificar registros y documentos anteriores por sede. | Brian | Solo César y el acceso principal ven historia empresarial sin sede hasta asignarla con seguimiento. | T081, T049, T094 |
+| T097 | Conservar originales y documentos fiscales de corrección. | Brian | El comprobante válido mantiene notas relacionadas; uno rechazado por Hacienda enlaza al nuevo comprobante corregido, conservando ambos. | T094 |
+| T098 | Comprobar anticipos, consulta cobrada y facturación externa. | Ambos | Se prueban pagos parciales, duplicados, rechazo, efectivo, inicio bloqueado, saldo y documentos antes del servicio. | T090, T091, T095, T097, T100 |
+| T099 | Guardar tarifas configurables y cotizaciones aceptadas. | Brian | Base y costo por km son configurables; cotizaciones aceptadas conservan valores e instrucciones. | T006, T005 |
+| T100 | Conservar las correcciones y excesos de pagos confirmados. | Brian | Una corrección registra motivo, montos y responsable; un exceso se muestra sin reembolso automático. | T089 |
+| T101 | Configurar y revisar el contenido público y el WhatsApp de RYC. | Brian | Datos, imágenes y servicios reales aprobados; número internacional revisado; precios no confirmados no se publican. | T006, T005 |
+| T102 | Construir la página pública adaptable. | Jeremy | Página pública de RYC presenta la empresa y sus condiciones con contacto principal y portal opcional, sin exigir registro. | T003, T101 |
+| T103 | Preparar y comprobar enlaces de contacto por WhatsApp. | Jeremy | El número revisado y texto codificado abren el contacto en ambos dispositivos; no se declara envío ni recepción. | T101, T102 |
+| T104 | Construir el formulario público breve y su alternativa de copia. | Jeremy | El formulario integrado en Página pública de RYC valida y prepara el mensaje sin crear solicitudes; ofrece contacto directo y copia manual. | T103 |
+| T105 | Registrar rápidamente un contacto recibido fuera del portal. | Brian | El formulario Registro rápido de un contacto se despliega en Atenciones o desde un acceso de Inicio administrativo o Clientes; guarda nombre, teléfono y motivo y continúa en la misma atención, permitiendo completar cliente y lugar después sin crear fichas ficticias. | T017, T020, T005 |
+| T106 | Reutilizar datos y acciones desde la ficha de atención. | Brian | La ficha de Atenciones precarga cliente, ubicación, orden y datos disponibles para cotizar, programar, revisar pagos, registrar tratamiento y adjuntar documentos. Desde la ficha de Clientes se abre la misma atención con sus datos; crear una ubicación conserva el contexto y la referencia. | T105, T029, T084 |
+| T107 | Guardar y retomar borradores privados de contacto y servicio. | Brian | Guardado inicial explícito, posteriores cambios tras dos segundos y recuperación en otro dispositivo; no se ejecutan acciones comerciales. | T105, T040, T106 |
+| T108 | Evitar sobrescritura y pérdida de cambios entre dispositivos. | Ambos | Una versión desactualizada se detecta; errores y sesión vencida conservan el texto visible para reintentar. | T107 |
+| T109 | Construir el componente común de tarjetas administrativas en celular. | Brian | Listados comunes presentan sus datos y acciones en tarjetas para celular y tablas de computadora sin perder permisos. | T005, T018 |
+| T110 | Preparar y registrar la entrega de documentos sin exigir cuenta. | Brian | La entrega se prepara y registra dentro de la orden en Cobros y documentos o Atenciones: descarga de archivos privados y registro de destinatario, canal, fecha y elementos entregados; adjuntar no implica entregar. | T049, T094 |
+| T111 | Mostrar pagos confirmados por mes o periodo autorizado. | Jeremy | El resumen de Pagos y documentos suma confirmados por recepción real, separa monedas y aplica permisos y correcciones sin sumar facturas. | T095, T100 |
+| T112 | Mantener la referencia de solicitudes al consultar por WhatsApp. | Jeremy | Las solicitudes, consultorías y propuestas dentro de Mis atenciones ofrecen WhatsApp con su referencia; abrirlo no repite formularios ni guarda otra solicitud. | T025, T034, T103 |
+| T113 | Conectar acciones confirmadas con su seguimiento relacionado. | Ambos | Programar, confirmar pago y publicar actualizan su resultado una sola vez dentro de la ficha de atención y muestran la siguiente tarea pendiente; los listados generales reflejan los mismos registros. | T106, T044, T089 |
+| T114 | Validar la facilidad de uso con César en ambos dispositivos. | Ambos | Se observan tareas, tiempo, repeticiones, errores y ayuda dentro de las páginas del portal y de administración; se comprueba guardar y cancelar conservando contexto en ambos dispositivos. Se corrigen impedimentos y pérdida de información antes de aceptar. | T108, T109, T110, T111, T112, T113, T061, T098 |
+| T115 | Comprobar el recorrido sin cuenta y su continuidad con el portal opcional. | Ambos | Contacto público, atención, dinero, entrega y asociación posterior conservan un solo historial; ningún documento exige registro. | T104, T105, T090, T110, T095, T112 |
+
+---
+
+#### Distribución del backlog en fases técnicas de desarrollo (Releases técnicos)
+
+Para efectos de modelado de desarrollo y análisis de dependencias, las 115 tareas técnicas se agrupan en **cuatro incrementos técnicos o releases de software**, ordenados por su arquitectura de dependencias:
+
+| Incremento técnico | Cantidad | Tareas asignadas | Objetivo del incremento técnico |
+| :---: | :---: | :--- | :--- |
+| **Fase Técnica 1**<br>*(Base, Identidad y Acceso)* | 31 | T001–T020, T071, T076, T080–T081, T086, T099, T101–T104, T109. | Fundaciones de arquitectura, modelo de datos, diseño responsivo, landing pública, enlace WhatsApp, autenticación, control de perfiles y gestión básica de clientes y sedes. |
+| **Fase Técnica 2**<br>*(Atención, Propuestas y Cobros)* | 40 | T021–T035, T047–T051, T072–T075, T082–T085, T087–T091, T093–T095, T105–T106, T110, T112. | Registro rápido de contactos, ficha unificada de atenciones, cotizaciones territoriales, aceptación, generación de órdenes, control de anticipos, registro de recibos y portal del cliente. |
+| **Fase Técnica 3**<br>*(Tratamientos, Catálogos y Operación)* | 19 | T036–T046, T079, T092, T097, T100, T107–T108, T111, T113. | Catálogos de plagas y productos, registro de tratamientos aplicados, persistencia de borradores entre dispositivos, publicación de atenciones y visualización del historial. |
+| **Fase Técnica 4**<br>*(Agenda, Respaldo y Cierre Técnico)* | 25 | T052–T070, T077–T078, T096, T098, T114–T115. | Vistas de calendario, gestión de bloqueos de agenda, clasificación histórica por sede, pruebas integrales de seguridad y usabilidad con César, copias de seguridad y despliegue. |
+
+##### Secuencia y orden crítico de trabajo técnico
+
+- **Fase Técnica 1:** La definición de relaciones (T002) y estilos (T003) precede a las páginas de acceso y estructura del menú (T004, T005). La configuración de clientes y ubicaciones (T015–T020) precede a las reglas de asociación y permisos de sede (T081). El contenido y número de WhatsApp (T101) preceden a la landing y al formulario de contacto público (T102–T104).
+- **Fase Técnica 2:** El registro rápido (T105) precede al listado general de atenciones (T026). La orden de servicio (T084) precede a las decisiones de aceptación (T032, T033, T083). La configuración territorial y tarifas (T080, T082) preceden a la cotización formal. La confirmación de pagos (T089) es prerrequisito para habilitar el inicio de la visita (T091). La integración de formularios en la ficha de atenciones (T106) unifica la operativa de César.
+- **Fase Técnica 3:** Los catálogos (T036–T039) son prerrequisito para registrar el tratamiento real (T041, T042). El servicio registrado (T040, T106) precede al motor de borradores (T107) y concurrencia (T108). La publicación del servicio (T044) precede a su consulta en el historial del cliente (T045).
+- **Fase Técnica 4:** La historia previa por sede (T096) se clasifica antes de validar el aislamiento total de datos (T059). Las pruebas de facilidad de uso (T114) y recorrido sin cuenta (T115) preceden a la redacción de la guía de usuario (T068) y la aceptación de César (T069). El entorno seguro (T062) precede a las rutinas de respaldo (T065) y pruebas de restauración (T067).
+
+---
+
+#### Criterios de terminación de tareas (Definition of Done - DoD)
+
+Una tarea del plan técnico se considera formalmente terminada (**Done**) cuando:
+
+1. **Cumplimiento funcional:** Satisface el resultado comprobable de su fila y las reglas de negocio descritas en la especificación del sistema.
+2. **Robustez y validación:** Supera las validaciones de entrada, control de duplicados, integridad referencial y permisos de acceso por rol y sede.
+3. **Diseño responsivo y accesibilidad:** Es completamente operable desde dispositivos móviles (pantallas pequeñas) y computadoras de escritorio, permitiendo navegación fluida y compatibilidad con teclado.
+4. **Conservación de contexto:** Las acciones de guardar o cancelar formularios conservan el registro abierto, sus datos ingresados y los filtros de navegación aplicados.
+5. **Revisión por pares (Peer Review):** El código, diseño o documento ha sido revisado por el otro integrante del equipo y los comentarios u observaciones han sido resueltos.
+6. **Integración documental:** La tarea queda integrada en la versión consolidada del repositorio y su documentación de soporte se encuentra actualizada.
+
+---
+
+#### Dinámica de trabajo y ceremonias Scrum
+
+| Evento Scrum | Periodicidad | Participantes | Objetivo y entregable |
+| --- | --- | --- | --- |
+| **Sprint Planning** | Inicio de cada Sprint (cada 2 semanas) | Brian y Jeremy | Revisar el objetivo del Sprint académico, seleccionar las tareas del backlog técnico pertinentes, analizar dependencias y confirmar la capacidad disponible. |
+| **Daily Scrum** | En cada día de trabajo del equipo (10–15 min) | Brian y Jeremy | Sincronización breve: ¿Qué se completó en la última jornada? ¿Qué se trabajará hoy? ¿Existe algún impedimento o bloqueo? |
+| **Sesión de enlace con el negocio** | Semanal (~20 min) | Brian, Jeremy y César | Consultar dudas de negocio, validar tarifas, formatos de comprobantes y flujos operativos según disponibilidad de César. |
+| **Sprint Review** | Al finalizar cada Sprint (~30 min) | Brian, Jeremy y César (cuando aplique) | Demostrar los entregables del Sprint (documentos, wireframes o componentes funcionales), recibir retroalimentación y verificar el valor aportado. |
+| **Sprint Retrospective** | Inmediatamente tras la Review | Brian y Jeremy | Analizar el desempeño del equipo: qué funcionó bien, qué dificultades surgieron y definir al menos un compromiso concreto de mejora para el siguiente ciclo. |
+
+---
+
+#### Seguimiento, control y gestión de cambios
+
+- **Control de avance:** Al cierre de cada Sprint, el equipo contrasta el trabajo planificado contra el trabajo efectivamente terminado. Las tareas que no alcancen la Definición de Terminado se reevalúan y se replanifican según prioridades y capacidad.
+- **Gestión de cambios de alcance:** Cualquier ajuste significativo en las funcionalidades, reglas de negocio o requerimientos de César o del profesor se documenta formalmente evaluando su triple restricción (alcance, tiempo y esfuerzo).
+- **Estimación en Semana 5:** Durante el Sprint 3 (Semanas 5–6), se realizará la estimación formal del esfuerzo del backlog técnico aplicando la técnica y nivel de detalle indicados por la cátedra en la Semana 5 (Gestión del tiempo y costos), estableciendo la línea base definitiva de tiempo y presupuesto del proyecto.
