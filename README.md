@@ -83,6 +83,17 @@ Sede Regional San Carlos
       - [Cuenta compartida por portal y administración](#cuenta-compartida-por-portal-y-administración)
         - [Mi cuenta](#mi-cuenta)
     - [Comprobaciones del sistema](#comprobaciones-del-sistema)
+  - [Semana 4 · Interacción e integración entre procesos](#semana-4--interacción-e-integración-entre-procesos)
+    - [Product Backlog inicial](#product-backlog-inicial)
+    - [Criterios utilizados para priorizar](#criterios-utilizados-para-priorizar)
+    - [Sprint Goal](#sprint-goal)
+    - [Sprint Backlog](#sprint-backlog)
+    - [Plan de trabajo del Sprint Backlog](#plan-de-trabajo-del-sprint-backlog)
+    - [Mecanismo de seguimiento del Sprint](#mecanismo-de-seguimiento-del-sprint)
+    - [Tratamiento de cambios durante el Sprint](#tratamiento-de-cambios-durante-el-sprint)
+    - [Interacción entre los procesos](#interacción-entre-los-procesos)
+    - [Integración y toma de decisiones](#integración-y-toma-de-decisiones)
+    - [Resultado de la Semana 4](#resultado-de-la-semana-4)
   - [Cronograma general del proyecto](#cronograma-general-del-proyecto)
     - [Ciclo de vida y organización del equipo](#ciclo-de-vida-y-organización-del-equipo)
       - [Fases del ciclo de vida](#fases-del-ciclo-de-vida)
@@ -1723,6 +1734,198 @@ Cada grupo reúne situaciones relacionadas. Se comprueba el resultado junto con 
 | Continuidad de canales y entrega | [Mis atenciones](#mis-atenciones); [Atenciones](#atenciones); [Cobros y documentos](#cobros-y-documentos) | Portal y WhatsApp conservan una solicitud u orden y un registro del dinero. Entregar documentos no exige cuenta; asociarla después conserva los mismos archivos. Adjuntar o descargar no registra entrega ni lectura. |
 | Resumen de pagos | [Pagos y reportes del cliente](#pagos-y-reportes-del-cliente) | Se suman solo confirmados del periodo y lugares autorizados, con CRC y USD separados; pendientes y facturas quedan fuera. |
 | Uso general | Todas las páginas. | Repetir envíos no duplica registros. Teclado y pantalla pequeña permiten completar las tareas. César prueba los recorridos en ambos dispositivos y se anotan dificultades para corregirlas. |
+
+---
+
+## Semana 4 · Interacción e integración entre procesos
+
+> **Sección 05 del Expediente del Proyecto — Cierre de la Unidad II: Grupos de Procesos de la Dirección de Proyectos**  
+> **Fecha lectiva:** Miércoles 7 de octubre de 2026 | **Curso:** ISW-912 · Bachillerato en Ingeniería del Software, UTN.
+
+Durante esta semana se analiza y formaliza la relación dinámica entre los cinco Grupos de Procesos de la dirección de proyectos (Inicio, Planificación, Ejecución, Monitoreo y Control, y Cierre) y su articulación práctica dentro del marco de trabajo ágil Scrum adoptado para el proyecto de RYC Control de Plagas.
+
+Los grupos de procesos no constituyen fases secuenciales aisladas, sino actividades integradas que interactúan y se superponen a lo largo del tiempo. En particular, el grupo de **Monitoreo y Control** opera como un proceso de fondo continuo que acompaña a los demás grupos, supervisando el progreso, detectando desvíos y generando salidas que retroalimentan la planificación y ejecución del producto.
+
+A continuación, se documenta la **Sección 05 del Expediente del Proyecto**: la conformación del Product Backlog inicial priorizado a partir del catálogo de necesidades (N01–N15), la definición del primer Sprint Backlog con su respectivo Sprint Goal, el mecanismo operativo de seguimiento visual y diario, y las dinámicas de interacción entre procesos y gobernanza.
+
+### Product Backlog inicial
+
+El Product Backlog constituye la fuente única, ordenada y viva de todas las necesidades y mejoras identificadas para el producto. Su naturaleza es **emergente y dinámica**: no está cerrado de forma definitiva, sino que evoluciona, se refina y se reordena continuamente conforme se obtenga retroalimentación de César, de los clientes o del contexto operativo.
+
+Para RYC Control de Plagas, el Product Backlog inicial se estructura formalmente a partir del catálogo de necesidades [N01–N15](#necesidades-de-los-usuarios-y-resultados-esperados) formulado durante el planeamiento:
+
+| Orden inicial | ID | Ítem del Product Backlog | Valor para el negocio y el proyecto | Dependencias clave |
+| ---: | :---: | --- | --- | --- |
+| 1 | **N08** | Registrar clientes particulares, empresas y ubicaciones aunque no tengan una cuenta activa en el sistema. | Centraliza la información base indispensable para operar; sin clientes ni ubicaciones no es posible agendar ni registrar atenciones. | Ninguna |
+| 2 | **N10** | Organizar las visitas de los clientes mediante una agenda centralizada. | Permite coordinar fechas, horarios y rutas, previniendo choques de programación y desatención de servicios. | Requiere N08 |
+| 3 | **N11** | Registrar el servicio y tratamiento realmente realizado (plagas, productos, cantidades, unidades y recomendaciones). | Preserva la evidencia técnica y operativa de cada atención, esencial para el seguimiento y garantías. | Requiere N08 y N10 |
+| 4 | **N01** | Permitir que una persona conozca RYC y pueda contactar por WhatsApp sin necesidad de crear una cuenta. | Facilita la captación inmediata y el primer contacto comercial de clientes potenciales sin fricción. | Ninguna |
+| 5 | **N02** | Informar el costo de la consultoría y la propuesta del servicio antes de que el cliente decida contratar. | Otorga transparencia financiera (gratuidad en San Carlos vs. cobro previo fuera de cantón) antes de iniciar labores. | Requiere N08 |
+| 6 | **N05** | Registrar e informar pagos realizados por SINPE Móvil, transferencia bancaria o efectivo. | Controla el flujo de caja, anticipos del 50% y saldos pendientes sin duplicar comprobantes ni dinero. | Requiere N02 y N11 |
+| 7 | **N03** | Permitir que un cliente asociado solicite una nueva visita y consulte su programación. | Fomenta la recurrencia del servicio y reduce la intermediación manual por llamadas o mensajes. | Requiere N08 y N10 |
+| 8 | **N06** | Entregar cotizaciones, comprobantes y reportes al cliente sin obligarlo a crear una cuenta. | Respeta la forma habitual de trabajo de RYC con clientes que no desean registrarse en plataformas digitales. | Requiere N08 y N11 |
+| 9 | **N09** | Asociar una cuenta autorizada con el historial de servicios existente mediante su ID único. | Habilita el acceso al portal digital para clientes recurrentes sin perder ni duplicar información histórica previa. | Requiere N08 |
+| 10 | **N04** | Permitir que clientes autorizados consulten su historial de visitas, tratamientos y recibos descargables. | Fortalece el autoservicio, la confianza del cliente corporativo y reduce consultas repetitivas a César. | Requiere N09 y N11 |
+| 11 | **N14** | Permitir que César registre y continúe una atención desde celular o computadora reutilizando datos guardados. | Optimiza la labor operativa en campo y oficina, evitando pérdida de datos por interrupciones de conectividad. | Requiere N08, N10 y N11 |
+| 12 | **N13** | Adjuntar documentos fiscales externos (facturas electrónicas en PDF y XML) a las atenciones correspondientes. | Cumple con respaldos tributarios y contables sin complejizar el sistema con facturación electrónica nativa. | Requiere N05 y N11 |
+| 13 | **N12** | Incorporar información histórica de clientes y servicios aunque existan datos incompletos. | Permite migrar bitácoras físicas previas sin forzar datos falsos o ficticios en campos no registrados. | Requiere N08 y N11 |
+| 14 | **N07** | Consultar reportes de pagos confirmados agrupados por periodo y desglosados por moneda (CRC y USD). | Facilita la conciliación periódica de ingresos y la toma de decisiones financieras para el propietario. | Requiere N05 |
+| 15 | **N15** | Entregar el sistema con documentación técnica, manuales operativos y mecanismos de respaldo comprobados. | Asegura la sostenibilidad, continuidad operativa y soberanía de los datos de RYC al concluir el proyecto. | Transversal |
+
+El orden establecido representa una priorización inicial basada en el valor directo para la operación y las dependencias lógicas del negocio. Como lista viva y emergente, el Product Backlog permanece abierto a refinamiento continuo conforme avancen las validaciones con César y las directrices del curso.
+
+### Criterios utilizados para priorizar
+
+La ordenación del Product Backlog responde a los siguientes criterios metodológicos y de negocio:
+
+1. **Valor operativo medular (Core de negocio):** La prioridad más alta recae en las capacidades que habilitan la operación directa de César (clientes, agenda y registro técnico de tratamientos). Sin este núcleo, ninguna otra función aporta valor real.
+2. **Dependencias técnicas y funcionales:** Un cliente no puede consultar su historial ([N04](#necesidades-de-las-personas-interesadas-y-los-clientes)) si primero no existe el registro de clientes ([N08](#necesidades-de-césar)) y de atenciones ([N11](#necesidades-de-césar)). Las funciones habilitadoras deben preceder a las funciones de consulta o reporte.
+3. **Facilidad de captación sin fricción:** La página pública y el enlace directo a WhatsApp ([N01](#necesidades-de-las-personas-interesadas-y-los-clientes)) tienen alta prioridad porque garantizan que el negocio continúe captando prospectos comerciales sin barreras de entrada.
+4. **Claridad financiera y mitigación de riesgo de cobro:** Conocer costos y registrar pagos ([N02](#necesidades-de-las-personas-interesadas-y-los-clientes), [N05](#necesidades-de-las-personas-interesadas-y-los-clientes)) se prioriza sobre reportes analíticos avanzados ([N07](#necesidades-de-ryc-como-empresa)) para asegurar el flujo de caja del negocio.
+5. **Enfoque incremental:** Cada entrega parcial debe constituir un incremento utilizable que reduzca la carga de trabajo manual de César de forma inmediata.
+
+### Sprint Goal
+
+Para aplicar el concepto de Sprint Backlog al proyecto de RYC, el equipo establece el siguiente Sprint Goal de referencia:
+
+> **"Establecer y validar el flujo operativo esencial de RYC que permita registrar la información base de clientes y ubicaciones, programar visitas en el calendario y conservar el registro técnico del tratamiento realizado."**
+
+Este objetivo garantiza que al finalizar la iteración se cuente con un recorrido completo de valor para el negocio: **Cliente → Ubicación → Visita programada → Servicio completado**.
+
+### Sprint Backlog
+
+A partir del Product Backlog y en función del Sprint Goal, el equipo de desarrollo selecciona los tres ítems fundacionales del producto:
+
+| ID | Ítem seleccionado | Justificación de inclusión en el Sprint Backlog |
+| :---: | --- | --- |
+| **N08** | Registrar clientes particulares, empresas y ubicaciones. | Constituye el prerrequisito indispensable: identifica de manera unívoca a quién se le brinda el servicio y en qué punto geográfico se ejecuta. |
+| **N10** | Organizar las visitas mediante una agenda centralizada. | Resuelve la coordinación temporal, previene superposición de citas y asocia la solicitud con una fecha y franja horaria definida. |
+| **N11** | Registrar el servicio y tratamiento realizado. | Cierra el ciclo operativo al registrar las plagas atendidas, productos utilizados, cantidades, unidades y recomendaciones entregadas. |
+
+### Plan de trabajo del Sprint Backlog
+
+Para materializar los ítems seleccionados, el equipo desglosa el trabajo en las siguientes actividades operativas y técnicas:
+
+| Código | Actividad detallada | Ítem PB | Responsable | Criterio de terminación (DoD) |
+| :---: | --- | :---: | :---: | --- |
+| **SB01** | Consolidar la estructura de datos para clientes (nombre, teléfono, tipo, identificación) y ubicaciones (dirección, cantón, señas). | N08 | Brian Rodríguez | Estructura validada con César y documentada sin campos redundantes. |
+| **SB02** | Definir y documentar las reglas de integridad para altas, modificaciones y bajas lógicas de clientes y sus sedes. | N08 | Jeremy Rodríguez | Reglas de duplicidad y relaciones cliente-ubicación verificadas. |
+| **SB03** | Consolidar el flujo y los estados de una visita (Programada, En curso, Realizada o Cancelada), contemplando la reprogramación de fecha y hora como una acción sobre la visita. | N10 | Brian Rodríguez | Estados definidos en Semana 3 respetados y coherentes con la operación real de RYC. |
+| **SB04** | Establecer las reglas para evitar solapamiento de horarios y gestionar reprogramaciones de visitas sin alterar estados históricos. | N10 | Brian y Jeremy | Criterios de validación de agenda listados y casos límite contemplados. |
+| **SB05** | Especificar la información que debe conservarse al registrar un servicio realizado (plagas atendidas, productos utilizados con cantidad y unidad, método de aplicación y recomendaciones). | N11 | Jeremy Rodríguez | Campos y unidades (mL, L, g, kg, unidad) alineados con lo definido en el planeamiento para el registro de productos. |
+| **SB06** | Realizar la comprobación de trazabilidad de punta a punta: Cliente → Ubicación → Visita → Servicio finalizado. | N08, N10, N11 | Brian y Jeremy | Recorrido comprobado en conjunto, asegurando que ningún dato quede huérfano. |
+| **SB07** | Consolidar la documentación técnica y actualizar las secciones correspondientes en el expediente del proyecto. | N08, N10, N11 | Brian y Jeremy | Revisión cruzada completada y aprobada por ambos integrantes. |
+
+### Mecanismo de seguimiento del Sprint
+
+Para garantizar el control del avance sin incurrir en sobrecarga administrativa, el equipo adopta un mecanismo de seguimiento visual compuesto por:
+
+#### 1. Tablero visual de tres estados
+
+El trabajo del Sprint Backlog se administra mediante un tablero estructurado en tres columnas:
+
+| Por hacer (To Do) | En proceso (Doing) | Terminado (Done) |
+| --- | --- | --- |
+| Actividades seleccionadas y priorizadas que aún no han comenzado. | Tareas asignadas que alguno de los integrantes está analizando, redactando o programando. | Tareas que cumplen satisfactoriamente todos los criterios de la Definición de Terminado (DoD). |
+
+*Regla del tablero:* Ningún integrante puede mantener más de dos actividades en estado "En proceso" simultáneamente (límite de trabajo en curso - WIP), fomentando la terminación colaborativa de tareas antes de abrir nuevas.
+
+#### 2. Sincronización diaria (Daily Scrum)
+
+En cada jornada coordinada de trabajo, Brian y Jeremy sostienen una reunión de sincronización de **10 a 15 minutos** frente al tablero, respondiendo a tres preguntas:
+
+1. **¿Qué logré completar desde la última jornada de trabajo?**
+2. **¿Qué actividad del Sprint Backlog voy a abordar hoy?**
+3. **¿Tengo algún bloqueo técnico, duda metodológica o impedimento que retrase mi avance?**
+
+Si surge un problema técnico complejo o una duda de negocio con César, se anota en el tablero y se convoca una sesión puntual fuera del Daily Scrum para no entorpecer el ritmo de la sincronización.
+
+### Tratamiento de cambios durante el Sprint
+
+Dado el enfoque adaptativo del proyecto, es común que durante el transcurso de un Sprint surjan nuevas solicitudes, ajustes en tarifas o sugerencias de César o del docente. La gobernanza del equipo aplica la siguiente política de control de cambios:
+
+1. **Protección del Sprint Goal:** El objetivo del Sprint permanece inmutable durante su ejecución para garantizar foco y estabilidad.
+2. **Evaluación de impacto:** Cuando surge una solicitud de cambio, el Product Owner (Brian) y el Scrum Master (Jeremy) evalúan si afecta directamente el trabajo en curso.
+3. **Enrutamiento al Product Backlog:** Si la solicitud no es indispensable para cumplir el Sprint Goal actual, no se introduce al Sprint Backlog de inmediato; en su lugar, se registra como una nueva necesidad o mejora en el **Product Backlog general**, donde será priorizada y estimada para un Sprint posterior.
+4. **Negociación en caso crítico:** Si el cambio representa un bloqueo de fuerza mayor que invalida el Sprint Goal, el equipo convoca una sesión extraordinaria para renegociar el alcance del Sprint o cancelarlo ordenadamente.
+
+### Interacción entre los procesos
+
+La dirección de proyectos demuestra que los cinco Grupos de Procesos interactúan de manera continua y superpuesta a lo largo de todo el ciclo de vida del proyecto:
+
+```mermaid
+flowchart LR
+    subgraph Ciclo["Interacción de Procesos en Scrum"]
+        direction TB
+        IN["Procesos de Inicio<br><i>(Visión, objetivos y valor)</i>"]
+        PL["Procesos de Planificación<br><i>(Backlog, Sprint Goal, estimación)</i>"]
+        EJ["Procesos de Ejecución<br><i>(Desarrollo técnico y análisis)</i>"]
+        MC["Procesos de Monitoreo y Control<br><i>(Daily Scrum, tablero, gestión de cambios)</i>"]
+        CI["Procesos de Cierre<br><i>(Sprint Review, Retrospectiva, DoD)</i>"]
+
+        IN --> PL
+        PL <--> EJ
+        EJ --> CI
+        CI -.->|"Retroalimentación para nuevo ciclo"| PL
+        
+        MC -.->|"Acompañamiento continuo"| PL
+        MC -.->|"Seguimiento de avance"| EJ
+        MC -.->|"Verificación de criterios"| CI
+    end
+```
+
+#### Aplicación concreta en RYC Control de Plagas
+
+| Grupo de Procesos | Manifestación y actividades dentro de la iteración de RYC |
+| --- | --- |
+| **Inicio** | Comprensión del problema operativo de RYC, identificación del valor esperado para César y delimitación del alcance general del incremento. |
+| **Planificación** | Refinamiento y ordenación del Product Backlog, selección del Sprint Backlog, redacción del Sprint Goal y desglose de actividades SB01–SB07. |
+| **Ejecución** | Brian y Jeremy desarrollan las actividades asignadas, formulan las reglas de negocio, diseñan los flujos y documentan las especificaciones técnicas. |
+| **Monitoreo y Control** | **Proceso de fondo permanente:** seguimiento diario en el tablero visual, medición del cumplimiento de la DoD, identificación temprana de bloqueos y canalización de cambios al Product Backlog. |
+| **Cierre** | Validación de los entregables del Sprint con la DoD, demostración de resultados a César (Sprint Review) y evaluación del desempeño del equipo para incorporar mejoras (Retrospectiva). |
+
+#### Flujo de salidas como entradas entre procesos
+
+Los procesos no operan como silos estancos; la salida de un proceso constituye la entrada fundamental del siguiente:
+
+- La **salida de Planificación** (el Sprint Backlog y el plan de actividades) es la **entrada para Ejecución**.
+- La **salida de Ejecución** (el incremento documentado y funcional) es la **entrada para Monitoreo y Control y Cierre**.
+- La **salida de Monitoreo y Control** (detección de una desviación o un nuevo requisito planteado por César en campo) se convierte en la **entrada directa para refinar el Product Backlog** y planificar el siguiente Sprint.
+
+### Integración y toma de decisiones
+
+En concordancia con el dominio de **Gobernanza** del PMBOK 8 y el marco Scrum, la integración del proyecto unifica las decisiones estratégicas, comerciales y técnicas asegurando coherencia en todos los niveles:
+
+```mermaid
+flowchart TD
+    subgraph Gobernanza["Estructura de Gobernanza e Integración de RYC"]
+        SP["César Rodríguez Corrales<br><b>Dueño del Negocio / Sponsor</b><br><i>Aporta conocimiento operativo, valida necesidades reales y autoriza reglas de negocio.</i>"]
+        PO["Brian Rodríguez Pérez<br><b>Product Owner & Desarrollador</b><br><i>Maximiza el valor del producto, prioriza el Product Backlog y enlaza con César.</i>"]
+        SM["Jeremy Rodríguez Esquivel<br><b>Scrum Master & Desarrollador</b><br><i>Asegura la disciplina Scrum, elimina impedimentos y facilita la integración metodológica.</i>"]
+        EQ["Brian & Jeremy<br><b>Equipo de Desarrollo (Developers)</b><br><i>Autogestionan el trabajo técnico, ejecutan tareas, realizan peer review y aseguran la DoD.</i>"]
+        
+        SP <-->|"Validación de valor y flujos"| PO
+        PO <-->|"Priorización y refinamiento"| SM
+        PO --- EQ
+        SM --- EQ
+    end
+```
+
+- **Nivel de Negocio (Sponsor):** César Rodríguez Corrales aporta las directrices comerciales, valida las políticas de cobro (50% anticipo / 50% contra entrega; consultoría gratuita en San Carlos) y verifica que los flujos reflejen la realidad operativa de su empresa.
+- **Nivel de Producto (Product Owner):** Brian Rodríguez Pérez centraliza la comunicación con César, defiende el valor del producto y toma decisiones sobre la ordenación y prioridad del Product Backlog.
+- **Nivel de Proceso (Scrum Master):** Jeremy Rodríguez Esquivel vela por el cumplimiento de las ceremonias, mantiene actualizado el proceso y lidera la remoción de impedimentos que amenacen el Sprint Goal.
+- **Nivel de Ejecución Técnica (Developers):** Ambos integrantes asumen la responsabilidad técnica compartida, coordinando decisiones de diseño, base de datos y arquitectura mediante revisión mutua.
+
+### Resultado de la Semana 4
+
+Con el trabajo completado en esta semana, el proyecto de RYC Control de Plagas consolida:
+
+- **Product Backlog formal y priorizado:** Estructuración de las necesidades N01–N15 ordenadas por valor, dependencias y viabilidad técnica.
+- **Sprint Goal articulado:** Definición clara del propósito de negocio para el incremento de referencia de la solución.
+- **Sprint Backlog seleccionado:** Elección rigurosa de las necesidades fundacionales N08, N10 y N11 con su desglose de actividades SB01–SB07 y asignación de responsabilidades.
+- **Mecanismo de control visual y diario:** Definición operativa del tablero visual de tres estados y la dinámica del Daily Scrum.
+- **Marco de integración y gobernanza:** Articulación de los roles de Brian (PO), Jeremy (SM) y César (Sponsor) bajo PMBOK 8 y Scrum.
+- **Comprensión integral de la interacción de procesos:** Justificación teórica y práctica de cómo Monitoreo y Control opera de forma transversal y cómo las salidas de cada proceso alimentan a los demás.
 
 ---
 
