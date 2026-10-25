@@ -8,6 +8,7 @@ Sede Regional San Carlos
 | Curso       | Administración de Proyectos Informáticos      |
 | Proyecto    | Sistema de Gestión para RYC Control de Plagas |
 | Profesor    | Deiver Cubero Molina                          |
+| Profesor    | Yesenia Calvo Araya                           |
 
 **Integrantes**
 
@@ -1984,7 +1985,8 @@ Casos con entradas/pasos/resultado esperado; avances/resultados sin software eje
 **Curso:** Administración de Proyectos Informáticos (ISW-912)
 **Integrantes:** Brian Rodríguez Pérez y Jeremy Rodríguez Esquivel
 **Universidad Técnica Nacional — Sede Regional San Carlos**
-**Profesor:** Deiver Cubero Molina
+**Profesor:** Deiver Cubero Molina\
+**Profesor:** Yesenia Calvo Araya
 
 Las historias de usuario describen las funcionalidades y el comportamiento esperado del sistema desde la perspectiva de las personas que interactúan con él: César Rodríguez Corrales como administrador y operador técnico, y los clientes particulares o empresariales que contratan los servicios de control de plagas.
 
