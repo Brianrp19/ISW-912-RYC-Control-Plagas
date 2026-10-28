@@ -616,6 +616,8 @@ Cliente confirma sobre solicitud autorizada; César registra respuesta externa c
 
 La consultoría cobrada y el trabajo aceptado generan órdenes distintas; cada una conserva servicio, ubicación, precio y condiciones. Estados con fecha/responsable: **Aceptada** al aceptar; **En atención** al iniciar; **Finalizada** al terminar; **Cancelada** con motivo.
 
+Cada orden utiliza una sola moneda: CRC o USD. Sus pagos y saldos se registran en esa moneda. Los resúmenes de varias órdenes mantienen CRC y USD separados, sin convertirlos.
+
 Pago separado: **Sin pagos confirmados**, **Pago parcial**, **Pago completo** o **Saldo a favor pendiente de revisión**. Solo dinero confirmado reduce deuda; pendientes, rechazados y facturas no descuentan.
 
 #### Datos del reporte de pago
@@ -1146,6 +1148,8 @@ Listado: nombre, dirección, provincia/cantón/distrito, estado; **Editar/Desact
 ###### Revisión de pagos recibidos
 
 Listado: fecha, cliente, sede, orden, concepto, medio, monto, referencia, estado, **Revisar**. Filtros estado (inicial Pendiente de revisión), cliente/sede/medio/fechas. Detalle: reporte, instrucciones, comprobante, verificaciones y saldo; origen Portal/WhatsApp/Registro de César, cliente/orden precargados desde atención.
+
+Para SINPE o transferencia, César comprueba el ingreso en la cuenta bancaria de RYC. Para efectivo, comprueba que recibió físicamente el dinero; no se exige referencia ni comprobante bancario. En todos los medios, solo la confirmación de César reduce el saldo.
 
 - **Confirmar pago**: monto/fecha reales precargados; diferencias exigen motivo 2–1000 y **He comprobado que RYC recibió este dinero**, una vez.
 - **Rechazar reporte**: motivo 2–1000 junto al pago; comunicar resultado por canal acordado.
@@ -1968,12 +1972,22 @@ Mismas provisiones de ₡85.000 y contingencia distribuidas por sprint. Revisar 
 
 ### Criterios de terminación y aceptación
 
-**Definición de Terminado (DoD):**
+**Calidad del producto representado — Definición de Terminado (DoD):**
 
-- **Expediente académico:** 105 tareas con resultado, dependencias, sprint, profesional y horas; sumas/bloques consistentes, presupuesto recalculable, riesgos/cambios/aceptación documentados y revisión cruzada de Brian/Jeremy.
-- **Ejecución representada:** resultado y reglas de Semana 3, pruebas/permisos, interfaz en páginas previstas, contexto conservado, revisión técnica/integración. Formularios compartidos usan mismos registros. S5 exige HTTPS, correo, persistencia, restauración, guía y aceptación.
+Cada historia debe cumplir sus criterios de aceptación y los siguientes criterios de calidad:
 
-Casos con entradas/pasos/resultado esperado; avances/resultados sin software ejecutado rotulados **simulados**. Cierre académico exige trazabilidad/coherencia, sin entregar aplicación funcional real.
+1. **Pruebas:** definir los casos unitarios, de integración y manuales aplicables, con entradas, pasos y resultados esperados; resolver los fallos que impidan aceptar la historia.
+2. **Seguridad:** comprobar validaciones y permisos en el servidor para proteger los registros y archivos de cada cliente y sede.
+3. **Uso en dispositivos:** comprobar celular, computadora y teclado, con etiquetas, foco visible y conservación del registro abierto y sus datos al guardar o cancelar.
+4. **Revisión técnica:** otro integrante del equipo profesional del escenario revisa el trabajo y se resuelven sus observaciones.
+5. **Integración:** incorporar los cambios a la rama principal y comprobarlos en el entorno de pruebas previsto, conservando las funciones anteriores; los formularios compartidos utilizan los mismos registros.
+6. **Documentación:** actualizar la documentación mínima de la función y su evidencia de comprobación, diferenciando resultados ejecutados y supuestos simulados.
+
+**Control del expediente, estimaciones y presupuesto:** las 105 tareas conservan su resultado, dependencias, sprint, profesional y horas. Las sumas y los bloques deben ser consistentes y el presupuesto, recalculable. Los cambios justificados de estimación o presupuesto conservan el motivo y los valores anteriores y actualizan los cálculos y apartados afectados. Brian y Jeremy realizan la revisión cruzada del expediente.
+
+**Aceptación final del escenario:** S5 exige HTTPS, correo, persistencia, restauración, guía y aceptación, con riesgos, cambios y resultados documentados.
+
+En el curso se documentan los casos y la evidencia esperada de esa ejecución; los resultados supuestos se rotulan **simulados**. El cierre académico exige coherencia y revisión documental, sin entregar una aplicación funcional real.
 
 ---
 
@@ -2145,9 +2159,9 @@ para conocer mis saldos pendientes, acreditar transferencias y conservar el resp
 
 **Criterios de aceptación**
 
-1. Dado que el cliente consulta la sección de pagos de una orden autorizada, cuando carga la vista, entonces visualiza el monto pactado, el dinero efectivamente confirmado y el saldo pendiente desglosado por moneda (colones y dólares).
+1. Dado que el cliente consulta la sección de pagos de una orden autorizada, cuando carga la vista, entonces visualiza el monto pactado, el dinero efectivamente confirmado y el saldo pendiente en la única moneda de esa orden, CRC o USD.
 2. Dado que el cliente reporta un pago por SINPE Móvil o transferencia bancaria, cuando ingresa el monto, número de referencia y adjunta comprobante (PDF, JPG, PNG hasta 5 MiB), entonces el reporte queda almacenado como Pendiente de revisión.
-3. Dado que el cliente envía un reporte de pago, cuando se guarda el registro, entonces el saldo deudor de la orden no se reduce hasta que César verifique el ingreso del dinero en su cuenta bancaria.
+3. Dado que el cliente envía un reporte de pago, cuando se guarda el registro, entonces el saldo de la orden no se reduce hasta que César confirme que recibió el dinero: ingreso bancario para SINPE o transferencia y recepción física para efectivo.
 4. Dado que existen recibos o facturas electrónicas autorizadas para su atención, cuando el cliente selecciona descargar, entonces obtiene los archivos disponibles (PDF, XML de factura y respuesta de Hacienda, cuando exista) mediante descarga autenticada y segura.
 5. Dado que un reporte de pago fue rechazado por César, cuando el cliente consulta el detalle, entonces visualiza el motivo justificado y dispone de la opción para ingresar un nuevo reporte corregido.
 
@@ -2301,9 +2315,9 @@ para asegurar que solo el dinero comprobado reduzca la deuda de las órdenes, ma
 
 **Criterios de aceptación**
 
-1. Dado que existe un reporte de pago con comprobante adjunto, cuando César comprueba el ingreso real en su cuenta bancaria y confirma el movimiento, entonces el estado pasa a Confirmado y se descuenta el importe del saldo deudor de la orden.
-2. Dado que un reporte no coincide con los extractos bancarios o es ilegible, cuando César lo rechaza con su motivo justificado, entonces el saldo deudor permanece intacto y se registra la trazabilidad del rechazo.
-3. Dado que César recibe un cobro en efectivo en campo, cuando lo registra en la orden, entonces se acredita como pago confirmado sin exigir que el cliente tenga cuenta en el portal.
+1. Dado que existe un reporte de SINPE o transferencia con comprobante adjunto, cuando César comprueba el ingreso real en la cuenta bancaria de RYC y confirma el movimiento, entonces el estado pasa a Confirmado y se descuenta el importe del saldo de la orden.
+2. Dado que un reporte de SINPE o transferencia no coincide con los movimientos bancarios o su comprobante es ilegible, cuando César lo rechaza con un motivo, entonces el saldo permanece intacto y se conserva el registro del rechazo.
+3. Dado que César recibe un cobro en efectivo en campo, cuando comprueba que recibió físicamente el dinero y lo registra en la orden, entonces el pago queda Confirmado y reduce el saldo, sin exigir referencia ni comprobante bancario o cuenta en el portal.
 4. Dado que se intenta confirmar un reporte cuya referencia bancaria ya fue utilizada previamente en otro pago, cuando el sistema evalúa la duplicidad, entonces bloquea la operación para evitar doble contabilización.
 5. Dado que un pago está confirmado, cuando César adjunta un recibo digital (PDF, JPG, PNG hasta 5 MiB), entonces se almacena en directorio privado y queda disponible para descarga del cliente.
 6. Dado que César emitió una factura en su sistema externo, cuando la adjunta a la orden correspondiente, entonces sube obligatoriamente el XML de factura y la representación gráfica en PDF; la respuesta de Hacienda se adjunta cuando esté disponible.
@@ -2341,13 +2355,13 @@ El catálogo oficial del proyecto reúne las doce historias de usuario principal
 
 ### Consideraciones sobre la Definition of Done y entrega progresiva
 
-El catálogo de 12 historias de usuario conforma la especificación formal del comportamiento del sistema. Para que una historia se considere terminada dentro del marco del proyecto, debe satisfacer plenamente la **Definition of Done (DoD)**:
-1. **Trazabilidad estricta:** Correspondencia unívoca con las tareas del backlog (T001–T105), Sprint asignado, ejecutor y dedicación en horas, manteniendo intactos las 926 horas base y el presupuesto de ₡16.229.950.
-2. **Respeto a las reglas de negocio:** Gratuidad de consultorías en San Carlos vs. cobro previo fuera; anticipo del 50 % obligatorio antes de iniciar tratamientos; confirmación bancaria indispensable antes de descontar saldos; confidencialidad de notas internas de César y separación de monedas (CRC y USD).
-3. **Casos de prueba documentados:** Registro de precondiciones, pasos de ejecución y resultados verificables.
-4. **Seguridad del lado del servidor:** Verificación de permisos y roles en backend para prevenir accesos no autorizados a sedes o documentos ajenos.
-5. **Transparencia académica:** En concordancia con la naturaleza del curso, todo resultado que no involucre código efectivamente ejecutado en servidores reales se rotula como **simulado**.
-6. **Nota metodológica sobre criterios INVEST y entrega progresiva:** Conforme a las directrices de la plantilla académica, las historias deben procurar el cumplimiento del principio INVEST (especialmente el atributo *Small*, orientado a resolverse dentro de un único Sprint). En este diseño, historias de amplia cobertura funcional como H05, H07, H09 y H12 reúnen requerimientos que operan a modo de épicas modulares, cuya entrega de valor se desglosa progresivamente mediante tareas técnicas (T001–T105) a lo largo de varios Sprints. Dicha estructura preserva la trazabilidad con el Product Backlog original y la planificación sin fragmentar el expediente en divisiones artificiales.
+El catálogo de 12 historias de usuario conforma la especificación formal del comportamiento del sistema. Para que una historia se considere terminada dentro del marco del proyecto, debe cumplir sus criterios de aceptación y la [Definición de Terminado (DoD)](#criterios-de-terminación-y-aceptación), que reúne los criterios comunes de calidad y la evidencia requerida para la simulación.
+
+**Reglas de negocio:** la aceptación conserva la gratuidad de consultoría en San Carlos y el cobro previo fuera del cantón; el anticipo del 50 % antes del tratamiento; la comprobación del dinero recibido según el medio de pago; las notas internas privadas de César y una sola moneda por orden, con CRC y USD separados en los resúmenes.
+
+**Estimaciones y presupuesto:** las horas y los costos se controlan en [Estimación y asignación de las tareas](#estimación-y-asignación-de-las-tareas) y [Presupuesto del proyecto simulado](#presupuesto-del-proyecto-simulado). Sus revisiones justificadas se registran y recalculan según el control del expediente. La DoD evalúa la calidad del trabajo y sus comprobaciones.
+
+**Nota metodológica sobre criterios INVEST y entrega progresiva:** Conforme a las directrices de la plantilla académica, las historias deben procurar el cumplimiento del principio INVEST (especialmente el atributo *Small*, orientado a resolverse dentro de un único Sprint). En este diseño, historias de amplia cobertura funcional como H05, H07, H09 y H12 reúnen requerimientos que operan a modo de épicas modulares, cuya entrega de valor se desglosa progresivamente mediante tareas técnicas (T001–T105) a lo largo de varios Sprints. Dicha estructura preserva la trazabilidad con el Product Backlog original y la planificación sin fragmentar el expediente en divisiones artificiales.
 
 ---
 
