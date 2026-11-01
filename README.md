@@ -237,9 +237,17 @@ Sede Regional San Carlos
       - [Escalamiento de impedimentos y conflictos](#escalamiento-de-impedimentos-y-conflictos)
     - [Tablero de Trabajo del Sprint 1](#tablero-de-trabajo-del-sprint-1)
       - [Columnas, límites y responsabilidades](#columnas-límites-y-responsabilidades)
+      - [Vista del tablero](#vista-del-tablero)
       - [Carga inicial y condición de terminado](#carga-inicial-y-condición-de-terminado)
+      - [Reglas de movimiento y bloqueos](#reglas-de-movimiento-y-bloqueos)
+      - [Tarjetas del Sprint 1](#tarjetas-del-sprint-1)
+        - [Tarjeta H01: Landing Page](#tarjeta-h01-landing-page)
+        - [Tarjeta H02: Inicio de sesión](#tarjeta-h02-inicio-de-sesión)
+        - [Tarjeta H03: Registro de cliente](#tarjeta-h03-registro-de-cliente)
+        - [Tarjeta H09.1: Clientes](#tarjeta-h091-clientes)
+        - [Tarjeta H11: Catálogos](#tarjeta-h11-catálogos)
+      - [Componentes comunes y seguimiento](#componentes-comunes-y-seguimiento)
     - [Relación con calidad y recursos](#relación-con-calidad-y-recursos)
-    - [Evidencia y registro de la entrega](#evidencia-y-registro-de-la-entrega)
 
 ---
 
@@ -2820,7 +2828,7 @@ PO es el analista/Product Owner del caso; QSM combina calidad y facilitación Sc
 
 #### Canales, respuestas y registro de decisiones
 
-- **Registro común:** el README contiene requisitos y acuerdos; el tablero contiene estado y bloqueos; [CHANGELOG.md](CHANGELOG.md) y Git conservan las entregas. Una conversación relevante se resume allí con fecha, autor, asunto, decisión y referencias H/T afectadas.
+- **Registro común:** este README reúne requisitos, acuerdos y tablero; Git conserva sus versiones. Una conversación relevante se resume aquí con fecha, autor, asunto, decisión y referencias H/T afectadas.
 - **Respuesta interna propuesta:** revisar mensajes o comentarios en la siguiente jornada de trabajo, con objetivo de un día hábil del escenario. Un bloqueo que amenace la DoD, el presupuesto o S5 se registra y comunica en la misma jornada.
 - **Personas externas:** no se presume un plazo de respuesta de César, la docente o proveedores. PO prepara la consulta y reitera en el siguiente contacto acordado; mientras falte una decisión necesaria, la dependencia se mantiene pendiente. El silencio no significa aprobación.
 - **Cambios:** antes de aplicar un ajuste, registrar su efecto en alcance, dependencias, personas, costo y cinco sprints. No cambiar reglas comerciales por un mensaje sin confirmación ni registrar una aceptación inexistente.
@@ -2836,9 +2844,13 @@ PO es el analista/Product Owner del caso; QSM combina calidad y facilitación Sc
 
 ### Tablero de Trabajo del Sprint 1
 
-**Abrir:** [Tablero Scrum/Kanban del Sprint 1](docs/semana-07/tablero-sprint-1.md). Está implementado como un tablero visual de cuatro columnas en Markdown, versionado en GitHub. Cada cambio de estado se hace editando el archivo y guardando el commit. Es un tablero del repositorio; no utiliza GitHub Projects.
+El tablero y sus tarjetas se consultan y actualizan en esta misma sección del README. Para cambiar un estado se edita la tabla y la tarjeta correspondiente y se guarda un commit.
 
-El tablero carga las cinco unidades del [Sprint Backlog 1](#sprint-1-base-técnica-acceso-y-datos-iniciales): **H01, H02, H03, H09.1 y H11**, con responsable documental, revisor, tareas y profesionales previstos. Reúnen **25 puntos**. El sprint completo incluye 22 tareas —188 h base y 296 h desfavorables—, con sus componentes comunes contados una vez.
+**Carga inicial:** 1 de noviembre de 2026. **Periodo representado:** S1, del 10 al 23 de septiembre de 2026. Son fechas del caso; no acreditan programación ejecutada.
+
+Se cargan las cinco unidades del [Sprint Backlog 1](#sprint-1-base-técnica-acceso-y-datos-iniciales): **H01, H02, H03, H09.1 y H11**, con responsable documental, revisor, tareas y profesionales previstos. Reúnen **25 puntos**. El sprint completo incluye 22 tareas —188 h base y 296 h desfavorables—, con sus componentes comunes contados una vez.
+
+En las tarjetas, LT identifica al líder técnico y D1–D5, a los desarrolladores hipotéticos; D4 también atiende DevOps dentro de su misma disponibilidad. Sus dedicaciones figuran en [Equipo profesional](#puestos-experiencia-y-dedicación). Brian y Jeremy son los autores documentales.
 
 #### Columnas, límites y responsabilidades
 
@@ -2851,16 +2863,112 @@ El tablero carga las cinco unidades del [Sprint Backlog 1](#sprint-1-base-técni
 
 WIP significa trabajo en curso. El límite se aplica a tarjetas, mientras la [asignación técnica](#estimación-y-asignación-de-las-tareas) mantiene una actividad por profesional a la vez. Una tarjeta puede reunir varias tareas y profesionales. Los autores documentales no se contabilizan como ejecutores contratados.
 
+Para cambiar los límites WIP, registrar el motivo y comprobar la capacidad y la calidad antes de aplicarlos.
+
+#### Vista del tablero
+
+| Por hacer | En progreso — WIP 5 | En revisión — WIP 2 | Hecho — cumple DoD |
+| --- | --- | --- | --- |
+| [H01 — Landing Page](#tarjeta-h01-landing-page) · Jeremy Rodríguez Esquivel | — | — | — |
+| [H02 — Inicio de sesión](#tarjeta-h02-inicio-de-sesión) · Jeremy Rodríguez Esquivel | — | — | — |
+| [H03 — Registro de cliente](#tarjeta-h03-registro-de-cliente) · Jeremy Rodríguez Esquivel | — | — | — |
+| [H09.1 — Clientes](#tarjeta-h091-clientes) · Brian Rodríguez Pérez | — | — | — |
+| [H11 — Catálogos](#tarjeta-h11-catálogos) · Brian Rodríguez Pérez | — | — | — |
+
+**Conteo inicial:** 5 Por hacer; 0 En progreso; 0 En revisión; 0 Hecho. **Puntos:** 25 planificados y 0 terminados. Preparar el expediente no equivale a programar estas funciones.
+
 #### Carga inicial y condición de terminado
 
 Las cinco tarjetas comienzan **Por hacer**: cargar su planificación no demuestra programación realizada. El tablero distingue la evidencia documental de los resultados que solo se representarían en el caso.
 
-Para mover una tarjeta a Hecho se comprueban sus criterios, tareas y dependencias, los seis criterios de [DoD](#criterios-de-terminación-y-aceptación) y la revisión correspondiente. Brian o Jeremy registra la evidencia y su carácter simulado; una revisión del expediente no se presenta como una prueba real del software. El detalle y las reglas de movimiento se mantienen en el tablero para evitar duplicarlas.
+Para mover una tarjeta a Hecho se comprueban sus criterios, tareas y dependencias, los seis criterios de [DoD](#criterios-de-terminación-y-aceptación) y la revisión correspondiente. Brian o Jeremy registra la evidencia y su carácter simulado; una revisión del expediente no se presenta como una prueba real del software. Las reglas de movimiento y las tarjetas se describen en esta misma sección.
+
+#### Reglas de movimiento y bloqueos
+
+1. **Por hacer → En progreso:** identificar responsable, tareas y dependencias del escenario; comprobar su disponibilidad y el WIP.
+2. **En progreso → En revisión:** adjuntar la referencia a los criterios, casos y evidencia prevista o representada, y asignar revisor.
+3. **En revisión → Hecho:** revisar criterios y los seis puntos de [DoD](#criterios-de-terminación-y-aceptación). Registrar fecha, revisor y evidencia; los resultados supuestos se identifican como simulados y no se atribuyen a ejecución real.
+4. Si hay observaciones, devolver a En progreso con el motivo. Una tarjeta bloqueada permanece en su columna y cuenta para su WIP; registrar causa, impacto, responsable y siguiente consulta.
+5. Editar la fila de la tarjeta para cambiarla de columna y actualizar los conteos y su ficha. Guardar el cambio mediante commit; conservar la historia del archivo. No duplicar una tarjeta en dos columnas.
+
+#### Tarjetas del Sprint 1
+
+##### Tarjeta H01: Landing Page
+
+**Estado:** Por hacer. **Puntos:** 5.
+
+**Responsable documental:** Jeremy Rodríguez Esquivel. **Revisor documental:** Brian Rodríguez Pérez.
+
+Presentar RYC y preparar el contacto por WhatsApp sin cuenta. El formulario público prepara el mensaje; no registra una solicitud.
+
+**Tareas propias:** T001, T002. **Profesionales previstos:** D4, D5. **Esfuerzo propio:** 20 h base / 30 h desfavorables.
+
+**Criterios y reglas:** [Conocer RYC y contactar desde la Landing Page](#historia-h01-conocer-ryc-y-contactar-desde-la-landing-page). Aplicar también la DoD y los componentes comunes de su ficha.
+
+**Bloqueos:** ninguno registrado en la carga inicial; comprobar las dependencias antes de iniciar. **Evidencia de ejecución:** no registrada.
+
+##### Tarjeta H02: Inicio de sesión
+
+**Estado:** Por hacer. **Puntos:** 5.
+
+**Responsable documental:** Jeremy Rodríguez Esquivel. **Revisor documental:** Brian Rodríguez Pérez.
+
+Ingresar con correo y contraseña, aplicar límites de intentos y gestionar la sesión y el acceso según el rol.
+
+**Tareas propias:** T003, T004. **Profesionales previstos:** D2, D3. **Esfuerzo propio:** 14 h base / 22 h desfavorables.
+
+**Criterios y reglas:** [Iniciar sesión en la aplicación web](#historia-h02-iniciar-sesión-en-la-aplicación-web). Aplicar también la DoD y los componentes comunes de su ficha.
+
+**Bloqueos:** ninguno registrado en la carga inicial; comprobar las dependencias antes de iniciar. **Evidencia de ejecución:** no registrada.
+
+##### Tarjeta H03: Registro de cliente
+
+**Estado:** Por hacer. **Puntos:** 5.
+
+**Responsable documental:** Jeremy Rodríguez Esquivel. **Revisor documental:** Brian Rodríguez Pérez.
+
+Registrar una cuenta de cliente con correo único, UUID y contraseña protegida con Argon2id. No autoriza historial previo.
+
+**Tareas propias:** T005, T006. **Profesionales previstos:** D2, D3. **Esfuerzo propio:** 16 h base / 24 h desfavorables.
+
+**Criterios y reglas:** [Crear una cuenta de cliente](#historia-h03-crear-una-cuenta-de-cliente). Aplicar también la DoD y los componentes comunes de su ficha.
+
+**Bloqueos:** ninguno registrado en la carga inicial; comprobar las dependencias antes de iniciar. **Evidencia de ejecución:** no registrada.
+
+##### Tarjeta H09.1: Clientes
+
+**Estado:** Por hacer. **Puntos:** 5.
+
+**Responsable documental:** Brian Rodríguez Pérez. **Revisor documental:** Jeremy Rodríguez Esquivel.
+
+Registrar, editar, listar y desactivar clientes conservando sus datos e historial, sin exigir cuenta en el portal.
+
+**Tareas propias:** T043, T044, T045, T046. **Profesionales previstos:** D1, D2, LT. **Esfuerzo propio:** 36 h base / 54 h desfavorables.
+
+**Criterios y reglas:** [Registrar y mantener clientes particulares y empresas](#h091--registrar-y-mantener-clientes-particulares-y-empresas). Aplicar también la DoD y los componentes comunes de su ficha.
+
+**Bloqueos:** ninguno registrado en la carga inicial; comprobar las dependencias antes de iniciar. **Evidencia de ejecución:** no registrada.
+
+##### Tarjeta H11: Catálogos
+
+**Estado:** Por hacer. **Puntos:** 5.
+
+**Responsable documental:** Brian Rodríguez Pérez. **Revisor documental:** Jeremy Rodríguez Esquivel.
+
+Mantener plagas y productos con estado activo o inactivo, conservando referencias históricas y sin prescribir dosis.
+
+**Tareas propias:** T064, T065, T066, T067. **Profesionales previstos:** D1, D2, D4, LT. **Esfuerzo propio:** 24 h base / 40 h desfavorables.
+
+**Criterios y reglas:** [Administrar los catálogos de plagas y productos](#historia-h11-administrar-los-catálogos-de-plagas-y-productos). Aplicar también la DoD y los componentes comunes de su ficha.
+
+**Bloqueos:** ninguno registrado en la carga inicial; comprobar las dependencias antes de iniciar. **Evidencia de ejecución:** no registrada.
+
+#### Componentes comunes y seguimiento
+
+S1 incluye ocho tareas comunes: **T078 — Preparar el proyecto; T079 — Relaciones de datos; T080 — Estilos; T081 — Cuenta administrativa; T082 — Diseño de acceso; T083 — Contacto por WhatsApp; T088 — Selectores territoriales; T092 — Menús**. Se consultan en el Sprint Backlog y la tabla de asignación; no crean otras historias ni puntos adicionales. Las cinco tarjetas reúnen 14 tareas propias y estas 8 comunes: **22 tareas** en total.
+
+Los responsables documentales actualizan el tablero al representar un cambio o resolver una revisión. Cada entrada conserva fecha, tarjeta, columna anterior/nueva, responsable, motivo y referencia a la evidencia. Las decisiones de negocio se consultan con César y las académicas con Yesenia, según el Plan de Comunicaciones.
 
 ### Relación con calidad y recursos
 
 La DoD y los criterios de cada historia son la referencia de calidad. Las pruebas y la revisión acompañan cada incremento; S5 agrega regresión integral, restauración y aceptación conjunta. Las observaciones del tablero y de la retrospectiva retroalimentan el Sprint Backlog. Se conservan las diez personas, 105 tareas, 124 puntos y el presupuesto de Semana 6.
-
-### Evidencia y registro de la entrega
-
-El Plan de Comunicaciones está en esta sección; el tablero y sus cinco tarjetas están en el archivo enlazado. La incorporación se registra en [Historial de cambios](CHANGELOG.md) y en un commit propio de Semana 7. La revisión cruzada humana y cualquier socialización con otro equipo se registran cuando ocurran; no se declaran realizadas por preparar estos archivos.
