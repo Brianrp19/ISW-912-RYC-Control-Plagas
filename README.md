@@ -7,8 +7,7 @@ Sede Regional San Carlos
 | ----------- | --------------------------------------------- |
 | Curso       | Administración de Proyectos Informáticos      |
 | Proyecto    | Sistema de Gestión para RYC Control de Plagas |
-| Profesor    | Deiver Cubero Molina                          |
-| Profesor    | Yesenia Calvo Araya                           |
+| Profesora   | Yesenia Calvo Araya                           |
 
 **Integrantes**
 
@@ -149,8 +148,10 @@ Sede Regional San Carlos
         - [Mi cuenta](#mi-cuenta)
     - [Comprobaciones del sistema](#comprobaciones-del-sistema)
   - [Semana 4 · Interacción e integración entre procesos](#semana-4--interacción-e-integración-entre-procesos)
+  - [Semana 5 · Integración, DoD y Sprint Backlogs](#semana-5--integración-dod-y-sprint-backlogs)
     - [Product Backlog priorizado](#product-backlog-priorizado)
     - [Criterios utilizados para priorizar](#criterios-utilizados-para-priorizar)
+    - [Criterios de terminación y aceptación](#criterios-de-terminación-y-aceptación)
     - [Sprints y Sprint Backlogs](#sprints-y-sprint-backlogs)
       - [Sprint 1: base técnica, acceso y presentación](#sprint-1-base-técnica-acceso-y-presentación)
       - [Sprint 2: clientes, solicitudes y programación](#sprint-2-clientes-solicitudes-y-programación)
@@ -177,7 +178,44 @@ Sede Regional San Carlos
         - [Pruebas de la aplicación web](#pruebas-de-la-aplicación-web)
         - [Entorno de entrega y respaldos](#entorno-de-entrega-y-respaldos)
         - [Guía, aceptación y cierre](#guía-aceptación-y-cierre)
-      - [Estimación y asignación de las tareas](#estimación-y-asignación-de-las-tareas)
+    - [Historias de usuario desarrolladas — Especificación formal según plantilla](#historias-de-usuario-desarrolladas--especificación-formal-según-plantilla)
+      - [Introducción y metodología de desarrollo](#introducción-y-metodología-de-desarrollo)
+      - [Historia H01: Conocer RYC y contactar desde la Landing Page](#historia-h01-conocer-ryc-y-contactar-desde-la-landing-page)
+      - [Historia H02: Iniciar sesión en la aplicación web](#historia-h02-iniciar-sesión-en-la-aplicación-web)
+      - [Historia H03: Crear una cuenta de cliente](#historia-h03-crear-una-cuenta-de-cliente)
+      - [Historia H04: Recuperar el acceso desde Olvidé mi contraseña](#historia-h04-recuperar-el-acceso-desde-olvidé-mi-contraseña)
+      - [Historia H05: Consultar mi resumen y gestionar mis atenciones](#historia-h05-consultar-mi-resumen-y-gestionar-mis-atenciones)
+        - [H05.1 — Solicitar consultorías con correo verificado](#h051--solicitar-consultorías-con-correo-verificado)
+        - [H05.2 — Solicitar nuevas visitas y cambios de agenda](#h052--solicitar-nuevas-visitas-y-cambios-de-agenda)
+        - [H05.3 — Consultar solicitudes y decidir propuestas](#h053--consultar-solicitudes-y-decidir-propuestas)
+        - [H05.4 — Consultar resumen e historial de atenciones](#h054--consultar-resumen-e-historial-de-atenciones)
+      - [Historia H06: Consultar mis pagos y documentos](#historia-h06-consultar-mis-pagos-y-documentos)
+      - [Historia H07: Consultar pendientes y gestionar las atenciones](#historia-h07-consultar-pendientes-y-gestionar-las-atenciones)
+        - [H07.1 — Registrar contactos y valorar consultorías](#h071--registrar-contactos-y-valorar-consultorías)
+        - [H07.2 — Gestionar consultorías y comprobar el anticipo](#h072--gestionar-consultorías-y-comprobar-el-anticipo)
+        - [H07.3 — Registrar el tratamiento y las recomendaciones reales](#h073--registrar-el-tratamiento-y-las-recomendaciones-reales)
+        - [H07.4 — Publicar y corregir atenciones desde el panel operativo](#h074--publicar-y-corregir-atenciones-desde-el-panel-operativo)
+      - [Historia H08: Consultar y administrar Mi cuenta](#historia-h08-consultar-y-administrar-mi-cuenta)
+      - [Historia H09: Gestionar clientes, ubicaciones y cuentas autorizadas](#historia-h09-gestionar-clientes-ubicaciones-y-cuentas-autorizadas)
+        - [H09.1 — Registrar y mantener clientes particulares y empresas](#h091--registrar-y-mantener-clientes-particulares-y-empresas)
+        - [H09.2 — Administrar ubicaciones y frecuencias de visita](#h092--administrar-ubicaciones-y-frecuencias-de-visita)
+        - [H09.3 — Asociar y revocar cuentas con permisos por sede](#h093--asociar-y-revocar-cuentas-con-permisos-por-sede)
+        - [H09.4 — Incorporar antecedentes y clasificarlos por sede](#h094--incorporar-antecedentes-y-clasificarlos-por-sede)
+      - [Historia H10: Programar visitas y administrar la disponibilidad](#historia-h10-programar-visitas-y-administrar-la-disponibilidad)
+      - [Historia H11: Administrar los catálogos de plagas y productos](#historia-h11-administrar-los-catálogos-de-plagas-y-productos)
+      - [Historia H12: Verificar cobros y gestionar documentos y entregas](#historia-h12-verificar-cobros-y-gestionar-documentos-y-entregas)
+        - [H12.1 — Confirmar, rechazar y corregir cobros](#h121--confirmar-rechazar-y-corregir-cobros)
+        - [H12.2 — Guardar y versionar recibos de pagos confirmados](#h122--guardar-y-versionar-recibos-de-pagos-confirmados)
+        - [H12.3 — Custodiar facturas electrónicas externas y correcciones](#h123--custodiar-facturas-electrónicas-externas-y-correcciones)
+        - [H12.4 — Registrar la entrega de documentos y recomendaciones](#h124--registrar-la-entrega-de-documentos-y-recomendaciones)
+      - [Resumen de estimaciones y prioridades del Product Backlog](#resumen-de-estimaciones-y-prioridades-del-product-backlog)
+      - [Consideraciones sobre la Definition of Done y entrega progresiva](#consideraciones-sobre-la-definition-of-done-y-entrega-progresiva)
+      - [Conclusión](#conclusión)
+  - [Semana 6 · Estimación y planificación de entregas](#semana-6--estimación-y-planificación-de-entregas)
+    - [Matriz de estimación en puntos de historia](#matriz-de-estimación-en-puntos-de-historia)
+      - [Formalización de los puntos de historia](#formalización-de-los-puntos-de-historia)
+    - [Desglose de puntos de las historias subdivididas](#desglose-de-puntos-de-las-historias-subdivididas)
+    - [Estimación y asignación de las tareas](#estimación-y-asignación-de-las-tareas)
     - [Equipo profesional y capacidad](#equipo-profesional-y-capacidad)
       - [Puestos, experiencia y dedicación](#puestos-experiencia-y-dedicación)
       - [Disponibilidad y carga por sprint](#disponibilidad-y-carga-por-sprint)
@@ -186,33 +224,8 @@ Sede Regional San Carlos
       - [Tarifas profesionales y costo del equipo](#tarifas-profesionales-y-costo-del-equipo)
       - [Infraestructura y operación prevista](#infraestructura-y-operación-prevista)
       - [Presupuesto total y distribución](#presupuesto-total-y-distribución)
-    - [Criterios de terminación y aceptación](#criterios-de-terminación-y-aceptación)
-  - [Historias de usuario desarrolladas — Especificación formal según plantilla](#historias-de-usuario-desarrolladas--especificación-formal-según-plantilla)
-    - [Introducción y metodología de desarrollo](#introducción-y-metodología-de-desarrollo)
-    - [Historia H01: Conocer RYC y contactar desde la Landing Page](#historia-h01-conocer-ryc-y-contactar-desde-la-landing-page)
-    - [Historia H02: Iniciar sesión en la aplicación web](#historia-h02-iniciar-sesión-en-la-aplicación-web)
-    - [Historia H03: Crear una cuenta de cliente](#historia-h03-crear-una-cuenta-de-cliente)
-    - [Historia H04: Recuperar el acceso desde Olvidé mi contraseña](#historia-h04-recuperar-el-acceso-desde-olvidé-mi-contraseña)
-    - [Historia H05: Consultar mi resumen y gestionar mis atenciones](#historia-h05-consultar-mi-resumen-y-gestionar-mis-atenciones)
-    - [Historia H06: Consultar mis pagos y documentos](#historia-h06-consultar-mis-pagos-y-documentos)
-    - [Historia H07: Consultar pendientes y gestionar las atenciones](#historia-h07-consultar-pendientes-y-gestionar-las-atenciones)
-    - [Historia H08: Consultar y administrar Mi cuenta](#historia-h08-consultar-y-administrar-mi-cuenta)
-    - [Historia H09: Gestionar clientes, ubicaciones y cuentas autorizadas](#historia-h09-gestionar-clientes-ubicaciones-y-cuentas-autorizadas)
-    - [Historia H10: Programar visitas y administrar la disponibilidad](#historia-h10-programar-visitas-y-administrar-la-disponibilidad)
-    - [Historia H11: Administrar los catálogos de plagas y productos](#historia-h11-administrar-los-catálogos-de-plagas-y-productos)
-    - [Historia H12: Verificar cobros y gestionar documentos y entregas](#historia-h12-verificar-cobros-y-gestionar-documentos-y-entregas)
-    - [Resumen de estimaciones y prioridades del Product Backlog](#resumen-de-estimaciones-y-prioridades-del-product-backlog)
-    - [Consideraciones sobre la Definition of Done y entrega progresiva](#consideraciones-sobre-la-definition-of-done-y-entrega-progresiva)
-    - [Conclusión](#conclusión)
-  - [Semana 6 · Estimación y planificación de entregas](#semana-6--estimación-y-planificación-de-entregas)
-    - [Matriz de estimación en puntos de historia](#matriz-de-estimación-en-puntos-de-historia)
-    - [División y reestimación de las cuatro historias grandes](#división-y-reestimación-de-las-cuatro-historias-grandes)
-      - [H05 — Portal del cliente: historias refinadas](#h05--portal-del-cliente-historias-refinadas)
-      - [H07 — Operación de César: historias refinadas](#h07--operación-de-césar-historias-refinadas)
-      - [H09 — Clientes, sedes y autorizaciones: historias refinadas](#h09--clientes-sedes-y-autorizaciones-historias-refinadas)
-      - [H12 — Cobros y documentos: historias refinadas](#h12--cobros-y-documentos-historias-refinadas)
     - [Supuestos, dependencias y riesgos de la estimación](#supuestos-dependencias-y-riesgos-de-la-estimación)
-    - [Velocidad inicial y proyección](#velocidad-inicial-y-proyección)
+    - [Capacidad y cierre en cinco sprints](#capacidad-y-cierre-en-cinco-sprints)
     - [Cronograma de entregas (Release Plan)](#cronograma-de-entregas-release-plan)
 
 ---
@@ -235,7 +248,7 @@ opcional. Las funciones siguientes describen el producto que construiría el equ
 La página pública presentará información real de RYC y facilitará el contacto por WhatsApp sin cuenta. César gestionará clientes, empresas, ubicaciones,
 solicitudes, agenda, servicios, tratamientos, pagos y documentos desde celular y computadora.
 
-La consultoría inicial será gratuita en el cantón de San Carlos; fuera se cotizará y cobrará completamente antes de la visita. El trabajo requiere 50% antes de iniciar
+RYC atiende en toda Costa Rica. La consultoría inicial será gratuita en el cantón de San Carlos; fuera se cotizará y cobrará completamente antes de la visita. El trabajo requiere 50% antes de iniciar
 y 50% al finalizar, verificados por César.
 
 Facturas y documentos se emitirán externamente y se entregarán sin exigir cuenta. Quien se registre podrá consultar el historial autorizado, solicitar atención o
@@ -394,7 +407,7 @@ El cliente acepta propuestas e informa pagos; César registra respuestas externa
 | Quién atiende       | Nombre, función y datos autorizados de César.                                                  |
 | Servicios           | Servicios/plagas confirmados; consulta sin confirmar precio ni disponibilidad.                 |
 | Cómo trabajamos     | Contacto, consultoría, propuesta, anticipo, tratamiento, saldo y documentos.                   |
-| Zonas y condiciones | San Carlos gratuito, cobro fuera, condiciones y total antes de aceptar.                        |
+| Zonas y condiciones | Atención en toda Costa Rica; consultoría gratuita en San Carlos y cotizada con pago previo fuera; condiciones y total antes de aceptar.                        |
 | Historial opcional  | Servicios, tratamientos, recomendaciones, pagos y documentos; Crear cuenta/Ver mi historial.   |
 | Contacto y cierre   | WhatsApp autorizado y formulario breve.                                                        |
 
@@ -475,7 +488,7 @@ Login, registro y las dos páginas de recuperación están en [Acceso](#landing-
 ##### Medidas para proteger las cuentas
 
 - Máximo **cinco fallos/minuto por correo y dirección IP** (dirección de red del intento); error definido en login.
-- **Argon2id en Laravel 13** protege contraseñas: nunca legibles ni en registros de error/diagnóstico.
+- **Argon2id en Laravel 13:** guardar una huella de la contraseña (hash) y comprobar contra ella los intentos de acceso. No guardar contraseñas legibles ni incluirlas en registros de error/diagnóstico.
 - El registro público no otorga administración. Para consultar historial y próximas visitas, exigir correo verificado y asociación activa según [permisos](#empresas-sedes-y-cuentas).
 
 ### Diseño y comportamiento en dispositivos
@@ -570,7 +583,7 @@ Controles, registro de autorización, cambios y retirada: [Ficha del cliente y c
 
 ### Consultoría y aceptación del servicio
 
-Solicitar no cuesta. Consultoría inicial gratuita en todo **San Carlos, Alajuela**; cobrada fuera, incluidos otros cantones de Alajuela. Tratamiento con propuesta independiente. Una nueva visita para necesidad conocida también exige condiciones y aceptación confirmadas por César.
+RYC atiende en **toda Costa Rica**. Solicitar no cuesta. La consultoría inicial es gratuita en todo el **cantón de San Carlos, Alajuela**; fuera del cantón se cotiza y exige el 100% confirmado antes de la visita, incluidos otros cantones de Alajuela. Tratamiento con propuesta independiente. Una nueva visita para necesidad conocida también exige condiciones y aceptación confirmadas por César.
 
 #### Formulario de consultoría
 
@@ -1248,29 +1261,47 @@ Documentar entradas, pasos y resultados esperados de estos casos; rotular **simu
 
 > **Fecha lectiva de referencia:** miércoles 7 de octubre de 2026, correspondiente a la Semana 4.
 >
-> **Resumen:** Priorización del Product Backlog, historias de usuario, planificación de sprints, estimación de tareas, asignación de recursos, presupuesto y criterios de aceptación.
+> **Resumen:** Product Backlog inicial y continuidad entre planificación, ejecución y seguimiento.
+
+El material de Semana 4 introduce el Product Backlog inicial, la selección de trabajo para un sprint y su seguimiento. El desarrollo consolidado del backlog, la DoD y los Sprint Backlogs se presenta en [Semana 5](#semana-5--integración-dod-y-sprint-backlogs).
+
+El backlog alimenta la planificación del sprint; sus tareas describen la ejecución prevista y las comprobaciones permiten revisar el resultado y ajustar el plan. La [DoD](#criterios-de-terminación-y-aceptación) define la calidad exigida. La estimación vigente y la proyección de entregas se documentan en [Semana 6](#semana-6--estimación-y-planificación-de-entregas).
+
+---
+
+## Semana 5 · Integración, DoD y Sprint Backlogs
+
+> **Fecha lectiva de referencia:** miércoles 14 de octubre de 2026, correspondiente a la Semana 5.
+>
+> **Resumen:** Consolidación del Product Backlog, criterios de calidad, Sprint Backlog 1 y planificación del escenario de cinco sprints.
+
+El material de esta semana pide la DoD y el Sprint Backlog 1 a partir del backlog iniciado en Semana 4. Este apartado reúne el backlog detallado, las tareas y las historias con sus subdivisiones. Los cinco Sprint Backlogs describen la ejecución hipotética; sus fechas se mantienen como referencias del escenario. Las [estimaciones, capacidad y costos](#estimación-y-asignación-de-las-tareas) se desarrollan en Semana 6.
 
 ### Product Backlog priorizado
 
-**Product Backlog:** necesidades ordenadas y revisables con César/capacidad. Prioridad inicial:
+El Product Backlog reúne **12 historias principales**. H05, H07, H09 y H12 contienen cuatro subdivisiones cada una: **16 subdivisiones en total**. La estimación vigente es de **124 puntos de historia**, adoptada como línea base de planificación de la simulación según la [formalización documentada](#formalización-de-los-puntos-de-historia).
 
-| Orden | Historia                                                                                                                | Prioridad | Puntos de historia |
-| ----: | :---------------------------------------------------------------------------------------------------------------------- | :-------: | -----------------: |
-|     1 | [H09: Gestionar clientes, ubicaciones y cuentas autorizadas](#h09-gestionar-clientes-ubicaciones-y-cuentas-autorizadas) |   Alta    |                 13 |
-|     2 | [H02: Iniciar sesión en la aplicación web](#h02-iniciar-sesión-en-la-aplicación-web)                                    |   Alta    |                  5 |
-|     3 | [H03: Crear una cuenta de cliente](#h03-crear-una-cuenta-de-cliente)                                                    |   Alta    |                  5 |
-|     4 | [H01: Conocer RYC y contactar desde la Landing Page](#h01-conocer-ryc-y-contactar-desde-la-landing-page)                |   Alta    |                  5 |
-|     5 | [H04: Recuperar el acceso desde Olvidé mi contraseña](#h04-recuperar-el-acceso-desde-olvidé-mi-contraseña)              |   Media   |                  5 |
-|     6 | [H08: Consultar y administrar Mi cuenta](#h08-consultar-y-administrar-mi-cuenta)                                        |   Media   |                  3 |
-|     7 | [H10: Programar visitas y administrar la disponibilidad](#h10-programar-visitas-y-administrar-la-disponibilidad)        |   Alta    |                  8 |
-|     8 | [H11: Administrar los catálogos de plagas y productos](#h11-administrar-los-catálogos-de-plagas-y-productos)            |   Alta    |                  5 |
-|     9 | [H07: Consultar pendientes y gestionar las atenciones](#h07-consultar-pendientes-y-gestionar-las-atenciones)            |   Alta    |                 13 |
-|    10 | [H12: Verificar cobros y gestionar documentos y entregas](#h12-verificar-cobros-y-gestionar-documentos-y-entregas)      |   Alta    |                 13 |
-|    11 | [H05: Consultar mi resumen y gestionar mis atenciones](#h05-consultar-mi-resumen-y-gestionar-mis-atenciones)            |   Media   |                 13 |
-|    12 | [H06: Consultar mis pagos y documentos](#h06-consultar-mis-pagos-y-documentos)                                          |   Media   |                  8 |
-| Total | **12 historias de usuario desarrolladas**                                                                               |           |             **96** |
+La tabla se presenta por identificador para localizar cada historia. La columna **Orden de prioridad** conserva la prioridad de implementación registrada; la ejecución también respeta las dependencias.
 
-Los puntos de historia representan estimaciones relativas de esfuerzo, complejidad técnica e incertidumbre según la secuencia de Fibonacci (plantilla `UserStoryTemplate.docx`), acumulando **96 puntos de historia** en el Product Backlog. No equivalen directamente a horas de trabajo ni al tiempo del reloj. Terminar una historia exige funciones, componentes y comprobaciones. Propuestas, órdenes, saldos, permisos y facturación se construyen/estiman una vez y comparten registros entre cliente y César.
+| Historia principal | Subdivisiones | Orden de prioridad | Prioridad | Puntos vigentes |
+| --- | --- | ---: | --- | ---: |
+| [H01: Conocer RYC y contactar desde la Landing Page](#h01-conocer-ryc-y-contactar-desde-la-landing-page) | — | 4 | Alta | 5 |
+| [H02: Iniciar sesión en la aplicación web](#h02-iniciar-sesión-en-la-aplicación-web) | — | 2 | Alta | 5 |
+| [H03: Crear una cuenta de cliente](#h03-crear-una-cuenta-de-cliente) | — | 3 | Alta | 5 |
+| [H04: Recuperar el acceso desde Olvidé mi contraseña](#h04-recuperar-el-acceso-desde-olvidé-mi-contraseña) | — | 5 | Media | 5 |
+| [H05: Consultar mi resumen y gestionar mis atenciones](#h05-consultar-mi-resumen-y-gestionar-mis-atenciones) | H05.1–H05.4 | 11 | Media | 18 (subtotal) |
+| [H06: Consultar mis pagos y documentos](#h06-consultar-mis-pagos-y-documentos) | — | 12 | Media | 8 |
+| [H07: Consultar pendientes y gestionar las atenciones](#h07-consultar-pendientes-y-gestionar-las-atenciones) | H07.1–H07.4 | 9 | Alta | 20 (subtotal) |
+| [H08: Consultar y administrar Mi cuenta](#h08-consultar-y-administrar-mi-cuenta) | — | 6 | Media | 3 |
+| [H09: Gestionar clientes, ubicaciones y cuentas autorizadas](#h09-gestionar-clientes-ubicaciones-y-cuentas-autorizadas) | H09.1–H09.4 | 1 | Alta | 21 (subtotal) |
+| [H10: Programar visitas y administrar la disponibilidad](#h10-programar-visitas-y-administrar-la-disponibilidad) | — | 7 | Alta | 8 |
+| [H11: Administrar los catálogos de plagas y productos](#h11-administrar-los-catálogos-de-plagas-y-productos) | — | 8 | Alta | 5 |
+| [H12: Verificar cobros y gestionar documentos y entregas](#h12-verificar-cobros-y-gestionar-documentos-y-entregas) | H12.1–H12.4 | 10 | Alta | 21 (subtotal) |
+| **Total** | **16 subdivisiones en 4 historias principales** | — | **8 principales Alta / 4 principales Media** | **124** |
+
+Los subtotales de las cuatro historias desglosadas incluyen sus subdivisiones. Los puntos se suman una sola vez: **44 puntos de las ocho historias sin subdividir + 80 de las dieciséis subdivisiones = 124**. Los puntos expresan esfuerzo relativo, complejidad e incertidumbre. Las horas-persona se conservan en la tabla de estimaciones técnicas.
+
+Terminar una historia principal desglosada exige comprobar todas sus subdivisiones y los componentes comunes que correspondan. Propuestas, órdenes, saldos, permisos y facturación utilizan los mismos registros y se construyen y estiman una vez.
 
 ### Criterios utilizados para priorizar
 
@@ -1281,6 +1312,25 @@ Los puntos de historia representan estimaciones relativas de esfuerzo, complejid
 5. Incrementos integrados comprobables, con evidencia documental del ejercicio.
 6. Capacidad profesional, revisión cruzada y retroalimentación del negocio.
 
+### Criterios de terminación y aceptación
+
+**Calidad del producto representado — Definición de Terminado (DoD):**
+
+Cada historia debe cumplir sus criterios de aceptación y los siguientes criterios de calidad:
+
+1. **Pruebas:** definir los casos unitarios, de integración y manuales aplicables, con entradas, pasos y resultados esperados; resolver los fallos que impidan aceptar la historia.
+2. **Seguridad:** comprobar validaciones y permisos en el servidor para proteger los registros y archivos de cada cliente y sede.
+3. **Uso en dispositivos:** comprobar celular, computadora y teclado, con etiquetas, foco visible y conservación del registro abierto y sus datos al guardar o cancelar.
+4. **Revisión técnica:** otro integrante del equipo profesional del escenario revisa el trabajo y se resuelven sus observaciones.
+5. **Integración:** incorporar los cambios a la rama principal y comprobarlos en el entorno de pruebas previsto, conservando las funciones anteriores; los formularios compartidos utilizan los mismos registros.
+6. **Documentación:** actualizar la documentación mínima de la función y su evidencia de comprobación, diferenciando resultados ejecutados y supuestos simulados.
+
+**Control del expediente, estimaciones y presupuesto:** las 105 tareas conservan su resultado, dependencias, sprint, profesional y horas. Las sumas y los bloques deben ser consistentes y el presupuesto, recalculable. Los cambios justificados de estimación o presupuesto conservan el motivo y los valores anteriores y actualizan los cálculos y apartados afectados. Brian y Jeremy realizan la revisión cruzada del expediente.
+
+**Aceptación final del escenario:** S5 exige HTTPS, correo, persistencia, restauración, guía y aceptación, con riesgos, cambios y resultados documentados.
+
+En el curso se documentan los casos y la evidencia esperada de esa ejecución; los resultados supuestos se rotulan **simulados**. El cierre académico exige coherencia y revisión documental, sin entregar una aplicación funcional real.
+
 ### Sprints y Sprint Backlogs
 
 Cada sprint define objetivo (**Sprint Goal**), incremento, selección (**Sprint Backlog**), aceptación y documento académico. [Estimaciones](#estimación-y-asignación-de-las-tareas), [capacidad](#disponibilidad-y-carga-por-sprint) y [costos](#presupuesto-total-y-distribución) sustentan **22/28/23/25/7 tareas**.
@@ -1288,8 +1338,8 @@ Cada sprint define objetivo (**Sprint Goal**), incremento, selección (**Sprint 
 > **Estimaciones de horas en los Sprints vs. puntos de historia:**
 >
 > - **Horas base de las tareas técnicas:** Las horas indicadas en las tablas de cada Sprint Backlog (182 h en S1, 230 h en S2, 200 h en S3, 224 h en S4 y 90 h en S5, sumando **926 h base**) son estimaciones de trabajo de las 105 tareas técnicas (T001–T105). Su finalidad es calcular la capacidad del equipo ficticio de ocho profesionales, planificar la duración y sustentar el presupuesto financiero simulado; **no representan estimaciones de las historias de usuario**.
-> - **Puntos de historia relativos:** Los puntos de historia (**96 pts totales**) son medidas de esfuerzo relativo y complejidad según Fibonacci que pertenecen exclusivamente a las historias de usuario (H01–H12). **No equivalen directamente a horas-persona**.
-> - **Historias distribuidas en múltiples Sprints:** Varias historias (como H01, H05, H06, H07, H09, H10 y H12) distribuyen sus tareas técnicas en más de un Sprint. **Los puntos de historia no se fraccionan ni se duplican en cada Sprint Backlog**. Una historia únicamente se contabiliza como terminada en el Sprint donde se completen todas sus tareas técnicas asociadas, satisfaga sus criterios de aceptación específicos y cumpla integralmente la Definition of Done (DoD). No se dividen puntos proporcionalmente entre tareas ni se inventan velocidades ficticias del equipo.
+> - **Puntos de historia relativos:** Los **124 puntos de historia** corresponden a las ocho historias sin subdividir y las dieciséis subdivisiones de H05, H07, H09 y H12. Los totales de estas cuatro historias principales son subtotales de sus partes. Los puntos no se convierten directamente en horas-persona.
+> - **Entrega de historias y subdivisiones:** una historia sin subdividir o una subdivisión reconoce sus puntos cuando termina sus tareas, cumple sus criterios de aceptación y satisface la DoD. Los puntos no se fraccionan ni duplican entre sprints. La historia principal desglosada se acepta al completar todas sus partes; su subtotal no se añade otra vez. Las asignaciones técnicas existentes se conservan y los casos que atraviesan sprints continúan sujetos a revisión de planificación.
 
 Activar solo funciones completadas con restricciones de Semana 3. T010 — Resumen cliente y T027 — Resumen César integran los paneles; antes, formularios/listados disponibles. Inicio con cobro bloqueado hasta T033 — Pago previo. Una ejecución posterior debe comprobar los casos.
 
@@ -1412,13 +1462,14 @@ Activar solo funciones completadas con restricciones de Semana 3. T010 — Resum
 
 **77 tareas propias por página y 28 comunes**, definidas y estimadas una vez. Cada historia indica persona, página/reglas y autor documental; las tablas conservan resultado y dependencias. Cliente y César utilizan los mismos registros compartidos.
 
-Las historias describen objetivos de usuario. H01–H12 se agrupan por página para consultar este expediente; durante Planning se refinan en entregas pequeñas y comprobables. Los sprints seleccionan las tareas de cada entrega. [Agile Alliance: historias de usuario](https://agilealliance.org/glossary/user-stories/).
+Las 12 historias principales organizan las funciones por objetivo y página. H05, H07, H09 y H12 se detallan en 16 subdivisiones, cada una con sus tareas y criterios. Los sprints seleccionan tareas de esas entregas; las subdivisiones conservan las páginas previstas. [Agile Alliance: historias de usuario](https://agilealliance.org/glossary/user-stories/).
 
 #### Simbología de las historias y las tareas
 
 | Símbolo      | Significado                                                                                        |
 | ------------ | -------------------------------------------------------------------------------------------------- |
-| H01–H12      | Historia por objetivo/página; H01 Landing y H08 Mi cuenta. H04 reúne dos páginas.                  |
+| H01–H12      | Historia principal por objetivo/página; H01 Landing y H08 Mi cuenta. H04 reúne dos páginas. |
+| H05.1–H05.4, H07.1–H07.4, H09.1–H09.4, H12.1–H12.4 | Las 16 subdivisiones de las cuatro historias principales desglosadas. |
 | T001–T105    | Tarea de construcción, preparación o comprobación; rangos incluyen extremos, comas separan tareas. |
 | Común        | Compartida y contabilizada una vez.                                                                |
 | Dependencias | Tareas que deben terminar antes; — sin prerrequisitos registrados.                                 |
@@ -1427,7 +1478,7 @@ Las historias describen objetivos de usuario. H01–H12 se agrupan por página p
 | O/Base/P     | Esfuerzo favorable/central/desfavorable.                                                           |
 | Tramo        | Posición dentro de 64 h efectivas/sprint; 8–24 ocupa 16 h, no horas del reloj.                     |
 
-Los ID ordenan el catálogo; prioridad/dependencias ordenan ejecución. T078–T081 preparan la aplicación en Sprint 1 aunque tengan número mayor. Total: **12 historias, 13 páginas, 105 tareas**.
+Los ID ordenan el catálogo; prioridad/dependencias ordenan ejecución. T078–T081 preparan la aplicación en Sprint 1 aunque tengan número mayor. Total: **12 historias principales, 16 subdivisiones en 4 de ellas, 13 páginas y 105 tareas**.
 
 **Responsable documental:** Brian, Jeremy o Brian y Jeremy. **Cliente/César:** usuarios. **Ejecutor:** profesional hipotético, identificado en [puestos](#puestos-experiencia-y-dedicación).
 
@@ -1489,6 +1540,8 @@ Los ID ordenan el catálogo; prioridad/dependencias ordenan ejecución. T078–T
 
 **Página y reglas:** [Panel del cliente](#panel-del-cliente). **Responsable documental:** Jeremy.
 
+**Subdivisiones:** [H05.1 — Solicitar consultorías con correo verificado](#h051--solicitar-consultorías-con-correo-verificado); [H05.2 — Solicitar nuevas visitas y cambios de agenda](#h052--solicitar-nuevas-visitas-y-cambios-de-agenda); [H05.3 — Consultar solicitudes y decidir propuestas](#h053--consultar-solicitudes-y-decidir-propuestas); [H05.4 — Consultar resumen e historial de atenciones](#h054--consultar-resumen-e-historial-de-atenciones).
+
 | ID   | Tarea                               | Resultado comprobable                                                                      | Dependencias           |
 | ---- | ----------------------------------- | ------------------------------------------------------------------------------------------ | ---------------------- |
 | T009 | Verificar correo.                   | Aviso, reenvío y habilitación según [verificación](#verificación-del-correo-en-el-portal). | T006                   |
@@ -1529,6 +1582,8 @@ Los ID ordenan el catálogo; prioridad/dependencias ordenan ejecución. T078–T
 
 **Página y reglas:** [Panel de administración de César](#panel-de-administración-de-césar). **Responsable documental:** Brian.
 
+**Subdivisiones:** [H07.1 — Registrar contactos y valorar consultorías](#h071--registrar-contactos-y-valorar-consultorías); [H07.2 — Gestionar consultorías y comprobar el anticipo](#h072--gestionar-consultorías-y-comprobar-el-anticipo); [H07.3 — Registrar el tratamiento y las recomendaciones reales](#h073--registrar-el-tratamiento-y-las-recomendaciones-reales); [H07.4 — Publicar y corregir atenciones desde el panel operativo](#h074--publicar-y-corregir-atenciones-desde-el-panel-operativo).
+
 | ID   | Tarea                            | Resultado comprobable                                                                                       | Dependencias                 |
 | ---- | -------------------------------- | ----------------------------------------------------------------------------------------------------------- | ---------------------------- |
 | T027 | Mostrar pendientes de César.     | Tarjetas, ficha y filtros; listado mediante T029 — Solicitudes.                                             | T029, T059, T068, T075, T077 |
@@ -1566,6 +1621,8 @@ Los ID ordenan el catálogo; prioridad/dependencias ordenan ejecución. T078–T
 **Historia:** César: conservar clientes/lugares y controlar las cuentas autorizadas para su historial.
 
 **Página y reglas:** [Clientes](#clientes). **Responsable documental:** Brian. T050 — Buscar cuenta, T051 — Asociar, T052 — Retirar y T054 — Relacionar históricos: Brian y Jeremy.
+
+**Subdivisiones:** [H09.1 — Registrar y mantener clientes particulares y empresas](#h091--registrar-y-mantener-clientes-particulares-y-empresas); [H09.2 — Administrar ubicaciones y frecuencias de visita](#h092--administrar-ubicaciones-y-frecuencias-de-visita); [H09.3 — Asociar y revocar cuentas con permisos por sede](#h093--asociar-y-revocar-cuentas-con-permisos-por-sede); [H09.4 — Incorporar antecedentes y clasificarlos por sede](#h094--incorporar-antecedentes-y-clasificarlos-por-sede).
 
 | ID   | Tarea                                    | Resultado comprobable                                                          | Dependencias           |
 | ---- | ---------------------------------------- | ------------------------------------------------------------------------------ | ---------------------- |
@@ -1624,6 +1681,8 @@ Los ID ordenan el catálogo; prioridad/dependencias ordenan ejecución. T078–T
 **Historia:** César: comprobar cobros y conservar documentos y entregas.
 
 **Página y reglas:** [Cobros y documentos](#cobros-y-documentos). **Responsable documental:** Brian.
+
+**Subdivisiones:** [H12.1 — Confirmar, rechazar y corregir cobros](#h121--confirmar-rechazar-y-corregir-cobros); [H12.2 — Guardar y versionar recibos de pagos confirmados](#h122--guardar-y-versionar-recibos-de-pagos-confirmados); [H12.3 — Custodiar facturas electrónicas externas y correcciones](#h123--custodiar-facturas-electrónicas-externas-y-correcciones); [H12.4 — Registrar la entrega de documentos y recomendaciones](#h124--registrar-la-entrega-de-documentos-y-recomendaciones).
 
 | ID   | Tarea                                 | Resultado comprobable                                                            | Dependencias     |
 | ---- | ------------------------------------- | -------------------------------------------------------------------------------- | ---------------- |
@@ -1719,10 +1778,685 @@ T078–T105 cubren preparación, componentes reutilizados, pruebas, alojamiento 
 | ID   | Tarea                      | Resultado comprobable                                                                                                           | Dependencias          |
 | ---- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
 | T103 | Preparar guía para César.  | Páginas, contactos, atención en ambos dispositivos, asociación por sede, cobros, entrega y respaldo.                            | T061, T096–T097, T102 |
-| T104 | Validar entrega con César. | Aceptación simulada de 12 historias y tareas comunes tras T001–T103, según [criterios](#criterios-de-terminación-y-aceptación). | T001–T103             |
+| T104 | Validar entrega con César. | Aceptación simulada de las 12 historias principales, incluidas las 16 subdivisiones de H05, H07, H09 y H12, y las tareas comunes tras T001–T103, según [criterios](#criterios-de-terminación-y-aceptación). | T001–T103             |
 | T105 | Documentar cierre.         | Aceptación, resultados y lecciones conservados.                                                                                 | T104                  |
 
-#### Estimación y asignación de las tareas
+### Historias de usuario desarrolladas — Especificación formal según plantilla
+
+#### Introducción y metodología de desarrollo
+
+**Proyecto:** Sistema de Gestión para RYC Control de Plagas
+**Curso:** Administración de Proyectos Informáticos (ISW-912)
+**Integrantes:** Brian Rodríguez Pérez y Jeremy Rodríguez Esquivel
+**Universidad Técnica Nacional — Sede Regional San Carlos**
+**Profesora:** Yesenia Calvo Araya
+
+Las historias de usuario describen las funcionalidades y el comportamiento esperado del sistema desde la perspectiva de las personas que interactúan con él: César Rodríguez Corrales como administrador y operador técnico, y los clientes particulares o empresariales que contratan los servicios de control de plagas.
+
+El **Product Backlog** contiene **12 historias principales, H01–H12**, y **16 subdivisiones dentro de H05, H07, H09 y H12**. Las historias sin subdividir y las subdivisiones suman **124 puntos de historia**; las cuatro principales desglosadas muestran únicamente el subtotal de sus partes. Se adopta la estructura establecida en la plantilla oficial de la asignatura (**UserStoryTemplate.docx**), asegurando que cada historia defina con precisión su alcance, valor y condiciones de aceptación:
+
+- **Título e identificador:** H01–H12 para historias principales; H05.1–H05.4, H07.1–H07.4, H09.1–H09.4 y H12.1–H12.4 para sus subdivisiones, vinculadas con el backlog técnico y los Sprint Backlogs.
+- **Tareas técnicas relacionadas:** Vínculo con las tareas de implementación (T001–T105) del backlog técnico.
+- **Estructura canónica:** Formulación mediante la tríada **Como [rol en el sistema], quiero [capacidad funcional concreta], para [beneficio o valor obtenido]**.
+- **Criterios de aceptación verificables:** Definición estructurada mediante **Dado que [contexto o precondición], cuando [evento o acción realizada], entonces [resultado observable]**, cubriendo casos de éxito, validaciones y restricciones operativas.
+- **Prioridad:** Clasificación de valor de negocio (Alta o Media).
+- **Estimación en puntos:** escala de Fibonacci de 1, 2, 3, 5 y 8 para historias sin subdividir y subdivisiones. Cada principal desglosada muestra la suma de sus cuatro partes, sin añadir una estimación independiente.
+- **Justificación de la estimación:** Explicación concisa de los factores determinantes del esfuerzo relativo.
+- **Notas adicionales:** Delimitaciones de alcance, reglas de negocio y restricciones operativas.
+
+El catálogo se presenta por familias: H01, H02, H03, H04, H05 con H05.1–H05.4, H06, H07 con H07.1–H07.4, H08, H09 con H09.1–H09.4, H10, H11 y H12 con H12.1–H12.4. Cada subdivisión aplica los criterios de su principal que correspondan a su alcance, además de sus criterios específicos.
+
+#### Historia H01: Conocer RYC y contactar desde la Landing Page
+
+**Tareas técnicas relacionadas:** T001, T002, T083
+
+**Historia de usuario**
+
+Como persona interesada en contratar un servicio de control de plagas,
+quiero consultar en la página web pública información sobre la empresa, los servicios que ofrece, las zonas de atención y las condiciones generales, así como preparar un mensaje de contacto directo por WhatsApp,
+para conocer si RYC resuelve mi problema de plagas y comunicarme de forma inmediata sin necesidad de registrarme ni crear una cuenta en el sistema.
+
+**Criterios de aceptación**
+
+1. Dado que una persona ingresa a la Landing Page pública, cuando el contenido carga, entonces visualiza la presentación de RYC, el perfil técnico del operador, los servicios disponibles y la cobertura en toda Costa Rica y las condiciones de consultoría: gratuita en el cantón de San Carlos y cotizada con pago previo fuera de él.
+2. Dado que la persona desea comunicarse directamente, cuando selecciona la opción rápida de WhatsApp, entonces se abre una conversación dirigida al número telefónico autorizado de RYC.
+3. Dado que la persona utiliza el formulario de contacto, cuando completa nombre, teléfono, lugar y descripción del problema, entonces el sistema valida los datos y prepara un mensaje codificado con esa información estructurada.
+4. Dado que falta un dato obligatorio en el formulario, cuando la persona intenta continuar, entonces el sistema indica de forma visual cuál campo debe completar.
+5. Dado que la persona abre WhatsApp o copia el mensaje, cuando regresa a la página, entonces el sistema no registra automáticamente una solicitud en la base de datos ni reserva citas de atención.
+6. Dado que WhatsApp no puede abrirse en el dispositivo, cuando ocurre el fallo de protocolo, entonces la interfaz ofrece el número autorizado y el contenido del texto para copiarlos manualmente al portapapeles.
+
+**Prioridad:** Alta.
+**Estimación:** 5 puntos de historia.
+**Justificación de la estimación:** Integra diseño web adaptable de acceso público, validación de formularios en el cliente, codificación URI multiplataforma y contingencias de copiado al portapapeles sin persistencia en base de datos.
+**Notas adicionales:** La publicación de información comercial requiere aprobación de César; el formulario público no guarda registros huérfanos; los precios y la disponibilidad están sujetos a evaluación técnica; el acceso al portal es opcional.
+
+#### Historia H02: Iniciar sesión en la aplicación web
+
+**Tareas técnicas relacionadas:** T003, T004, T082
+
+**Historia de usuario**
+
+Como usuario registrado del sistema (cliente o César),
+quiero iniciar sesión mediante mi correo electrónico y contraseña,
+para acceder de forma segura a las funciones y datos que me corresponden según mi rol y permisos autorizados.
+
+**Criterios de aceptación**
+
+1. Dado que el usuario ingresa sus credenciales válidas, cuando el sistema las comprueba, entonces inicia su sesión y lo redirige automáticamente según su rol (César al área administrativa y clientes al portal).
+2. Dado que las credenciales son incorrectas, cuando el usuario intenta ingresar, entonces el sistema rechaza el acceso con un mensaje neutro sin revelar cuál dato falló.
+3. Dado que se registran múltiples intentos fallidos consecutivos, cuando se alcanza el umbral de seguridad establecido, entonces el sistema restringe temporalmente nuevos intentos.
+4. Dado que el usuario permanece inactivo durante sesenta minutos, cuando vence la sesión, entonces el sistema exige autenticarse nuevamente para continuar.
+5. Dado que el usuario presiona cerrar sesión, cuando ejecuta la acción, entonces el sistema invalida la sesión activa y redirige a la pantalla de acceso.
+
+**Prioridad:** Alta.
+**Estimación:** 5 puntos de historia.
+**Justificación de la estimación:** Manejo de sesiones seguras, autenticación mediante huellas de contraseña (hashes) generadas con Argon2id, redirección por roles, mitigación de fuerza bruta y políticas de expiración por inactividad.
+**Notas adicionales:** El registro público nunca otorga permisos administrativos; las restricciones deben comprobarse en el servidor y no limitarse a ocultar elementos visuales en el navegador.
+
+#### Historia H03: Crear una cuenta de cliente
+
+**Tareas técnicas relacionadas:** T005, T006, T082
+
+**Historia de usuario**
+
+Como cliente interesado en utilizar las funciones del portal web,
+quiero registrar una cuenta personal mediante mis datos básicos de contacto y credenciales,
+para ingresar a la plataforma y dar seguimiento digital a mis solicitudes, visitas y documentos autorizados.
+
+**Criterios de aceptación**
+
+1. Dado que una persona ingresa a la opción de crear cuenta, cuando completa nombre, correo electrónico, teléfono opcional, contraseña y confirmación, entonces el sistema registra la cuenta con rol de cliente.
+2. Dado que el correo electrónico ya pertenece a una cuenta registrada, cuando se intenta registrarlo nuevamente, entonces el sistema impide el duplicado y muestra una advertencia adecuada.
+3. Dado que la contraseña no cumple las condiciones de seguridad o no coincide con su confirmación, cuando se intenta guardar, entonces el sistema solicita corregirla detallando los requisitos pendientes.
+4. Dado que el registro se completa exitosamente, cuando se almacena la cuenta, entonces el sistema le asigna un identificador único (ID de cuenta) y muestra el aviso para verificar el correo.
+
+**Prioridad:** Alta.
+**Estimación:** 5 puntos de historia.
+**Justificación de la estimación:** Validación de datos personales, control de unicidad de correos, hashing de contraseñas con Argon2id y asignación de identificadores únicos para procesos de vinculación.
+**Notas adicionales:** Crear una cuenta no genera automáticamente una ficha comercial de cliente ni da acceso a servicios anteriores; la asociación con el historial requiere verificación y autorización de César.
+
+#### Historia H04: Recuperar el acceso desde Olvidé mi contraseña
+
+**Tareas técnicas relacionadas:** T007, T008, T082
+
+**Historia de usuario**
+
+Como usuario registrado del sistema que olvidó su contraseña,
+quiero solicitar un enlace seguro de recuperación a mi correo electrónico,
+para establecer una nueva contraseña y restablecer el acceso a mi cuenta.
+
+**Criterios de aceptación**
+
+1. Dado que el usuario solicita recuperación de contraseña, cuando ingresa su correo, entonces el sistema muestra una confirmación general sin revelar si la cuenta existe en la base de datos.
+2. Dado que el correo corresponde a una cuenta activa, cuando se procesa la solicitud, entonces se envía un enlace de recuperación con un token de un solo uso vigente por treinta minutos.
+3. Dado que el usuario accede mediante un enlace válido y vigente, cuando introduce y confirma su nueva contraseña, entonces el sistema actualiza la clave y anula el token utilizado.
+4. Dado que el enlace expiró o ya fue utilizado previamente, cuando se intenta usar, entonces el sistema rechaza la operación e invita a solicitar uno nuevo.
+
+**Prioridad:** Media.
+**Estimación:** 5 puntos de historia.
+**Justificación de la estimación:** Generación y validación de tokens criptográficos de un solo uso con expiración temporal, plantillas de correo transaccional y prevención de enumeración de usuarios.
+**Notas adicionales:** Los enlaces tienen vigencia estricta de 30 minutos y quedan inutilizados tras su primer uso exitoso; el cambio de contraseña invalida sesiones anteriores.
+
+#### Historia H05: Consultar mi resumen y gestionar mis atenciones
+
+**Tareas técnicas relacionadas:** T009, T010, T011, T012, T013, T014, T015, T016, T017, T018, T019, T020, T021, T084, T085, T086
+
+**Historia de usuario**
+
+Como cliente registrado,
+quiero verificar mi correo, solicitar consultorías y nuevas visitas, evaluar propuestas de trabajo, consultar citas programadas con opción de solicitar cambios y revisar el historial de tratamientos de mis ubicaciones autorizadas,
+para coordinar de forma integral la atención de plagas en mis inmuebles y contar con trazabilidad técnica de los servicios recibidos.
+
+**Criterios de aceptación**
+
+1. Dado que el cliente accede mediante el enlace recibido en su correo electrónico, cuando el sistema valida el token de confirmación, entonces marca el correo como verificado y habilita las acciones protegidas del portal.
+2. Dado que el cliente tiene su correo verificado, cuando completa el formulario de consultoría (ubicación territorial, problema y teléfono), entonces la solicitud se registra con estado Recibida y genera una referencia única.
+3. Dado que la consultoría solicitada corresponde a una ubicación fuera de San Carlos, cuando se revisan las condiciones, entonces el sistema notifica que el servicio queda sujeto a cotización previa y pago confirmado antes de realizar la visita.
+4. Dado que el cliente solicita una nueva visita técnica, cuando selecciona una de sus ubicaciones activas autorizadas e ingresa el motivo, entonces el sistema registra la solicitud con estado Recibida conservando la fecha preferida sin bloquear la agenda.
+5. Dado que existe una propuesta de trabajo pendiente, cuando el cliente abre su detalle, entonces visualiza descripción, total, moneda, anticipo del 50 % y saldo del 50 %, pudiendo aceptar o rechazar el trabajo de forma definitiva.
+6. Dado que el cliente acepta formalmente la propuesta, cuando se procesa la decisión, entonces se genera la orden de trabajo correspondiente sin acreditar dinero automáticamente.
+7. Dado que el cliente tiene visitas en estado Programada, cuando solicita reprogramación o cancelación indicando su motivo, entonces se genera una solicitud de cambio para revisión de César sin alterar la cita activa en la agenda.
+8. Dado que una cuenta verificada aún no tiene historial asociado, cuando el cliente completa el formulario de consultoría cumpliendo las condiciones del territorio, entonces puede solicitar una consultoría inicial sin necesidad de que César haya asociado previamente registros a esa cuenta.
+9. Dado que el cliente consulta su historial, cuando revisa los servicios finalizados y publicados que está autorizado a consultar, entonces puede visualizar fecha, plagas identificadas, tratamiento aplicado, químicos y recomendaciones de sus sedes autorizadas, sin tener acceso a las notas internas privadas de César.
+
+**Prioridad:** Media.
+**Estimación total:** 18 puntos, subtotal de H05.1–H05.4. Las subdivisiones se estiman individualmente y se suman una vez.
+**Justificación de la estimación:** Agrupación de gran amplitud funcional que integra verificación de correos, lógica territorial de consultorías, validación de permisos por sede (control IDOR), decisiones contractuales con esquemas 50/50, gestión de agenda y consulta de historiales técnicos.
+**Notas adicionales:** Sus tareas técnicas se desarrollan progresivamente a lo largo de los Sprints 1, 2, 3 y 4; solicitar atención no reserva automáticamente citas en el calendario; aceptar una propuesta genera la orden pero el anticipo del 50 % debe confirmarse antes de iniciar el tratamiento; César decide si aprueba las reprogramaciones.
+
+##### H05.1 — Solicitar consultorías con correo verificado
+
+**Puntos:** 5. **Prioridad:** Media. **Entrega prevista:** S2.
+
+**Historia:** Como cliente, quiero verificar mi correo y enviar una consultoría con una referencia única, para solicitar atención sin tener que registrar directamente una cita.
+
+**Tareas asociadas:** T009, T011, T012, T014. **Dependencias clave:** T006, T088, T092, T083 y T017.
+
+**Criterios de aceptación:**
+
+1. Dado que el cliente verifica su correo y completa los datos obligatorios, cuando envía una consultoría, entonces esta se guarda como Recibida, con referencia única, sin reservar horario.
+
+2. Dado que la consultoría es fuera de San Carlos, cuando se consulta su detalle o se prepara el mensaje para WhatsApp, entonces se advierte la cotización y el pago previo, sin crear solicitudes duplicadas.
+
+**Justificación de los puntos:** Combina verificación, formulario territorial y continuidad del mismo contacto sin automatizar WhatsApp.
+
+##### H05.2 — Solicitar nuevas visitas y cambios de agenda
+
+**Puntos:** 5. **Prioridad:** Media. **Entrega prevista:** S3.
+
+**Historia:** Como cliente autorizado, quiero solicitar nuevas visitas y pedir cambios sobre las programadas, para coordinar la atención sin modificar la agenda de César por mi cuenta.
+
+**Tareas asociadas:** T017, T018, T019. **Dependencias clave:** T048, T051, T059 y T060.
+
+**Criterios de aceptación:**
+
+1. Dado que una cuenta tiene acceso a una ubicación activa, cuando solicita una nueva visita, entonces se registra la petición sin reservar una fecha automáticamente.
+
+2. Dado que existe una visita Programada, cuando el cliente pide cancelarla o reprogramarla, entonces se envía la solicitud de cambio y la visita original continúa hasta que César resuelva.
+
+**Justificación de los puntos:** La autorización por ubicación y la diferencia entre solicitar y modificar la agenda añaden reglas de negocio.
+
+##### H05.3 — Consultar solicitudes y decidir propuestas
+
+**Puntos:** 5. **Prioridad:** Media. **Entrega prevista:** S4.
+
+**Historia:** Como cliente, quiero revisar mis solicitudes y aceptar o rechazar propuestas de trabajo, para conocer y decidir las condiciones antes de contratar.
+
+**Tareas asociadas:** T013, T015, T016. **Dependencias clave:** T012, T017, T084, T085 y T086.
+
+**Criterios de aceptación:**
+
+1. Dado que una solicitud pertenece a la cuenta autorizada, cuando el cliente la consulta, entonces ve su estado y la propuesta disponible sin acceder a datos de otros clientes.
+
+2. Dado que existe una propuesta pendiente, cuando la acepta, entonces se crea una única orden con anticipo y saldo, sin confirmar dinero; cuando la rechaza, no se crea orden.
+
+**Justificación de los puntos:** Requiere control del estado de la propuesta y una decisión única enlazada a órdenes y permisos.
+
+##### H05.4 — Consultar resumen e historial de atenciones
+
+**Puntos:** 3. **Prioridad:** Media. **Entrega prevista:** S4.
+
+**Historia:** Como cliente autorizado, quiero ver mi resumen y los servicios publicados de mis ubicaciones, para consultar tratamientos y recomendaciones sin solicitar otra vez la información.
+
+**Tareas asociadas:** T010, T020, T021. **Dependencias clave:** T038, T041, T051 y T089.
+
+**Criterios de aceptación:**
+
+1. Dado que el cliente tiene acceso a una sede, cuando abre el historial o un servicio publicado, entonces solo aparecen atenciones autorizadas y no se muestran notas internas.
+
+2. Dado que consulta el panel, cuando cambia entre sus secciones, entonces conserva los filtros y puede acceder al detalle del servicio publicado.
+
+**Justificación de los puntos:** Reutiliza los registros y permisos desarrollados previamente para presentar un resumen y consulta.
+
+#### Historia H06: Consultar mis pagos y documentos
+
+**Tareas técnicas relacionadas:** T022, T023, T024, T025, T026
+
+**Historia de usuario**
+
+Como cliente que contrató servicios de RYC,
+quiero consultar el estado financiero de mis órdenes, reportar pagos realizados adjuntando comprobantes y descargar recibos o facturas disponibles,
+para conocer mis saldos pendientes, acreditar transferencias y conservar el respaldo documental de mis atenciones.
+
+**Criterios de aceptación**
+
+1. Dado que el cliente consulta la sección de pagos de una orden autorizada, cuando carga la vista, entonces visualiza el monto pactado, el dinero efectivamente confirmado y el saldo pendiente en la única moneda de esa orden, CRC o USD.
+2. Dado que el cliente reporta un pago por SINPE Móvil o transferencia bancaria, cuando ingresa el monto, número de referencia y adjunta comprobante (PDF, JPG, PNG hasta 5 MiB), entonces el reporte queda almacenado como Pendiente de revisión.
+3. Dado que el cliente envía un reporte de pago, cuando se guarda el registro, entonces el saldo de la orden no se reduce hasta que César confirme que recibió el dinero: ingreso bancario para SINPE o transferencia y recepción física para efectivo.
+4. Dado que existen recibos o facturas electrónicas autorizadas para su atención, cuando el cliente selecciona descargar, entonces obtiene los archivos disponibles (PDF, XML de factura y respuesta de Hacienda, cuando exista) mediante descarga autenticada y segura.
+5. Dado que un reporte de pago fue rechazado por César, cuando el cliente consulta el detalle, entonces visualiza el motivo justificado y dispone de la opción para ingresar un nuevo reporte corregido.
+
+**Prioridad:** Media.
+**Estimación:** 8 puntos de historia.
+**Justificación de la estimación:** Manejo de información financiera con monedas segregadas (CRC y USD), carga segura de archivos con validación de tipo MIME y cuotas de tamaño, y descargas controladas mediante endpoints autenticados.
+**Notas adicionales:** Reportar un pago no extingue la deuda; solo los pagos confirmados por César descuentan saldo; los documentos fiscales se generan externamente y se consultan a modo de repositorio.
+
+#### Historia H07: Consultar pendientes y gestionar las atenciones
+
+**Tareas técnicas relacionadas:** T027, T028, T029, T030, T031, T032, T033, T034, T035, T036, T037, T038, T039, T040, T084, T085, T086
+
+**Historia de usuario**
+
+Como César, administrador y responsable operativo de RYC,
+quiero registrar contactos recibidos, gestionar solicitudes de consultoría según su zona geográfica, preparar propuestas y registrar decisiones, registrar en campo los datos reales de los tratamientos aplicados y publicar los servicios finalizados,
+para organizar integralmente el ciclo de atención comercial y técnico de la empresa, asegurando un historial fidedigno y trazable.
+
+**Criterios de aceptación**
+
+1. Dado que César recibe una consulta por llamada o WhatsApp, cuando la registra con datos básicos, entonces crea una ficha de seguimiento con estado Recibida sin exigir ubicación definitiva.
+2. Dado que César evalúa una consultoría en San Carlos, cuando la revisa, entonces se determina gratuita sin requerir cobro; si es fuera del cantón, registra la cotización requerida y permite programar la visita con pago pendiente, pero impide iniciar la atención cobrada o publicarla sin el pago previo requerido confirmado.
+3. Dado que César prepara una propuesta de tratamiento, cuando ingresa el monto total, entonces el sistema calcula automáticamente el anticipo del 50 % y el saldo del 50 %.
+4. Dado que el cliente aprueba la propuesta por canal externo (WhatsApp o llamada), cuando César registra la decisión, fecha y canal, entonces se genera la orden de trabajo correspondiente sin duplicar registros.
+5. Dado que César finaliza un servicio en campo, cuando documenta la atención, entonces asocia cliente, ubicación, fecha real, plagas identificadas desde el catálogo (o justifica servicio preventivo), productos químicos con cantidades exactas y unidad de medida.
+6. Dado que César ingresa notas de la atención, cuando las guarda, entonces el sistema separa de forma estricta las recomendaciones públicas para el cliente de las observaciones internas privadas de administración.
+7. Dado que César intenta publicar un servicio de tratamiento que requería anticipo del 50 % sin que este figure como pago confirmado en la orden, cuando presiona publicar, entonces el sistema bloquea la acción hasta que se verifique el pago previo.
+8. Dado que la atención se publica exitosamente, cuando existe una visita en agenda asociada, entonces su estado pasa a Realizada y se habilita la consulta en el portal del cliente.
+
+**Prioridad:** Alta.
+**Estimación total:** 20 puntos, subtotal de H07.1–H07.4. Las subdivisiones se estiman individualmente y se suman una vez.
+**Justificación de la estimación:** Historia central de la administración operativa que abarca captura comercial de prospectos, validación geográfica de consultorías, cálculo de anticipos 50/50, persistencia de tratamientos químicos en campo, verificación de pagos previos y auditoría de publicaciones.
+**Notas adicionales:** Sus tareas técnicas se desarrollan en los Sprints 2, 3 y 4; el software no prescribe dosis químicas automáticas, sino que registra lo efectivamente aplicado por César; las notas privadas nunca se exponen al cliente.
+
+##### H07.1 — Registrar contactos y valorar consultorías
+
+**Puntos:** 5. **Prioridad:** Alta. **Entrega prevista:** S2.
+
+**Historia:** Como César, quiero registrar contactos recibidos y calcular las condiciones iniciales de una consultoría, para dar seguimiento a personas con o sin cuenta web.
+
+**Tareas asociadas:** T028, T029, T031. **Dependencias clave:** T012, T045, T048 y T092.
+
+**Criterios de aceptación:**
+
+1. Dado que César recibe un mensaje o llamada, cuando registra el contacto, entonces crea una ficha Recibida sin exigir aún una ubicación definitiva.
+
+2. Dado que revisa la zona de consultoría, cuando determina el costo, entonces identifica gratuidad dentro de San Carlos o cotización requerida fuera de él.
+
+**Justificación de los puntos:** Abarca contacto multicanal y reglas territoriales sin duplicar el registro inicial.
+
+##### H07.2 — Gestionar consultorías y comprobar el anticipo
+
+**Puntos:** 5. **Prioridad:** Alta. **Entrega prevista:** S3.
+
+**Historia:** Como César, quiero actualizar consultorías y verificar el pago requerido antes de iniciar una atención, para cumplir las condiciones aceptadas por el cliente.
+
+**Tareas asociadas:** T030, T033, T040. **Dependencias clave:** T029, T031, T059, T068, T085 y T087.
+
+**Criterios de aceptación:**
+
+1. Dado que existe una consultoría, cuando César actualiza su estado o recupera la ficha, entonces se conservan solicitud, cliente y ubicación sin duplicarlos.
+
+2. Dado que el servicio exige pago previo, cuando se intenta iniciar o publicar sin el importe confirmado, entonces el sistema bloquea la operación y muestra lo pendiente.
+
+**Justificación de los puntos:** Integra estados, reglas de anticipo y acceso a la misma ficha de atención.
+
+##### H07.3 — Registrar el tratamiento y las recomendaciones reales
+
+**Puntos:** 5. **Prioridad:** Alta. **Entrega prevista:** S4.
+
+**Historia:** Como César, quiero documentar el servicio realizado con plagas, productos, cantidades y recomendaciones, para conservar evidencia técnica fiel de cada tratamiento.
+
+**Tareas asociadas:** T034, T035, T036, T037. **Dependencias clave:** T033, T034, T065, T067 y T086.
+
+**Criterios de aceptación:**
+
+1. Dado que registra una atención, cuando selecciona las plagas y productos realmente utilizados, entonces guarda cantidades positivas con unidades válidas o justifica el servicio preventivo.
+
+2. Dado que añade recomendaciones y observaciones, cuando guarda el registro, entonces las notas internas quedan separadas de la información visible al cliente.
+
+**Justificación de los puntos:** Manejo de datos técnicos, validaciones y separación entre recomendaciones y notas privadas.
+
+##### H07.4 — Publicar y corregir atenciones desde el panel operativo
+
+**Puntos:** 5. **Prioridad:** Alta. **Entrega prevista:** S4.
+
+**Historia:** Como César, quiero gestionar decisiones externas y publicar o corregir servicios desde mi panel, para mantener visible el estado real de las atenciones.
+
+**Tareas asociadas:** T027, T032, T038, T039. **Dependencias clave:** T029, T033, T036, T037, T068, T075 y T077.
+
+**Criterios de aceptación:**
+
+1. Dado que el cliente decide por un canal externo, cuando César registra la decisión, entonces se conserva fecha y canal y no se duplica la orden.
+
+2. Dado que la atención cumple los controles previos y contiene datos del servicio, cuando César la publica, entonces queda disponible para el cliente autorizado; si la corrige, conserva el motivo y el seguimiento.
+
+**Justificación de los puntos:** Integra panel, decisiones, publicación y correcciones con varias dependencias administrativas.
+
+#### Historia H08: Consultar y administrar Mi cuenta
+
+**Tareas técnicas relacionadas:** T041, T042
+
+**Historia de usuario**
+
+Como usuario autenticado del sistema (César o cliente),
+quiero consultar mis datos personales, actualizar teléfono o nombre permitido y copiar mi ID de cuenta al portapapeles,
+para mantener mis datos de contacto correctos y disponer de mi identificador para los procesos de vinculación autorizada.
+
+**Criterios de aceptación**
+
+1. Dado que el usuario ingresa a Mi cuenta, cuando carga la página, entonces visualiza su nombre completo, correo electrónico, teléfono y su identificador alfanumérico único (ID de cuenta).
+2. Dado que el usuario modifica su nombre o número de teléfono con valores válidos, cuando guarda los cambios, entonces el perfil se actualiza en el sistema.
+3. Dado que el usuario visualiza su correo electrónico y su ID de cuenta, cuando interactúa con el formulario, entonces ambos campos permanecen bloqueados en modo de solo lectura.
+4. Dado que presiona el botón copiar ID, cuando ejecuta la acción, entonces el identificador se copia al portapapeles y se muestra una confirmación visual inmediata.
+
+**Prioridad:** Media.
+**Estimación:** 3 puntos de historia.
+**Justificación de la estimación:** Operaciones atómicas de consulta y actualización sobre el registro del usuario en sesión, protección de campos inmutables y funcionalidad de portapapeles.
+**Notas adicionales:** La interfaz es compartida entre clientes y administración; el ID de cuenta es una clave pública de búsqueda pero no concede acceso por sí solo al historial si César no autoriza la asociación.
+
+#### Historia H09: Gestionar clientes, ubicaciones y cuentas autorizadas
+
+**Tareas técnicas relacionadas:** T043, T044, T045, T046, T047, T048, T049, T050, T051, T052, T053, T054, T055
+
+**Historia de usuario**
+
+Como César, propietario y administrador de RYC Control de Plagas,
+quiero registrar y actualizar clientes particulares y empresas con sus diferentes sedes físicas y frecuencias de atención, asociar cuentas del portal con permisos por empresa o sede específica, e incorporar antecedentes de servicios históricos,
+para estructurar la base maestra de clientes, controlar quién accede digitalmente a cada inmueble y preservar el historial técnico acumulado de la empresa.
+
+**Criterios de aceptación**
+
+1. Dado que César registra un cliente particular, cuando completa nombre y teléfono obligatorios, entonces se guarda con estado Activo sin exigir correo electrónico ni cuenta web.
+2. Dado que registra una empresa, cuando ingresa razón social, nombre de contacto y teléfono, entonces se crea la ficha comercial pudiendo registrar el nombre comercial por separado.
+3. Dado que un cliente particular o empresa posee inmuebles, cuando César agrega ubicaciones indicando provincia, cantón, distrito y señas obligatorias, pudiendo registrar una frecuencia sugerida de atención en días como dato opcional, entonces quedan vinculadas unívocamente a su ficha.
+4. Dado que César desactiva un cliente o ubicación, cuando confirma la acción, entonces se bloquea su selección para nuevas atenciones pero se conserva íntegro su historial técnico anterior.
+5. Dado que un cliente particular o representante de empresa comunica su ID de cuenta, cuando César verifica su identidad por medio confiable, entonces puede asociarlo al cliente particular o a una empresa con acceso a todas las sedes o restringido a una sede física específica.
+6. Dado que un usuario con permiso de sede específica inicia sesión en el portal, cuando consulta atenciones o solicita visitas, entonces el sistema restringe su acceso estrictamente a dicha sede autorizada.
+7. Dado que César incorpora datos de servicios anteriores al sistema, cuando los registra con la información real disponible, entonces el sistema los rotula como Registro histórico sin inventar datos desconocidos ni facturas ficticias.
+8. Dado que César retira una asociación previamente otorgada a un cliente particular o empresa, cuando confirma la desvinculación, entonces el sistema conserva el registro del cambio y revoca de inmediato el acceso que dicha cuenta tenía sobre el cliente o sus sedes.
+
+**Prioridad:** Alta.
+**Estimación total:** 21 puntos, subtotal de H09.1–H09.4. Las subdivisiones se estiman individualmente y se suman una vez.
+**Justificación de la estimación:** Modela la estructura relacional central del negocio (particulares, empresas, sedes múltiples), control de acceso granular por sede (RBAC/ABAC), auditoría de asociaciones y reglas de flexibilización controlada para migración de datos legacy.
+**Notas adicionales:** Sus tareas se desarrollan a lo largo de los Sprints 1, 2, 3 y 4; una empresa puede tener múltiples sedes independientes; el historial pertenece a la sede y al cliente, no a la cuenta de usuario empleada para consultarlo.
+
+##### H09.1 — Registrar y mantener clientes particulares y empresas
+
+**Puntos:** 5. **Prioridad:** Alta. **Entrega prevista:** S2.
+
+**Historia:** Como César, quiero crear, editar y desactivar fichas de clientes particulares y empresas, para mantener sus datos comerciales sin exigirles una cuenta.
+
+**Tareas asociadas:** T043, T044, T045, T046. **Dependencias clave:** T079, T081 y T092.
+
+**Criterios de aceptación:**
+
+1. Dado que completa los datos obligatorios del tipo de cliente, cuando guarda la ficha, entonces se registra como Activa aunque no exista correo o usuario web.
+
+2. Dado que desactiva un cliente, cuando confirma la acción, entonces no se utiliza para nuevas atenciones y se preserva su historial.
+
+**Justificación de los puntos:** Diferentes tipos de cliente, validaciones y conservación de registros históricos.
+
+##### H09.2 — Administrar ubicaciones y frecuencias de visita
+
+**Puntos:** 3. **Prioridad:** Alta. **Entrega prevista:** S2.
+
+**Historia:** Como César, quiero registrar las ubicaciones y frecuencias de visita de cada cliente, para programar trabajos en el inmueble correcto.
+
+**Tareas asociadas:** T047, T048, T049. **Dependencias clave:** T045, T079 y T088.
+
+**Criterios de aceptación:**
+
+1. Dado que existe un cliente, cuando César crea una ubicación con su territorio y dirección, entonces queda vinculada a esa ficha y no a otra.
+
+2. Dado que registra una frecuencia o desactiva la ubicación, cuando guarda el cambio, entonces la frecuencia solo sugiere una visita y la sede inactiva conserva su historial.
+
+**Justificación de los puntos:** Formulario y mantenimiento acotados que reutilizan cliente y selector territorial.
+
+##### H09.3 — Asociar y revocar cuentas con permisos por sede
+
+**Puntos:** 8. **Prioridad:** Alta. **Entrega prevista:** S2.
+
+**Historia:** Como César, quiero asociar o retirar cuentas del portal verificando identidad y alcance por sede, para proteger el historial privado de cada cliente.
+
+**Tareas asociadas:** T050, T051, T052. **Dependencias clave:** T041, T048, T050, T089 y T009.
+
+**Criterios de aceptación:**
+
+1. Dado que recibe un ID de cuenta, cuando comprueba la autorización y asocia una empresa o sede, entonces el usuario solo puede consultar los registros del alcance aprobado.
+
+2. Dado que César retira una asociación, cuando confirma la operación, entonces se revoca ese permiso, se guarda el cambio y no se otorga acceso por conocer únicamente el ID.
+
+**Justificación de los puntos:** Alta incertidumbre y riesgo de seguridad en la autorización por cliente, empresa y sede.
+
+##### H09.4 — Incorporar antecedentes y clasificarlos por sede
+
+**Puntos:** 5. **Prioridad:** Alta. **Entrega prevista:** S4.
+
+**Historia:** Como César, quiero ingresar servicios anteriores y relacionarlos con sus ubicaciones cuando se conozcan, para conservar un historial real sin inventar datos.
+
+**Tareas asociadas:** T053, T054, T055. **Dependencias clave:** T034, T051, T073, T075 y T089.
+
+**Criterios de aceptación:**
+
+1. Dado que importa una atención anterior, cuando falta su fecha o ubicación, entonces el sistema conserva el dato como desconocido sin fabricar fechas ni documentos.
+
+2. Dado que un servicio o documento antiguo identifica a la empresa pero no la sede atendida, cuando se consulta, entonces solo César y la cuenta principal de esa empresa pueden verlo. Las cuentas de sede no lo ven hasta que César lo clasifique; después, solo lo consulta la cuenta de la sede correspondiente, además de César y la cuenta principal.
+
+**Justificación de los puntos:** Información incompleta, vínculos con recibos y control de exposición por sede.
+
+#### Historia H10: Programar visitas y administrar la disponibilidad
+
+**Tareas técnicas relacionadas:** T056, T057, T058, T059, T060, T061, T062, T063
+
+**Historia de usuario**
+
+Como César, encargado de realizar las visitas en campo,
+quiero agendar citas para mis clientes, reprogramar y cancelar visitas justificadas, reservar bloqueos de tiempo no laboral y consultar mi calendario en vistas de mes, semana y lista,
+para organizar eficientemente mis jornadas de trabajo, evitar colisiones de horario y planificar traslados entre cantones.
+
+**Criterios de aceptación**
+
+1. Dado que César programa una visita para un cliente y ubicación activos, cuando define tipo, fecha, hora y duración (de 15 a 480 minutos), entonces se registra con estado Programada siempre que no colisione con otra cita o bloqueo de agenda activo.
+2. Dado que una visita o bloqueo coincide total o parcialmente con el intervalo propuesto, cuando se intenta agendar o reprogramar, entonces el sistema detecta la superposición temporal y rechaza la inserción.
+3. Dado que César necesita apartar tiempo para traslados intercantonales o asuntos personales, cuando registra un bloqueo de disponibilidad con su motivo, entonces ese periodo queda reservado como no disponible.
+4. Dado que una visita requiere cambio de fecha u hora (por decisión de César o atendiendo una solicitud del cliente), cuando César confirma la reprogramación válida con su motivo, entonces el sistema actualiza la agenda y conserva el registro del horario previo.
+5. Dado que una visita debe anularse definitivamente, cuando César ingresa el motivo de cancelación, entonces el estado pasa a Cancelada y se libera el espacio en el calendario.
+6. Dado que un servicio finalizado en una ubicación tiene configurada una frecuencia preventiva en días, cuando se publica, entonces el sistema genera una sugerencia de próxima visita que requiere confirmación explícita de César antes de agendarse.
+7. Dado que César accede a la interfaz del calendario de trabajo, cuando alterna entre las vistas de Mes, Semana y Lista, entonces el sistema presenta las visitas programadas y bloqueos temporales correspondientes al intervalo seleccionado sin perder el contexto operativo.
+
+**Prioridad:** Alta.
+**Estimación:** 8 puntos de historia.
+**Justificación de la estimación:** Algoritmo de detección de solapamientos temporales en huso horario de Costa Rica (America/Costa_Rica), control de colisiones con bloqueos personales, vistas interactivas de agenda y sugerencias automáticas de seguimiento.
+**Notas adicionales:** Las tareas se desarrollan en los Sprints 2, 3 y 4; los únicos estados válidos son Programada, En curso, Realizada y Cancelada; reprogramar es una acción de modificación sobre una visita programada y no un estado nuevo.
+
+#### Historia H11: Administrar los catálogos de plagas y productos
+
+**Tareas técnicas relacionadas:** T064, T065, T066, T067
+
+**Historia de usuario**
+
+Como César, responsable técnico de los tratamientos,
+quiero gestionar los catálogos de plagas atendidas y productos plaguicidas utilizados en los tratamientos,
+para estandarizar la captura técnica de datos y seleccionar con exactitud las plagas detectadas y químicos aplicados en cada servicio.
+
+**Criterios de aceptación**
+
+1. Dado que César registra una plaga, cuando ingresa su nombre común o científico obligatorio y notas complementarias, entonces se añade al catálogo activo.
+2. Dado que César registra un producto, cuando ingresa su nombre comercial obligatorio, pudiendo registrar el ingrediente activo, referencia y notas de manipulación como campos opcionales, entonces queda registrado en el catálogo de productos sin incorporar control de inventarios ni prescripción de dosis.
+3. Dado que una plaga o químico deja de utilizarse, cuando César lo desactiva en el catálogo, entonces desaparece de las opciones seleccionables en nuevos servicios.
+4. Dado que un elemento desactivado fue utilizado en atenciones anteriores, cuando se consultan servicios históricos, entonces el registro técnico conserva intactos el nombre y los datos originales del tratamiento.
+
+**Prioridad:** Alta.
+**Estimación:** 5 puntos de historia.
+**Justificación de la estimación:** Mantenimiento de catálogos maestros con validación de nombres, bajas lógicas y aseguramiento de integridad referencial sobre tratamientos pasados.
+**Notas adicionales:** Se desarrolla en el Sprint 2; el catálogo es estrictamente descriptivo e identificatorio; no prescribe dosis automáticas; todo químico utilizado históricamente permanece visible en los expedientes archivados.
+
+#### Historia H12: Verificar cobros y gestionar documentos y entregas
+
+**Tareas técnicas relacionadas:** T068, T069, T070, T071, T072, T073, T074, T075, T076, T077
+
+**Historia de usuario**
+
+Como César, responsable de la administración de cobros de RYC,
+quiero verificar los reportes de pago informados para confirmarlos o rechazarlos, asentar cobros directos en efectivo, adjuntar recibos, custodiar facturas electrónicas externas (XML y PDF) y registrar formalmente la entrega de documentos al cliente,
+para asegurar que solo el dinero comprobado reduzca la deuda de las órdenes, mantener organizados los expedientes tributarios y conservar evidencia de las entregas realizadas.
+
+**Criterios de aceptación**
+
+1. Dado que existe un reporte de SINPE o transferencia con comprobante adjunto, cuando César comprueba el ingreso real en la cuenta bancaria de RYC y confirma el movimiento, entonces el estado pasa a Confirmado y se descuenta el importe del saldo de la orden.
+2. Dado que un reporte de SINPE o transferencia no coincide con los movimientos bancarios o su comprobante es ilegible, cuando César lo rechaza con un motivo, entonces el saldo permanece intacto y se conserva el registro del rechazo.
+3. Dado que César recibe un cobro en efectivo en campo, cuando comprueba que recibió físicamente el dinero y lo registra en la orden, entonces el pago queda Confirmado y reduce el saldo, sin exigir referencia ni comprobante bancario o cuenta en el portal.
+4. Dado que se intenta confirmar un reporte cuya referencia bancaria ya fue utilizada previamente en otro pago, cuando el sistema evalúa la duplicidad, entonces bloquea la operación para evitar doble contabilización.
+5. Dado que un pago está confirmado, cuando César adjunta un recibo digital (PDF, JPG, PNG hasta 5 MiB), entonces se almacena en directorio privado y queda disponible para descarga del cliente.
+6. Dado que César emitió una factura en su sistema externo, cuando la adjunta a la orden correspondiente, entonces sube obligatoriamente el XML de factura y la representación gráfica en PDF; la respuesta de Hacienda se adjunta cuando esté disponible.
+7. Dado que se registra una factura electrónica en una orden, cuando se actualiza la vista financiera, entonces el documento fiscal no altera por sí mismo el saldo pendiente de cobro.
+8. Dado que César entrega recibos, facturas o recomendaciones al cliente por WhatsApp, correo o presencialmente, cuando registra la fecha, destinatario y canal, entonces queda asentada la evidencia formal de entrega.
+
+**Prioridad:** Alta.
+**Estimación total:** 21 puntos, subtotal de H12.1–H12.4. Las subdivisiones se estiman individualmente y se suman una vez.
+**Justificación de la estimación:** Agrupación compleja de cierre administrativo que integra control transaccional de cobros bancarios, prevención de duplicados, gestión de almacenamiento binario para recibos, validación de formatos tributarios XML/PDF y auditoría de entregas.
+**Notas adicionales:** Las tareas se desarrollan en los Sprints 3 y 4; solo los pagos confirmados modifican saldos; el sistema no realiza conciliación bancaria automática; las facturas se emiten externamente y se custodian en el sistema; descargar un archivo no acredita entrega sin confirmación explícita de César.
+
+##### H12.1 — Confirmar, rechazar y corregir cobros
+
+**Puntos:** 5. **Prioridad:** Alta. **Entrega prevista:** S3.
+
+**Historia:** Como César, quiero revisar reportes de pago y registrar cobros recibidos directamente, para actualizar los saldos solo con dinero comprobado.
+
+**Tareas asociadas:** T068, T069, T070. **Dependencias clave:** T025, T086 y T087.
+
+**Criterios de aceptación:**
+
+1. Dado que se reporta un pago, cuando César lo confirma tras verificarlo, entonces reduce la deuda una sola vez y bloquea referencias duplicadas.
+
+2. Dado que registra efectivo, rechaza un reporte o corrige un movimiento, cuando guarda la operación, entonces conserva responsable y motivo sin acreditar pagos pendientes.
+
+**Justificación de los puntos:** Control transaccional, prevención de duplicaciones y trazabilidad del dinero confirmado.
+
+##### H12.2 — Guardar y versionar recibos de pagos confirmados
+
+**Puntos:** 5. **Prioridad:** Alta. **Entrega prevista:** S3.
+
+**Historia:** Como César, quiero adjuntar recibos y conservar sus versiones vinculadas al pago, para entregar constancias verificables de los cobros.
+
+**Tareas asociadas:** T071, T072, T073, T074. **Dependencias clave:** T068, T081 y T086.
+
+**Criterios de aceptación:**
+
+1. Dado que un pago está confirmado, cuando César carga un recibo válido, entonces se guarda en privado y queda relacionado con la orden y el cliente.
+
+2. Dado que sustituye el archivo de un recibo, cuando registra el motivo, entonces el archivo anterior se conserva como versión y no se modifica una factura fiscal.
+
+**Justificación de los puntos:** Archivos privados, integridad de asociaciones y conservación de versiones.
+
+##### H12.3 — Custodiar facturas electrónicas externas y correcciones
+
+**Puntos:** 8. **Prioridad:** Alta. **Entrega prevista:** S4.
+
+**Historia:** Como César, quiero adjuntar facturas externas, respuestas y documentos correctivos a cada orden, para conservar los originales tributarios de forma segura.
+
+**Tareas asociadas:** T075, T076. **Dependencias clave:** T072, T086, T090 y T089.
+
+**Criterios de aceptación:**
+
+1. Dado que se incorpora una factura externa, cuando César adjunta XML y PDF válidos, entonces el documento queda vinculado a la orden correcta y no altera por sí mismo el saldo.
+
+2. Dado que existe una respuesta o nota correctiva, cuando se adjunta, entonces conserva el original, relaciona la corrección y evita mezclar órdenes de distintos clientes.
+
+**Justificación de los puntos:** Validación documental XML/PDF, protección de archivos y correcciones tributarias.
+
+##### H12.4 — Registrar la entrega de documentos y recomendaciones
+
+**Puntos:** 3. **Prioridad:** Alta. **Entrega prevista:** S4.
+
+**Historia:** Como César, quiero registrar a quién, cuándo y por qué canal entregué documentos o recomendaciones, para conservar seguimiento de la atención al cliente.
+
+**Tareas asociadas:** T077. **Dependencias clave:** T073, T075 y T089.
+
+**Criterios de aceptación:**
+
+1. Dado que una orden tiene documentos o recomendaciones disponibles, cuando César confirma una entrega real, entonces guarda destinatario, fecha, canal y elementos entregados.
+
+2. Dado que solo abre o descarga un documento, cuando no confirma la entrega, entonces no se registra una entrega ficticia.
+
+**Justificación de los puntos:** Acción de registro acotada que reutiliza los archivos y el seguimiento de órdenes.
+
+#### Resumen de estimaciones y prioridades del Product Backlog
+
+El catálogo reúne 12 historias principales y 16 subdivisiones dentro de cuatro de ellas. Los subtotales siguientes incluyen sus partes; el total de 124 puntos de historia se contabiliza una sola vez. Las tareas técnicas mantienen sus asignaciones en los cinco sprints:
+
+| Código | Título de la historia de usuario | Prioridad | Estimación (pts) | Tareas técnicas asociadas | Sprints de desarrollo |
+|:---:|:---|:---:|:---:|:---|:---:|
+| **H01** | Conocer RYC y contactar desde la Landing Page | Alta | 5 | T001, T002, T083 | S1, S2 |
+| **H02** | Iniciar sesión en la aplicación web | Alta | 5 | T003, T004, T082 | S1 |
+| **H03** | Crear una cuenta de cliente | Alta | 5 | T005, T006, T082 | S1 |
+| **H04** | Recuperar el acceso desde Olvidé mi contraseña | Media | 5 | T007, T008, T082 | S1 |
+| **H05** | Consultar mi resumen y gestionar mis atenciones | Media | 18 (subtotal) | T009–T021, T084–T086 | S1, S2, S3, S4 |
+| **H06** | Consultar mis pagos y documentos | Media | 8 | T022–T026 | S3, S4 |
+| **H07** | Consultar pendientes y gestionar las atenciones | Alta | 20 (subtotal) | T027–T040, T084–T086 | S2, S3, S4 |
+| **H08** | Consultar y administrar Mi cuenta | Media | 3 | T041, T042 | S1 |
+| **H09** | Gestionar clientes, ubicaciones y cuentas autorizadas | Alta | 21 (subtotal) | T043–T055 | S1, S2, S3, S4 |
+| **H10** | Programar visitas y administrar la disponibilidad | Alta | 8 | T056–T063 | S2, S3, S4 |
+| **H11** | Administrar los catálogos de plagas y productos | Alta | 5 | T064–T067 | S2 |
+| **H12** | Verificar cobros y gestionar documentos y entregas | Alta | 21 (subtotal) | T068–T077 | S3, S4 |
+| **Total** | **12 historias principales; 16 subdivisiones en 4 de ellas** | **8 principales Alta / 4 principales Media** | **124 pts** | **105 tareas técnicas (T001–T105)** | **5 Sprints** |
+
+---
+
+#### Consideraciones sobre la Definition of Done y entrega progresiva
+
+Las 12 historias principales y sus 16 subdivisiones describen el comportamiento esperado. Una principal desglosada se acepta al validar todas sus partes; las historias sin subdividir se comprueban completas. Para que una historia se considere terminada dentro del marco del proyecto, debe cumplir sus criterios de aceptación y la [Definición de Terminado (DoD)](#criterios-de-terminación-y-aceptación), que reúne los criterios comunes de calidad y la evidencia requerida para la simulación.
+
+**Reglas de negocio:** la aceptación conserva la gratuidad de consultoría en San Carlos y el cobro previo fuera del cantón; el anticipo del 50 % antes del tratamiento; la comprobación del dinero recibido según el medio de pago; las notas internas privadas de César y una sola moneda por orden, con CRC y USD separados en los resúmenes.
+
+**Estimaciones y presupuesto:** las horas y los costos se controlan en [Estimación y asignación de las tareas](#estimación-y-asignación-de-las-tareas) y [Presupuesto del proyecto simulado](#presupuesto-del-proyecto-simulado). Sus revisiones justificadas se registran y recalculan según el control del expediente. La DoD evalúa la calidad del trabajo y sus comprobaciones.
+
+**Nota metodológica sobre INVEST y entrega progresiva:** el atributo *Small* busca que cada unidad pueda completarse dentro de un sprint. H05, H07, H09 y H12 reúnen funciones amplias y se desglosan en 16 subdivisiones con sus tareas y criterios. Los puntos se reconocen por subdivisión aceptada, sin sumar de nuevo el subtotal de su historia principal. La asignación vigente distribuye las tareas de algunas subdivisiones entre varios sprints; revisar que cada una pueda entregarse en un solo sprint sigue siendo un pendiente de planificación, señalado en [Capacidad y cierre en cinco sprints](#capacidad-y-cierre-en-cinco-sprints).
+
+---
+
+#### Conclusión
+
+Las 12 historias principales y las 16 subdivisiones de H05, H07, H09 y H12 se relacionan con las 105 tareas técnicas, la estimación de 124 puntos de historia y los cinco sprints del escenario.
+
+---
+
+## Semana 6 · Estimación y planificación de entregas
+
+> **Fecha lectiva de referencia:** miércoles 21 de octubre de 2026, correspondiente a la Semana 6.
+>
+> **Objetivo:** Presentar la estimación vigente de 124 puntos de historia, su relación con las 105 tareas, la capacidad profesional, el presupuesto y las entregas del escenario de cinco sprints.
+
+### Matriz de estimación en puntos de historia
+
+El proyecto contiene **12 historias principales**. **H05, H07, H09 y H12 se desglosan en cuatro subdivisiones cada una: 16 en total**. La estimación vigente es de **124 puntos de historia**, calculados sobre las ocho historias sin subdividir y las dieciséis subdivisiones.
+
+#### Formalización de los puntos de historia
+
+**Línea base vigente del expediente: 124 puntos de historia.** Se adopta esta estimación documentada para planificar la simulación de diez semanas y cinco sprints. Su uso en el expediente no queda condicionado a una validación posterior.
+
+**Método:** estimación relativa según alcance, complejidad e incertidumbre, con **H08 — Mi cuenta (3 puntos)** como referencia y la escala de Fibonacci de **1, 2, 3, 5 y 8**. Las justificaciones de las historias y subdivisiones sustentan los valores de la matriz.
+
+**Cómputo:** las ocho historias sin subdividir suman **44 puntos** y las dieciséis subdivisiones, **80**: **44 + 80 = 124**. H05, H07, H09 y H12 muestran subtotales de sus partes, sin puntos independientes ni doble contabilización.
+
+**Naturaleza y control:** es una estimación académica formalizada, no un resultado de programación ejecutada ni de una sesión real de Planning Poker. Los puntos no se convierten directamente en horas-persona. Cualquier revisión posterior exige una decisión explícita, su justificación y la actualización de la matriz, los subtotales, las historias y las entregas afectadas; las horas, capacidad y costos se revisan si el cambio también afecta el trabajo técnico.
+
+| Historia o subdivisión | Funcionalidad | Puntos | Prioridad | Tareas técnicas | Dependencias de referencia | Entrega prevista |
+| --- | --- | ---: | --- | --- | --- | --- |
+| H01 | Contacto público y WhatsApp | 5 | Alta | T001, T002; T083 común | T080; T083 | S2 |
+| H02 | Iniciar sesión | 5 | Alta | T003–T004; T082 común | T006; T082 | S1 |
+| H03 | Crear cuenta | 5 | Alta | T005–T006; T082 común | T079; T082 | S1 |
+| H04 | Recuperar acceso | 5 | Media | T007–T008; T082 común | T006 | S1 |
+| **H05** | **Consultar mi resumen y gestionar mis atenciones — historia principal** | **18 (subtotal)** | Media | Se detalla en H05.1–H05.4 | Ver subdivisiones | Ver subdivisiones |
+| H05.1 | Solicitar consultorías con correo verificado | 5 | Media | T009, T011, T012, T014 | T006, T088, T092, T083 y T017 | S2 |
+| H05.2 | Solicitar nuevas visitas y cambios de agenda | 5 | Media | T017, T018, T019 | T048, T051, T059 y T060 | S3 |
+| H05.3 | Consultar solicitudes y decidir propuestas | 5 | Media | T013, T015, T016 | T012, T017, T084, T085 y T086 | S4 |
+| H05.4 | Consultar resumen e historial de atenciones | 3 | Media | T010, T020, T021 | T038, T041, T051 y T089 | S4 |
+| H06 | Pagos y documentos del cliente | 8 | Media | T022–T026 | T087; T089; T073/T075 | S4 |
+| **H07** | **Consultar pendientes y gestionar las atenciones — historia principal** | **20 (subtotal)** | Alta | Se detalla en H07.1–H07.4 | Ver subdivisiones | Ver subdivisiones |
+| H07.1 | Registrar contactos y valorar consultorías | 5 | Alta | T028, T029, T031 | T012, T045, T048 y T092 | S2 |
+| H07.2 | Gestionar consultorías y comprobar el anticipo | 5 | Alta | T030, T033, T040 | T029, T031, T059, T068, T085 y T087 | S3 |
+| H07.3 | Registrar el tratamiento y las recomendaciones reales | 5 | Alta | T034, T035, T036, T037 | T033, T034, T065, T067 y T086 | S4 |
+| H07.4 | Publicar y corregir atenciones desde el panel operativo | 5 | Alta | T027, T032, T038, T039 | T029, T033, T036, T037, T068, T075 y T077 | S4 |
+| H08 | Mi cuenta (referencia) | 3 | Media | T041–T042 | T004 | S1 |
+| **H09** | **Gestionar clientes, ubicaciones y cuentas autorizadas — historia principal** | **21 (subtotal)** | Alta | Se detalla en H09.1–H09.4 | Ver subdivisiones | Ver subdivisiones |
+| H09.1 | Registrar y mantener clientes particulares y empresas | 5 | Alta | T043, T044, T045, T046 | T079, T081 y T092 | S2 |
+| H09.2 | Administrar ubicaciones y frecuencias de visita | 3 | Alta | T047, T048, T049 | T045, T079 y T088 | S2 |
+| H09.3 | Asociar y revocar cuentas con permisos por sede | 8 | Alta | T050, T051, T052 | T041, T048, T050, T089 y T009 | S2 |
+| H09.4 | Incorporar antecedentes y clasificarlos por sede | 5 | Alta | T053, T054, T055 | T034, T051, T073, T075 y T089 | S4 |
+| H10 | Programación y calendario | 8 | Alta | T056–T063 | T048; T086 | S4 |
+| H11 | Catálogos de plagas y productos | 5 | Alta | T064–T067 | T081; T092 | S2 |
+| **H12** | **Verificar cobros y gestionar documentos y entregas — historia principal** | **21 (subtotal)** | Alta | Se detalla en H12.1–H12.4 | Ver subdivisiones | Ver subdivisiones |
+| H12.1 | Confirmar, rechazar y corregir cobros | 5 | Alta | T068, T069, T070 | T025, T086 y T087 | S3 |
+| H12.2 | Guardar y versionar recibos de pagos confirmados | 5 | Alta | T071, T072, T073, T074 | T068, T081 y T086 | S3 |
+| H12.3 | Custodiar facturas electrónicas externas y correcciones | 8 | Alta | T075, T076 | T072, T086, T090 y T089 | S4 |
+| H12.4 | Registrar la entrega de documentos y recomendaciones | 3 | Alta | T077 | T073, T075 y T089 | S4 |
+| **Total** | **12 historias principales; 16 subdivisiones dentro de 4 de ellas** | **124** | — | **105 tareas propias y comunes** | — | **5 sprints** |
+
+**Lectura de la matriz:** las filas principales H05, H07, H09 y H12 muestran subtotales de sus partes. Para obtener 124 se suman las ocho historias sin subdividir y las dieciséis subdivisiones; los subtotales no se añaden otra vez. La entrega prevista corresponde al sprint de la última tarea propia registrada y exige además criterios de aceptación y DoD. Las tareas comunes se utilizan como dependencias y se construyen y estiman una vez. Las dependencias completas figuran en el [backlog técnico de Semana 5](#backlog-técnico-de-implementación); horas y ejecutores, en [Estimación y asignación de las tareas](#estimación-y-asignación-de-las-tareas).
+
+### Desglose de puntos de las historias subdivididas
+
+| Historia principal | Subdivisiones | Puntos de sus partes |
+| --- | --- | ---: |
+| H05 — Consultar mi resumen y gestionar mis atenciones | H05.1, H05.2, H05.3, H05.4 | 18 |
+| H07 — Consultar pendientes y gestionar las atenciones | H07.1, H07.2, H07.3, H07.4 | 20 |
+| H09 — Gestionar clientes, ubicaciones y cuentas autorizadas | H09.1, H09.2, H09.3, H09.4 | 21 |
+| H12 — Verificar cobros y gestionar documentos y entregas | H12.1, H12.2, H12.3, H12.4 | 21 |
+| **Total de las cuatro principales desglosadas** | **16 subdivisiones** | **80** |
+
+Las ocho historias sin subdividir suman **44 puntos** y las dieciséis subdivisiones suman **80 puntos**: **124 puntos de historia en total**. Estos valores integran la línea base académica vigente; no se asignan puntos independientes a las cuatro principales que agrupan las subdivisiones.
+
+### Estimación y asignación de las tareas
 
 **Supuestos revisables por los ejecutores**, en horas-persona. Base incluye implementación, validaciones, pruebas, revisión y documentación; coordinación/ceremonias usan reserva. O supone reutilización favorable; P, dificultad/correcciones/integración.
 
@@ -1732,113 +2466,113 @@ T078–T105 cubren preparación, componentes reutilizados, pruebas, alojamiento 
 
 Escenarios de sensibilidad, sin intervalo estadístico ni velocidad observada. Los [códigos profesionales](#puestos-experiencia-y-dedicación) identifican personas; tramo dentro de **64 h efectivas/sprint** comprueba precedencia/simultaneidad. Confirmar dedicaciones parciales en esos bloques. Filas por historia; Común identifica trabajo compartido.
 
-| ID   | Historia | Sprint | Ejecutor | O (h) | Base (h) | P (h) | Tramo del sprint (h)
-| ---- | -------- | ------ | -------- | ----- | -------- | ----- | --------------------
-| T001 | H01      | 1      | D2       | 6     | 12       | 18    | 44–56
-| T002 | H01      | 2      | D3       | 4     | 8        | 12    | 12–20
-| T003 | H02      | 1      | D2       | 2     | 6        | 10    | 28–34
-| T004 | H02      | 1      | D1       | 4     | 8        | 12    | 44–52
-| T005 | H03      | 1      | LT       | 4     | 8        | 12    | 28–36
-| T006 | H03      | 1      | LT       | 4     | 8        | 12    | 36–44
-| T007 | H04      | 1      | D3       | 2     | 4        | 6     | 46–50
-| T008 | H04      | 1      | D3       | 2     | 4        | 6     | 50–54
-| T009 | H05      | 1      | LT       | 2     | 6        | 10    | 44–50
-| T010 | H05      | 3      | D3       | 2     | 6        | 10    | 6–12
-| T011 | H05      | 1      | D3       | 6     | 10       | 16    | 54–64
-| T012 | H05      | 2      | D2       | 4     | 8        | 12    | 0–8
-| T013 | H05      | 3      | D1       | 2     | 6        | 10    | 12–18
-| T014 | H05      | 2      | D3       | 2     | 4        | 6     | 54–58
-| T015 | H05      | 4      | D3       | 4     | 8        | 12    | 10–18
-| T016 | H05      | 4      | D1       | 2     | 4        | 6     | 44–48
-| T017 | H05      | 2      | D3       | 4     | 8        | 12    | 46–54
-| T018 | H05      | 2      | D2       | 2     | 6        | 10    | 56–62
-| T019 | H05      | 3      | D3       | 2     | 6        | 10    | 0–6
-| T020 | H05      | 4      | D3       | 4     | 8        | 12    | 18–26
-| T021 | H05      | 4      | D2       | 2     | 6        | 10    | 30–36
-| T022 | H06      | 4      | D1       | 6     | 10       | 16    | 34–44
-| T023 | H06      | 4      | D2       | 2     | 6        | 10    | 42–48
-| T024 | H06      | 3      | LT       | 6     | 10       | 16    | 0–10
-| T025 | H06      | 3      | LT       | 4     | 8        | 12    | 10–18
-| T026 | H06      | 4      | D1       | 6     | 12       | 18    | 22–34
-| T027 | H07      | 4      | D3       | 4     | 8        | 12    | 34–42
-| T028 | H07      | 2      | D1       | 6     | 10       | 16    | 16–26
-| T029 | H07      | 2      | D3       | 4     | 8        | 12    | 26–34
-| T030 | H07      | 3      | D2       | 6     | 12       | 22    | 40–52
-| T031 | H07      | 2      | D1       | 6     | 10       | 16    | 26–36
-| T032 | H07      | 4      | D1       | 2     | 6        | 10    | 16–22
-| T033 | H07      | 3      | D1       | 6     | 10       | 18    | 30–40
-| T034 | H07      | 3      | D1       | 6     | 10       | 16    | 40–50
-| T035 | H07      | 3      | D3       | 6     | 12       | 18    | 50–62
-| T036 | H07      | 4      | D2       | 2     | 6        | 10    | 0–6
-| T037 | H07      | 3      | D2       | 2     | 4        | 6     | 52–56
-| T038 | H07      | 4      | D2       | 6     | 10       | 18    | 6–16
-| T039 | H07      | 4      | D2       | 2     | 6        | 10    | 36–42
-| T040 | H07      | 3      | D1       | 6     | 12       | 18    | 0–12
-| T041 | H08      | 1      | D1       | 2     | 6        | 10    | 52–58
-| T042 | H08      | 1      | D2       | 2     | 4        | 6     | 60–64
-| T043 | H09      | 1      | D1       | 4     | 8        | 12    | 36–44
-| T044 | H09      | 1      | D2       | 4     | 8        | 12    | 36–44
-| T045 | H09      | 1      | LT       | 6     | 12       | 18    | 50–62
-| T046 | H09      | 2      | D1       | 4     | 8        | 12    | 36–44
-| T047 | H09      | 2      | D1       | 4     | 8        | 12    | 0–8
-| T048 | H09      | 2      | D1       | 4     | 8        | 12    | 8–16
-| T049 | H09      | 2      | D3       | 2     | 4        | 6     | 58–62
-| T050 | H09      | 2      | D3       | 2     | 6        | 10    | 0–6
-| T051 | H09      | 2      | D3       | 6     | 12       | 22    | 34–46
-| T052 | H09      | 2      | LT       | 2     | 4        | 6     | 60–64
-| T053 | H09      | 3      | D1       | 4     | 8        | 12    | 50–58
-| T054 | H09      | 4      | LT       | 2     | 6        | 10    | 26–32
-| T055 | H09      | 4      | LT       | 2     | 6        | 10    | 20–26
-| T056 | H10      | 4      | D2       | 2     | 6        | 10    | 16–22
-| T057 | H10      | 3      | D3       | 2     | 6        | 10    | 12–18
-| T058 | H10      | 2      | D2       | 4     | 8        | 12    | 20–28
-| T059 | H10      | 2      | D2       | 6     | 12       | 18    | 28–40
-| T060 | H10      | 2      | D2       | 4     | 8        | 12    | 40–48
-| T061 | H10      | 3      | D2       | 8     | 14       | 22    | 0–14
-| T062 | H10      | 4      | D3       | 2     | 4        | 6     | 42–46
-| T063 | H10      | 3      | D2       | 4     | 8        | 12    | 14–22
-| T064 | H11      | 2      | D2       | 2     | 6        | 10    | 8–14
-| T065 | H11      | 2      | D2       | 2     | 6        | 10    | 14–20
-| T066 | H11      | 2      | LT       | 2     | 6        | 10    | 12–18
-| T067 | H11      | 2      | D3       | 2     | 6        | 10    | 20–26
-| T068 | H12      | 3      | LT       | 6     | 12       | 22    | 18–30
-| T069 | H12      | 3      | D3       | 2     | 6        | 10    | 30–36
-| T070 | H12      | 3      | D2       | 4     | 8        | 12    | 30–38
-| T071 | H12      | 3      | LT       | 4     | 8        | 12    | 30–38
-| T072 | H12      | 3      | LT       | 6     | 10       | 18    | 38–48
-| T073 | H12      | 3      | LT       | 2     | 6        | 10    | 48–54
-| T074 | H12      | 3      | D2       | 2     | 6        | 10    | 56–62
-| T075 | H12      | 4      | LT       | 12    | 20       | 36    | 0–20
-| T076 | H12      | 4      | D2       | 4     | 8        | 12    | 22–30
-| T077 | H12      | 4      | D3       | 4     | 8        | 12    | 26–34
-| T078 | Común    | 1      | OPS      | 4     | 8        | 12    | 0–8
-| T079 | Común    | 1      | LT       | 10    | 16       | 30    | 8–24
-| T080 | Común    | 1      | UX       | 6     | 12       | 18    | 8–20
-| T081 | Común    | 1      | LT       | 2     | 4        | 8     | 24–28
-| T082 | Común    | 1      | D2       | 4     | 8        | 12    | 20–28
-| T083 | Común    | 1      | D2       | 2     | 4        | 6     | 56–60
-| T084 | Común    | 4      | D3       | 6     | 10       | 16    | 0–10
-| T085 | Común    | 2      | D1       | 2     | 6        | 10    | 54–60
-| T086 | Común    | 2      | LT       | 8     | 14       | 26    | 34–48
-| T087 | Común    | 2      | LT       | 6     | 12       | 22    | 48–60
-| T088 | Común    | 1      | D3       | 6     | 10       | 16    | 36–46
-| T089 | Común    | 2      | LT       | 10    | 16       | 30    | 18–34
-| T090 | Común    | 2      | D2       | 4     | 8        | 12    | 48–56
-| T091 | Común    | 4      | LT       | 6     | 10       | 18    | 54–64
-| T092 | Común    | 1      | D1       | 10    | 16       | 24    | 20–36
-| T093 | Común    | 2      | D1       | 6     | 10       | 16    | 44–54
-| T094 | Común    | 4      | QSM      | 8     | 14       | 22    | 34–48
-| T095 | Común    | 5      | QSM      | 10    | 16       | 24    | 28–44
-| T096 | Común    | 5      | QSM      | 10    | 16       | 24    | 0–16
-| T097 | Común    | 5      | QSM      | 6     | 12       | 18    | 16–28
-| T098 | Común    | 4      | QSM      | 6     | 12       | 18    | 48–60
-| T099 | Común    | 3      | QSM      | 6     | 12       | 18    | 14–26
-| T100 | Común    | 4      | LT       | 4     | 8        | 12    | 32–40
-| T101 | Común    | 4      | OPS      | 10    | 22       | 34    | 40–62
-| T102 | Común    | 5      | OPS      | 12    | 24       | 38    | 0–24
-| T103 | Común    | 5      | PO       | 6     | 10       | 16    | 28–38
-| T104 | Común    | 5      | PO       | 4     | 8        | 12    | 44–52
-| T105 | Común    | 5      | QSM      | 2     | 4        | 6     | 52–56
+| ID   | Historia | Sprint | Ejecutor | O (h) | Base (h) | P (h) | Tramo del sprint (h) |
+| ---- | -------- | ------ | -------- | ----- | -------- | ----- | -------------------- |
+| T001 | H01      | 1      | D2       | 6     | 12       | 18    | 44–56 |
+| T002 | H01      | 2      | D3       | 4     | 8        | 12    | 12–20 |
+| T003 | H02      | 1      | D2       | 2     | 6        | 10    | 28–34 |
+| T004 | H02      | 1      | D1       | 4     | 8        | 12    | 44–52 |
+| T005 | H03      | 1      | LT       | 4     | 8        | 12    | 28–36 |
+| T006 | H03      | 1      | LT       | 4     | 8        | 12    | 36–44 |
+| T007 | H04      | 1      | D3       | 2     | 4        | 6     | 46–50 |
+| T008 | H04      | 1      | D3       | 2     | 4        | 6     | 50–54 |
+| T009 | H05      | 1      | LT       | 2     | 6        | 10    | 44–50 |
+| T010 | H05      | 3      | D3       | 2     | 6        | 10    | 6–12 |
+| T011 | H05      | 1      | D3       | 6     | 10       | 16    | 54–64 |
+| T012 | H05      | 2      | D2       | 4     | 8        | 12    | 0–8 |
+| T013 | H05      | 3      | D1       | 2     | 6        | 10    | 12–18 |
+| T014 | H05      | 2      | D3       | 2     | 4        | 6     | 54–58 |
+| T015 | H05      | 4      | D3       | 4     | 8        | 12    | 10–18 |
+| T016 | H05      | 4      | D1       | 2     | 4        | 6     | 44–48 |
+| T017 | H05      | 2      | D3       | 4     | 8        | 12    | 46–54 |
+| T018 | H05      | 2      | D2       | 2     | 6        | 10    | 56–62 |
+| T019 | H05      | 3      | D3       | 2     | 6        | 10    | 0–6 |
+| T020 | H05      | 4      | D3       | 4     | 8        | 12    | 18–26 |
+| T021 | H05      | 4      | D2       | 2     | 6        | 10    | 30–36 |
+| T022 | H06      | 4      | D1       | 6     | 10       | 16    | 34–44 |
+| T023 | H06      | 4      | D2       | 2     | 6        | 10    | 42–48 |
+| T024 | H06      | 3      | LT       | 6     | 10       | 16    | 0–10 |
+| T025 | H06      | 3      | LT       | 4     | 8        | 12    | 10–18 |
+| T026 | H06      | 4      | D1       | 6     | 12       | 18    | 22–34 |
+| T027 | H07      | 4      | D3       | 4     | 8        | 12    | 34–42 |
+| T028 | H07      | 2      | D1       | 6     | 10       | 16    | 16–26 |
+| T029 | H07      | 2      | D3       | 4     | 8        | 12    | 26–34 |
+| T030 | H07      | 3      | D2       | 6     | 12       | 22    | 40–52 |
+| T031 | H07      | 2      | D1       | 6     | 10       | 16    | 26–36 |
+| T032 | H07      | 4      | D1       | 2     | 6        | 10    | 16–22 |
+| T033 | H07      | 3      | D1       | 6     | 10       | 18    | 30–40 |
+| T034 | H07      | 3      | D1       | 6     | 10       | 16    | 40–50 |
+| T035 | H07      | 3      | D3       | 6     | 12       | 18    | 50–62 |
+| T036 | H07      | 4      | D2       | 2     | 6        | 10    | 0–6 |
+| T037 | H07      | 3      | D2       | 2     | 4        | 6     | 52–56 |
+| T038 | H07      | 4      | D2       | 6     | 10       | 18    | 6–16 |
+| T039 | H07      | 4      | D2       | 2     | 6        | 10    | 36–42 |
+| T040 | H07      | 3      | D1       | 6     | 12       | 18    | 0–12 |
+| T041 | H08      | 1      | D1       | 2     | 6        | 10    | 52–58 |
+| T042 | H08      | 1      | D2       | 2     | 4        | 6     | 60–64 |
+| T043 | H09      | 1      | D1       | 4     | 8        | 12    | 36–44 |
+| T044 | H09      | 1      | D2       | 4     | 8        | 12    | 36–44 |
+| T045 | H09      | 1      | LT       | 6     | 12       | 18    | 50–62 |
+| T046 | H09      | 2      | D1       | 4     | 8        | 12    | 36–44 |
+| T047 | H09      | 2      | D1       | 4     | 8        | 12    | 0–8 |
+| T048 | H09      | 2      | D1       | 4     | 8        | 12    | 8–16 |
+| T049 | H09      | 2      | D3       | 2     | 4        | 6     | 58–62 |
+| T050 | H09      | 2      | D3       | 2     | 6        | 10    | 0–6 |
+| T051 | H09      | 2      | D3       | 6     | 12       | 22    | 34–46 |
+| T052 | H09      | 2      | LT       | 2     | 4        | 6     | 60–64 |
+| T053 | H09      | 3      | D1       | 4     | 8        | 12    | 50–58 |
+| T054 | H09      | 4      | LT       | 2     | 6        | 10    | 26–32 |
+| T055 | H09      | 4      | LT       | 2     | 6        | 10    | 20–26 |
+| T056 | H10      | 4      | D2       | 2     | 6        | 10    | 16–22 |
+| T057 | H10      | 3      | D3       | 2     | 6        | 10    | 12–18 |
+| T058 | H10      | 2      | D2       | 4     | 8        | 12    | 20–28 |
+| T059 | H10      | 2      | D2       | 6     | 12       | 18    | 28–40 |
+| T060 | H10      | 2      | D2       | 4     | 8        | 12    | 40–48 |
+| T061 | H10      | 3      | D2       | 8     | 14       | 22    | 0–14 |
+| T062 | H10      | 4      | D3       | 2     | 4        | 6     | 42–46 |
+| T063 | H10      | 3      | D2       | 4     | 8        | 12    | 14–22 |
+| T064 | H11      | 2      | D2       | 2     | 6        | 10    | 8–14 |
+| T065 | H11      | 2      | D2       | 2     | 6        | 10    | 14–20 |
+| T066 | H11      | 2      | LT       | 2     | 6        | 10    | 12–18 |
+| T067 | H11      | 2      | D3       | 2     | 6        | 10    | 20–26 |
+| T068 | H12      | 3      | LT       | 6     | 12       | 22    | 18–30 |
+| T069 | H12      | 3      | D3       | 2     | 6        | 10    | 30–36 |
+| T070 | H12      | 3      | D2       | 4     | 8        | 12    | 30–38 |
+| T071 | H12      | 3      | LT       | 4     | 8        | 12    | 30–38 |
+| T072 | H12      | 3      | LT       | 6     | 10       | 18    | 38–48 |
+| T073 | H12      | 3      | LT       | 2     | 6        | 10    | 48–54 |
+| T074 | H12      | 3      | D2       | 2     | 6        | 10    | 56–62 |
+| T075 | H12      | 4      | LT       | 12    | 20       | 36    | 0–20 |
+| T076 | H12      | 4      | D2       | 4     | 8        | 12    | 22–30 |
+| T077 | H12      | 4      | D3       | 4     | 8        | 12    | 26–34 |
+| T078 | Común    | 1      | OPS      | 4     | 8        | 12    | 0–8 |
+| T079 | Común    | 1      | LT       | 10    | 16       | 30    | 8–24 |
+| T080 | Común    | 1      | UX       | 6     | 12       | 18    | 8–20 |
+| T081 | Común    | 1      | LT       | 2     | 4        | 8     | 24–28 |
+| T082 | Común    | 1      | D2       | 4     | 8        | 12    | 20–28 |
+| T083 | Común    | 1      | D2       | 2     | 4        | 6     | 56–60 |
+| T084 | Común    | 4      | D3       | 6     | 10       | 16    | 0–10 |
+| T085 | Común    | 2      | D1       | 2     | 6        | 10    | 54–60 |
+| T086 | Común    | 2      | LT       | 8     | 14       | 26    | 34–48 |
+| T087 | Común    | 2      | LT       | 6     | 12       | 22    | 48–60 |
+| T088 | Común    | 1      | D3       | 6     | 10       | 16    | 36–46 |
+| T089 | Común    | 2      | LT       | 10    | 16       | 30    | 18–34 |
+| T090 | Común    | 2      | D2       | 4     | 8        | 12    | 48–56 |
+| T091 | Común    | 4      | LT       | 6     | 10       | 18    | 54–64 |
+| T092 | Común    | 1      | D1       | 10    | 16       | 24    | 20–36 |
+| T093 | Común    | 2      | D1       | 6     | 10       | 16    | 44–54 |
+| T094 | Común    | 4      | QSM      | 8     | 14       | 22    | 34–48 |
+| T095 | Común    | 5      | QSM      | 10    | 16       | 24    | 28–44 |
+| T096 | Común    | 5      | QSM      | 10    | 16       | 24    | 0–16 |
+| T097 | Común    | 5      | QSM      | 6     | 12       | 18    | 16–28 |
+| T098 | Común    | 4      | QSM      | 6     | 12       | 18    | 48–60 |
+| T099 | Común    | 3      | QSM      | 6     | 12       | 18    | 14–26 |
+| T100 | Común    | 4      | LT       | 4     | 8        | 12    | 32–40 |
+| T101 | Común    | 4      | OPS      | 10    | 22       | 34    | 40–62 |
+| T102 | Común    | 5      | OPS      | 12    | 24       | 38    | 0–24 |
+| T103 | Común    | 5      | PO       | 6     | 10       | 16    | 28–38 |
+| T104 | Común    | 5      | PO       | 4     | 8        | 12    | 44–52 |
+| T105 | Común    | 5      | QSM      | 2     | 4        | 6     | 52–56 |
 
 **Totales O/Base/P: 466 / 926 / 1.482 h.** T026 — Descargas unificadas ocupa 12 h base/S4 y conserva permisos desde todas sus páginas.
 
@@ -1894,9 +2628,9 @@ Máximo 80 h brutas/persona/quincena; **80% planificable y 20% reservado** para 
 
 #### Secuencia, capacidad y sensibilidad del plazo
 
-La secuencia respeta dependencias, una tarea/persona simultánea y límites de sprint. Cierre base: **hora efectiva 312/320**. Dedicaciones parciales deben cumplir sus bloques; LT en S2 requiere 65 h brutas = 52 efectivas, tramo 12–64.
+El plazo del escenario es fijo: **10 semanas y 5 sprints de 2 semanas**, incluido el cierre. La secuencia base respeta dependencias, una tarea por persona a la vez y los límites de sprint. **T105 — Cierre termina en la hora efectiva 312 de 320**, dentro de S5. Las dedicaciones parciales deben cumplir sus bloques; LT en S2 requiere 65 h brutas = 52 efectivas, tramo 12–64.
 
-Ocho personas es un escenario viable, sin demostrar mínimo universal. Cambiar composición exige recalcular. Cadena hasta **T105 — Cierre: 264 h base y 426 h desfavorables**, sin esperas; desfavorable supera trece semanas a 32 h efectivas semanales. Más personas no eliminan dependencias.
+El plan base cabe con **8 profesionales de dedicación parcial**, sin demostrar que sea el equipo mínimo posible. Cambiar su composición exige recalcular carga, secuencia y costo. La cadena de tareas hasta **T105 — Cierre suma 264 h base y 426 h desfavorables**, sin esperas. En el escenario desfavorable esa cadena supera las 320 h efectivas del plazo fijo: incorporar personas no permite ejecutar a la vez tareas que dependen entre sí. La respuesta a ese escenario queda pendiente de decisión; no se autoriza ampliar los cinco sprints.
 
 | Riesgo                                | Efecto y respuesta prevista                                                                                                       | Responsable profesional |
 | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ----------------------- |
@@ -1958,7 +2692,7 @@ El **15%** cubre tarifas, servicios o necesidades adicionales a bloques contrata
 | Base                 | ₡14.028.000 | ₡85.000         | ₡2.116.950       | ₡16.229.950              |
 | Alto                 | ₡18.016.000 | ₡85.000         | ₡2.715.150       | ₡20.816.150              |
 
-Rango de tarifas con iguales personas/horas; **1.482 h desfavorables** requieren otro plan/presupuesto. Inversión de RYC por confirmar; evaluar presupuesto y ahorros/ingresos atribuibles. Si el límite es menor, comparar alcance/plazo.
+Rango de tarifas con iguales personas/horas; **1.482 h desfavorables** requieren otro plan/presupuesto. Inversión de RYC por confirmar; evaluar presupuesto y ahorros/ingresos atribuibles. Si el presupuesto autorizado fuera menor, revisar alcance, forma de ejecución y recursos dentro de los cinco sprints; cualquier cambio requiere una decisión explícita.
 
 | Sprint | Equipo reservado | Provisión de infraestructura | Contingencia | Presupuesto antes de impuestos |
 | ------ | ---------------- | ---------------------------- | ------------ | ------------------------------ |
@@ -1970,729 +2704,58 @@ Rango de tarifas con iguales personas/horas; **1.482 h desfavorables** requieren
 
 Mismas provisiones de ₡85.000 y contingencia distribuidas por sprint. Revisar renovaciones sin añadir compras; presupuesto hipotético, separado del gasto académico.
 
-### Criterios de terminación y aceptación
-
-**Calidad del producto representado — Definición de Terminado (DoD):**
-
-Cada historia debe cumplir sus criterios de aceptación y los siguientes criterios de calidad:
-
-1. **Pruebas:** definir los casos unitarios, de integración y manuales aplicables, con entradas, pasos y resultados esperados; resolver los fallos que impidan aceptar la historia.
-2. **Seguridad:** comprobar validaciones y permisos en el servidor para proteger los registros y archivos de cada cliente y sede.
-3. **Uso en dispositivos:** comprobar celular, computadora y teclado, con etiquetas, foco visible y conservación del registro abierto y sus datos al guardar o cancelar.
-4. **Revisión técnica:** otro integrante del equipo profesional del escenario revisa el trabajo y se resuelven sus observaciones.
-5. **Integración:** incorporar los cambios a la rama principal y comprobarlos en el entorno de pruebas previsto, conservando las funciones anteriores; los formularios compartidos utilizan los mismos registros.
-6. **Documentación:** actualizar la documentación mínima de la función y su evidencia de comprobación, diferenciando resultados ejecutados y supuestos simulados.
-
-**Control del expediente, estimaciones y presupuesto:** las 105 tareas conservan su resultado, dependencias, sprint, profesional y horas. Las sumas y los bloques deben ser consistentes y el presupuesto, recalculable. Los cambios justificados de estimación o presupuesto conservan el motivo y los valores anteriores y actualizan los cálculos y apartados afectados. Brian y Jeremy realizan la revisión cruzada del expediente.
-
-**Aceptación final del escenario:** S5 exige HTTPS, correo, persistencia, restauración, guía y aceptación, con riesgos, cambios y resultados documentados.
-
-En el curso se documentan los casos y la evidencia esperada de esa ejecución; los resultados supuestos se rotulan **simulados**. El cierre académico exige coherencia y revisión documental, sin entregar una aplicación funcional real.
-
----
-
-## Historias de usuario desarrolladas — Especificación formal según plantilla
-
-### Introducción y metodología de desarrollo
-
-**Proyecto:** Sistema de Gestión para RYC Control de Plagas
-**Curso:** Administración de Proyectos Informáticos (ISW-912)
-**Integrantes:** Brian Rodríguez Pérez y Jeremy Rodríguez Esquivel
-**Universidad Técnica Nacional — Sede Regional San Carlos**
-**Profesor:** Deiver Cubero Molina\
-**Profesor:** Yesenia Calvo Araya
-
-Las historias de usuario describen las funcionalidades y el comportamiento esperado del sistema desde la perspectiva de las personas que interactúan con él: César Rodríguez Corrales como administrador y operador técnico, y los clientes particulares o empresariales que contratan los servicios de control de plagas.
-
-Para este desarrollo formal se toma como referencia directa el **Product Backlog** del proyecto, conformado por las doce historias originales (**H01 a H12**). Se adopta la estructura establecida en la plantilla oficial de la asignatura (**UserStoryTemplate.docx**), asegurando que cada historia defina con precisión su alcance, valor y condiciones de aceptación:
-
-- **Título e identificador único:** H01 a H12, conservando consistencia unívoca con el Product Backlog, el backlog técnico y los Sprint Backlogs.
-- **Tareas técnicas relacionadas:** Vínculo con las tareas de implementación (T001–T105) del backlog técnico.
-- **Estructura canónica:** Formulación mediante la tríada **Como [rol en el sistema], quiero [capacidad funcional concreta], para [beneficio o valor obtenido]**.
-- **Criterios de aceptación verificables:** Definición estructurada mediante **Dado que [contexto o precondición], cuando [evento o acción realizada], entonces [resultado observable]**, cubriendo casos de éxito, validaciones y restricciones operativas.
-- **Prioridad:** Clasificación de valor de negocio (Alta o Media).
-- **Estimación en puntos de historia:** Valoración de esfuerzo relativo mediante la escala de Fibonacci (**1, 2, 3, 5, 8 y 13**), considerando complejidad técnica, incertidumbre y dependencias.
-- **Justificación de la estimación:** Explicación concisa de los factores determinantes del esfuerzo relativo.
-- **Notas adicionales:** Delimitaciones de alcance, reglas de negocio y restricciones operativas.
-
-Este catálogo unificado de doce historias evita fragmentaciones artificiales y proporciona un documento limpio, conciso y directamente alineado con la planificación técnica del proyecto.
-
----
-
-### Historia H01: Conocer RYC y contactar desde la Landing Page
-
-**Tareas técnicas relacionadas:** T001, T002, T083
-
-**Historia de usuario**
-
-Como persona interesada en contratar un servicio de control de plagas,
-quiero consultar en la página web pública información sobre la empresa, los servicios que ofrece, las zonas de atención y las condiciones generales, así como preparar un mensaje de contacto directo por WhatsApp,
-para conocer si RYC resuelve mi problema de plagas y comunicarme de forma inmediata sin necesidad de registrarme ni crear una cuenta en el sistema.
-
-**Criterios de aceptación**
-
-1. Dado que una persona ingresa a la Landing Page pública, cuando el contenido carga, entonces visualiza la presentación de RYC, el perfil técnico del operador, los servicios disponibles y las zonas atendidas (San Carlos y resto del país).
-2. Dado que la persona desea comunicarse directamente, cuando selecciona la opción rápida de WhatsApp, entonces se abre una conversación dirigida al número telefónico autorizado de RYC.
-3. Dado que la persona utiliza el formulario de contacto, cuando completa nombre, teléfono, lugar y descripción del problema, entonces el sistema valida los datos y prepara un mensaje codificado con esa información estructurada.
-4. Dado que falta un dato obligatorio en el formulario, cuando la persona intenta continuar, entonces el sistema indica de forma visual cuál campo debe completar.
-5. Dado que la persona abre WhatsApp o copia el mensaje, cuando regresa a la página, entonces el sistema no registra automáticamente una solicitud en la base de datos ni reserva citas de atención.
-6. Dado que WhatsApp no puede abrirse en el dispositivo, cuando ocurre el fallo de protocolo, entonces la interfaz ofrece el número autorizado y el contenido del texto para copiarlos manualmente al portapapeles.
-
-**Prioridad:** Alta.
-**Estimación:** 5 puntos de historia.
-**Justificación de la estimación:** Integra diseño web adaptable de acceso público, validación de formularios en el cliente, codificación URI multiplataforma y contingencias de copiado al portapapeles sin persistencia en base de datos.
-**Notas adicionales:** La publicación de información comercial requiere aprobación de César; el formulario público no guarda registros huérfanos; los precios y la disponibilidad están sujetos a evaluación técnica; el acceso al portal es opcional.
-
----
-
-### Historia H02: Iniciar sesión en la aplicación web
-
-**Tareas técnicas relacionadas:** T003, T004, T082
-
-**Historia de usuario**
-
-Como usuario registrado del sistema (cliente o César),
-quiero iniciar sesión mediante mi correo electrónico y contraseña,
-para acceder de forma segura a las funciones y datos que me corresponden según mi rol y permisos autorizados.
-
-**Criterios de aceptación**
-
-1. Dado que el usuario ingresa sus credenciales válidas, cuando el sistema las comprueba, entonces inicia su sesión y lo redirige automáticamente según su rol (César al área administrativa y clientes al portal).
-2. Dado que las credenciales son incorrectas, cuando el usuario intenta ingresar, entonces el sistema rechaza el acceso con un mensaje neutro sin revelar cuál dato falló.
-3. Dado que se registran múltiples intentos fallidos consecutivos, cuando se alcanza el umbral de seguridad establecido, entonces el sistema restringe temporalmente nuevos intentos.
-4. Dado que el usuario permanece inactivo durante sesenta minutos, cuando vence la sesión, entonces el sistema exige autenticarse nuevamente para continuar.
-5. Dado que el usuario presiona cerrar sesión, cuando ejecuta la acción, entonces el sistema invalida la sesión activa y redirige a la pantalla de acceso.
-
-**Prioridad:** Alta.
-**Estimación:** 5 puntos de historia.
-**Justificación de la estimación:** Manejo de sesiones seguras, autenticación basada en contraseñas cifradas, redirección por roles, mitigación de fuerza bruta y políticas de expiración por inactividad.
-**Notas adicionales:** El registro público nunca otorga permisos administrativos; las restricciones deben comprobarse en el servidor y no limitarse a ocultar elementos visuales en el navegador.
-
----
-
-### Historia H03: Crear una cuenta de cliente
-
-**Tareas técnicas relacionadas:** T005, T006, T082
-
-**Historia de usuario**
-
-Como cliente interesado en utilizar las funciones del portal web,
-quiero registrar una cuenta personal mediante mis datos básicos de contacto y credenciales,
-para ingresar a la plataforma y dar seguimiento digital a mis solicitudes, visitas y documentos autorizados.
-
-**Criterios de aceptación**
-
-1. Dado que una persona ingresa a la opción de crear cuenta, cuando completa nombre, correo electrónico, teléfono opcional, contraseña y confirmación, entonces el sistema registra la cuenta con rol de cliente.
-2. Dado que el correo electrónico ya pertenece a una cuenta registrada, cuando se intenta registrarlo nuevamente, entonces el sistema impide el duplicado y muestra una advertencia adecuada.
-3. Dado que la contraseña no cumple las condiciones de seguridad o no coincide con su confirmación, cuando se intenta guardar, entonces el sistema solicita corregirla detallando los requisitos pendientes.
-4. Dado que el registro se completa exitosamente, cuando se almacena la cuenta, entonces el sistema le asigna un identificador único (ID de cuenta) y muestra el aviso para verificar el correo.
-
-**Prioridad:** Alta.
-**Estimación:** 5 puntos de historia.
-**Justificación de la estimación:** Validación de datos personales, control de unicidad de correos, hashing de contraseñas con Argon2id y asignación de identificadores únicos para procesos de vinculación.
-**Notas adicionales:** Crear una cuenta no genera automáticamente una ficha comercial de cliente ni da acceso a servicios anteriores; la asociación con el historial requiere verificación y autorización de César.
-
----
-
-### Historia H04: Recuperar el acceso desde Olvidé mi contraseña
-
-**Tareas técnicas relacionadas:** T007, T008, T082
-
-**Historia de usuario**
-
-Como usuario registrado del sistema que olvidó su contraseña,
-quiero solicitar un enlace seguro de recuperación a mi correo electrónico,
-para establecer una nueva contraseña y restablecer el acceso a mi cuenta.
-
-**Criterios de aceptación**
-
-1. Dado que el usuario solicita recuperación de contraseña, cuando ingresa su correo, entonces el sistema muestra una confirmación general sin revelar si la cuenta existe en la base de datos.
-2. Dado que el correo corresponde a una cuenta activa, cuando se procesa la solicitud, entonces se envía un enlace de recuperación con un token de un solo uso vigente por treinta minutos.
-3. Dado que el usuario accede mediante un enlace válido y vigente, cuando introduce y confirma su nueva contraseña, entonces el sistema actualiza la clave y anula el token utilizado.
-4. Dado que el enlace expiró o ya fue utilizado previamente, cuando se intenta usar, entonces el sistema rechaza la operación e invita a solicitar uno nuevo.
-
-**Prioridad:** Media.
-**Estimación:** 5 puntos de historia.
-**Justificación de la estimación:** Generación y validación de tokens criptográficos de un solo uso con expiración temporal, plantillas de correo transaccional y prevención de enumeración de usuarios.
-**Notas adicionales:** Los enlaces tienen vigencia estricta de 30 minutos y quedan inutilizados tras su primer uso exitoso; el cambio de contraseña invalida sesiones anteriores.
-
----
-
-### Historia H05: Consultar mi resumen y gestionar mis atenciones
-
-**Tareas técnicas relacionadas:** T009, T010, T011, T012, T013, T014, T015, T016, T017, T018, T019, T020, T021, T084, T085, T086
-
-**Historia de usuario**
-
-Como cliente registrado,
-quiero verificar mi correo, solicitar consultorías y nuevas visitas, evaluar propuestas de trabajo, consultar citas programadas con opción de solicitar cambios y revisar el historial de tratamientos de mis ubicaciones autorizadas,
-para coordinar de forma integral la atención de plagas en mis inmuebles y contar con trazabilidad técnica de los servicios recibidos.
-
-**Criterios de aceptación**
-
-1. Dado que el cliente accede mediante el enlace recibido en su correo electrónico, cuando el sistema valida el token de confirmación, entonces marca el correo como verificado y habilita las acciones protegidas del portal.
-2. Dado que el cliente tiene su correo verificado, cuando completa el formulario de consultoría (ubicación territorial, problema y teléfono), entonces la solicitud se registra con estado Recibida y genera una referencia única.
-3. Dado que la consultoría solicitada corresponde a una ubicación fuera de San Carlos, cuando se revisan las condiciones, entonces el sistema notifica que el servicio queda sujeto a cotización previa y pago confirmado antes de realizar la visita.
-4. Dado que el cliente solicita una nueva visita técnica, cuando selecciona una de sus ubicaciones activas autorizadas e ingresa el motivo, entonces el sistema registra la solicitud con estado Recibida conservando la fecha preferida sin bloquear la agenda.
-5. Dado que existe una propuesta de trabajo pendiente, cuando el cliente abre su detalle, entonces visualiza descripción, total, moneda, anticipo del 50 % y saldo del 50 %, pudiendo aceptar o rechazar el trabajo de forma definitiva.
-6. Dado que el cliente acepta formalmente la propuesta, cuando se procesa la decisión, entonces se genera la orden de trabajo correspondiente sin acreditar dinero automáticamente.
-7. Dado que el cliente tiene visitas en estado Programada, cuando solicita reprogramación o cancelación indicando su motivo, entonces se genera una solicitud de cambio para revisión de César sin alterar la cita activa en la agenda.
-8. Dado que una cuenta verificada aún no tiene historial asociado, cuando el cliente completa el formulario de consultoría cumpliendo las condiciones del territorio, entonces puede solicitar una consultoría inicial sin necesidad de que César haya asociado previamente registros a esa cuenta.
-9. Dado que el cliente consulta su historial, cuando revisa los servicios finalizados y publicados que está autorizado a consultar, entonces puede visualizar fecha, plagas identificadas, tratamiento aplicado, químicos y recomendaciones de sus sedes autorizadas, sin tener acceso a las notas internas privadas de César.
-
-**Prioridad:** Media.
-**Estimación:** 13 puntos de historia.
-**Justificación de la estimación:** Agrupación de gran amplitud funcional que integra verificación de correos, lógica territorial de consultorías, validación de permisos por sede (control IDOR), decisiones contractuales con esquemas 50/50, gestión de agenda y consulta de historiales técnicos.
-**Notas adicionales:** Sus tareas técnicas se desarrollan progresivamente a lo largo de los Sprints 1, 2, 3 y 4; solicitar atención no reserva automáticamente citas en el calendario; aceptar una propuesta genera la orden pero el anticipo del 50 % debe confirmarse antes de iniciar el tratamiento; César decide si aprueba las reprogramaciones.
-
----
-
-### Historia H06: Consultar mis pagos y documentos
-
-**Tareas técnicas relacionadas:** T022, T023, T024, T025, T026
-
-**Historia de usuario**
-
-Como cliente que contrató servicios de RYC,
-quiero consultar el estado financiero de mis órdenes, reportar pagos realizados adjuntando comprobantes y descargar recibos o facturas disponibles,
-para conocer mis saldos pendientes, acreditar transferencias y conservar el respaldo documental de mis atenciones.
-
-**Criterios de aceptación**
-
-1. Dado que el cliente consulta la sección de pagos de una orden autorizada, cuando carga la vista, entonces visualiza el monto pactado, el dinero efectivamente confirmado y el saldo pendiente en la única moneda de esa orden, CRC o USD.
-2. Dado que el cliente reporta un pago por SINPE Móvil o transferencia bancaria, cuando ingresa el monto, número de referencia y adjunta comprobante (PDF, JPG, PNG hasta 5 MiB), entonces el reporte queda almacenado como Pendiente de revisión.
-3. Dado que el cliente envía un reporte de pago, cuando se guarda el registro, entonces el saldo de la orden no se reduce hasta que César confirme que recibió el dinero: ingreso bancario para SINPE o transferencia y recepción física para efectivo.
-4. Dado que existen recibos o facturas electrónicas autorizadas para su atención, cuando el cliente selecciona descargar, entonces obtiene los archivos disponibles (PDF, XML de factura y respuesta de Hacienda, cuando exista) mediante descarga autenticada y segura.
-5. Dado que un reporte de pago fue rechazado por César, cuando el cliente consulta el detalle, entonces visualiza el motivo justificado y dispone de la opción para ingresar un nuevo reporte corregido.
-
-**Prioridad:** Media.
-**Estimación:** 8 puntos de historia.
-**Justificación de la estimación:** Manejo de información financiera con monedas segregadas (CRC y USD), carga segura de archivos con validación de tipo MIME y cuotas de tamaño, y descargas controladas mediante endpoints autenticados.
-**Notas adicionales:** Reportar un pago no extingue la deuda; solo los pagos confirmados por César descuentan saldo; los documentos fiscales se generan externamente y se consultan a modo de repositorio.
-
----
-
-### Historia H07: Consultar pendientes y gestionar las atenciones
-
-**Tareas técnicas relacionadas:** T027, T028, T029, T030, T031, T032, T033, T034, T035, T036, T037, T038, T039, T040, T084, T085, T086
-
-**Historia de usuario**
-
-Como César, administrador y responsable operativo de RYC,
-quiero registrar contactos recibidos, gestionar solicitudes de consultoría según su zona geográfica, preparar propuestas y registrar decisiones, registrar en campo los datos reales de los tratamientos aplicados y publicar los servicios finalizados,
-para organizar integralmente el ciclo de atención comercial y técnico de la empresa, asegurando un historial fidedigno y trazable.
-
-**Criterios de aceptación**
-
-1. Dado que César recibe una consulta por llamada o WhatsApp, cuando la registra con datos básicos, entonces crea una ficha de seguimiento con estado Recibida sin exigir ubicación definitiva.
-2. Dado que César evalúa una consultoría en San Carlos, cuando la revisa, entonces se determina gratuita sin requerir cobro; si es fuera del cantón, registra la cotización requerida y permite programar la visita con pago pendiente, pero impide iniciar la atención cobrada o publicarla sin el pago previo requerido confirmado.
-3. Dado que César prepara una propuesta de tratamiento, cuando ingresa el monto total, entonces el sistema calcula automáticamente el anticipo del 50 % y el saldo del 50 %.
-4. Dado que el cliente aprueba la propuesta por canal externo (WhatsApp o llamada), cuando César registra la decisión, fecha y canal, entonces se genera la orden de trabajo correspondiente sin duplicar registros.
-5. Dado que César finaliza un servicio en campo, cuando documenta la atención, entonces asocia cliente, ubicación, fecha real, plagas identificadas desde el catálogo (o justifica servicio preventivo), productos químicos con cantidades exactas y unidad de medida.
-6. Dado que César ingresa notas de la atención, cuando las guarda, entonces el sistema separa de forma estricta las recomendaciones públicas para el cliente de las observaciones internas privadas de administración.
-7. Dado que César intenta publicar un servicio de tratamiento que requería anticipo del 50 % sin que este figure como pago confirmado en la orden, cuando presiona publicar, entonces el sistema bloquea la acción hasta que se verifique el pago previo.
-8. Dado que la atención se publica exitosamente, cuando existe una visita en agenda asociada, entonces su estado pasa a Realizada y se habilita la consulta en el portal del cliente.
-
-**Prioridad:** Alta.
-**Estimación:** 13 puntos de historia.
-**Justificación de la estimación:** Historia central de la administración operativa que abarca captura comercial de prospectos, validación geográfica de consultorías, cálculo de anticipos 50/50, persistencia de tratamientos químicos en campo, verificación de pagos previos y auditoría de publicaciones.
-**Notas adicionales:** Sus tareas técnicas se desarrollan en los Sprints 2, 3 y 4; el software no prescribe dosis químicas automáticas, sino que registra lo efectivamente aplicado por César; las notas privadas nunca se exponen al cliente.
-
----
-
-### Historia H08: Consultar y administrar Mi cuenta
-
-**Tareas técnicas relacionadas:** T041, T042
-
-**Historia de usuario**
-
-Como usuario autenticado del sistema (César o cliente),
-quiero consultar mis datos personales, actualizar teléfono o nombre permitido y copiar mi ID de cuenta al portapapeles,
-para mantener mis datos de contacto correctos y disponer de mi identificador para los procesos de vinculación autorizada.
-
-**Criterios de aceptación**
-
-1. Dado que el usuario ingresa a Mi cuenta, cuando carga la página, entonces visualiza su nombre completo, correo electrónico, teléfono y su identificador alfanumérico único (ID de cuenta).
-2. Dado que el usuario modifica su nombre o número de teléfono con valores válidos, cuando guarda los cambios, entonces el perfil se actualiza en el sistema.
-3. Dado que el usuario visualiza su correo electrónico y su ID de cuenta, cuando interactúa con el formulario, entonces ambos campos permanecen bloqueados en modo de solo lectura.
-4. Dado que presiona el botón copiar ID, cuando ejecuta la acción, entonces el identificador se copia al portapapeles y se muestra una confirmación visual inmediata.
-
-**Prioridad:** Media.
-**Estimación:** 3 puntos de historia.
-**Justificación de la estimación:** Operaciones atómicas de consulta y actualización sobre el registro del usuario en sesión, protección de campos inmutables y funcionalidad de portapapeles.
-**Notas adicionales:** La interfaz es compartida entre clientes y administración; el ID de cuenta es una clave pública de búsqueda pero no concede acceso por sí solo al historial si César no autoriza la asociación.
-
----
-
-### Historia H09: Gestionar clientes, ubicaciones y cuentas autorizadas
-
-**Tareas técnicas relacionadas:** T043, T044, T045, T046, T047, T048, T049, T050, T051, T052, T053, T054, T055
-
-**Historia de usuario**
-
-Como César, propietario y administrador de RYC Control de Plagas,
-quiero registrar y actualizar clientes particulares y empresas con sus diferentes sedes físicas y frecuencias de atención, asociar cuentas del portal con permisos por empresa o sede específica, e incorporar antecedentes de servicios históricos,
-para estructurar la base maestra de clientes, controlar quién accede digitalmente a cada inmueble y preservar el historial técnico acumulado de la empresa.
-
-**Criterios de aceptación**
-
-1. Dado que César registra un cliente particular, cuando completa nombre y teléfono obligatorios, entonces se guarda con estado Activo sin exigir correo electrónico ni cuenta web.
-2. Dado que registra una empresa, cuando ingresa razón social, nombre de contacto y teléfono, entonces se crea la ficha comercial pudiendo registrar el nombre comercial por separado.
-3. Dado que un cliente particular o empresa posee inmuebles, cuando César agrega ubicaciones indicando provincia, cantón, distrito y señas obligatorias, pudiendo registrar una frecuencia sugerida de atención en días como dato opcional, entonces quedan vinculadas unívocamente a su ficha.
-4. Dado que César desactiva un cliente o ubicación, cuando confirma la acción, entonces se bloquea su selección para nuevas atenciones pero se conserva íntegro su historial técnico anterior.
-5. Dado que un cliente particular o representante de empresa comunica su ID de cuenta, cuando César verifica su identidad por medio confiable, entonces puede asociarlo al cliente particular o a una empresa con acceso a todas las sedes o restringido a una sede física específica.
-6. Dado que un usuario con permiso de sede específica inicia sesión en el portal, cuando consulta atenciones o solicita visitas, entonces el sistema restringe su acceso estrictamente a dicha sede autorizada.
-7. Dado que César incorpora datos de servicios anteriores al sistema, cuando los registra con la información real disponible, entonces el sistema los rotula como Registro histórico sin inventar datos desconocidos ni facturas ficticias.
-8. Dado que César retira una asociación previamente otorgada a un cliente particular o empresa, cuando confirma la desvinculación, entonces el sistema conserva el registro del cambio y revoca de inmediato el acceso que dicha cuenta tenía sobre el cliente o sus sedes.
-
-**Prioridad:** Alta.
-**Estimación:** 13 puntos de historia.
-**Justificación de la estimación:** Modela la estructura relacional central del negocio (particulares, empresas, sedes múltiples), control de acceso granular por sede (RBAC/ABAC), auditoría de asociaciones y reglas de flexibilización controlada para migración de datos legacy.
-**Notas adicionales:** Sus tareas se desarrollan a lo largo de los Sprints 1, 2, 3 y 4; una empresa puede tener múltiples sedes independientes; el historial pertenece a la sede y al cliente, no a la cuenta de usuario empleada para consultarlo.
-
----
-
-### Historia H10: Programar visitas y administrar la disponibilidad
-
-**Tareas técnicas relacionadas:** T056, T057, T058, T059, T060, T061, T062, T063
-
-**Historia de usuario**
-
-Como César, encargado de realizar las visitas en campo,
-quiero agendar citas para mis clientes, reprogramar y cancelar visitas justificadas, reservar bloqueos de tiempo no laboral y consultar mi calendario en vistas de mes, semana y lista,
-para organizar eficientemente mis jornadas de trabajo, evitar colisiones de horario y planificar traslados entre cantones.
-
-**Criterios de aceptación**
-
-1. Dado que César programa una visita para un cliente y ubicación activos, cuando define tipo, fecha, hora y duración (de 15 a 480 minutos), entonces se registra con estado Programada siempre que no colisione con otra cita o bloqueo de agenda activo.
-2. Dado que una visita o bloqueo coincide total o parcialmente con el intervalo propuesto, cuando se intenta agendar o reprogramar, entonces el sistema detecta la superposición temporal y rechaza la inserción.
-3. Dado que César necesita apartar tiempo para traslados intercantonales o asuntos personales, cuando registra un bloqueo de disponibilidad con su motivo, entonces ese periodo queda reservado como no disponible.
-4. Dado que una visita requiere cambio de fecha u hora (por decisión de César o atendiendo una solicitud del cliente), cuando César confirma la reprogramación válida con su motivo, entonces el sistema actualiza la agenda y conserva el registro del horario previo.
-5. Dado que una visita debe anularse definitivamente, cuando César ingresa el motivo de cancelación, entonces el estado pasa a Cancelada y se libera el espacio en el calendario.
-6. Dado que un servicio finalizado en una ubicación tiene configurada una frecuencia preventiva en días, cuando se publica, entonces el sistema genera una sugerencia de próxima visita que requiere confirmación explícita de César antes de agendarse.
-7. Dado que César accede a la interfaz del calendario de trabajo, cuando alterna entre las vistas de Mes, Semana y Lista, entonces el sistema presenta las visitas programadas y bloqueos temporales correspondientes al intervalo seleccionado sin perder el contexto operativo.
-
-**Prioridad:** Alta.
-**Estimación:** 8 puntos de historia.
-**Justificación de la estimación:** Algoritmo de detección de solapamientos temporales en huso horario de Costa Rica (America/Costa_Rica), control de colisiones con bloqueos personales, vistas interactivas de agenda y sugerencias automáticas de seguimiento.
-**Notas adicionales:** Las tareas se desarrollan en los Sprints 2, 3 y 4; los únicos estados válidos son Programada, En curso, Realizada y Cancelada; reprogramar es una acción de modificación sobre una visita programada y no un estado nuevo.
-
----
-
-### Historia H11: Administrar los catálogos de plagas y productos
-
-**Tareas técnicas relacionadas:** T064, T065, T066, T067
-
-**Historia de usuario**
-
-Como César, responsable técnico de los tratamientos,
-quiero gestionar los catálogos de plagas atendidas y productos plaguicidas utilizados en los tratamientos,
-para estandarizar la captura técnica de datos y seleccionar con exactitud las plagas detectadas y químicos aplicados en cada servicio.
-
-**Criterios de aceptación**
-
-1. Dado que César registra una plaga, cuando ingresa su nombre común o científico obligatorio y notas complementarias, entonces se añade al catálogo activo.
-2. Dado que César registra un producto, cuando ingresa su nombre comercial obligatorio, pudiendo registrar el ingrediente activo, referencia y notas de manipulación como campos opcionales, entonces queda registrado en el catálogo de productos sin incorporar control de inventarios ni prescripción de dosis.
-3. Dado que una plaga o químico deja de utilizarse, cuando César lo desactiva en el catálogo, entonces desaparece de las opciones seleccionables en nuevos servicios.
-4. Dado que un elemento desactivado fue utilizado en atenciones anteriores, cuando se consultan servicios históricos, entonces el registro técnico conserva intactos el nombre y los datos originales del tratamiento.
-
-**Prioridad:** Alta.
-**Estimación:** 5 puntos de historia.
-**Justificación de la estimación:** Mantenimiento de catálogos maestros con validación de nombres, bajas lógicas y aseguramiento de integridad referencial sobre tratamientos pasados.
-**Notas adicionales:** Se desarrolla en el Sprint 2; el catálogo es estrictamente descriptivo e identificatorio; no prescribe dosis automáticas; todo químico utilizado históricamente permanece visible en los expedientes archivados.
-
----
-
-### Historia H12: Verificar cobros y gestionar documentos y entregas
-
-**Tareas técnicas relacionadas:** T068, T069, T070, T071, T072, T073, T074, T075, T076, T077
-
-**Historia de usuario**
-
-Como César, responsable de la administración de cobros de RYC,
-quiero verificar los reportes de pago informados para confirmarlos o rechazarlos, asentar cobros directos en efectivo, adjuntar recibos, custodiar facturas electrónicas externas (XML y PDF) y registrar formalmente la entrega de documentos al cliente,
-para asegurar que solo el dinero comprobado reduzca la deuda de las órdenes, mantener organizados los expedientes tributarios y conservar evidencia de las entregas realizadas.
-
-**Criterios de aceptación**
-
-1. Dado que existe un reporte de SINPE o transferencia con comprobante adjunto, cuando César comprueba el ingreso real en la cuenta bancaria de RYC y confirma el movimiento, entonces el estado pasa a Confirmado y se descuenta el importe del saldo de la orden.
-2. Dado que un reporte de SINPE o transferencia no coincide con los movimientos bancarios o su comprobante es ilegible, cuando César lo rechaza con un motivo, entonces el saldo permanece intacto y se conserva el registro del rechazo.
-3. Dado que César recibe un cobro en efectivo en campo, cuando comprueba que recibió físicamente el dinero y lo registra en la orden, entonces el pago queda Confirmado y reduce el saldo, sin exigir referencia ni comprobante bancario o cuenta en el portal.
-4. Dado que se intenta confirmar un reporte cuya referencia bancaria ya fue utilizada previamente en otro pago, cuando el sistema evalúa la duplicidad, entonces bloquea la operación para evitar doble contabilización.
-5. Dado que un pago está confirmado, cuando César adjunta un recibo digital (PDF, JPG, PNG hasta 5 MiB), entonces se almacena en directorio privado y queda disponible para descarga del cliente.
-6. Dado que César emitió una factura en su sistema externo, cuando la adjunta a la orden correspondiente, entonces sube obligatoriamente el XML de factura y la representación gráfica en PDF; la respuesta de Hacienda se adjunta cuando esté disponible.
-7. Dado que se registra una factura electrónica en una orden, cuando se actualiza la vista financiera, entonces el documento fiscal no altera por sí mismo el saldo pendiente de cobro.
-8. Dado que César entrega recibos, facturas o recomendaciones al cliente por WhatsApp, correo o presencialmente, cuando registra la fecha, destinatario y canal, entonces queda asentada la evidencia formal de entrega.
-
-**Prioridad:** Alta.
-**Estimación:** 13 puntos de historia.
-**Justificación de la estimación:** Agrupación compleja de cierre administrativo que integra control transaccional de cobros bancarios, prevención de duplicados, gestión de almacenamiento binario para recibos, validación de formatos tributarios XML/PDF y auditoría de entregas.
-**Notas adicionales:** Las tareas se desarrollan en los Sprints 3 y 4; solo los pagos confirmados modifican saldos; el sistema no realiza conciliación bancaria automática; las facturas se emiten externamente y se custodian en el sistema; descargar un archivo no acredita entrega sin confirmación explícita de César.
-
----
-
-### Resumen de estimaciones y prioridades del Product Backlog
-
-El catálogo oficial del proyecto reúne las doce historias de usuario principales, vinculadas directamente con sus tareas técnicas y distribuidas de manera progresiva en los cinco Sprints:
-
-| Código | Título de la historia de usuario | Prioridad | Estimación (pts) | Tareas técnicas asociadas | Sprints de desarrollo |
-|:---:|:---|:---:|:---:|:---|:---:|
-| **H01** | Conocer RYC y contactar desde la Landing Page | Alta | 5 | T001, T002, T083 | S1, S2 |
-| **H02** | Iniciar sesión en la aplicación web | Alta | 5 | T003, T004, T082 | S1 |
-| **H03** | Crear una cuenta de cliente | Alta | 5 | T005, T006, T082 | S1 |
-| **H04** | Recuperar el acceso desde Olvidé mi contraseña | Media | 5 | T007, T008, T082 | S1 |
-| **H05** | Consultar mi resumen y gestionar mis atenciones | Media | 13 | T009–T021, T084–T086 | S1, S2, S3, S4 |
-| **H06** | Consultar mis pagos y documentos | Media | 8 | T022–T026 | S3, S4 |
-| **H07** | Consultar pendientes y gestionar las atenciones | Alta | 13 | T027–T040, T084–T086 | S2, S3, S4 |
-| **H08** | Consultar y administrar Mi cuenta | Media | 3 | T041, T042 | S1 |
-| **H09** | Gestionar clientes, ubicaciones y cuentas autorizadas | Alta | 13 | T043–T055 | S1, S2, S3, S4 |
-| **H10** | Programar visitas y administrar la disponibilidad | Alta | 8 | T056–T063 | S2, S3, S4 |
-| **H11** | Administrar los catálogos de plagas y productos | Alta | 5 | T064–T067 | S2 |
-| **H12** | Verificar cobros y gestionar documentos y entregas | Alta | 13 | T068–T077 | S3, S4 |
-| **Total** | **12 historias de usuario principales** | **8 Alta / 4 Media** | **96 pts** | **105 tareas técnicas (T001–T105)** | **5 Sprints** |
-
----
-
-### Consideraciones sobre la Definition of Done y entrega progresiva
-
-El catálogo de 12 historias de usuario conforma la especificación formal del comportamiento del sistema. Para que una historia se considere terminada dentro del marco del proyecto, debe cumplir sus criterios de aceptación y la [Definición de Terminado (DoD)](#criterios-de-terminación-y-aceptación), que reúne los criterios comunes de calidad y la evidencia requerida para la simulación.
-
-**Reglas de negocio:** la aceptación conserva la gratuidad de consultoría en San Carlos y el cobro previo fuera del cantón; el anticipo del 50 % antes del tratamiento; la comprobación del dinero recibido según el medio de pago; las notas internas privadas de César y una sola moneda por orden, con CRC y USD separados en los resúmenes.
-
-**Estimaciones y presupuesto:** las horas y los costos se controlan en [Estimación y asignación de las tareas](#estimación-y-asignación-de-las-tareas) y [Presupuesto del proyecto simulado](#presupuesto-del-proyecto-simulado). Sus revisiones justificadas se registran y recalculan según el control del expediente. La DoD evalúa la calidad del trabajo y sus comprobaciones.
-
-**Nota metodológica sobre criterios INVEST y entrega progresiva:** Conforme a las directrices de la plantilla académica, las historias deben procurar el cumplimiento del principio INVEST (especialmente el atributo *Small*, orientado a resolverse dentro de un único Sprint). En este diseño, historias de amplia cobertura funcional como H05, H07, H09 y H12 reúnen requerimientos que operan a modo de épicas modulares, cuya entrega de valor se desglosa progresivamente mediante tareas técnicas (T001–T105) a lo largo de varios Sprints. Dicha estructura preserva la trazabilidad con el Product Backlog original y la planificación sin fragmentar el expediente en divisiones artificiales.
-
----
-
-### Conclusión
-
-El desarrollo formal de las doce historias originales (**H01 a H12**) proporciona un marco de trabajo limpio, directo y perfectamente alineado con la estructura pedagógica de la asignatura y la plantilla oficial `UserStoryTemplate.docx`.
-
-Al mantener un **único catálogo de doce historias unívocas**, el expediente elimina la sobrecarga de 34 subdivisiones innecesarias, suprime la sensación de catálogos duplicados o nomenclaturas cambiantes, y ofrece al evaluador un documento claro, ágil y coherente con el Product Backlog, las 105 tareas técnicas y la planificación en cinco Sprints.
-
----
-
-## Semana 6 · Estimación y planificación de entregas
-
-> **Fecha lectiva de referencia:** miércoles 21 de octubre de 2026, correspondiente a la Semana 6.
-
->
-
-> **Objetivo:** Aplicar al proyecto RYC la matriz de estimación y el *Release Plan* de la clase, refinando las cuatro historias de 13 puntos. Se conservan el alcance, las tareas T001–T105, sus horas, los responsables, los cinco Sprints y el presupuesto vigente; solo se revisan las estimaciones relativas y la presentación de entregables de esta semana.
-
-### Matriz de estimación en puntos de historia
-
-**Punto de partida:** en la Semana 4 se definieron **12 historias principales y 96 puntos**. Esta es la estimación inicial, que se mantiene allí como antecedente. Para la Semana 6, **H05, H07, H09 y H12** se desglosan en historias verificables de **8 puntos o menos**. Los códigos H05–H12 originales no se eliminan: H05, H07, H09 y H12 quedan como **agrupaciones maestras**, no como historias adicionales cuyos puntos deban contarse otra vez.
-
-La **historia de referencia** sigue siendo **H08 — Mi cuenta (3 puntos)**. Los valores nuevos son **preestimaciones académicas** en escala Fibonacci (1, 2, 3, 5 y 8), basadas en el alcance y la incertidumbre de cada funcionalidad, **no en una conversión de horas a puntos**. Se revisarán mediante Planning Poker si se realiza la simulación de votaciones; no se declara un consenso ni una velocidad observada del equipo hipotético.
-
-| Historia | Funcionalidad entregable | Puntos | Prioridad | Tareas técnicas ya existentes | Dependencias de referencia | Entrega prevista |
-| --- | --- | ---: | --- | --- | --- | --- |
-| H01 | Contacto público y WhatsApp | 5 | Alta | T001, T002; T083 común | T080; T083 | S2 |
-| H02 | Iniciar sesión | 5 | Alta | T003–T004; T082 común | T006; T082 | S1 |
-| H03 | Crear cuenta | 5 | Alta | T005–T006; T082 común | T079; T082 | S1 |
-| H04 | Recuperar acceso | 5 | Media | T007–T008; T082 común | T006 | S1 |
-| H06 | Pagos y documentos del cliente | 8 | Media | T022–T026 | T087; T089; T073/T075 | S4 |
-| H08 | Mi cuenta (referencia) | 3 | Media | T041–T042 | T004 | S1 |
-| H10 | Programación y calendario | 8 | Alta | T056–T063 | T048; T086 | S4 |
-| H11 | Catálogos de plagas y productos | 5 | Alta | T064–T067 | T081; T092 | S2 |
-| H05.1 | Solicitar consultorías con correo verificado | 5 | Media | T009, T011, T012, T014 | T006, T088, T092, T083 y T017 | S2 |
-| H05.2 | Solicitar nuevas visitas y cambios de agenda | 5 | Media | T017, T018, T019 | T048, T051, T059 y T060 | S3 |
-| H05.3 | Consultar solicitudes y decidir propuestas | 5 | Media | T013, T015, T016 | T012, T017, T084, T085 y T086 | S4 |
-| H05.4 | Consultar resumen e historial de atenciones | 3 | Media | T010, T020, T021 | T038, T041, T051 y T089 | S4 |
-| H07.1 | Registrar contactos y valorar consultorías | 5 | Alta | T028, T029, T031 | T012, T045, T048 y T092 | S2 |
-| H07.2 | Gestionar consultorías y comprobar el anticipo | 5 | Alta | T030, T033, T040 | T029, T031, T059, T068, T085 y T087 | S3 |
-| H07.3 | Registrar el tratamiento y las recomendaciones reales | 5 | Alta | T034, T035, T036, T037 | T033, T034, T065, T067 y T086 | S4 |
-| H07.4 | Publicar y corregir atenciones desde el panel operativo | 5 | Alta | T027, T032, T038, T039 | T029, T033, T036, T037, T068, T075 y T077 | S4 |
-| H09.1 | Registrar y mantener clientes particulares y empresas | 5 | Alta | T043, T044, T045, T046 | T079, T081 y T092 | S2 |
-| H09.2 | Administrar ubicaciones y frecuencias de visita | 3 | Alta | T047, T048, T049 | T045, T079 y T088 | S2 |
-| H09.3 | Asociar y revocar cuentas con permisos por sede | 8 | Alta | T050, T051, T052 | T041, T048, T050, T089 y T009 | S2 |
-| H09.4 | Incorporar antecedentes y clasificarlos por sede | 5 | Alta | T053, T054, T055 | T034, T051, T073, T075 y T089 | S4 |
-| H12.1 | Confirmar, rechazar y corregir cobros | 5 | Alta | T068, T069, T070 | T025, T086 y T087 | S3 |
-| H12.2 | Guardar y versionar recibos de pagos confirmados | 5 | Alta | T071, T072, T073, T074 | T068, T081 y T086 | S3 |
-| H12.3 | Custodiar facturas electrónicas externas y correcciones | 8 | Alta | T075, T076 | T072, T086, T090 y T089 | S4 |
-| H12.4 | Registrar la entrega de documentos y recomendaciones | 3 | Alta | T077 | T073, T075 y T089 | S4 |
-
-**Lectura de la matriz:** cada fila es una **historia entregable**. La última columna indica el Sprint donde termina su última tarea técnica propia **según el plan existente**, no una aceptación real. Las tareas comunes (por ejemplo, permisos T089, propuesta T084 y órdenes T086) se utilizan como dependencias **sin asignarles puntos ni contarlas dos veces**. Las dependencias completas, horas y ejecutores continúan en el backlog técnico de Semana 4.
-
-### División y reestimación de las cuatro historias grandes
-
-| Agrupación de Semana 4 | Estimación anterior | Historias obtenidas en Semana 6 | Nueva preestimación |
-| --- | ---: | --- | ---: |
-| H05 — Portal del cliente | 13 | H05.1, H05.2, H05.3 y H05.4 | 18 |
-| H07 — Operación de César | 13 | H07.1, H07.2, H07.3 y H07.4 | 20 |
-| H09 — Clientes, ubicaciones y permisos | 13 | H09.1, H09.2, H09.3 y H09.4 | 21 |
-| H12 — Cobros, documentos y entregas | 13 | H12.1, H12.2, H12.3 y H12.4 | 21 |
-| **Subtotal refinado** | **52** | **16 historias entregables** | **80** |
-
-**Resultado de la revisión:** ocho historias sin cambios (**44 puntos**) más las dieciséis historias refinadas (**80 puntos**) dan **24 historias entregables y 124 puntos preliminares**. La diferencia de **28 puntos** respecto a los 96 iniciales no representa nuevas funcionalidades: aparece porque las historias pequeñas se valoran individualmente y no se fuerza su suma a coincidir con los 13 puntos originales. Estos números todavía requieren validación.
-
-#### H05 — Portal del cliente: historias refinadas
-
-**H05.1 — Solicitar consultorías con correo verificado (5 puntos; Media; entrega prevista S2).**
-
-**Historia:** Como cliente, quiero verificar mi correo y enviar una consultoría con una referencia única, para solicitar atención sin tener que registrar directamente una cita.
-
-**Tareas asociadas:** T009, T011, T012, T014. **Dependencias clave:** T006, T088, T092, T083 y T017.
-
-**Criterios de aceptación:**
-
-1. Dado que el cliente verifica su correo y completa los datos obligatorios, cuando envía una consultoría, entonces esta se guarda como Recibida, con referencia única, sin reservar horario.
-
-2. Dado que la consultoría es fuera de San Carlos, cuando se consulta su detalle o se prepara el mensaje para WhatsApp, entonces se advierte la cotización y el pago previo, sin crear solicitudes duplicadas.
-
-**Justificación de los puntos:** Combina verificación, formulario territorial y continuidad del mismo contacto sin automatizar WhatsApp.
-
-**H05.2 — Solicitar nuevas visitas y cambios de agenda (5 puntos; Media; entrega prevista S3).**
-
-**Historia:** Como cliente autorizado, quiero solicitar nuevas visitas y pedir cambios sobre las programadas, para coordinar la atención sin modificar la agenda de César por mi cuenta.
-
-**Tareas asociadas:** T017, T018, T019. **Dependencias clave:** T048, T051, T059 y T060.
-
-**Criterios de aceptación:**
-
-1. Dado que una cuenta tiene acceso a una ubicación activa, cuando solicita una nueva visita, entonces se registra la petición sin reservar una fecha automáticamente.
-
-2. Dado que existe una visita Programada, cuando el cliente pide cancelarla o reprogramarla, entonces se envía la solicitud de cambio y la visita original continúa hasta que César resuelva.
-
-**Justificación de los puntos:** La autorización por ubicación y la diferencia entre solicitar y modificar la agenda añaden reglas de negocio.
-
-**H05.3 — Consultar solicitudes y decidir propuestas (5 puntos; Media; entrega prevista S4).**
-
-**Historia:** Como cliente, quiero revisar mis solicitudes y aceptar o rechazar propuestas de trabajo, para conocer y decidir las condiciones antes de contratar.
-
-**Tareas asociadas:** T013, T015, T016. **Dependencias clave:** T012, T017, T084, T085 y T086.
-
-**Criterios de aceptación:**
-
-1. Dado que una solicitud pertenece a la cuenta autorizada, cuando el cliente la consulta, entonces ve su estado y la propuesta disponible sin acceder a datos de otros clientes.
-
-2. Dado que existe una propuesta pendiente, cuando la acepta, entonces se crea una única orden con anticipo y saldo, sin confirmar dinero; cuando la rechaza, no se crea orden.
-
-**Justificación de los puntos:** Requiere control del estado de la propuesta y una decisión única enlazada a órdenes y permisos.
-
-**H05.4 — Consultar resumen e historial de atenciones (3 puntos; Media; entrega prevista S4).**
-
-**Historia:** Como cliente autorizado, quiero ver mi resumen y los servicios publicados de mis ubicaciones, para consultar tratamientos y recomendaciones sin solicitar otra vez la información.
-
-**Tareas asociadas:** T010, T020, T021. **Dependencias clave:** T038, T041, T051 y T089.
-
-**Criterios de aceptación:**
-
-1. Dado que el cliente tiene acceso a una sede, cuando abre el historial o un servicio publicado, entonces solo aparecen atenciones autorizadas y no se muestran notas internas.
-
-2. Dado que consulta el panel, cuando cambia entre sus secciones, entonces conserva los filtros y puede acceder al detalle del servicio publicado.
-
-**Justificación de los puntos:** Reutiliza los registros y permisos desarrollados previamente para presentar un resumen y consulta.
-
-#### H07 — Operación de César: historias refinadas
-
-**H07.1 — Registrar contactos y valorar consultorías (5 puntos; Alta; entrega prevista S2).**
-
-**Historia:** Como César, quiero registrar contactos recibidos y calcular las condiciones iniciales de una consultoría, para dar seguimiento a personas con o sin cuenta web.
-
-**Tareas asociadas:** T028, T029, T031. **Dependencias clave:** T012, T045, T048 y T092.
-
-**Criterios de aceptación:**
-
-1. Dado que César recibe un mensaje o llamada, cuando registra el contacto, entonces crea una ficha Recibida sin exigir aún una ubicación definitiva.
-
-2. Dado que revisa la zona de consultoría, cuando determina el costo, entonces identifica gratuidad dentro de San Carlos o cotización requerida fuera de él.
-
-**Justificación de los puntos:** Abarca contacto multicanal y reglas territoriales sin duplicar el registro inicial.
-
-**H07.2 — Gestionar consultorías y comprobar el anticipo (5 puntos; Alta; entrega prevista S3).**
-
-**Historia:** Como César, quiero actualizar consultorías y verificar el pago requerido antes de iniciar una atención, para cumplir las condiciones aceptadas por el cliente.
-
-**Tareas asociadas:** T030, T033, T040. **Dependencias clave:** T029, T031, T059, T068, T085 y T087.
-
-**Criterios de aceptación:**
-
-1. Dado que existe una consultoría, cuando César actualiza su estado o recupera la ficha, entonces se conservan solicitud, cliente y ubicación sin duplicarlos.
-
-2. Dado que el servicio exige pago previo, cuando se intenta iniciar o publicar sin el importe confirmado, entonces el sistema bloquea la operación y muestra lo pendiente.
-
-**Justificación de los puntos:** Integra estados, reglas de anticipo y acceso a la misma ficha de atención.
-
-**H07.3 — Registrar el tratamiento y las recomendaciones reales (5 puntos; Alta; entrega prevista S4).**
-
-**Historia:** Como César, quiero documentar el servicio realizado con plagas, productos, cantidades y recomendaciones, para conservar evidencia técnica fiel de cada tratamiento.
-
-**Tareas asociadas:** T034, T035, T036, T037. **Dependencias clave:** T033, T034, T065, T067 y T086.
-
-**Criterios de aceptación:**
-
-1. Dado que registra una atención, cuando selecciona las plagas y productos realmente utilizados, entonces guarda cantidades positivas con unidades válidas o justifica el servicio preventivo.
-
-2. Dado que añade recomendaciones y observaciones, cuando guarda el registro, entonces las notas internas quedan separadas de la información visible al cliente.
-
-**Justificación de los puntos:** Manejo de datos técnicos, validaciones y separación entre recomendaciones y notas privadas.
-
-**H07.4 — Publicar y corregir atenciones desde el panel operativo (5 puntos; Alta; entrega prevista S4).**
-
-**Historia:** Como César, quiero gestionar decisiones externas y publicar o corregir servicios desde mi panel, para mantener visible el estado real de las atenciones.
-
-**Tareas asociadas:** T027, T032, T038, T039. **Dependencias clave:** T029, T033, T036, T037, T068, T075 y T077.
-
-**Criterios de aceptación:**
-
-1. Dado que el cliente decide por un canal externo, cuando César registra la decisión, entonces se conserva fecha y canal y no se duplica la orden.
-
-2. Dado que la atención cumple los controles previos y contiene datos del servicio, cuando César la publica, entonces queda disponible para el cliente autorizado; si la corrige, conserva el motivo y el seguimiento.
-
-**Justificación de los puntos:** Integra panel, decisiones, publicación y correcciones con varias dependencias administrativas.
-
-#### H09 — Clientes, sedes y autorizaciones: historias refinadas
-
-**H09.1 — Registrar y mantener clientes particulares y empresas (5 puntos; Alta; entrega prevista S2).**
-
-**Historia:** Como César, quiero crear, editar y desactivar fichas de clientes particulares y empresas, para mantener sus datos comerciales sin exigirles una cuenta.
-
-**Tareas asociadas:** T043, T044, T045, T046. **Dependencias clave:** T079, T081 y T092.
-
-**Criterios de aceptación:**
-
-1. Dado que completa los datos obligatorios del tipo de cliente, cuando guarda la ficha, entonces se registra como Activa aunque no exista correo o usuario web.
-
-2. Dado que desactiva un cliente, cuando confirma la acción, entonces no se utiliza para nuevas atenciones y se preserva su historial.
-
-**Justificación de los puntos:** Diferentes tipos de cliente, validaciones y conservación de registros históricos.
-
-**H09.2 — Administrar ubicaciones y frecuencias de visita (3 puntos; Alta; entrega prevista S2).**
-
-**Historia:** Como César, quiero registrar las ubicaciones y frecuencias de visita de cada cliente, para programar trabajos en el inmueble correcto.
-
-**Tareas asociadas:** T047, T048, T049. **Dependencias clave:** T045, T079 y T088.
-
-**Criterios de aceptación:**
-
-1. Dado que existe un cliente, cuando César crea una ubicación con su territorio y dirección, entonces queda vinculada a esa ficha y no a otra.
-
-2. Dado que registra una frecuencia o desactiva la ubicación, cuando guarda el cambio, entonces la frecuencia solo sugiere una visita y la sede inactiva conserva su historial.
-
-**Justificación de los puntos:** Formulario y mantenimiento acotados que reutilizan cliente y selector territorial.
-
-**H09.3 — Asociar y revocar cuentas con permisos por sede (8 puntos; Alta; entrega prevista S2).**
-
-**Historia:** Como César, quiero asociar o retirar cuentas del portal verificando identidad y alcance por sede, para proteger el historial privado de cada cliente.
-
-**Tareas asociadas:** T050, T051, T052. **Dependencias clave:** T041, T048, T050, T089 y T009.
-
-**Criterios de aceptación:**
-
-1. Dado que recibe un ID de cuenta, cuando comprueba la autorización y asocia una empresa o sede, entonces el usuario solo puede consultar los registros del alcance aprobado.
-
-2. Dado que César retira una asociación, cuando confirma la operación, entonces se revoca ese permiso, se guarda el cambio y no se otorga acceso por conocer únicamente el ID.
-
-**Justificación de los puntos:** Alta incertidumbre y riesgo de seguridad en la autorización por cliente, empresa y sede.
-
-**H09.4 — Incorporar antecedentes y clasificarlos por sede (5 puntos; Alta; entrega prevista S4).**
-
-**Historia:** Como César, quiero ingresar servicios anteriores y relacionarlos con sus ubicaciones cuando se conozcan, para conservar un historial real sin inventar datos.
-
-**Tareas asociadas:** T053, T054, T055. **Dependencias clave:** T034, T051, T073, T075 y T089.
-
-**Criterios de aceptación:**
-
-1. Dado que importa una atención anterior, cuando falta su fecha o ubicación, entonces el sistema conserva el dato como desconocido sin fabricar fechas ni documentos.
-
-2. Dado que un antecedente empresarial aún no tiene sede asignada, cuando se consulta desde el portal, entonces permanece restringido hasta que César lo clasifique.
-
-**Justificación de los puntos:** Información incompleta, vínculos con recibos y control de exposición por sede.
-
-#### H12 — Cobros y documentos: historias refinadas
-
-**H12.1 — Confirmar, rechazar y corregir cobros (5 puntos; Alta; entrega prevista S3).**
-
-**Historia:** Como César, quiero revisar reportes de pago y registrar cobros recibidos directamente, para actualizar los saldos solo con dinero comprobado.
-
-**Tareas asociadas:** T068, T069, T070. **Dependencias clave:** T025, T086 y T087.
-
-**Criterios de aceptación:**
-
-1. Dado que se reporta un pago, cuando César lo confirma tras verificarlo, entonces reduce la deuda una sola vez y bloquea referencias duplicadas.
-
-2. Dado que registra efectivo, rechaza un reporte o corrige un movimiento, cuando guarda la operación, entonces conserva responsable y motivo sin acreditar pagos pendientes.
-
-**Justificación de los puntos:** Control transaccional, prevención de duplicaciones y trazabilidad del dinero confirmado.
-
-**H12.2 — Guardar y versionar recibos de pagos confirmados (5 puntos; Alta; entrega prevista S3).**
-
-**Historia:** Como César, quiero adjuntar recibos y conservar sus versiones vinculadas al pago, para entregar constancias verificables de los cobros.
-
-**Tareas asociadas:** T071, T072, T073, T074. **Dependencias clave:** T068, T081 y T086.
-
-**Criterios de aceptación:**
-
-1. Dado que un pago está confirmado, cuando César carga un recibo válido, entonces se guarda en privado y queda relacionado con la orden y el cliente.
-
-2. Dado que sustituye el archivo de un recibo, cuando registra el motivo, entonces el archivo anterior se conserva como versión y no se modifica una factura fiscal.
-
-**Justificación de los puntos:** Archivos privados, integridad de asociaciones y conservación de versiones.
-
-**H12.3 — Custodiar facturas electrónicas externas y correcciones (8 puntos; Alta; entrega prevista S4).**
-
-**Historia:** Como César, quiero adjuntar facturas externas, respuestas y documentos correctivos a cada orden, para conservar los originales tributarios de forma segura.
-
-**Tareas asociadas:** T075, T076. **Dependencias clave:** T072, T086, T090 y T089.
-
-**Criterios de aceptación:**
-
-1. Dado que se incorpora una factura externa, cuando César adjunta XML y PDF válidos, entonces el documento queda vinculado a la orden correcta y no altera por sí mismo el saldo.
-
-2. Dado que existe una respuesta o nota correctiva, cuando se adjunta, entonces conserva el original, relaciona la corrección y evita mezclar órdenes de distintos clientes.
-
-**Justificación de los puntos:** Validación documental XML/PDF, protección de archivos y correcciones tributarias.
-
-**H12.4 — Registrar la entrega de documentos y recomendaciones (3 puntos; Alta; entrega prevista S4).**
-
-**Historia:** Como César, quiero registrar a quién, cuándo y por qué canal entregué documentos o recomendaciones, para conservar seguimiento de la atención al cliente.
-
-**Tareas asociadas:** T077. **Dependencias clave:** T073, T075 y T089.
-
-**Criterios de aceptación:**
-
-1. Dado que una orden tiene documentos o recomendaciones disponibles, cuando César confirma una entrega real, entonces guarda destinatario, fecha, canal y elementos entregados.
-
-2. Dado que solo abre o descarga un documento, cuando no confirma la entrega, entonces no se registra una entrega ficticia.
-
-**Justificación de los puntos:** Acción de registro acotada que reutiliza los archivos y el seguimiento de órdenes.
-
 ### Supuestos, dependencias y riesgos de la estimación
 
-Las **12 agrupaciones originales** continúan ordenando la documentación de requisitos. El desglose de Semana 6 afecta **solo la unidad de estimación y entrega**, no los formularios, pantallas, criterios de negocio, tareas ni trabajo contratado. Las **105 tareas** permanecen exactamente en los mismos Sprints y con **926 horas base**; no se suman puntos a tareas técnicas. Las historias pequeñas conservan los criterios originales de su agrupación, detallados en la especificación formal, además de los criterios específicos anteriores.
+Las **12 historias principales** organizan la documentación; H05, H07, H09 y H12 contienen las **16 subdivisiones**. Se conservan las páginas, formularios y reglas del sistema. Las **105 tareas** mantienen su asignación a sprints, profesionales y **926 horas base**. Cada subdivisión aplica los criterios de su principal que correspondan a su alcance y sus criterios específicos. La validación de una principal desglosada comprende todas sus partes y las tareas comunes aplicables.
 
-Los principales riesgos son la dependencia de permisos por sede (H09.3), la verificación de dinero (H12.1 y H07.2), la custodia de XML/PDF (H12.3), las aprobaciones de César y la integración necesaria para publicar servicios. Algunas historias pequeñas dependen de tareas que se completan antes, dentro de otras historias o como componentes comunes; eso no implica duplicar esfuerzo. El orden y la secuencia de tareas de Semana 4 permanecen como referencia.
+Los principales riesgos son la dependencia de permisos por sede (H09.3), la verificación de dinero (H12.1 y H07.2), la custodia de XML/PDF (H12.3), las aprobaciones de César y la integración necesaria para publicar servicios. Algunas historias pequeñas dependen de tareas que se completan antes, dentro de otras historias o como componentes comunes; eso no implica duplicar esfuerzo. Las dependencias del backlog técnico de Semana 5 y las asignaciones de esta semana conservan la secuencia técnica de referencia.
 
 El ejercicio de clase **N08/N10: 16 puntos, 2 Sprints y ₡240.000** corresponde solo a dos funcionalidades y a supuestos de dos integrantes. **N08 no equivale a toda H09**, porque H09 incluye cuentas autorizadas e historiales; los importes y la velocidad del ejercicio parcial no sustituyen el plan completo de ocho profesionales hipotéticos.
 
-### Velocidad inicial y proyección
+### Capacidad y cierre en cinco sprints
 
-**No existe velocidad real observada**, porque la ejecución del equipo profesional se representa académicamente. Con **124 puntos preliminares**, terminar en **cinco Sprints** exigiría un promedio de **24,8 puntos por Sprint**; para la simulación se utiliza **25 puntos/Sprint como hipótesis de referencia**, no como capacidad demostrada. Con Sprints de dos semanas:
+**El proyecto del escenario debe finalizar en 10 semanas: cinco sprints de dos semanas.** Ese plazo incluye comprobaciones, respaldos, guía, aceptación y cierre; el plan no contempla sprints adicionales.
 
-| Velocidad hipotética | Cálculo para 124 puntos | Sprints aproximados | Duración |
-| --- | --- | ---: | --- |
-| 20 puntos/Sprint (menor) | 124 ÷ 20 = 6,2; redondear hacia arriba | 7 | 14 semanas |
-| **25 puntos/Sprint (referencia)** | **124 ÷ 25 = 4,96; redondear hacia arriba** | **5** | **10 semanas** |
-| 32 puntos/Sprint (mayor) | 124 ÷ 32 = 3,875; redondear hacia arriba | 4 | 8 semanas |
+Los **124 puntos de historia** expresan tamaño relativo. Dividirlos entre cinco da **24,8 puntos por sprint como promedio requerido**, no como límite de capacidad ni como productividad comprobada. La cantidad puede variar entre sprints según las historias que se terminen. Por eso, 36 puntos en S2 y 50 en S4 requieren revisar las entregas y sus criterios, pero no obligan por sí solos a contratar más personas.
 
-El cálculo global **no garantiza que el cronograma que sigue sea viable**: la distribución actual concentra **36 puntos en S2 y 50 en S4** frente a una velocidad de referencia de 25. Es un **riesgo explícito de secuenciación y capacidad**, no evidencia de que el equipo pueda asumir ese volumen. Si las validaciones o la velocidad real no respaldan el plan, deberán revisarse las entregas y luego recalcularse fechas, disponibilidad y costos; no se alteran anticipadamente las tareas ni el presupuesto en esta actividad documental.
+La **velocidad observada** sería el número de puntos de historias aceptadas al terminar sprints realmente ejecutados. Este curso es una simulación teórica, por lo que no se dispone de ese dato. La comprobación del plazo utiliza las **105 tareas**, sus horas, dependencias, ejecutores, dedicaciones y pruebas previstas; los puntos no se convierten en horas.
+
+Las estimaciones representan tres casos del mismo alcance: **favorable**, con reutilización y menos correcciones; **base**, con el esfuerzo previsto; y **desfavorable**, con mayor dificultad, correcciones o integración. No son tres plazos distintos: todos deben contrastarse con el límite de cinco sprints.
+
+| Escenario | Horas-persona | Comprobación con la asignación vigente |
+| --- | ---: | --- |
+| Favorable | 466 | Cabe en cinco sprints manteniendo los inicios previstos y usando la duración favorable. T105 terminaría en la hora efectiva 310. |
+| Base | 926 | Cabe en cinco sprints; T105 termina en la hora efectiva 312. |
+| Desfavorable | 1.482 | No cabe con la asignación vigente. Requiere una decisión sobre reorganización y recursos antes de actualizar el plan. |
+
+En el favorable se mantiene la disponibilidad contratada y su presupuesto: gastar menos horas de ejecución no reduce automáticamente el costo de una bolsa ya contratada.
+
+| Comprobación del plan base | Resultado |
+| --- | --- |
+| Trabajo técnico | 926 horas-persona, repartidas en 182 / 230 / 200 / 224 / 90 h por sprint. |
+| Equipo | 8 profesionales hipotéticos con dedicaciones parciales. |
+| Disponibilidad | 1.541 h brutas; 1.232,8 h planificables después de reservar el 20%. |
+| Carga por persona y secuencia | Respeta sus bolsas, las dependencias y una tarea por persona a la vez. |
+| Terminación | T105 termina en la hora efectiva 312 de 320, dentro del Sprint 5. |
+| Presupuesto base | ₡16.229.950 antes de impuestos. |
+
+Con las estimaciones base, el plan cabe en los cinco sprints con el equipo y el presupuesto registrados. La revisión no justifica aumentarlos solo para repartir los puntos de forma uniforme. Esto es una comprobación de planificación con supuestos académicos, no evidencia de ejecución real.
+
+**Riesgo pendiente de decisión:** con los esfuerzos desfavorables, la cadena dependiente de 426 h no cabe en las 320 h efectivas del plazo. Resolverla exige revisar la descomposición, el modo de ejecución, las estimaciones o las dependencias justificadas, además de los recursos y costos que correspondan. Se consulta antes de modificar esos datos. El plazo permanece en cinco sprints.
 
 ### Cronograma de entregas (Release Plan)
 
-Se conservan los cinco Sprints y sus fechas del escenario. Cada historia se atribuye **solo** al Sprint donde está prevista la última tarea técnica propia; su punto se reconoce realmente solo cuando cumple todos sus criterios de aceptación y la *Definition of Done* (DoD). Las pruebas integrales y la aceptación final común corresponden a S5. Los puntos siguientes son **planificados y provisionales**, no velocidad medida.
+Se conservan los cinco sprints y sus fechas del escenario. Cada historia sin subdividir o subdivisión se atribuye al sprint de su última tarea propia prevista y reconoce sus puntos al cumplir sus criterios de aceptación y la DoD. Las cuatro historias principales desglosadas se aceptan al completar todas sus partes; sus subtotales no se contabilizan de nuevo. Las pruebas integrales y la aceptación final común corresponden a S5. Los puntos siguientes son **planificados y provisionales**, no productividad medida.
 
-| Sprint | Fechas previstas | Incremento principal previsto | Historias cuya última tarea técnica se prevé completar | Puntos previstos | Presupuesto vigente |
+| Sprint | Fechas previstas | Incremento principal previsto | Historias sin subdividir o subdivisiones previstas | Puntos previstos | Presupuesto vigente |
 | --- | --- | --- | --- | ---: | ---: |
 | **S1** | 10–23 sep. 2026 | Base técnica, cuentas, ingreso, recuperación y Mi cuenta | H02, H03, H04, H08 | **18** | ₡3.193.550 |
 | **S2** | 24 sep.–7 oct. 2026 | Landing completa, clientes, sedes, asociaciones, consultorías iniciales y catálogos | H01, H05.1, H07.1, H09.1, H09.2, H09.3, H11 | **36** | ₡3.446.550 |
 | **S3** | 8–21 oct. 2026 | Solicitudes de cambios, control previo de atención, cobros y recibos | H05.2, H07.2, H12.1, H12.2 | **20** | ₡3.285.550 |
 | **S4** | 22 oct.–4 nov. 2026 | Propuestas, historial, calendario, publicación, historiales anteriores, documentos fiscales y entrega | H05.3, H05.4, H06, H07.3, H07.4, H09.4, H10, H12.3, H12.4 | **50** | ₡3.919.200 |
 | **S5** | 5–18 nov. 2026 | Validación integral, restauración de respaldos, guía y aceptación simulada | Comprobaciones comunes y cierre; no se duplican puntos de historias | **0** | ₡2.385.100 |
-| **Total** | **10 semanas** | **105 tareas y 24 historias entregables de 12 agrupaciones** | **Estimaciones revisadas, sujetas a Planning Poker** | **124** | **₡16.229.950** |
+| **Total** | **10 semanas** | **105 tareas; 12 historias principales y 16 subdivisiones dentro de 4 de ellas** | **Estimación académica formalizada** | **124** | **₡16.229.950** |
 
-**Interpretación:** las fechas y el presupuesto son los de la planificación técnica original; **no se redistribuyeron tareas u horas** para hacer coincidir artificialmente los puntos con la velocidad supuesta. Si un incremento no cumple los criterios o la DoD, sus puntos continúan pendientes. La aceptación conjunta de S5 no autoriza a contar puntos por segunda vez.
+**Interpretación:** las entregas suman 124 puntos una sola vez y se comprueban contra las tareas y sus criterios. Los cinco sprints y las 105 tareas forman el plan base; la distribución desigual de puntos no cambia las horas contratadas. Si una desviación amenaza la fecha de S5, se revisan las tareas, dependencias, recursos y presupuesto y se consulta la decisión antes de modificar el plan. Una historia que no cumple sus criterios o la DoD no se declara aceptada para cuadrar el cierre. La aceptación conjunta de S5 no permite contar puntos por segunda vez.
 
-**Seguimiento e hitos:** al cierre de cada Sprint se revisaría el incremento con César y se registrarían decisiones y evidencias académicas en Git. Un **burndown de release** comenzaría con **124 puntos pendientes** y descontaría únicamente historias aceptadas; se actualizarían los supuestos de velocidad, riesgos, alcance y presupuesto si la ejecución real mostrara diferencias. Los resultados hipotéticos no deben presentarse como logros observados.
+**Seguimiento e hitos:** al cierre de cada Sprint se revisaría el incremento con César y se registrarían decisiones y evidencias académicas en Git. Un **burndown de release** comenzaría con **124 puntos pendientes** y descontaría únicamente historias sin subdividir o subdivisiones aceptadas, una vez cada una; las desviaciones representadas obligarían a revisar secuencia, capacidad, riesgos y presupuesto dentro del plazo de cinco sprints, con decisiones explícitas. Los resultados hipotéticos no deben presentarse como logros observados.
