@@ -229,6 +229,17 @@ Sede Regional San Carlos
     - [Supuestos, dependencias y riesgos de la estimación](#supuestos-dependencias-y-riesgos-de-la-estimación)
     - [Capacidad y cierre en cinco sprints](#capacidad-y-cierre-en-cinco-sprints)
     - [Cronograma de entregas (Release Plan)](#cronograma-de-entregas-release-plan)
+  - [Semana 7 · Calidad, recursos humanos y comunicación](#semana-7--calidad-recursos-humanos-y-comunicación)
+    - [Plan de Comunicaciones](#plan-de-comunicaciones)
+      - [Interesados y comunicaciones académicas](#interesados-y-comunicaciones-académicas)
+      - [Comunicación del escenario profesional](#comunicación-del-escenario-profesional)
+      - [Canales, respuestas y registro de decisiones](#canales-respuestas-y-registro-de-decisiones)
+      - [Escalamiento de impedimentos y conflictos](#escalamiento-de-impedimentos-y-conflictos)
+    - [Tablero de Trabajo del Sprint 1](#tablero-de-trabajo-del-sprint-1)
+      - [Columnas, límites y responsabilidades](#columnas-límites-y-responsabilidades)
+      - [Carga inicial y condición de terminado](#carga-inicial-y-condición-de-terminado)
+    - [Relación con calidad y recursos](#relación-con-calidad-y-recursos)
+    - [Evidencia y registro de la entrega](#evidencia-y-registro-de-la-entrega)
 
 ---
 
@@ -2768,3 +2779,88 @@ Los cinco sprints mantienen las fechas de referencia. Cada una de las ocho histo
 | **Total** | **10 semanas** | **105 tareas únicas; 108 actividades al detallar tres tareas comunes** | **12 historias principales, 16 subdivisiones y 24 unidades de entrega** | **124** | **₡23.024.150** |
 
 **Seguimiento:** revisar por sprint tareas y etapas terminadas, carga, criterios, presupuesto y riesgos. Un burndown comienza con 124 puntos y descuenta únicamente unidades aceptadas, una vez cada una. Se registran los cambios y la evidencia del expediente en Git; los resultados hipotéticos se rotulan simulados. Las modificaciones nuevas de alcance, dependencias, personas o costos se consultan antes de aplicarlas y se propagan a todos los apartados afectados.
+
+---
+
+## Semana 7 · Calidad, recursos humanos y comunicación
+
+> **Fecha lectiva de referencia:** miércoles 28 de octubre de 2026. Registro en el expediente: 1 de noviembre de 2026.
+>
+> **Entregables:** Plan de Comunicaciones y Tablero de Trabajo del Sprint Backlog 1.
+
+Esta sección aplica la guía de Semana 7 —diapositivas 16 y 17 del archivo, numeradas 15 y 16 en el pie—. El plan define qué información necesita cada interesado y el tablero hace visible el trabajo seleccionado. Ambos forman parte del expediente en Git.
+
+### Plan de Comunicaciones
+
+Brian y Jeremy elaboran y revisan el expediente real. Los diez profesionales de [Semana 6](#puestos-experiencia-y-dedicación) representan la ejecución técnica hipotética; sus reuniones y avances no se presentan como hechos observados. Las frecuencias siguientes son acuerdos de trabajo propuestos para el ejercicio, sujetos a disponibilidad cuando interviene una persona externa.
+
+#### Interesados y comunicaciones académicas
+
+Se reutiliza el poder/interés del [registro de Semana 2](#registro-de-interesados). Yesenia se incorpora como interesada académica con valoración propuesta **5/5**, por su función de evaluación y retroalimentación; no es una valoración medida ni un acuerdo de la docente.
+
+| Interesado — poder/interés | Información y momento | Canal | Responsable de comunicar | Evidencia |
+| --- | --- | --- | --- | --- |
+| Brian y Jeremy — 4/5 | Avance del expediente, revisión y dudas en cada jornada coordinada; sincronización de 10–15 min. | Reunión breve y GitHub para decisiones. | El autor de cada cambio; el otro integrante revisa. | Commit, diferencia y observaciones resueltas. |
+| César — 5/5 | Reglas y dudas de negocio: consulta semanal propuesta de 20 min; revisión de incremento al cierre del sprint, unos 30 min, según disponibilidad. | WhatsApp o conversación acordada; resumen en Git. | Brian coordina; Jeremy registra conclusiones y pendientes. | Fecha, asunto, respuesta y efecto en historias o tareas. |
+| Yesenia Calvo Araya — 5/5, propuesta | Entregables y dudas sobre instrucciones durante la clase y en las fechas que indique. | Clase y enlace al expediente en GitHub; otro canal solo cuando lo indique. | Brian y Jeremy. | Entrega versionada y retroalimentación registrada. |
+
+#### Comunicación del escenario profesional
+
+PO es el analista/Product Owner del caso; QSM combina calidad y facilitación Scrum; D4 combina desarrollo senior y DevOps. Estos códigos identifican profesionales hipotéticos, no reemplazan a los autores del expediente.
+
+| Interesado — poder/interés | Información y momento | Canal del escenario | Responsable previsto |
+| --- | --- | --- | --- |
+| Equipo profesional — 4/5 | Tareas, dependencias, bloques y bloqueos: Daily de hasta 15 min cuando haya trabajo activo; Planning, Review y Retrospective por sprint. | Tablero, repositorio y reunión del escenario. | QSM facilita; cada ejecutor actualiza su trabajo; PO prioriza. |
+| Clientes particulares — 2/4 | Condiciones y recorridos del portal cuando se validen necesidades; comunicación comercial según Semana 3. | Consulta coordinada por César; WhatsApp y portal opcional en el caso. | César y PO. |
+| Empresas clientes — 3/5 | Consulta por empresa, sedes, documentos y permisos cuando se valide el alcance. | Consulta con representante; resumen de requisitos en el expediente. | PO con César. |
+| Contactos de empresas — 3/5 | Coordinación de visitas y acceso por sede al revisar esos recorridos. | Conversación acordada; WhatsApp en la operación representada. | César y PO. |
+| Proveedores de productos — 2/2 | Identificación de productos cuando falten datos para el catálogo. | Documentación del proveedor o consulta puntual. | César aporta o confirma datos; PO registra la necesidad. |
+| Alojamiento/infraestructura — 2/2 | Condiciones técnicas, consumo, incidencias y restauración al preparar el entorno o detectar un problema. | Documentación, consola y soporte del servicio. | D4; PO comunica cualquier efecto en costo o plazo. |
+| Entidades reguladoras aplicables — 5/2 | Requisitos que afecten datos o documentos, antes de decidir sobre ellos. | Fuentes oficiales y consulta por el canal que corresponda. | PO y César identifican lo aplicable; el equipo conserva la referencia. |
+
+#### Canales, respuestas y registro de decisiones
+
+- **Registro común:** el README contiene requisitos y acuerdos; el tablero contiene estado y bloqueos; [CHANGELOG.md](CHANGELOG.md) y Git conservan las entregas. Una conversación relevante se resume allí con fecha, autor, asunto, decisión y referencias H/T afectadas.
+- **Respuesta interna propuesta:** revisar mensajes o comentarios en la siguiente jornada de trabajo, con objetivo de un día hábil del escenario. Un bloqueo que amenace la DoD, el presupuesto o S5 se registra y comunica en la misma jornada.
+- **Personas externas:** no se presume un plazo de respuesta de César, la docente o proveedores. PO prepara la consulta y reitera en el siguiente contacto acordado; mientras falte una decisión necesaria, la dependencia se mantiene pendiente. El silencio no significa aprobación.
+- **Cambios:** antes de aplicar un ajuste, registrar su efecto en alcance, dependencias, personas, costo y cinco sprints. No cambiar reglas comerciales por un mensaje sin confirmación ni registrar una aceptación inexistente.
+- **Reuniones y tiempo:** coordinación y ceremonias utilizan el 20% ya reservado; no añaden horas ni tareas T nuevas. Los especialistas parciales intervienen cuando tienen trabajo activo o se requiere su criterio.
+- **Información compartida:** el expediente público utiliza datos ficticios; las consultas del negocio se resumen sin publicar datos personales, comprobantes ni credenciales.
+
+#### Escalamiento de impedimentos y conflictos
+
+1. El responsable registra el bloqueo en la tarjeta: fecha, causa, H/T afectadas, impacto y siguiente acción. La tarjeta permanece en su columna y cuenta para el WIP.
+2. QSM coordinaría la resolución del impedimento; LT revisaría lo técnico y PO, prioridades o requisitos. Brian y Jeremy documentan esa representación.
+3. Una regla de negocio se consulta con César; una instrucción académica, con Yesenia. Se conservan las alternativas y la respuesta sin inventar autorizaciones.
+4. Tras la decisión se actualizan tarjeta, requisitos y cálculos afectados. En la retrospectiva se registra al menos una mejora concreta para el siguiente sprint.
+
+### Tablero de Trabajo del Sprint 1
+
+**Abrir:** [Tablero Scrum/Kanban del Sprint 1](docs/semana-07/tablero-sprint-1.md). Está implementado como un tablero visual de cuatro columnas en Markdown, versionado en GitHub. Cada cambio de estado se hace editando el archivo y guardando el commit. Es un tablero del repositorio; no utiliza GitHub Projects.
+
+El tablero carga las cinco unidades del [Sprint Backlog 1](#sprint-1-base-técnica-acceso-y-datos-iniciales): **H01, H02, H03, H09.1 y H11**, con responsable documental, revisor, tareas y profesionales previstos. Reúnen **25 puntos**. El sprint completo incluye 22 tareas —188 h base y 296 h desfavorables—, con sus componentes comunes contados una vez.
+
+#### Columnas, límites y responsabilidades
+
+| Columna | Significado | Límite acordado para el escenario |
+| --- | --- | --- |
+| Por hacer | Unidad seleccionada todavía no iniciada. | Las cinco unidades cargadas; no es trabajo en curso. |
+| En progreso | Sus tareas se están ejecutando en la simulación, con responsable y dependencias comprobados. | Máximo 5 tarjetas: corresponde a las cinco entregas coordinadas por los seis desarrolladores; no amplía la capacidad individual. |
+| En revisión | Está pendiente comprobar criterios, integración y DoD. | Máximo 2 tarjetas; cada revisión tiene responsable identificado. |
+| Hecho | Cumple criterios y DoD dentro de la ejecución representada. | Sin límite WIP; una tarjeta se cuenta una sola vez. |
+
+WIP significa trabajo en curso. El límite se aplica a tarjetas, mientras la [asignación técnica](#estimación-y-asignación-de-las-tareas) mantiene una actividad por profesional a la vez. Una tarjeta puede reunir varias tareas y profesionales. Los autores documentales no se contabilizan como ejecutores contratados.
+
+#### Carga inicial y condición de terminado
+
+Las cinco tarjetas comienzan **Por hacer**: cargar su planificación no demuestra programación realizada. El tablero distingue la evidencia documental de los resultados que solo se representarían en el caso.
+
+Para mover una tarjeta a Hecho se comprueban sus criterios, tareas y dependencias, los seis criterios de [DoD](#criterios-de-terminación-y-aceptación) y la revisión correspondiente. Brian o Jeremy registra la evidencia y su carácter simulado; una revisión del expediente no se presenta como una prueba real del software. El detalle y las reglas de movimiento se mantienen en el tablero para evitar duplicarlas.
+
+### Relación con calidad y recursos
+
+La DoD y los criterios de cada historia son la referencia de calidad. Las pruebas y la revisión acompañan cada incremento; S5 agrega regresión integral, restauración y aceptación conjunta. Las observaciones del tablero y de la retrospectiva retroalimentan el Sprint Backlog. Se conservan las diez personas, 105 tareas, 124 puntos y el presupuesto de Semana 6.
+
+### Evidencia y registro de la entrega
+
+El Plan de Comunicaciones está en esta sección; el tablero y sus cinco tarjetas están en el archivo enlazado. La incorporación se registra en [Historial de cambios](CHANGELOG.md) y en un commit propio de Semana 7. La revisión cruzada humana y cualquier socialización con otro equipo se registran cuando ocurran; no se declaran realizadas por preparar estos archivos.
