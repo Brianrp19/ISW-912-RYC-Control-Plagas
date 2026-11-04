@@ -1531,7 +1531,7 @@ Los grupos de datos generales, plagas/productos, tratamiento y recomendaciones s
 | T003 | Construir login. | Correo, contraseña, mostrar/ocultar y enlaces de registro/recuperación. | T082 |
 | T004 | Validar acceso y sesión. | Credenciales, errores, límite de fallos, cierre e inactividad según [seguridad](#registro-e-inicio-de-sesión). | T003, T079, T081 |
 
-**Componentes comunes:** T082 — Diseño de acceso; T092 — Menús. [Uso por persona](#componentes-utilizados-en-las-páginas).
+**Componentes comunes:** T082 — Diseño de las páginas de acceso; T092 — Menús. [Uso por persona](#componentes-utilizados-en-las-páginas).
 
 #### H03: Crear una cuenta de cliente
 
@@ -1544,7 +1544,7 @@ Los grupos de datos generales, plagas/productos, tratamiento y recomendaciones s
 | T005 | Construir registro. | Cinco campos, etiquetas y reglas del [registro](#campos-del-registro). | T082 |
 | T006 | Guardar cuenta de cliente. | Validación, UUID v4 y contraseña protegida con Argon2id. | T005, T079 |
 
-**Componentes comunes:** T009 — Verificación de correo; T082 — Diseño de acceso. [Uso por persona](#componentes-utilizados-en-las-páginas).
+**Componentes comunes:** T009 — Verificación de correo; T082 — Diseño de las páginas de acceso. [Uso por persona](#componentes-utilizados-en-las-páginas).
 
 #### H04: Recuperar el acceso desde Olvidé mi contraseña
 
@@ -1557,7 +1557,7 @@ Los grupos de datos generales, plagas/productos, tratamiento y recomendaciones s
 | T007 | Solicitar enlace de recuperación. | Correo válido, respuesta genérica y envío cuando corresponde. | T079, T081, T101 |
 | T008 | Guardar nueva contraseña. | Enlace válido; invalidar enlace/sesiones, confirmar y volver a login. | T007 |
 
-**Componentes comunes:** T082 — Diseño de acceso; T101 — Railway, HTTPS y correo. [Uso por persona](#componentes-utilizados-en-las-páginas).
+**Componentes comunes:** T082 — Diseño de las páginas de acceso; T101 — Railway, HTTPS y correo. [Uso por persona](#componentes-utilizados-en-las-páginas).
 
 #### H05: Consultar mi resumen y gestionar mis atenciones
 
@@ -1582,7 +1582,7 @@ Los grupos de datos generales, plagas/productos, tratamiento y recomendaciones s
 | T020 | Consultar historial. | Línea de tiempo con publicados del cliente/sedes autorizados. | T079, T089 |
 | T021 | Consultar servicio. | Detalle con plagas/productos/tratamiento/recomendaciones dentro del panel. | T020, T079 |
 
-**Componentes comunes:** T009 — Verificación de correo; T026 — Descargas de documentos; T083 — WhatsApp; T084 — Propuesta; T085 — Decisión de consultoría; T086 — Orden; T087 — Pagado/pendiente; T088 — Territorio; T089 — Permisos; T090 — Facturación; T091 — Actualización; T092 — Menús; T093 — Listados por rol. [Uso por persona](#componentes-utilizados-en-las-páginas).
+**Componentes comunes:** T009 — Verificación de correo; T026 — Descargas de documentos; T083 — WhatsApp; T084 — Propuesta; T085 — Aceptación o rechazo del costo de consultoría; T086 — Orden; T087 — Pagado/pendiente; T088 — Territorio; T089 — Permisos; T090 — Facturación; T091 — Actualización; T092 — Menús; T093 — Listados por rol. [Uso por persona](#componentes-utilizados-en-las-páginas).
 
 #### H06: Consultar mis pagos y documentos
 
@@ -1624,7 +1624,7 @@ Los grupos de datos generales, plagas/productos, tratamiento y recomendaciones s
 | T039 | Corregir servicio. | Conservar motivo, fecha y seguimiento. | T038 |
 | T040 | Reutilizar ficha de atención. | Precargar cliente/lugar/orden y acciones; crear ubicación conserva contexto. | T028, T086 |
 
-**Componentes comunes:** T026 — Descargas de documentos; T084 — Propuesta; T085 — Decisión de consultoría; T086 — Orden; T087 — Pagado/pendiente; T088 — Territorio; T089 — Permisos; T090 — Facturación; T091 — Actualización; T092 — Menús; T093 — Listados por rol. [Uso por persona](#componentes-utilizados-en-las-páginas).
+**Componentes comunes:** T026 — Descargas de documentos; T084 — Propuesta; T085 — Aceptación o rechazo del costo de consultoría; T086 — Orden; T087 — Pagado/pendiente; T088 — Territorio; T089 — Permisos; T090 — Facturación; T091 — Actualización; T092 — Menús; T093 — Listados por rol. [Uso por persona](#componentes-utilizados-en-las-páginas).
 
 #### H08: Consultar y administrar Mi cuenta
 
@@ -1739,16 +1739,16 @@ T009, T026 y T078–T105 cubren correo, descargas, preparación, componentes reu
 
 ##### Componentes utilizados en las páginas
 
-**Autores documentales:** Brian y Jeremy. Jeremy: T009 — Verificación de correo, T026 — Descargas de documentos, T082 — Acceso, T083 — WhatsApp, T085 — Decisión, T090 — Facturación. Brian: T084 — Propuesta, T087 — Pagado/pendiente, T093 — Listados por rol.
+**Autores documentales:** Brian y Jeremy. Jeremy: T009 — Verificación de correo, T026 — Descargas de documentos, T082 — Diseño de las páginas de acceso, T083 — WhatsApp, T085 — Aceptación o rechazo del costo de consultoría, T090 — Facturación. Brian: T084 — Propuesta, T087 — Pagado/pendiente, T093 — Listados por rol.
 
 | Componente                      | Cliente/visitante                            | César                                 |
 | ------------------------------- | -------------------------------------------- | ------------------------------------- |
 | T009 — Verificación de correo | Verifica su correo y reenvía el enlace. | Comprueba el correo verificado al asociar. |
 | T026 — Descargas de documentos | Recibos, facturas y originales autorizados. | Documentos de atenciones e historial. |
-| T082 — Acceso                   | Login, registro, recuperación.               | Login y recuperación.                 |
+| T082 — Diseño de las páginas de acceso                   | Login, registro, recuperación.               | Login y recuperación.                 |
 | T083 — WhatsApp                 | Contacto público o solicitud.                | Recibe; registra con T028 — Contacto. |
 | T084 — Propuesta                | Consulta.                                    | Prepara.                              |
-| T085 — Consultoría              | Acepta/rechaza costo.                        | Registra decisión externa.            |
+| T085 — Aceptación o rechazo del costo de consultoría | Acepta o rechaza el precio de la consultoría inicial. | Registra la respuesta recibida fuera del portal. |
 | T086 — Orden                    | Consulta condiciones.                        | Administra.                           |
 | T087 — Pagado/pendiente         | Consulta importes.                           | Registra/revisa/corrige.              |
 | T088 — Territorio               | Indica/selecciona lugar autorizado.          | Comprueba.                            |
@@ -1762,10 +1762,10 @@ T009, T026 y T078–T105 cubren correo, descargas, preparación, componentes reu
 | ---- | ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------- |
 | T009 | Verificar correo. | Envío, verificación y componente de aviso/reenvío preparados en S1; el Panel del cliente los reutiliza según [verificación](#verificación-del-correo-en-el-portal). | T006 |
 | T026 | Consultar y descargar recibos/facturas. | Recibo, PDF, XML y respuesta autorizados; admite orden propia sin asociación. | T079, T089 |
-| T082 | Construir diseño de acceso. | Login/registro/recuperación con anchos, espacios y desplazamiento previstos. | T080 |
+| T082 | Diseñar las páginas de acceso. | Diseño de login, registro y recuperación con anchos, espacios y desplazamiento previstos. | T080 |
 | T083 | Preparar contacto WhatsApp. | Número aprobado/mensaje codificado abren en ambos dispositivos; usuario envía allí. | T001 |
 | T084 | Guardar/mostrar propuesta. | César prepara; WhatsApp comparte y portal consulta, sin exigir cuenta. | T045, T079, T086 |
-| T085 | Registrar decisión de consultoría. | Portal o César, fecha/canal; aceptar crea orden con T086 — Condiciones aceptadas. | T031, T086 |
+| T085 | Registrar aceptación o rechazo del costo de consultoría. | El cliente responde en el portal o César registra la respuesta externa; conservar fecha y canal. Aceptar crea la orden de consultoría con T086. | T031, T086 |
 | T086 | Conservar orden aceptada. | Cliente/sede, solicitante si existe, total/moneda/condiciones; cuenta opcional. | T079 |
 | T087 | Calcular pagado/pendiente. | Consultoría, anticipo y saldo según [condiciones](#consultoría-y-aceptación-del-servicio); solo dinero confirmado descuenta. | T079 |
 | T088 | Construir selectores territoriales. | Catálogo y niveles dependientes compartidos entre solicitudes/ubicaciones. | T079, T092 |
@@ -2914,7 +2914,7 @@ Ingresar con correo y contraseña, controlar intentos y sesión y ofrecer enlace
 
 **Tareas propias:** T003, T004. **Profesionales previstos:** D3. **Esfuerzo propio:** 14 h base / 22 h desfavorables.
 
-**Componentes comunes:** T082 — Diseño de acceso; T092 — Menús. **Criterios:** [Iniciar sesión en la aplicación web](#historia-h02-iniciar-sesión-en-la-aplicación-web), más DoD.
+**Componentes comunes:** T082 — Diseño de las páginas de acceso; T092 — Menús. **Criterios:** [Iniciar sesión en la aplicación web](#historia-h02-iniciar-sesión-en-la-aplicación-web), más DoD.
 
 **Bloqueos:** ninguno registrado en la carga inicial; comprobar dependencias antes de iniciar. **Evidencia de ejecución:** no registrada.
 
@@ -2928,7 +2928,7 @@ Guardar cuenta de cliente con correo único, UUID y Argon2id; reutilizar la veri
 
 **Tareas propias:** T005, T006. **Profesionales previstos:** D1, D2. **Esfuerzo propio:** 16 h base / 24 h desfavorables.
 
-**Componentes comunes:** T009 — Verificación de correo; T082 — Diseño de acceso. **Criterios:** [Crear una cuenta de cliente](#historia-h03-crear-una-cuenta-de-cliente), más DoD.
+**Componentes comunes:** T009 — Verificación de correo; T082 — Diseño de las páginas de acceso. **Criterios:** [Crear una cuenta de cliente](#historia-h03-crear-una-cuenta-de-cliente), más DoD.
 
 **Bloqueos:** ninguno registrado en la carga inicial; comprobar dependencias antes de iniciar. **Evidencia de ejecución:** no registrada.
 
@@ -2942,7 +2942,7 @@ Solicitar el enlace por correo y guardar la nueva contraseña; ambas páginas, v
 
 **Tareas propias:** T007, T008. **Profesionales previstos:** D6. **Esfuerzo propio:** 8 h base / 12 h desfavorables.
 
-**Componentes comunes:** T082 — Diseño de acceso; T101 — Railway, HTTPS y correo. **Criterios:** [Recuperar el acceso desde Olvidé mi contraseña](#historia-h04-recuperar-el-acceso-desde-olvidé-mi-contraseña), más DoD.
+**Componentes comunes:** T082 — Diseño de las páginas de acceso; T101 — Railway, HTTPS y correo. **Criterios:** [Recuperar el acceso desde Olvidé mi contraseña](#historia-h04-recuperar-el-acceso-desde-olvidé-mi-contraseña), más DoD.
 
 **Bloqueos:** ninguno registrado en la carga inicial; comprobar dependencias antes de iniciar. **Evidencia de ejecución:** no registrada.
 
