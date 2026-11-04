@@ -74,6 +74,7 @@ Sede Regional San Carlos
       - [Justificación](#justificación)
     - [Asociación mediante ID](#asociación-mediante-id)
     - [Consultoría y aceptación del servicio](#consultoría-y-aceptación-del-servicio)
+      - [Precio de la consultoría](#precio-de-la-consultoría)
       - [Formulario de consultoría](#formulario-de-consultoría)
       - [Estados de la consultoría](#estados-de-la-consultoría)
       - [Cómo se registra la aceptación del trabajo](#cómo-se-registra-la-aceptación-del-trabajo)
@@ -153,11 +154,11 @@ Sede Regional San Carlos
     - [Criterios utilizados para priorizar](#criterios-utilizados-para-priorizar)
     - [Criterios de terminación y aceptación](#criterios-de-terminación-y-aceptación)
     - [Sprints y Sprint Backlogs](#sprints-y-sprint-backlogs)
-      - [Sprint 1: base técnica, acceso y datos iniciales](#sprint-1-base-técnica-acceso-y-datos-iniciales)
-      - [Sprint 2: solicitudes, asociaciones y condiciones](#sprint-2-solicitudes-asociaciones-y-condiciones)
-      - [Sprint 3: agenda, cobros y recibos](#sprint-3-agenda-cobros-y-recibos)
-      - [Sprint 4: tratamientos, documentos e integración](#sprint-4-tratamientos-documentos-e-integración)
-      - [Sprint 5: validación, respaldo y cierre](#sprint-5-validación-respaldo-y-cierre)
+      - [Sprint 1: base técnica, acceso completo, Landing y catálogos](#sprint-1-base-técnica-acceso-completo-landing-y-catálogos)
+      - [Sprint 2: clientes, cobros y documentos completos](#sprint-2-clientes-cobros-y-documentos-completos)
+      - [Sprint 3: agenda y atención administrativa completas](#sprint-3-agenda-y-atención-administrativa-completas)
+      - [Sprint 4: Portal del cliente completo y respaldos](#sprint-4-portal-del-cliente-completo-y-respaldos)
+      - [Sprint 5: validación integral y cierre](#sprint-5-validación-integral-y-cierre)
     - [Backlog técnico de implementación](#backlog-técnico-de-implementación)
       - [Simbología de las historias y las tareas](#simbología-de-las-historias-y-las-tareas)
       - [Dependencias de construcción y reglas de uso](#dependencias-de-construcción-y-reglas-de-uso)
@@ -179,7 +180,7 @@ Sede Regional San Carlos
         - [Pruebas de la aplicación web](#pruebas-de-la-aplicación-web)
         - [Entorno de entrega y respaldos](#entorno-de-entrega-y-respaldos)
         - [Guía, aceptación y cierre](#guía-aceptación-y-cierre)
-      - [Etapas de las tareas comunes](#etapas-de-las-tareas-comunes)
+      - [Reutilización y comprobación de los componentes comunes](#reutilización-y-comprobación-de-los-componentes-comunes)
     - [Historias de usuario desarrolladas — Especificación formal según plantilla](#historias-de-usuario-desarrolladas--especificación-formal-según-plantilla)
       - [Introducción y metodología de desarrollo](#introducción-y-metodología-de-desarrollo)
       - [Historia H01: Conocer RYC y contactar desde la Landing Page](#historia-h01-conocer-ryc-y-contactar-desde-la-landing-page)
@@ -244,7 +245,8 @@ Sede Regional San Carlos
         - [Tarjeta H01: Landing Page](#tarjeta-h01-landing-page)
         - [Tarjeta H02: Inicio de sesión](#tarjeta-h02-inicio-de-sesión)
         - [Tarjeta H03: Registro de cliente](#tarjeta-h03-registro-de-cliente)
-        - [Tarjeta H09.1: Clientes](#tarjeta-h091-clientes)
+        - [Tarjeta H04: Recuperación de acceso](#tarjeta-h04-recuperación-de-acceso)
+        - [Tarjeta H08: Mi cuenta](#tarjeta-h08-mi-cuenta)
         - [Tarjeta H11: Catálogos](#tarjeta-h11-catálogos)
       - [Componentes comunes y seguimiento](#componentes-comunes-y-seguimiento)
     - [Relación con calidad y recursos](#relación-con-calidad-y-recursos)
@@ -315,7 +317,7 @@ Brian y Jeremy preparan el expediente; el equipo profesional hipotético represe
 | --------------------------------------------------------------------- | ---------------------------------------------------------- | ----- | ------- | ------------------- | ------------------------------------------------------- | ---------------------- |
 | César Rodríguez Corrales, propietario y operador                      | Centralizar clientes, visitas, tratamientos y seguimiento. | 5     | 5       | Favorable           | Consultar necesidades y validar avances de cerca.       | Brian y Jeremy         |
 | Brian Rodríguez Pérez y Jeremy Rodríguez Esquivel, autores académicos | Requisitos y retroalimentación para el plan.               | 4     | 5       | Favorable           | Coordinar expediente, dudas y decisiones.               | Brian y Jeremy         |
-| Diez profesionales hipotéticos                                        | Requisitos, dependencias y disponibilidad suficientes.     | 4     | 5       | Favorable, supuesto | Representar asignaciones, capacidad, costos y revisión. | Brian y Jeremy         |
+| Once profesionales hipotéticos                                        | Requisitos, dependencias y disponibilidad suficientes.     | 4     | 5       | Favorable, supuesto | Representar asignaciones, capacidad, costos y revisión. | Brian y Jeremy         |
 | Clientes particulares                                                 | Historial, próximas visitas y solicitudes.                 | 2     | 4       | Favorable           | Informar y recoger comentarios del portal.              | Jeremy                 |
 | Empresas clientes                                                     | Seguimiento de servicios y tratamientos.                   | 3     | 5       | Favorable           | Informar, consultar y validar necesidades del portal.   | Brian                  |
 | Encargados de empresas                                                | Coordinar visitas e información para recibirlas.           | 3     | 5       | Favorable           | Informar y consultar la coordinación.                   | Jeremy                 |
@@ -606,6 +608,12 @@ Controles, registro de autorización, cambios y retirada: [Ficha del cliente y c
 
 RYC atiende en **toda Costa Rica**. Solicitar no cuesta. La consultoría inicial es gratuita en todo el **cantón de San Carlos, Alajuela**; fuera del cantón se cotiza y exige el 100% confirmado antes de la visita, incluidos otros cantones de Alajuela. Tratamiento con propuesta independiente. Una nueva visita para necesidad conocida también exige condiciones y aceptación confirmadas por César.
 
+#### Precio de la consultoría
+
+En San Carlos, el importe es **₡0** y no se exige reporte de pago. Fuera del cantón, **César decide e introduce manualmente el precio de la visita**; el sistema guarda ese monto y la moneda CRC/USD, sin aplicar una fórmula de distancia o tarifas. El importe cobrado debe ser positivo y admitir hasta dos decimales, según las reglas de las órdenes.
+
+Antes de aceptar se muestran lugar, concepto, monto, moneda e instrucciones. La aceptación conserva esa cotización; cambiar un importe aceptado exige nueva aceptación y revisión de los pagos registrados. La consultoría se cobra aparte del tratamiento y no se descuenta automáticamente de él. Para iniciar la visita cobrada se exige el 100% confirmado.
+
 #### Formulario de consultoría
 
 El portal guarda y precarga cuenta/lugar; el formulario público solo prepara WhatsApp. Campos, en orden:
@@ -858,6 +866,8 @@ Los opcionales vacíos no generan error. Los valores introducidos cumplen format
 
 #### Navegación
 
+Esta sección describe la aplicación completa. En los [incrementos del plan](#sprints-y-sprint-backlogs), los enlaces se habilitan al entregar cada página completa: inicialmente César accede a Catálogos y el cliente a Mi cuenta; los paneles se convierten en el destino de entrada cuando están disponibles.
+
 | Área                    | Menú, en orden                                                                            |
 | ----------------------- | ----------------------------------------------------------------------------------------- |
 | Landing Page            | Servicios; Cómo trabajamos; Zonas; Contacto; Contactar por WhatsApp; Ver mi historial.    |
@@ -1015,7 +1025,7 @@ Estado junto al pago: **Pendiente de revisión**, César debe comprobar; **Confi
 
 Sumar debajo solo confirmados que cumplen filtros, por recepción real en America/Costa_Rica, **CRC/USD separados**. No sumar pendientes, rechazados ni facturas. Correcciones usan monto/fecha vigentes con seguimiento; cambios de asociación actualizan permisos. Saldo a favor queda en revisión.
 
-Sin datos: **No hay pagos confirmados en este periodo**.
+Listado sin resultados: **No hay registros para mostrar.** Subtotal sin confirmados: **No hay pagos confirmados en este periodo**.
 
 ###### Datos de facturación de la orden
 
@@ -1080,7 +1090,7 @@ Elegir/crear cliente y ubicación reutiliza contacto. Coincidencias: **Abrir reg
 
 Listado: fecha, contacto, tipo, empresa, lugar, origen Portal/WhatsApp/registro de César, estado y **Ver detalle**. Filtros estado/tipo/contacto-empresa. **Registrar contacto** abre su formulario; detalle reúne solicitud, lugar, cotización, orden, pagos, visita y decisiones.
 
-Acciones: **Revisar solicitud**, **Revisar costo**, **Programar consultoría**, **Registrar consultoría realizada**, **Preparar propuesta**, **Registrar decisión**, **Cancelar consultoría**, según [costo](#consultoría-y-aceptación-del-servicio), [estados](#estados-de-la-consultoría) y [aceptación](#cómo-se-registra-la-aceptación-del-trabajo). Exigir cliente/lugar completos para cotizar/programar. Leer/elegir cliente no cambia estados ni asocia. Cancelación previa: motivo 2–1000; corrección: fecha/motivo.
+César introduce el precio manual fuera de San Carlos; dentro se fija ₡0. Acciones: **Revisar solicitud**, **Revisar costo**, **Programar consultoría**, **Registrar consultoría realizada**, **Preparar propuesta**, **Registrar decisión**, **Cancelar consultoría**, según [costo](#consultoría-y-aceptación-del-servicio), [estados](#estados-de-la-consultoría) y [aceptación](#cómo-se-registra-la-aceptación-del-trabajo). Exigir cliente/lugar completos para cotizar/programar. Leer/elegir cliente no cambia estados ni asocia. Cancelación previa: motivo 2–1000; corrección: fecha/motivo.
 
 Compartir propuesta al contacto autorizado por WhatsApp y registrar envío; también visible a cuenta solicitante autorizada. Decisión: resultado, fecha real, canal Portal/WhatsApp/Llamada/Presencial/Otro medio acordado y nota opcional hasta 1000; sin duplicar orden.
 
@@ -1264,7 +1274,7 @@ Documentar entradas, pasos y resultados esperados de estos casos; rotular **simu
 | [Solicitudes y aceptación](#solicitudes-y-seguimiento-del-cliente)                           | Rechazar empresa sin nombre, fecha pasada, lugar inactivo/ajeno o aceptación sin propuesta pendiente. Cancelar conserva decisión; aceptar crea una orden.                                                                                                                                                                                                                       |
 | [Agenda y cambios](#visitas-y-calendario)                                                    | Cambio solicitado conserva visita hasta decisión de César. Rechazar superposición con visita/bloqueo sin reservar horario.                                                                                                                                                                                                                                                      |
 | [Clientes](#clientes) y [catálogos](#catálogos)                                              | Registrar sin cuenta/correo. Desactivar conserva historial y bloquea uso nuevo; producto previo sigue visible.                                                                                                                                                                                                                                                                  |
-| [Cobro previo](#consultoría-y-aceptación-del-servicio)                                                  | San Carlos ₡0; fuera 100% confirmado y trabajo 50%, incluso al publicar directamente. Aceptación congela tarifa, cálculo, total e instrucciones.                                                                                                                                                                                                                                |
+| [Cobro previo](#consultoría-y-aceptación-del-servicio)                                                  | San Carlos ₡0; fuera 100% confirmado y trabajo 50%, incluso al publicar directamente. San Carlos conserva importe cero; fuera se guarda el precio manual de César. La aceptación conserva monto, moneda, condiciones e instrucciones.                                                                                                                                                                                                                                |
 | [Pagos](#revisión-de-pagos-recibidos)                                                        | Repetir reporte/referencia no duplica dinero. Pendientes/rechazados no reducen saldo; efectivo confirmado sin cuenta sí. Deuda restante permite publicación.                                                                                                                                                                                                                    |
 | [Servicios](#servicio-y-tratamiento-realizado)                                               | Rechazar tratamiento sin plaga/justificación preventiva y cantidades no positivas. Publicar tratamiento y recomendaciones reales, sin notas internas.                                                                                                                                                                                                                           |
 | [Historia anterior](#registro-de-servicios-anteriores)                                       | Lugar desconocido: **No registrado**; fecha desconocida: **Fecha no registrada**. No generar visita ni inventar datos.                                                                                                                                                                                                                                                          |
@@ -1302,23 +1312,23 @@ El material de esta semana pide la DoD y el Sprint Backlog 1 a partir del backlo
 
 El Product Backlog reúne **12 historias principales**. H05, H07, H09 y H12 contienen cuatro subdivisiones cada una: **16 subdivisiones en total**. La estimación vigente es de **124 puntos de historia**, adoptada como línea base de planificación de la simulación según la [formalización documentada](#formalización-de-los-puntos-de-historia).
 
-La tabla se presenta por identificador para localizar cada historia. La columna **Orden de prioridad** conserva la prioridad de implementación registrada; la ejecución también respeta las dependencias.
+La tabla se presenta por identificador. El **Orden de prioridad** combina valor operativo y dependencias: acceso, Landing y catálogos primero; clientes y cobros después; agenda y atención completas antes del Portal del cliente. Recuperación y Mi cuenta se incluyen con el acceso para ofrecer un recorrido completo. Los resúmenes se construyen después de las funciones que producen sus datos.
 
 | Historia principal | Subdivisiones | Orden de prioridad | Prioridad | Puntos vigentes |
 | --- | --- | ---: | --- | ---: |
-| [H01: Conocer RYC y contactar desde la Landing Page](#h01-conocer-ryc-y-contactar-desde-la-landing-page) | — | 4 | Alta | 5 |
-| [H02: Iniciar sesión en la aplicación web](#h02-iniciar-sesión-en-la-aplicación-web) | — | 2 | Alta | 5 |
-| [H03: Crear una cuenta de cliente](#h03-crear-una-cuenta-de-cliente) | — | 3 | Alta | 5 |
-| [H04: Recuperar el acceso desde Olvidé mi contraseña](#h04-recuperar-el-acceso-desde-olvidé-mi-contraseña) | — | 5 | Media | 5 |
+| [H01: Conocer RYC y contactar desde la Landing Page](#h01-conocer-ryc-y-contactar-desde-la-landing-page) | — | 3 | Alta | 5 |
+| [H02: Iniciar sesión en la aplicación web](#h02-iniciar-sesión-en-la-aplicación-web) | — | 1 | Alta | 5 |
+| [H03: Crear una cuenta de cliente](#h03-crear-una-cuenta-de-cliente) | — | 4 | Alta | 5 |
+| [H04: Recuperar el acceso desde Olvidé mi contraseña](#h04-recuperar-el-acceso-desde-olvidé-mi-contraseña) | — | 5 | Alta | 5 |
 | [H05: Consultar mi resumen y gestionar mis atenciones](#h05-consultar-mi-resumen-y-gestionar-mis-atenciones) | H05.1–H05.4 | 11 | Media | 18 (subtotal) |
 | [H06: Consultar mis pagos y documentos](#h06-consultar-mis-pagos-y-documentos) | — | 12 | Media | 8 |
-| [H07: Consultar pendientes y gestionar las atenciones](#h07-consultar-pendientes-y-gestionar-las-atenciones) | H07.1–H07.4 | 9 | Alta | 20 (subtotal) |
-| [H08: Consultar y administrar Mi cuenta](#h08-consultar-y-administrar-mi-cuenta) | — | 6 | Media | 3 |
-| [H09: Gestionar clientes, ubicaciones y cuentas autorizadas](#h09-gestionar-clientes-ubicaciones-y-cuentas-autorizadas) | H09.1–H09.4 | 1 | Alta | 21 (subtotal) |
-| [H10: Programar visitas y administrar la disponibilidad](#h10-programar-visitas-y-administrar-la-disponibilidad) | — | 7 | Alta | 8 |
-| [H11: Administrar los catálogos de plagas y productos](#h11-administrar-los-catálogos-de-plagas-y-productos) | — | 8 | Alta | 5 |
-| [H12: Verificar cobros y gestionar documentos y entregas](#h12-verificar-cobros-y-gestionar-documentos-y-entregas) | H12.1–H12.4 | 10 | Alta | 21 (subtotal) |
-| **Total** | **16 subdivisiones en 4 historias principales** | — | **8 principales Alta / 4 principales Media** | **124** |
+| [H07: Consultar pendientes y gestionar las atenciones](#h07-consultar-pendientes-y-gestionar-las-atenciones) | H07.1–H07.4 | 10 | Alta | 20 (subtotal) |
+| [H08: Consultar y administrar Mi cuenta](#h08-consultar-y-administrar-mi-cuenta) | — | 6 | Alta | 3 |
+| [H09: Gestionar clientes, ubicaciones y cuentas autorizadas](#h09-gestionar-clientes-ubicaciones-y-cuentas-autorizadas) | H09.1–H09.4 | 7 | Alta | 21 (subtotal) |
+| [H10: Programar visitas y administrar la disponibilidad](#h10-programar-visitas-y-administrar-la-disponibilidad) | — | 9 | Alta | 8 |
+| [H11: Administrar los catálogos de plagas y productos](#h11-administrar-los-catálogos-de-plagas-y-productos) | — | 2 | Alta | 5 |
+| [H12: Verificar cobros y gestionar documentos y entregas](#h12-verificar-cobros-y-gestionar-documentos-y-entregas) | H12.1–H12.4 | 8 | Alta | 21 (subtotal) |
+| **Total** | **16 subdivisiones en 4 historias principales** | — | **10 principales Alta / 2 principales Media** | **124** |
 
 Los subtotales de las cuatro historias desglosadas incluyen sus subdivisiones. Los puntos se suman una sola vez: **44 puntos de las ocho historias sin subdividir + 80 de las dieciséis subdivisiones = 124**. Los puntos expresan esfuerzo relativo, complejidad e incertidumbre. Las horas-persona se conservan en la tabla de estimaciones técnicas.
 
@@ -1326,24 +1336,24 @@ Terminar una historia principal desglosada exige comprobar todas sus subdivision
 
 ### Criterios utilizados para priorizar
 
-1. Clientes/lugares independientes de cuentas y contacto público sin registro.
-2. Cuentas, verificación, asociación y permisos antes de consultas/descargas restringidas.
-3. Propuesta/orden y cobro antes de atención nueva con costo; documentos admitidos antes del tratamiento finalizado.
-4. Dependencias terminadas antes de cada tarea, también dentro del sprint.
-5. Incrementos integrados comprobables, con evidencia documental del ejercicio.
-6. Capacidad profesional, revisión cruzada y retroalimentación del negocio.
+1. **Preparación y acceso completos:** modelo, estilos, permisos necesarios, correo, cuenta de César, registro, recuperación y Mi cuenta antes de depender de ellos. La Landing y los catálogos aportan valor desde el primer sprint.
+2. **Datos administrativos antes del autoservicio:** particulares, empresas, sedes, cuentas autorizadas, antecedentes, cobros y documentos permiten operar sin exigir una cuenta al cliente.
+3. **Operación antes de resúmenes:** agenda, contacto, cotización manual, aceptación, pago previo y tratamiento antes del resumen administrativo; el resumen del cliente espera sus consultas de solicitudes, visitas, historial y pagos.
+4. **Páginas completas:** todas las tareas propias, subdivisiones, componentes, validaciones y acciones de una página deben estar listas al aceptarla. No se traslada una parte pendiente al sprint siguiente.
+5. **Reutilización comprobada:** cada componente se construye y estima una vez, antes de su primera página o en ese mismo sprint. Las páginas siguientes verifican su integración dentro de sus propias tareas.
+6. **Capacidad y calidad:** respetar dependencias, disponibilidad por especialidad, revisión y DoD. Si el conjunto no cabe, revisar recursos y presupuesto manteniendo los cinco sprints, sin declarar trabajo incompleto como terminado.
 
 ### Criterios de terminación y aceptación
 
 **Calidad del producto representado — Definición de Terminado (DoD):**
 
-Cada historia debe cumplir sus criterios de aceptación y los siguientes criterios de calidad:
+Cada historia y página debe cumplir todos sus criterios y tareas, incluidas las subdivisiones y los componentes comunes aplicables, dentro del sprint de entrega. Una página parcial no se acepta ni suma puntos. Además se aplican los siguientes criterios de calidad:
 
 1. **Pruebas:** definir los casos unitarios, de integración y manuales aplicables, con entradas, pasos y resultados esperados; resolver los fallos que impidan aceptar la historia.
 2. **Seguridad:** comprobar validaciones y permisos en el servidor para proteger los registros y archivos de cada cliente y sede.
 3. **Uso en dispositivos:** comprobar celular, computadora y teclado, con etiquetas, foco visible y conservación del registro abierto y sus datos al guardar o cancelar.
 4. **Revisión técnica:** otro integrante del equipo profesional del escenario revisa el trabajo y se resuelven sus observaciones.
-5. **Integración:** incorporar los cambios a la rama principal y comprobarlos en el entorno de pruebas previsto, conservando las funciones anteriores; los formularios compartidos utilizan los mismos registros.
+5. **Integración:** incorporar los cambios a la rama principal y comprobarlos en el entorno de pruebas previsto, conservando las funciones anteriores; los formularios compartidos utilizan los mismos registros y todos los componentes necesarios están disponibles antes de aceptar la página.
 6. **Documentación:** actualizar la documentación mínima de la función y su evidencia de comprobación, diferenciando resultados ejecutados y supuestos simulados.
 
 **Control del expediente, estimaciones y presupuesto:** cada una de las 105 tareas registra su resultado, dependencias, sprint, profesional y estimaciones. La planificación conserva los 105 identificadores y los totales de esfuerzo; las revisiones de secuencia y recursos quedan justificadas. Las sumas y los bloques deben ser consistentes y el presupuesto, recalculable. Los cambios justificados de estimación o presupuesto conservan el motivo y los valores anteriores y actualizan los cálculos y apartados afectados. Brian y Jeremy realizan la revisión cruzada del expediente.
@@ -1354,123 +1364,111 @@ En el curso se documentan los casos y la evidencia esperada de esa ejecución; l
 
 ### Sprints y Sprint Backlogs
 
-El escenario termina en **10 semanas y 5 sprints de 2 semanas**, incluido el cierre. Cada unidad de entrega —una historia sin subdividir o una subdivisión— concentra sus tareas propias en un sprint. Las cuatro historias principales desglosadas pueden abarcar varios sprints. Se mantienen **12 principales, 16 subdivisiones, 24 unidades de entrega y 105 tareas técnicas únicas**.
+El escenario termina en **10 semanas y 5 sprints de 2 semanas**, incluido el cierre. **Cada una de las 12 historias principales se construye y acepta completa en un solo sprint**, con todas sus tareas propias, subdivisiones y componentes necesarios. H04 reúne dos páginas que se entregan juntas; las demás historias conservan su página. Son **13 páginas, 16 subdivisiones y 105 tareas únicas**.
 
-La secuencia reserva bloques para las **1.482 horas-persona desfavorables**. Las estimaciones **466 / 926 / 1.482 h** favorable/base/desfavorable no se reducen. Los 124 puntos se cuentan una vez al aceptar cada unidad con sus criterios y DoD; no se convierten en horas ni se reparten entre tareas.
+Las ocho historias sin subdividir y las dieciséis subdivisiones conservan las 24 unidades de estimación y los **124 puntos**, contados una vez. Las cuatro subdivisiones de cada principal se entregan juntas; no se acepta una página a medias para completar sus otras partes después.
 
-**T094 — Comprobaciones de cobros y documentos, T098 — Continuidad y T103 — Guía** tienen dos etapas internas cada una. Siguen siendo tres tareas de las 105; las tablas de sprint contienen **108 actividades o partes**, no 108 identificadores nuevos. Los componentes comunes preparados antes se reutilizan sin duplicar esfuerzo. [Detalle de etapas](#etapas-de-las-tareas-comunes).
+Se reservan bloques para las **1.482 horas-persona desfavorables**, sin reducir las estimaciones **466 / 926 / 1.482 h**. Cada tarea tiene un sprint, profesional y bloque. **T009 — Verificación de correo y T026 — Descargas de documentos** se tratan como componentes comunes: se preparan antes de las páginas que los reutilizan y mantienen sus ID y horas. T094, T098 y T103 se completan cada una en un solo sprint; ya no se reparten en etapas de sprints distintos.
 
-Los incrementos se integran y prueban en su sprint con datos ficticios, según la DoD. S5 añade regresión completa, restauración y aceptación conjunta. Todo resultado representado se identifica como **simulado**; el curso entrega el expediente.
+Cada página se integra, prueba y documenta en su sprint según la DoD. La reutilización no vuelve a cobrar la construcción de un componente; las comprobaciones de integración de una nueva página están incluidas en sus tareas. S5 añade regresión y aceptación global. El curso entrega el expediente teórico; las ejecuciones y resultados representados se identifican como **simulados**.
 
-#### Sprint 1: base técnica, acceso y datos iniciales
+#### Sprint 1: base técnica, acceso completo, Landing y catálogos
 
 **Semanas simuladas 1–2; revisión de referencia 23/09/2026.**
 
-**Objetivo:** Preparar la aplicación, el acceso, la Landing Page, clientes y catálogos básicos.
+**Objetivo:** Habilitar la Landing, el acceso completo, Mi cuenta y los catálogos de César, con correo y entorno disponibles.
 
-**Incremento previsto:** Ingreso de César, clientes y catálogos; Landing pública y registro opcional. Las ubicaciones y las asociaciones se incorporan en S2.
+**Incremento previsto:** Se entregan Landing, login, registro, las dos páginas de recuperación, Mi cuenta y Catálogos. Cada página incluye sus componentes y comprobaciones. César comienza en Catálogos y el cliente en Mi cuenta; los menús y enlaces solo ofrecen páginas ya disponibles. Los paneles pasan a ser el destino de entrada al entregarse completos.
 
-**Sprint Backlog:** 22 tareas o partes; **188 h base y 296 h reservadas** para cubrir el caso desfavorable.
+**Sprint Backlog:** 26 tareas únicas; **216 h base y 342 h reservadas** para cubrir el caso desfavorable. **Puntos:** 28.
 
-| Historia o trabajo común | Tareas o parte incluida | Base (h) | Desfavorable (h) |
-| --- | --- | ---: | ---: |
+| Historia o trabajo común | Tareas incluidas | Base (h) | Desfavorable (h) |
+| --- | --- | --- | --- |
 | H01 — Conocer RYC y contactar desde la Landing Page | T001, T002 | 20 | 30 |
 | H02 — Iniciar sesión en la aplicación web | T003, T004 | 14 | 22 |
 | H03 — Crear una cuenta de cliente | T005, T006 | 16 | 24 |
-| H09.1 — Registrar y mantener clientes particulares y empresas | T043, T044, T045, T046 | 36 | 54 |
-| H11 — Administrar los catálogos de plagas y productos | T064, T065, T066, T067 | 24 | 40 |
-| Componentes y tareas comunes | T078, T079, T080, T081, T082, T083, T088, T092 | 78 | 126 |
+| H04 — Recuperar el acceso desde Olvidé mi contraseña | T007, T008 | 8 | 12 |
+| H08 — Consultar y administrar Mi cuenta | T041, T042 | 10 | 16 |
+| H11 — Administrar los catálogos de plagas y productos | T064–T067 | 24 | 40 |
+| Componentes y tareas comunes | T009, T078–T083, T088, T092, T093, T100, T101 | 124 | 198 |
 
-**Comprobación del expediente:** revisar tareas, precedencia, carga por profesional y evidencia esperada del incremento; corregir inconsistencias antes de avanzar.
+**Aceptación:** verificar la página completa, sus componentes, pruebas, permisos, precedencia y carga profesional. Ninguna tarea propia o componente necesario queda pendiente para aceptar esa página.
 
-#### Sprint 2: solicitudes, asociaciones y condiciones
+#### Sprint 2: clientes, cobros y documentos completos
 
 **Semanas simuladas 3–4; revisión de referencia 07/10/2026.**
 
-**Objetivo:** Completar consultorías, propuestas, cuentas autorizadas y condiciones de cobro, con el entorno Railway disponible.
+**Objetivo:** Completar Clientes y Cobros y documentos, con todas sus subdivisiones, permisos y archivos.
 
-**Incremento previsto:** El cliente solicita consultoría y decide propuestas; César registra contactos y cotiza. Se habilitan sedes, asociaciones, recuperación y Mi cuenta. Aceptar no confirma dinero.
+**Incremento previsto:** César gestiona particulares, empresas, sedes, cuentas e información anterior; verifica dinero y administra recibos, facturas externas y entregas. La carga histórica conserva su excepción de datos incompletos. Se utilizan registros existentes o ficticios para comprobar estos recorridos; las pantallas de atenciones nuevas llegan completas en S3.
 
-**Sprint Backlog:** 26 tareas o partes; **216 h base y 352 h reservadas** para cubrir el caso desfavorable.
+**Sprint Backlog:** 29 tareas únicas; **262 h base y 434 h reservadas** para cubrir el caso desfavorable. **Puntos:** 42.
 
-| Historia o trabajo común | Tareas o parte incluida | Base (h) | Desfavorable (h) |
-| --- | --- | ---: | ---: |
-| H04 — Recuperar el acceso desde Olvidé mi contraseña | T007, T008 | 8 | 12 |
-| H05.1 — Solicitar consultorías con correo verificado | T009, T011, T012, T014 | 28 | 44 |
-| H05.3 — Consultar solicitudes y decidir propuestas | T013, T015, T016 | 18 | 28 |
-| H07.1 — Registrar contactos y valorar consultorías | T028, T029, T031 | 28 | 44 |
-| H08 — Consultar y administrar Mi cuenta | T041, T042 | 10 | 16 |
-| H09.2 — Administrar ubicaciones y frecuencias de visita | T047, T048, T049 | 20 | 30 |
-| H09.3 — Asociar y revocar cuentas con permisos por sede | T050, T051, T052 | 22 | 38 |
-| Componentes y tareas comunes | T084, T086, T087, T089, T100, T101 | 82 | 140 |
+| Historia o trabajo común | Tareas incluidas | Base (h) | Desfavorable (h) |
+| --- | --- | --- | --- |
+| H09 — Gestionar clientes, ubicaciones y cuentas autorizadas | T043–T055 | 98 | 154 |
+| H12 — Verificar cobros y gestionar documentos y entregas | T068–T077 | 92 | 154 |
+| Componentes y tareas comunes | T026, T086, T087, T089–T091 | 72 | 126 |
 
-**Comprobación del expediente:** revisar tareas, precedencia, carga por profesional y evidencia esperada del incremento; corregir inconsistencias antes de avanzar.
+**Aceptación:** verificar la página completa, sus componentes, pruebas, permisos, precedencia y carga profesional. Ninguna tarea propia o componente necesario queda pendiente para aceptar esa página.
 
-#### Sprint 3: agenda, cobros y recibos
+#### Sprint 3: agenda y atención administrativa completas
 
 **Semanas simuladas 5–6; revisión de referencia 21/10/2026.**
 
-**Objetivo:** Completar agenda, solicitudes de cambio, historial de consulta, comprobación de pagos y recibos.
+**Objetivo:** Completar Calendario y el Panel de administración de César, desde contacto hasta servicio publicado.
 
-**Incremento previsto:** César programa y cobra con verificación; el cliente consulta agenda, solicita cambios y consulta el historial publicado disponible. Las consultas se prueban con datos ficticios; los registros nuevos aparecen al publicarse en S4.
+**Incremento previsto:** Se entregan programación, cambios, bloqueos, cotización manual, aceptación, pago previo, tratamiento, recomendaciones, publicación y correcciones. El resumen administrativo se termina después de las funciones que generan sus datos. El portal posterior reutiliza estas operaciones y los mismos registros.
 
-**Sprint Backlog:** 28 tareas o partes; **226 h base y 366 h reservadas** para cubrir el caso desfavorable.
+**Sprint Backlog:** 24 tareas únicas; **206 h base y 330 h reservadas** para cubrir el caso desfavorable. **Puntos:** 28.
 
-| Historia o trabajo común | Tareas o parte incluida | Base (h) | Desfavorable (h) |
-| --- | --- | ---: | ---: |
-| H05.2 — Solicitar nuevas visitas y cambios de agenda | T017, T018, T019 | 20 | 32 |
-| H05.4 — Consultar resumen e historial de atenciones | T010, T020, T021 | 20 | 32 |
-| H07.2 — Gestionar consultorías y comprobar el anticipo | T030, T033, T040 | 34 | 58 |
-| H10 — Programar visitas y administrar la disponibilidad | T056, T057, T058, T059, T060, T061, T062, T063 | 66 | 102 |
-| H12.1 — Confirmar, rechazar y corregir cobros | T068, T069, T070 | 26 | 44 |
-| H12.2 — Guardar y versionar recibos de pagos confirmados | T071, T072, T073, T074 | 30 | 50 |
-| Componentes y tareas comunes | T085, T090, T093, T094 (Casos de pagos, anticipo y efectivo) | 30 | 48 |
+| Historia o trabajo común | Tareas incluidas | Base (h) | Desfavorable (h) |
+| --- | --- | --- | --- |
+| H07 — Consultar pendientes y gestionar las atenciones | T027–T040 | 124 | 202 |
+| H10 — Programar visitas y administrar la disponibilidad | T056–T063 | 66 | 102 |
+| Componentes y tareas comunes | T084, T085 | 16 | 26 |
 
-**Comprobación del expediente:** revisar tareas, precedencia, carga por profesional y evidencia esperada del incremento; corregir inconsistencias antes de avanzar.
+**Aceptación:** verificar la página completa, sus componentes, pruebas, permisos, precedencia y carga profesional. Ninguna tarea propia o componente necesario queda pendiente para aceptar esa página.
 
-#### Sprint 4: tratamientos, documentos e integración
+#### Sprint 4: Portal del cliente completo y respaldos
 
 **Semanas simuladas 7–8; revisión de referencia 04/11/2026.**
 
-**Objetivo:** Integrar tratamientos, publicación, pagos del cliente, documentos fiscales y entrega.
+**Objetivo:** Completar el Panel del cliente y Pagos y documentos, reutilizando la administración ya terminada.
 
-**Incremento previsto:** César registra y publica lo realmente realizado; el cliente utiliza pagos y descargas. Se incorporan antecedentes, facturas externas y entregas sin exigir cuenta.
+**Incremento previsto:** El cliente consulta su resumen, solicitudes, propuestas, visitas, historial y pagos; envía solicitudes propias sin exigir WhatsApp, informa pagos y descarga documentos. Se comprueban la continuidad de canales y las descargas compartidas. Se configura y prueba el respaldo completo.
 
-**Sprint Backlog:** 24 tareas o partes; **206 h base y 332 h reservadas** para cubrir el caso desfavorable.
+**Sprint Backlog:** 19 tareas únicas; **164 h base y 258 h reservadas** para cubrir el caso desfavorable. **Puntos:** 26.
 
-| Historia o trabajo común | Tareas o parte incluida | Base (h) | Desfavorable (h) |
-| --- | --- | ---: | ---: |
-| H06 — Consultar mis pagos y documentos | T022, T023, T024, T025, T026 | 46 | 72 |
-| H07.3 — Registrar el tratamiento y las recomendaciones reales | T034, T035, T036, T037 | 32 | 50 |
-| H07.4 — Publicar y corregir atenciones desde el panel operativo | T027, T032, T038, T039 | 30 | 50 |
-| H09.4 — Incorporar antecedentes y clasificarlos por sede | T053, T054, T055 | 20 | 32 |
-| H12.3 — Custodiar facturas electrónicas externas y correcciones | T075, T076 | 28 | 48 |
-| H12.4 — Registrar la entrega de documentos y recomendaciones | T077 | 8 | 12 |
-| Componentes y tareas comunes | T091, T094 (Casos de documentos y correcciones), T098 (Continuidad sin cuenta y entrega), T099, T103 (Redacción y preparación de guía) | 42 | 68 |
+| Historia o trabajo común | Tareas incluidas | Base (h) | Desfavorable (h) |
+| --- | --- | --- | --- |
+| H05 — Consultar mi resumen y gestionar mis atenciones | T010–T021 | 80 | 126 |
+| H06 — Consultar mis pagos y documentos | T022–T025 | 34 | 54 |
+| Componentes y tareas comunes | T094, T098, T102 | 50 | 78 |
 
-**Comprobación del expediente:** revisar tareas, precedencia, carga por profesional y evidencia esperada del incremento; corregir inconsistencias antes de avanzar.
+**Aceptación:** verificar la página completa, sus componentes, pruebas, permisos, precedencia y carga profesional. Ninguna tarea propia o componente necesario queda pendiente para aceptar esa página.
 
-#### Sprint 5: validación, respaldo y cierre
+#### Sprint 5: validación integral y cierre
 
 **Semanas simuladas 9–10; revisión de referencia 18/11/2026.**
 
-**Objetivo:** Comprobar aislamiento y recorridos completos, restaurar respaldos, revisar la guía y cerrar la aceptación simulada.
+**Objetivo:** Revisar el conjunto, la recuperación, la guía y la aceptación del escenario.
 
-**Incremento previsto:** Se representa la aceptación conjunta de las 12 historias principales y sus 16 subdivisiones, con archivos privados, recuperación y guía comprobadas.
+**Incremento previsto:** Todas las páginas están completas desde S1–S4. Este sprint añade regresión de aislamiento, recorridos y uso, guía completa y aceptación conjunta; no contiene campos, acciones o componentes aplazados de una página anterior.
 
-**Sprint Backlog:** 8 tareas o partes; **90 h base y 136 h reservadas** para cubrir el caso desfavorable.
+**Sprint Backlog:** 7 tareas únicas; **78 h base y 118 h reservadas** para cubrir el caso desfavorable. **Puntos:** 0.
 
-| Historia o trabajo común | Tareas o parte incluida | Base (h) | Desfavorable (h) |
-| --- | --- | ---: | ---: |
-| Componentes y tareas comunes | T095, T096, T097, T098 (Asociación posterior y acceso al mismo historial), T102, T103 (Ajuste y revisión final de guía), T104, T105 | 90 | 136 |
+| Historia o trabajo común | Tareas incluidas | Base (h) | Desfavorable (h) |
+| --- | --- | --- | --- |
+| Componentes y tareas comunes | T095–T097, T099, T103–T105 | 78 | 118 |
 
-**Comprobación del expediente:** revisar tareas, precedencia, carga por profesional y evidencia esperada del incremento; corregir inconsistencias antes de avanzar.
+**Aceptación:** contrastar los resultados del conjunto y la guía con las páginas ya completas; corregir y volver a verificar cualquier fallo antes del cierre simulado.
 
 ### Backlog técnico de implementación
 
-**77 tareas propias por página y 28 comunes**, definidas y estimadas una vez. Cada historia indica persona, página/reglas y autor documental; las tablas conservan resultado y dependencias. Cliente y César utilizan los mismos registros compartidos.
+**75 tareas propias por página y 30 comunes**, definidas y estimadas una vez. Cada historia indica persona, página/reglas y autor documental; las tablas conservan resultado y dependencias. Cliente y César utilizan los mismos registros compartidos.
 
-Las 12 historias principales organizan las funciones por objetivo y página. H05, H07, H09 y H12 se detallan en 16 subdivisiones, cada una con sus tareas y criterios. Los sprints seleccionan tareas de esas entregas; las subdivisiones conservan las páginas previstas. [Agile Alliance: historias de usuario](https://agilealliance.org/glossary/user-stories/).
+Las 12 historias principales organizan las funciones por objetivo y página. H05, H07, H09 y H12 se detallan en 16 subdivisiones, cada una con sus tareas y criterios. Cada sprint selecciona páginas completas; las cuatro subdivisiones de una principal se terminan juntas. T009 — Verificación de correo y T026 — Descargas se construyen como componentes comunes y se reutilizan. [Agile Alliance: historias de usuario](https://agilealliance.org/glossary/user-stories/).
 
 #### Simbología de las historias y las tareas
 
@@ -1479,7 +1477,7 @@ Las 12 historias principales organizan las funciones por objetivo y página. H05
 | H01–H12      | Historia principal por objetivo/página; H01 Landing y H08 Mi cuenta. H04 reúne dos páginas. |
 | H05.1–H05.4, H07.1–H07.4, H09.1–H09.4, H12.1–H12.4 | Las 16 subdivisiones de las cuatro historias principales desglosadas. |
 | T001–T105    | Tarea de construcción, preparación o comprobación; rangos incluyen extremos, comas separan tareas. |
-| Común        | Compartida y contabilizada una vez.                                                                |
+| Común | Compartida, construida y contabilizada una vez; disponible antes de aceptar cada página que la utiliza. |
 | Dependencias | Tareas que deben terminar antes; — sin prerrequisitos registrados.                                 |
 | h            | Horas-persona: 8 h = ocho horas individuales.                                                      |
 | S1–S5        | Sprints 1 a 5.                                                                                     |
@@ -1503,7 +1501,11 @@ Formularios y consultas pueden construirse con el modelo y probarse con datos fi
 | Órdenes, cobros y recibos | Se construyen contra el modelo común. En ejecución se exige aceptación y dinero confirmado según cada operación; el reporte del cliente es opcional. |
 | Formularios de solicitud y permisos | La persistencia y la asociación exigen correo verificado y autorizaciones. Construir el formulario no equivale a habilitar su envío. |
 | Agenda, tratamiento, publicación e historial | Comparten modelos y validaciones. Publicar comprueba el trabajo real y el anticipo; las consultas solo muestran servicios publicados autorizados. |
-| Railway y comprobaciones | El entorno se prepara en S2; las pruebas acompañan los incrementos y la aceptación final espera todos los casos y la restauración. |
+| Railway y comprobaciones | HTTPS, correo y archivos privados están disponibles en S1; los respaldos completos se comprueban en S4. Cada página cumple su DoD al entregarse; S5 agrega regresión y aceptación global. |
+
+**Dependencias revisadas:** T093 — Listados usa modelo, estilos y menús; T046 — Listado de clientes la reutiliza, por lo que se invierte la espera anterior. T091 — Actualización responde a cambios del modelo y no necesita esperar las pantallas que los provocan. La carga anterior de H09 utiliza su excepción histórica, no los controles de un servicio nuevo. La consulta administrativa de solicitudes/cambios usa sus registros del modelo; los formularios del cliente se integran en S4.
+
+Los grupos de datos generales, plagas/productos, tratamiento y recomendaciones se construyen en paralelo dentro de H07; T038 — Publicación espera todos ellos y el pago previo. Recibos y XML tienen validaciones propias y no esperan la pantalla de otro tipo de documento. Los formularios de órdenes, asociación y entrega se apoyan en el modelo; al utilizarse comprueban clientes, sedes, dinero y archivos existentes. Antes de aceptar H09/H12 se integran todas esas acciones y sus permisos en S2. El resumen administrativo espera publicación, agenda, cobros y documentos; el resumen del cliente espera sus consultas y pagos.
 
 #### H01: Conocer RYC y contactar desde la Landing Page
 
@@ -1529,7 +1531,7 @@ Formularios y consultas pueden construirse con el modelo y probarse con datos fi
 | T003 | Construir login. | Correo, contraseña, mostrar/ocultar y enlaces de registro/recuperación. | T082 |
 | T004 | Validar acceso y sesión. | Credenciales, errores, límite de fallos, cierre e inactividad según [seguridad](#registro-e-inicio-de-sesión). | T003, T079, T081 |
 
-**Componentes comunes:** T082 — Diseño de acceso. [Uso por persona](#componentes-utilizados-en-las-páginas).
+**Componentes comunes:** T082 — Diseño de acceso; T092 — Menús. [Uso por persona](#componentes-utilizados-en-las-páginas).
 
 #### H03: Crear una cuenta de cliente
 
@@ -1542,7 +1544,7 @@ Formularios y consultas pueden construirse con el modelo y probarse con datos fi
 | T005 | Construir registro. | Cinco campos, etiquetas y reglas del [registro](#campos-del-registro). | T082 |
 | T006 | Guardar cuenta de cliente. | Validación, UUID v4 y contraseña protegida con Argon2id. | T005, T079 |
 
-**Componentes comunes:** T082 — Diseño de acceso. [Uso por persona](#componentes-utilizados-en-las-páginas).
+**Componentes comunes:** T009 — Verificación de correo; T082 — Diseño de acceso. [Uso por persona](#componentes-utilizados-en-las-páginas).
 
 #### H04: Recuperar el acceso desde Olvidé mi contraseña
 
@@ -1552,10 +1554,10 @@ Formularios y consultas pueden construirse con el modelo y probarse con datos fi
 
 | ID   | Tarea                             | Resultado comprobable                                                 | Dependencias |
 | ---- | --------------------------------- | --------------------------------------------------------------------- | ------------ |
-| T007 | Solicitar enlace de recuperación. | Correo válido, respuesta genérica y envío cuando corresponde. | T006 |
+| T007 | Solicitar enlace de recuperación. | Correo válido, respuesta genérica y envío cuando corresponde. | T079, T081, T101 |
 | T008 | Guardar nueva contraseña. | Enlace válido; invalidar enlace/sesiones, confirmar y volver a login. | T007 |
 
-**Componentes comunes:** T082 — Diseño de acceso. [Uso por persona](#componentes-utilizados-en-las-páginas).
+**Componentes comunes:** T082 — Diseño de acceso; T101 — Railway, HTTPS y correo. [Uso por persona](#componentes-utilizados-en-las-páginas).
 
 #### H05: Consultar mi resumen y gestionar mis atenciones
 
@@ -1567,8 +1569,7 @@ Formularios y consultas pueden construirse con el modelo y probarse con datos fi
 
 | ID   | Tarea                               | Resultado comprobable                                                                      | Dependencias           |
 | ---- | ----------------------------------- | ------------------------------------------------------------------------------------------ | ---------------------- |
-| T009 | Verificar correo. | Aviso, reenvío y habilitación según [verificación](#verificación-del-correo-en-el-portal). | T006 |
-| T010 | Mostrar resumen y pestañas. | Una página con filtros conservados y acceso a pagos. | T009, T041, T089 |
+| T010 | Mostrar resumen y pestañas. | Resumen y pestañas completos después de solicitudes, visitas, historial y pagos; conservar filtros y acceso a pagos. | T009, T013, T018, T021, T022, T041, T089 |
 | T011 | Construir solicitud de consultoría. | Formulario territorial integrado; distinguir solicitud de visita. | T088, T092 |
 | T012 | Guardar solicitud de consultoría. | Solicitante/lugar autorizados; fecha preferida no reserva. | T009, T011, T089 |
 | T013 | Consultar solicitudes propias. | Listado, detalle y propuesta dentro del panel, conservando contexto. | T012, T089 |
@@ -1581,7 +1582,7 @@ Formularios y consultas pueden construirse con el modelo y probarse con datos fi
 | T020 | Consultar historial. | Línea de tiempo con publicados del cliente/sedes autorizados. | T079, T089 |
 | T021 | Consultar servicio. | Detalle con plagas/productos/tratamiento/recomendaciones dentro del panel. | T020, T079 |
 
-**Componentes comunes:** T083 — WhatsApp; T084 — Propuesta; T085 — Decisión de consultoría; T086 — Orden; T087 — Pagado/pendiente; T088 — Territorio; T089 — Permisos; T090 — Facturación; T091 — Actualización; T092 — Menús. [Uso por persona](#componentes-utilizados-en-las-páginas).
+**Componentes comunes:** T009 — Verificación de correo; T026 — Descargas de documentos; T083 — WhatsApp; T084 — Propuesta; T085 — Decisión de consultoría; T086 — Orden; T087 — Pagado/pendiente; T088 — Territorio; T089 — Permisos; T090 — Facturación; T091 — Actualización; T092 — Menús; T093 — Listados por rol. [Uso por persona](#componentes-utilizados-en-las-páginas).
 
 #### H06: Consultar mis pagos y documentos
 
@@ -1595,9 +1596,8 @@ Formularios y consultas pueden construirse con el modelo y probarse con datos fi
 | T023 | Mostrar estado y rechazo. | Estado actualizado, motivo y opción de corregir reporte. | T068 |
 | T024 | Informar pago realizado. | [Reporte](#datos-del-reporte-de-pago) con orden fija; Pendiente de revisión. | T087, T089 |
 | T025 | Guardar comprobante. | Archivo privado, tipo/tamaño según medio; efectivo sin archivo. | T024 |
-| T026 | Consultar y descargar recibos/facturas. | Recibo, PDF, XML y respuesta autorizados; admite orden propia sin asociación. | T079, T089 |
 
-**Componentes comunes:** T086 — Orden; T087 — Pagado/pendiente; T089 — Permisos; T090 — Facturación; T091 — Actualización. [Uso por persona](#componentes-utilizados-en-las-páginas).
+**Componentes comunes:** T026 — Descargas de documentos; T086 — Orden; T087 — Pagado/pendiente; T089 — Permisos; T090 — Facturación; T091 — Actualización; T092 — Menús; T093 — Listados por rol. [Uso por persona](#componentes-utilizados-en-las-páginas).
 
 #### H07: Consultar pendientes y gestionar las atenciones
 
@@ -1609,22 +1609,22 @@ Formularios y consultas pueden construirse con el modelo y probarse con datos fi
 
 | ID   | Tarea                            | Resultado comprobable                                                                                       | Dependencias                 |
 | ---- | -------------------------------- | ----------------------------------------------------------------------------------------------------------- | ---------------------------- |
-| T027 | Mostrar pendientes de César. | Tarjetas, ficha y filtros; listado mediante T029 — Solicitudes. | T029, T059, T068, T075, T077 |
+| T027 | Mostrar pendientes de César. | Resumen administrativo después de las funciones de atención, agenda, dinero y documentos; tarjetas, ficha y filtros con datos reales disponibles o casos ficticios. | T029, T038, T059, T068, T075, T077 |
 | T028 | Registrar contacto recibido. | Guardar y abrir ficha; cliente/lugar pueden completarse después. | T079, T092 |
-| T029 | Listar solicitudes. | Contactos/solicitudes guardados y su ficha; enlace público no genera filas. | T012, T028 |
+| T029 | Listar solicitudes. | Contactos/solicitudes guardados y su ficha; enlace público no genera filas. | T028, T079, T089 |
 | T030 | Gestionar consultoría. | Estados, decisiones y cancelación conservan seguimiento y pago previo. | T029, T031, T033, T085 |
-| T031 | Calcular consultoría. | [Costo territorial](#consultoría-y-aceptación-del-servicio) revisado; aceptación conserva cálculo/total/instrucciones. | T012, T028 |
+| T031 | Registrar precio de consultoría. | San Carlos ₡0; fuera César introduce monto y moneda manualmente. La aceptación conserva cotización e instrucciones según [precio](#precio-de-la-consultoría). | T028, T045, T048 |
 | T032 | Registrar decisión externa. | Aceptación/rechazo con fecha y canal. | T084, T086 |
 | T033 | Verificar pago previo. | Bloquear inicio/publicación directa sin [pago requerido](#visitas-y-calendario). | T068, T087 |
-| T034 | Registrar servicio. | Enlazar cliente/lugar/orden/visita; conservar excepción histórica. | T033, T045, T048, T086 |
-| T035 | Registrar plagas/productos. | Cantidad positiva, unidad y prevención según [tratamiento](#registro-del-tratamiento). | T034, T065, T067 |
-| T036 | Registrar tratamiento. | Conservar descripción, método real y zona atendida. | T035 |
-| T037 | Registrar recomendaciones/notas. | Recomendaciones para cliente; notas internas privadas. | T034 |
-| T038 | Publicar atención. | Publicar lo realizado y habilitar cobro del saldo; deuda restante no bloquea. | T033, T034, T079 |
+| T034 | Registrar servicio. | Cliente/lugar/orden/visita y excepción histórica; las acciones de atención se integran con T033 antes de aceptar H07. | T045, T048, T079, T086 |
+| T035 | Registrar plagas/productos. | Plagas, cantidades positivas, unidades y prevención; grupo integrado con los datos generales antes de publicar. | T065, T067, T079 |
+| T036 | Registrar tratamiento. | Conservar descripción, método real y zona atendida. | T079, T080 |
+| T037 | Registrar recomendaciones/notas. | Recomendaciones para cliente; notas internas privadas. | T079, T080 |
+| T038 | Publicar atención. | Publicar solo cuando están completos tratamiento, plagas/productos, recomendaciones y pago previo; el saldo restante no bloquea. | T033–T037, T079 |
 | T039 | Corregir servicio. | Conservar motivo, fecha y seguimiento. | T038 |
 | T040 | Reutilizar ficha de atención. | Precargar cliente/lugar/orden y acciones; crear ubicación conserva contexto. | T028, T086 |
 
-**Componentes comunes:** T084 — Propuesta; T085 — Decisión de consultoría; T086 — Orden; T087 — Pagado/pendiente; T088 — Territorio; T089 — Permisos; T090 — Facturación; T091 — Actualización; T092 — Menús; T093 — Tarjetas/tablas. [Uso por persona](#componentes-utilizados-en-las-páginas).
+**Componentes comunes:** T026 — Descargas de documentos; T084 — Propuesta; T085 — Decisión de consultoría; T086 — Orden; T087 — Pagado/pendiente; T088 — Territorio; T089 — Permisos; T090 — Facturación; T091 — Actualización; T092 — Menús; T093 — Listados por rol. [Uso por persona](#componentes-utilizados-en-las-páginas).
 
 #### H08: Consultar y administrar Mi cuenta
 
@@ -1634,7 +1634,7 @@ Formularios y consultas pueden construirse con el modelo y probarse con datos fi
 
 | ID   | Tarea              | Resultado comprobable                                 | Dependencias |
 | ---- | ------------------ | ----------------------------------------------------- | ------------ |
-| T041 | Mostrar/copiar ID. | Identificador visible y copia con ID copiado. | T004 |
+| T041 | Mostrar/copiar ID. | Identificador visible y copia con ID copiado. | T079, T092 |
 | T042 | Editar perfil. | Nombre/teléfono validados; correo/ID de solo lectura. | T041 |
 
 **Componentes comunes:** T092 — Menús. [Uso por persona](#componentes-utilizados-en-las-páginas).
@@ -1651,19 +1651,19 @@ Formularios y consultas pueden construirse con el modelo y probarse con datos fi
 | ---- | ---------------------------------------- | ------------------------------------------------------------------------------ | ---------------------- |
 | T043 | Construir formulario particular. | Campos, obligatoriedad y límites de [Cliente particular](#cliente-particular). | T080 |
 | T044 | Construir formulario empresa. | Razón social, contacto y demás [campos empresariales](#empresa). | T080 |
-| T045 | Guardar/editar cliente. | Particulares/empresas sin exigir cuenta. | T079, T043, T044 |
-| T046 | Listar/desactivar clientes. | Conservar datos e historial. | T079, T081, T092 |
+| T045 | Guardar/editar cliente. | Particulares/empresas sin exigir cuenta. | T043, T044, T079 |
+| T046 | Listar/desactivar clientes. | Conservar datos e historial. | T045, T081, T089, T092, T093 |
 | T047 | Construir formulario ubicación. | Datos del lugar y cliente propietario. | T079, T092 |
-| T048 | Gestionar ubicaciones. | Identificar lugar por visita y permitir desactivarlo. | T045, T047 |
+| T048 | Gestionar ubicaciones. | Identificar lugar por visita y permitir desactivarlo. | T045, T047, T088 |
 | T049 | Registrar frecuencia. | Opcional, entero de 1–365 días. | T048 |
-| T050 | Buscar cuenta por ID. | Mostrar nombre y correo verificado. | T006, T045, T079 |
-| T051 | Asociar cuenta autorizada. | Comprobación registrada y cambios de alcance con seguimiento. | T009, T048, T050, T089 |
+| T050 | Buscar cuenta por ID. | Mostrar nombre y correo verificado. | T006, T079, T081 |
+| T051 | Asociar cuenta autorizada. | Comprobación registrada y cambios de alcance con seguimiento. | T009, T050, T079, T089 |
 | T052 | Retirar asociación. | Conservar cambio y revocar el acceso concedido por la asociación. | T051 |
-| T053 | Registrar servicio anterior. | Conservar datos conocidos, origen histórico y desconocidos. | T034 |
-| T054 | Relacionar historial/recibos anteriores. | Asociación posterior sin duplicados; sin sede, solo acceso principal/César. | T051, T053, T055, T073 |
-| T055 | Clasificar historia por sede. | Solo César/principal hasta asignar sede con seguimiento. | T073, T075, T089 |
+| T053 | Registrar servicio anterior. | Conservar datos conocidos, origen histórico y desconocidos. | T045, T079, T089 |
+| T054 | Relacionar historial/recibos anteriores. | Asociación posterior sin duplicados; sin sede, solo acceso principal/César. | T051, T053, T055, T073, T075 |
+| T055 | Clasificar historia por sede. | Solo César/principal hasta asignar sede con seguimiento. | T048, T079, T089 |
 
-**Componentes comunes:** T088 — Territorio; T089 — Permisos; T092 — Menús; T093 — Tarjetas/tablas. [Uso por persona](#componentes-utilizados-en-las-páginas).
+**Componentes comunes:** T009 — Verificación de correo; T026 — Descargas de documentos; T088 — Territorio; T089 — Permisos; T092 — Menús; T093 — Listados por rol. [Uso por persona](#componentes-utilizados-en-las-páginas).
 
 #### H10: Programar visitas y administrar la disponibilidad
 
@@ -1673,8 +1673,8 @@ Formularios y consultas pueden construirse con el modelo y probarse con datos fi
 
 | ID   | Tarea                           | Resultado comprobable                                                                                  | Dependencias           |
 | ---- | ------------------------------- | ------------------------------------------------------------------------------------------------------ | ---------------------- |
-| T056 | Revisar/programar nueva visita. | Trabajo nuevo con cobro: propuesta y orden aceptadas para programar; anticipo confirmado para iniciar. | T017, T059, T086 |
-| T057 | Resolver cambio solicitado. | Aplicada/No aplicada; agenda cambia solo al confirmar. | T019, T060 |
+| T056 | Revisar/programar nueva visita. | Trabajo nuevo con cobro: propuesta y orden aceptadas para programar; anticipo confirmado para iniciar. | T045, T048, T059, T086 |
+| T057 | Resolver cambio solicitado. | Aplicada/No aplicada; agenda cambia solo al confirmar. | T060, T079 |
 | T058 | Construir programación. | [Formulario](#programación-y-estado-de-una-visita) reutilizado en atención/Calendario. | T048, T092 |
 | T059 | Guardar visita. | Validar fecha/duración y ausencia de solapamiento. | T058 |
 | T060 | Reprogramar/cancelar visita. | Conservar programación anterior y motivo. | T059 |
@@ -1682,7 +1682,7 @@ Formularios y consultas pueden construirse con el modelo y probarse con datos fi
 | T062 | Sugerir próxima visita. | Frecuencia en días; César confirma, sugerencia no reserva. | T049, T079 |
 | T063 | Bloquear horario. | Motivo conservado; rechazar solapamiento de visitas nuevas. | T059, T061 |
 
-**Componentes comunes:** T086 — Orden; T087 — Pagado/pendiente; T091 — Actualización; T092 — Menús; T093 — Tarjetas/tablas. [Uso por persona](#componentes-utilizados-en-las-páginas).
+**Componentes comunes:** T086 — Orden; T087 — Pagado/pendiente; T091 — Actualización; T092 — Menús; T093 — Listados por rol. [Uso por persona](#componentes-utilizados-en-las-páginas).
 
 #### H11: Administrar los catálogos de plagas y productos
 
@@ -1697,7 +1697,7 @@ Formularios y consultas pueden construirse con el modelo y probarse con datos fi
 | T066 | Construir formulario productos. | Nombre, ingrediente, referencia, nota y estado. | T080 |
 | T067 | Guardar/desactivar producto. | Conservar referencias en tratamientos anteriores. | T066, T079 |
 
-**Componentes comunes:** T092 — Menús; T093 — Tarjetas/tablas. [Uso por persona](#componentes-utilizados-en-las-páginas).
+**Componentes comunes:** T092 — Menús; T093 — Listados por rol. [Uso por persona](#componentes-utilizados-en-las-páginas).
 
 #### H12: Verificar cobros y gestionar documentos y entregas
 
@@ -1709,22 +1709,22 @@ Formularios y consultas pueden construirse con el modelo y probarse con datos fi
 
 | ID   | Tarea                                 | Resultado comprobable                                                            | Dependencias     |
 | ---- | ------------------------------------- | -------------------------------------------------------------------------------- | ---------------- |
-| T068 | Confirmar/rechazar reporte. | Solo dinero verificado reduce saldo; rechazo motivado, sin duplicar referencias. | T086, T087 |
+| T068 | Confirmar/rechazar reporte. | Solo dinero verificado reduce saldo; rechazo motivado, sin duplicar referencias. | T079, T081, T087 |
 | T069 | Registrar pago externo/efectivo. | Misma orden y comprobantes, sin duplicar reporte del portal. | T068 |
 | T070 | Corregir pago/registrar exceso. | Motivo, importes y responsable; exceso sin reembolso automático. | T068 |
-| T071 | Construir carga de recibo. | Pago confirmado, cliente/orden precargados, servicio opcional; admite anticipo. | T079, T081, T086 |
+| T071 | Construir carga de recibo. | Pago confirmado, cliente/orden precargados, servicio opcional; admite anticipo. | T079, T081, T101 |
 | T072 | Guardar archivo del recibo. | Validar tipo/tamaño, nombre generado, archivo privado. | T071 |
-| T073 | Relacionar recibo. | Orden/pago/cliente en nuevos; relaciones conocidas en históricos. | T072 |
+| T073 | Relacionar recibo. | Orden/pago/cliente en nuevos; relaciones conocidas en históricos. | T068, T072, T086 |
 | T074 | Sustituir recibo conservando versión. | Motivo y archivo anterior; no aplica a factura emitida. | T073 |
-| T075 | Adjuntar documento fiscal externo. | XML/PDF/respuesta/metadatos privados; formulario reutilizado en atención. | T072, T086, T090 |
+| T075 | Adjuntar documento fiscal externo. | XML/PDF/respuesta/metadatos privados con validaciones propias; integra orden y facturación antes de aceptar H12, sin depender del formulario de recibos. | T079, T081, T101 |
 | T076 | Conservar originales/correcciones. | Notas relacionadas y corregido enlazado a rechazado. | T075 |
-| T077 | Preparar/registrar entrega. | [Entrega](#entrega-de-documentos-de-la-atención) en orden sin exigir cuenta. | T073, T075 |
+| T077 | Preparar/registrar entrega. | Seleccionar archivos existentes, preparar entrega y registrar destinatario/canal/fecha; integra recibos y documentos en H12 y atención posterior, sin exigir cuenta. | T079, T081, T086, T101 |
 
-**Componentes comunes:** T086 — Orden; T087 — Pagado/pendiente; T089 — Permisos; T090 — Facturación; T091 — Actualización; T092 — Menús; T093 — Tarjetas/tablas. [Uso por persona](#componentes-utilizados-en-las-páginas).
+**Componentes comunes:** T026 — Descargas de documentos; T086 — Orden; T087 — Pagado/pendiente; T089 — Permisos; T090 — Facturación; T091 — Actualización; T092 — Menús; T093 — Listados por rol. [Uso por persona](#componentes-utilizados-en-las-páginas).
 
 #### Componentes y tareas comunes
 
-T078–T105 cubren preparación, componentes reutilizados, pruebas, alojamiento y cierre. Cada tarea se construye, asigna y estima una vez.
+T009, T026 y T078–T105 cubren correo, descargas, preparación, componentes reutilizados, pruebas, alojamiento y cierre. Cada tarea se construye, asigna y estima una vez. Las páginas que la necesitan indican su uso; no se reconstruye en un sprint posterior.
 
 ##### Preparación inicial de la aplicación web
 
@@ -1739,10 +1739,12 @@ T078–T105 cubren preparación, componentes reutilizados, pruebas, alojamiento 
 
 ##### Componentes utilizados en las páginas
 
-**Autores documentales:** Brian y Jeremy. Jeremy: T082 — Acceso, T083 — WhatsApp, T085 — Decisión, T090 — Facturación. Brian: T084 — Propuesta, T087 — Pagado/pendiente, T093 — Listados administrativos.
+**Autores documentales:** Brian y Jeremy. Jeremy: T009 — Verificación de correo, T026 — Descargas de documentos, T082 — Acceso, T083 — WhatsApp, T085 — Decisión, T090 — Facturación. Brian: T084 — Propuesta, T087 — Pagado/pendiente, T093 — Listados por rol.
 
 | Componente                      | Cliente/visitante                            | César                                 |
 | ------------------------------- | -------------------------------------------- | ------------------------------------- |
+| T009 — Verificación de correo | Verifica su correo y reenvía el enlace. | Comprueba el correo verificado al asociar. |
+| T026 — Descargas de documentos | Recibos, facturas y originales autorizados. | Documentos de atenciones e historial. |
 | T082 — Acceso                   | Login, registro, recuperación.               | Login y recuperación.                 |
 | T083 — WhatsApp                 | Contacto público o solicitud.                | Recibe; registra con T028 — Contacto. |
 | T084 — Propuesta                | Consulta.                                    | Prepara.                              |
@@ -1752,24 +1754,26 @@ T078–T105 cubren preparación, componentes reutilizados, pruebas, alojamiento 
 | T088 — Territorio               | Indica/selecciona lugar autorizado.          | Comprueba.                            |
 | T089 — Permisos                 | Sus registros/archivos.                      | Autoriza/administra.                  |
 | T090 — Facturación              | Envía datos.                                 | Completa/revisa.                      |
-| T091 — Actualización            | Consulta cambios autorizados.                | Confirma acciones.                    |
+| T091 — Actualización            | Consulta cambios autorizados.                | Confirma acciones sobre el mismo componente desde S2.                    |
 | T092 — Menús                    | Portal.                                      | Administración.                       |
-| T093 — Listados administrativos | Listados propios en H05 — Panel/H06 — Pagos. | Tarjetas/tablas.                      |
+| T093 — Listados por rol | Sus registros en H05 — Panel y H06 — Pagos. | Listados de Administración de César. |
 
 | ID   | Tarea                                      | Resultado comprobable                                                                                                        | Dependencias           |
 | ---- | ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------- |
+| T009 | Verificar correo. | Envío, verificación y componente de aviso/reenvío preparados en S1; el Panel del cliente los reutiliza según [verificación](#verificación-del-correo-en-el-portal). | T006 |
+| T026 | Consultar y descargar recibos/facturas. | Recibo, PDF, XML y respuesta autorizados; admite orden propia sin asociación. | T079, T089 |
 | T082 | Construir diseño de acceso. | Login/registro/recuperación con anchos, espacios y desplazamiento previstos. | T080 |
 | T083 | Preparar contacto WhatsApp. | Número aprobado/mensaje codificado abren en ambos dispositivos; usuario envía allí. | T001 |
 | T084 | Guardar/mostrar propuesta. | César prepara; WhatsApp comparte y portal consulta, sin exigir cuenta. | T045, T079, T086 |
 | T085 | Registrar decisión de consultoría. | Portal o César, fecha/canal; aceptar crea orden con T086 — Condiciones aceptadas. | T031, T086 |
 | T086 | Conservar orden aceptada. | Cliente/sede, solicitante si existe, total/moneda/condiciones; cuenta opcional. | T079 |
-| T087 | Calcular pagado/pendiente. | Consultoría, anticipo y saldo según [condiciones](#consultoría-y-aceptación-del-servicio); solo dinero confirmado descuenta. | T086 |
+| T087 | Calcular pagado/pendiente. | Consultoría, anticipo y saldo según [condiciones](#consultoría-y-aceptación-del-servicio); solo dinero confirmado descuenta. | T079 |
 | T088 | Construir selectores territoriales. | Catálogo y niveles dependientes compartidos entre solicitudes/ubicaciones. | T079, T092 |
 | T089 | Aplicar permisos a datos/archivos. | Comprobar correo y alcance en consultas/acciones/descargas según [permisos](#empresas-sedes-y-cuentas). | T006, T079 |
 | T090 | Recibir/revisar datos de factura. | Dentro de orden; César revisa sin alterar ficha maestra. | T086, T089 |
-| T091 | Actualizar seguimiento relacionado. | Confirmar visita/pago/publicación actualiza una vez todas las vistas y siguiente acción. | T038, T040, T068 |
-| T092 | Construir menús adaptables. | Estructura y comportamiento según [Navegación](#navegación) y [Diseño](#diseño-y-comportamiento-en-dispositivos). | T080 |
-| T093 | Construir tarjetas/tablas administrativas. | Iguales datos, acciones y permisos en celular/computadora. | T046, T092 |
+| T091 | Actualizar seguimiento relacionado. | Componente común probado en S2: una confirmación actualiza los registros y vistas relacionados. Calendario, paneles y pagos lo reutilizan al integrar sus acciones. | T079, T086, T087 |
+| T092 | Construir menús adaptables. | Estructura según [Navegación](#navegación) y [Diseño](#diseño-y-comportamiento-en-dispositivos); solo páginas entregadas. Antes de sus paneles, César ingresa a Catálogos y el cliente a Mi cuenta. | T080 |
+| T093 | Construir tarjetas y tablas para cliente y César. | Tarjetas en celular y tablas en computadora desde S1, con los mismos datos y acciones por rol y sin ampliar sus permisos. | T079, T080, T092 |
 
 ##### Pruebas de la aplicación web
 
@@ -1777,12 +1781,12 @@ T078–T105 cubren preparación, componentes reutilizados, pruebas, alojamiento 
 
 | ID   | Tarea                                    | Resultado comprobable                                                                                                                                               | Dependencias                                                   |
 | ---- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
-| T094 | Comprobar cobros/documentos. | Casos de pagos en S3 y de documentos en S4, con resultados esperados y seguimiento; no se duplica esfuerzo. | Casos de pagos, anticipo y efectivo: T033, T069, T070; Casos de documentos y correcciones: T075, T076, T026 |
+| T094 | Comprobar cobros/documentos. | Comprobación integrada de pagos, anticipo, efectivo, documentos y correcciones en S4; cada página ya incluye sus pruebas específicas. | T025, T026, T033, T069, T070, T075, T076 |
 | T095 | Comprobar aislamiento. | Servicios/visitas/pagos/XML/PDF de dos clientes y sedes; orden propia no abre historial ajeno. | T018, T021, T026, T055 |
 | T096 | Comprobar atención completa. | Contacto sin cuenta, consulta gratis/cobrada, decisiones, anticipo, servicio, saldo, entrega e historial opcional. | T015, T026, T032, T038, T056, T094, T098 |
-| T097 | Validar uso con César. | César en Administración y equipo en Portal: paneles completos en celular/computadora, pestañas, filtros, guardar/cancelar; dificultades/correcciones registradas. | T010, T014, T022–T023, T027, T042, T077, T091, T093–T094, T099 |
-| T098 | Comprobar continuidad sin cuenta/portal. | Recorrido sin cuenta en S4 y asociación posterior en S5; conservar historial único y documentos sin registro. | Continuidad sin cuenta y entrega: T002, T028, T032, T069, T077; Asociación posterior y acceso al mismo historial: T014, T021, T026, T051, T054 |
-| T099 | Comprobar interfaz inicialmente. | Sprint 4: acceso, menús, paneles y calendario en celular/computadora, teclado, foco, etiquetas y áreas táctiles. T097 completa la revisión final. | T008, T010, T018, T029, T061, T082, T092 |
+| T097 | Validar uso con César. | César en Administración y equipo en Portal: paneles completos en celular/computadora, pestañas, filtros, guardar/cancelar; dificultades/correcciones registradas. | T010, T014, T022, T023, T027, T042, T077, T091, T093, T094, T099 |
+| T098 | Comprobar continuidad sin cuenta/portal. | Comprobar juntos en S4 el recorrido sin cuenta y la asociación posterior: un historial, archivos y dinero sin duplicados. | T002, T014, T021, T026, T028, T032, T051, T054, T069, T077 |
+| T099 | Comprobar interfaz integrada. | S5: regresión de acceso, menús, paneles y calendario en celular/computadora, teclado, foco, etiquetas y áreas táctiles; cada página ya fue comprobada al entregarse. | T008, T010, T018, T029, T061, T082, T092 |
 
 ##### Entorno de entrega y respaldos
 
@@ -1790,8 +1794,8 @@ T078–T105 cubren preparación, componentes reutilizados, pruebas, alojamiento 
 
 | ID   | Tarea                           | Resultado comprobable                                                                                                                                                 | Dependencias                            |
 | ---- | ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
-| T100 | Preparar datos ficticios. | Datos ficticios coherentes con el modelo; completar los recorridos al integrar los módulos, sin datos reales de clientes. | T079 |
-| T101 | Publicar/configurar Railway. | Entorno Railway con HTTPS, SMTP y archivos privados desde S2; desplegar y comprobar los incrementos al integrarlos. Persistencia y descargas se validan con datos ficticios. | T078, T079, T100 |
+| T100 | Preparar datos ficticios. | Conjunto ficticio completo conforme al modelo, preparado en S1; se reutiliza al probar cada página, sin datos reales de clientes. | T079 |
+| T101 | Publicar/configurar Railway. | Railway con HTTPS, SMTP y archivos privados disponible en S1; despliegue y comprobación de cada página en su sprint, con persistencia privada. | T078 |
 | T102 | Configurar/comprobar respaldos. | Copias, conservación fiscal y restauración consultable según [Respaldo](#respaldo-y-entrega). | T101 |
 
 ##### Guía, aceptación y cierre
@@ -1800,22 +1804,15 @@ T078–T105 cubren preparación, componentes reutilizados, pruebas, alojamiento 
 
 | ID   | Tarea                      | Resultado comprobable                                                                                                           | Dependencias          |
 | ---- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
-| T103 | Preparar guía para César. | Redacción en S4 y revisión final tras recorridos y restauración en S5; guía coherente con el sistema representado. | Redacción y preparación de guía: T061, T101; Ajuste y revisión final de guía: redacción previa de la guía, T096, T097, T102 |
+| T103 | Preparar guía para César. | Guía completa en S5 basada en todas las páginas y respaldos ya disponibles; revisar su concordancia durante la aceptación conjunta. | T010, T027, T042, T061, T077, T101, T102 |
 | T104 | Validar entrega con César. | Aceptación simulada de las 12 historias principales, incluidas las 16 subdivisiones de H05, H07, H09 y H12, y las tareas comunes tras T001–T103, según [criterios](#criterios-de-terminación-y-aceptación). | T001–T103 |
 | T105 | Documentar cierre. | Aceptación, resultados y lecciones conservados. | T104 |
 
-#### Etapas de las tareas comunes
+#### Reutilización y comprobación de los componentes comunes
 
-Estas seis filas detallan T094, T098 y T103. No crean identificadores adicionales ni aumentan sus estimaciones: cada etapa usa sus propias dependencias. Una tarea que necesita T094, T098 o T103 completas espera a sus dos etapas. La revisión final queda antes de T104.
+Cada componente tiene una sola construcción y una sola estimación. T009 — Verificación de correo, T093 — Listados por rol y el entorno se completan en S1; T026 — Descargas, T091 — Actualización y los componentes de cobro y permisos quedan disponibles en S2. Las páginas posteriores reutilizan ese trabajo y comprueban su integración dentro de sus propias tareas.
 
-| Tarea y etapa | Profesional | Sprint | O (h) | Base (h) | P (h) | Bloque reservado | Depende de |
-| --- | --- | --- | ---: | ---: | ---: | --- | --- |
-| T094 — Casos de pagos, anticipo y efectivo | QSM | S3 | 4 | 6 | 10 | 54–64 | T033, T069, T070 |
-| T094 — Casos de documentos y correcciones | QSM | S4 | 4 | 8 | 12 | 48–60 | T075, T076, T026 |
-| T098 — Continuidad sin cuenta y entrega | QA2 | S4 | 4 | 6 | 10 | 48–58 | T002, T028, T032, T069, T077 |
-| T098 — Asociación posterior y acceso al mismo historial | QA2 | S5 | 2 | 6 | 8 | 0–8 | T014, T021, T026, T051, T054 |
-| T103 — Redacción y preparación de guía | PO | S4 | 4 | 6 | 10 | 0–10 | T061, T101 |
-| T103 — Ajuste y revisión final de guía | PO | S5 | 2 | 4 | 6 | 38–44 | T103 — Redacción, T096, T097, T102 |
+T094 — Cobros/documentos y T098 — Continuidad se completan en S4; T103 — Guía, en S5. Sus alcances completos y horas no cambian. Las pruebas generales de cierre son adicionales a las pruebas y criterios ya cumplidos por cada página: no justifican aceptar antes una función incompleta.
 
 ### Historias de usuario desarrolladas — Especificación formal según plantilla
 
@@ -1868,7 +1865,7 @@ para conocer si RYC resuelve mi problema de plagas y comunicarme de forma inmedi
 
 #### Historia H02: Iniciar sesión en la aplicación web
 
-**Tareas técnicas relacionadas:** T003, T004, T082
+**Tareas técnicas relacionadas:** T003, T004, T082, T092
 
 **Historia de usuario**
 
@@ -1891,7 +1888,7 @@ para acceder de forma segura a las funciones y datos que me corresponden según 
 
 #### Historia H03: Crear una cuenta de cliente
 
-**Tareas técnicas relacionadas:** T005, T006, T082
+**Tareas técnicas relacionadas:** T005, T006, T009, T082
 
 **Historia de usuario**
 
@@ -1913,7 +1910,7 @@ para ingresar a la plataforma y dar seguimiento digital a mis solicitudes, visit
 
 #### Historia H04: Recuperar el acceso desde Olvidé mi contraseña
 
-**Tareas técnicas relacionadas:** T007, T008, T082
+**Tareas técnicas relacionadas:** T007, T008, T082, T101
 
 **Historia de usuario**
 
@@ -1928,14 +1925,14 @@ para establecer una nueva contraseña y restablecer el acceso a mi cuenta.
 3. Dado que el usuario accede mediante un enlace válido y vigente, cuando introduce y confirma su nueva contraseña, entonces el sistema actualiza la clave y anula el token utilizado.
 4. Dado que el enlace expiró o ya fue utilizado previamente, cuando se intenta usar, entonces el sistema rechaza la operación e invita a solicitar uno nuevo.
 
-**Prioridad:** Media.
+**Prioridad:** Alta.
 **Estimación:** 5 puntos de historia.
 **Justificación de la estimación:** Generación y validación de tokens criptográficos de un solo uso con expiración temporal, plantillas de correo transaccional y prevención de enumeración de usuarios.
 **Notas adicionales:** Los enlaces tienen vigencia estricta de 30 minutos y quedan inutilizados tras su primer uso exitoso; el cambio de contraseña invalida sesiones anteriores.
 
 #### Historia H05: Consultar mi resumen y gestionar mis atenciones
 
-**Tareas técnicas relacionadas:** T009, T010, T011, T012, T013, T014, T015, T016, T017, T018, T019, T020, T021, T084, T085, T086
+**Tareas técnicas relacionadas:** T009, T010, T011, T012, T013, T014, T015, T016, T017, T018, T019, T020, T021, T026, T083, T084, T085, T086, T087, T088, T089, T090, T091, T092, T093
 
 **Historia de usuario**
 
@@ -1957,8 +1954,8 @@ para coordinar de forma integral la atención de plagas en mis inmuebles y conta
 
 **Prioridad:** Media.
 **Estimación total:** 18 puntos, subtotal de H05.1–H05.4. Las subdivisiones se estiman individualmente y se suman una vez.
-**Justificación de la estimación:** Agrupación de gran amplitud funcional que integra verificación de correos, lógica territorial de consultorías, validación de permisos por sede (control IDOR), decisiones contractuales con esquemas 50/50, gestión de agenda y consulta de historiales técnicos.
-**Notas adicionales:** Las unidades de entrega se completan en S2, S3; solicitar atención no reserva automáticamente citas en el calendario; aceptar una propuesta genera la orden pero el anticipo del 50 % debe confirmarse antes de iniciar el tratamiento; César decide si aprueba las reprogramaciones.
+**Justificación de la estimación:** Agrupación de gran amplitud funcional que integra verificación de correos, lógica territorial de consultorías, validación de permisos por sede para evitar acceso a registros ajenos, aceptación de condiciones con esquemas 50/50, gestión de agenda y consulta de historiales técnicos.
+**Notas adicionales:** La página y todas sus subdivisiones se completan juntas en S4; solicitar atención no reserva automáticamente citas en el calendario; aceptar una propuesta genera la orden pero el anticipo del 50 % debe confirmarse antes de iniciar el tratamiento; César decide si aprueba las reprogramaciones.
 
 ##### H05.1 — Solicitar consultorías con correo verificado
 
@@ -1966,7 +1963,7 @@ para coordinar de forma integral la atención de plagas en mis inmuebles y conta
 
 **Historia:** Como cliente, quiero verificar mi correo y enviar una consultoría con una referencia única, para solicitar atención sin tener que registrar directamente una cita.
 
-**Tareas asociadas:** T009, T011, T012, T014. **Dependencias clave:** T006, T083, T088, T089, T092.
+**Tareas asociadas:** T011, T012, T014. **Dependencias clave:** T009, T083, T088, T089, T092.
 
 **Criterios de aceptación:**
 
@@ -2014,7 +2011,7 @@ para coordinar de forma integral la atención de plagas en mis inmuebles y conta
 
 **Historia:** Como cliente autorizado, quiero ver mi resumen y los servicios publicados de mis ubicaciones, para consultar tratamientos y recomendaciones sin solicitar otra vez la información.
 
-**Tareas asociadas:** T010, T020, T021. **Dependencias clave:** T009, T041, T079, T089.
+**Tareas asociadas:** T010, T020, T021. **Dependencias clave:** T009, T013, T018, T022, T041, T079, T089.
 
 **Criterios de aceptación:**
 
@@ -2026,7 +2023,7 @@ para coordinar de forma integral la atención de plagas en mis inmuebles y conta
 
 #### Historia H06: Consultar mis pagos y documentos
 
-**Tareas técnicas relacionadas:** T022, T023, T024, T025, T026
+**Tareas técnicas relacionadas:** T022, T023, T024, T025, T026, T086, T087, T089, T090, T091, T092, T093
 
 **Historia de usuario**
 
@@ -2044,12 +2041,12 @@ para conocer mis saldos pendientes, acreditar transferencias y conservar el resp
 
 **Prioridad:** Media.
 **Estimación:** 8 puntos de historia.
-**Justificación de la estimación:** Manejo de información financiera con monedas segregadas (CRC y USD), carga segura de archivos con validación de tipo MIME y cuotas de tamaño, y descargas controladas mediante endpoints autenticados.
+**Justificación de la estimación:** Manejo de información financiera con monedas segregadas (CRC y USD), carga segura de archivos con validación de tipo real y límites de tamaño, y descargas controladas mediante endpoints autenticados.
 **Notas adicionales:** Reportar un pago no extingue la deuda; solo los pagos confirmados por César descuentan saldo; los documentos fiscales se generan externamente y se consultan a modo de repositorio.
 
 #### Historia H07: Consultar pendientes y gestionar las atenciones
 
-**Tareas técnicas relacionadas:** T027, T028, T029, T030, T031, T032, T033, T034, T035, T036, T037, T038, T039, T040, T084, T085, T086
+**Tareas técnicas relacionadas:** T026, T027, T028, T029, T030, T031, T032, T033, T034, T035, T036, T037, T038, T039, T040, T084, T085, T086, T087, T088, T089, T090, T091, T092, T093
 
 **Historia de usuario**
 
@@ -2060,7 +2057,7 @@ para organizar integralmente el ciclo de atención comercial y técnico de la em
 **Criterios de aceptación**
 
 1. Dado que César recibe una consulta por llamada o WhatsApp, cuando la registra con datos básicos, entonces crea una ficha de seguimiento con estado Recibida sin exigir ubicación definitiva.
-2. Dado que César evalúa una consultoría en San Carlos, cuando la revisa, entonces se determina gratuita sin requerir cobro; si es fuera del cantón, registra la cotización requerida y permite programar la visita con pago pendiente, pero impide iniciar la atención cobrada o publicarla sin el pago previo requerido confirmado.
+2. Dado que César evalúa una consultoría en San Carlos, cuando la revisa, entonces se determina gratuita sin requerir cobro; si es fuera del cantón, introduce manualmente el precio de la cotización y permite programar la visita con pago pendiente, pero impide iniciar la atención cobrada o publicarla sin el pago previo requerido confirmado.
 3. Dado que César prepara una propuesta de tratamiento, cuando ingresa el monto total, entonces el sistema calcula automáticamente el anticipo del 50 % y el saldo del 50 %.
 4. Dado que el cliente aprueba la propuesta por canal externo (WhatsApp o llamada), cuando César registra la decisión, fecha y canal, entonces se genera la orden de trabajo correspondiente sin duplicar registros.
 5. Dado que César finaliza un servicio en campo, cuando documenta la atención, entonces asocia cliente, ubicación, fecha real, plagas identificadas desde el catálogo (o justifica servicio preventivo), productos químicos con cantidades exactas y unidad de medida.
@@ -2071,7 +2068,7 @@ para organizar integralmente el ciclo de atención comercial y técnico de la em
 **Prioridad:** Alta.
 **Estimación total:** 20 puntos, subtotal de H07.1–H07.4. Las subdivisiones se estiman individualmente y se suman una vez.
 **Justificación de la estimación:** Historia central de la administración operativa que abarca captura comercial de prospectos, validación geográfica de consultorías, cálculo de anticipos 50/50, persistencia de tratamientos químicos en campo, verificación de pagos previos y auditoría de publicaciones.
-**Notas adicionales:** Las unidades de entrega se completan en S2, S3, S4; el software no prescribe dosis químicas automáticas, sino que registra lo efectivamente aplicado por César; las notas privadas nunca se exponen al cliente.
+**Notas adicionales:** La página y todas sus subdivisiones se completan juntas en S3; el software no prescribe dosis químicas automáticas, sino que registra lo efectivamente aplicado por César; las notas privadas nunca se exponen al cliente.
 
 ##### H07.1 — Registrar contactos y valorar consultorías
 
@@ -2079,13 +2076,13 @@ para organizar integralmente el ciclo de atención comercial y técnico de la em
 
 **Historia:** Como César, quiero registrar contactos recibidos y calcular las condiciones iniciales de una consultoría, para dar seguimiento a personas con o sin cuenta web.
 
-**Tareas asociadas:** T028, T029, T031. **Dependencias clave:** T012, T079, T092.
+**Tareas asociadas:** T028, T029, T031. **Dependencias clave:** T045, T048, T079, T089, T092.
 
 **Criterios de aceptación:**
 
 1. Dado que César recibe un mensaje o llamada, cuando registra el contacto, entonces crea una ficha Recibida sin exigir aún una ubicación definitiva.
 
-2. Dado que revisa la zona de consultoría, cuando determina el costo, entonces identifica gratuidad dentro de San Carlos o cotización requerida fuera de él.
+2. Dado que revisa la zona de consultoría, cuando registra el precio, entonces conserva ₡0 dentro de San Carlos o el importe y la moneda introducidos manualmente fuera del cantón.
 
 **Justificación de los puntos:** Abarca contacto multicanal y reglas territoriales sin duplicar el registro inicial.
 
@@ -2111,7 +2108,7 @@ para organizar integralmente el ciclo de atención comercial y técnico de la em
 
 **Historia:** Como César, quiero documentar el servicio realizado con plagas, productos, cantidades y recomendaciones, para conservar evidencia técnica fiel de cada tratamiento.
 
-**Tareas asociadas:** T034, T035, T036, T037. **Dependencias clave:** T033, T045, T048, T065, T067, T086.
+**Tareas asociadas:** T034, T035, T036, T037. **Dependencias clave:** T045, T048, T065, T067, T079, T080, T086.
 
 **Criterios de aceptación:**
 
@@ -2127,7 +2124,7 @@ para organizar integralmente el ciclo de atención comercial y técnico de la em
 
 **Historia:** Como César, quiero gestionar decisiones externas y publicar o corregir servicios desde mi panel, para mantener visible el estado real de las atenciones.
 
-**Tareas asociadas:** T027, T032, T038, T039. **Dependencias clave:** T029, T033, T034, T059, T068, T075, T077, T079, T084, T086.
+**Tareas asociadas:** T027, T032, T038, T039. **Dependencias clave:** T029, T033, T034, T035, T036, T037, T059, T068, T075, T077, T079, T084, T086.
 
 **Criterios de aceptación:**
 
@@ -2139,7 +2136,7 @@ para organizar integralmente el ciclo de atención comercial y técnico de la em
 
 #### Historia H08: Consultar y administrar Mi cuenta
 
-**Tareas técnicas relacionadas:** T041, T042
+**Tareas técnicas relacionadas:** T041, T042, T092
 
 **Historia de usuario**
 
@@ -2154,14 +2151,14 @@ para mantener mis datos de contacto correctos y disponer de mi identificador par
 3. Dado que el usuario visualiza su correo electrónico y su ID de cuenta, cuando interactúa con el formulario, entonces ambos campos permanecen bloqueados en modo de solo lectura.
 4. Dado que presiona el botón copiar ID, cuando ejecuta la acción, entonces el identificador se copia al portapapeles y se muestra una confirmación visual inmediata.
 
-**Prioridad:** Media.
+**Prioridad:** Alta.
 **Estimación:** 3 puntos de historia.
 **Justificación de la estimación:** Operaciones atómicas de consulta y actualización sobre el registro del usuario en sesión, protección de campos inmutables y funcionalidad de portapapeles.
 **Notas adicionales:** La interfaz es compartida entre clientes y administración; el ID de cuenta es una clave pública de búsqueda pero no concede acceso por sí solo al historial si César no autoriza la asociación.
 
 #### Historia H09: Gestionar clientes, ubicaciones y cuentas autorizadas
 
-**Tareas técnicas relacionadas:** T043, T044, T045, T046, T047, T048, T049, T050, T051, T052, T053, T054, T055
+**Tareas técnicas relacionadas:** T009, T026, T043, T044, T045, T046, T047, T048, T049, T050, T051, T052, T053, T054, T055, T088, T089, T092, T093
 
 **Historia de usuario**
 
@@ -2182,8 +2179,8 @@ para estructurar la base maestra de clientes, controlar quién accede digitalmen
 
 **Prioridad:** Alta.
 **Estimación total:** 21 puntos, subtotal de H09.1–H09.4. Las subdivisiones se estiman individualmente y se suman una vez.
-**Justificación de la estimación:** Modela la estructura relacional central del negocio (particulares, empresas, sedes múltiples), control de acceso granular por sede (RBAC/ABAC), auditoría de asociaciones y reglas de flexibilización controlada para migración de datos legacy.
-**Notas adicionales:** Las unidades de entrega se completan en S1, S2, S4; una empresa puede tener múltiples sedes independientes; el historial pertenece a la sede y al cliente, no a la cuenta de usuario empleada para consultarlo.
+**Justificación de la estimación:** Modela la estructura relacional central del negocio (particulares, empresas, sedes múltiples), permisos por rol, cliente y sede, seguimiento de asociaciones y reglas para incorporar información anterior.
+**Notas adicionales:** La página y todas sus subdivisiones se completan juntas en S2; una empresa puede tener múltiples sedes independientes; el historial pertenece a la sede y al cliente, no a la cuenta de usuario empleada para consultarlo.
 
 ##### H09.1 — Registrar y mantener clientes particulares y empresas
 
@@ -2191,7 +2188,7 @@ para estructurar la base maestra de clientes, controlar quién accede digitalmen
 
 **Historia:** Como César, quiero crear, editar y desactivar fichas de clientes particulares y empresas, para mantener sus datos comerciales sin exigirles una cuenta.
 
-**Tareas asociadas:** T043, T044, T045, T046. **Dependencias clave:** T079, T080, T081, T092.
+**Tareas asociadas:** T043, T044, T045, T046. **Dependencias clave:** T079, T080, T081, T089, T092, T093.
 
 **Criterios de aceptación:**
 
@@ -2207,7 +2204,7 @@ para estructurar la base maestra de clientes, controlar quién accede digitalmen
 
 **Historia:** Como César, quiero registrar las ubicaciones y frecuencias de visita de cada cliente, para programar trabajos en el inmueble correcto.
 
-**Tareas asociadas:** T047, T048, T049. **Dependencias clave:** T045, T079, T092.
+**Tareas asociadas:** T047, T048, T049. **Dependencias clave:** T045, T079, T088, T092.
 
 **Criterios de aceptación:**
 
@@ -2223,7 +2220,7 @@ para estructurar la base maestra de clientes, controlar quién accede digitalmen
 
 **Historia:** Como César, quiero asociar o retirar cuentas del portal verificando identidad y alcance por sede, para proteger el historial privado de cada cliente.
 
-**Tareas asociadas:** T050, T051, T052. **Dependencias clave:** T006, T009, T045, T048, T079, T089.
+**Tareas asociadas:** T050, T051, T052. **Dependencias clave:** T006, T009, T079, T081, T089.
 
 **Criterios de aceptación:**
 
@@ -2239,7 +2236,7 @@ para estructurar la base maestra de clientes, controlar quién accede digitalmen
 
 **Historia:** Como César, quiero ingresar servicios anteriores y relacionarlos con sus ubicaciones cuando se conozcan, para conservar un historial real sin inventar datos.
 
-**Tareas asociadas:** T053, T054, T055. **Dependencias clave:** T034, T051, T073, T075, T089.
+**Tareas asociadas:** T053, T054, T055. **Dependencias clave:** T045, T048, T051, T073, T075, T079, T089.
 
 **Criterios de aceptación:**
 
@@ -2251,7 +2248,7 @@ para estructurar la base maestra de clientes, controlar quién accede digitalmen
 
 #### Historia H10: Programar visitas y administrar la disponibilidad
 
-**Tareas técnicas relacionadas:** T056, T057, T058, T059, T060, T061, T062, T063
+**Tareas técnicas relacionadas:** T056, T057, T058, T059, T060, T061, T062, T063, T086, T087, T091, T092, T093
 
 **Historia de usuario**
 
@@ -2272,11 +2269,11 @@ para organizar eficientemente mis jornadas de trabajo, evitar colisiones de hora
 **Prioridad:** Alta.
 **Estimación:** 8 puntos de historia.
 **Justificación de la estimación:** Algoritmo de detección de solapamientos temporales en huso horario de Costa Rica (America/Costa_Rica), control de colisiones con bloqueos personales, vistas interactivas de agenda y sugerencias automáticas de seguimiento.
-**Notas adicionales:** Las unidades de entrega se completan en S3; los únicos estados válidos son Programada, En curso, Realizada y Cancelada; reprogramar es una acción de modificación sobre una visita programada y no un estado nuevo.
+**Notas adicionales:** La página se completa en S3; los únicos estados válidos son Programada, En curso, Realizada y Cancelada; reprogramar es una acción de modificación sobre una visita programada y no un estado nuevo.
 
 #### Historia H11: Administrar los catálogos de plagas y productos
 
-**Tareas técnicas relacionadas:** T064, T065, T066, T067
+**Tareas técnicas relacionadas:** T064, T065, T066, T067, T092, T093
 
 **Historia de usuario**
 
@@ -2294,11 +2291,11 @@ para estandarizar la captura técnica de datos y seleccionar con exactitud las p
 **Prioridad:** Alta.
 **Estimación:** 5 puntos de historia.
 **Justificación de la estimación:** Mantenimiento de catálogos maestros con validación de nombres, bajas lógicas y aseguramiento de integridad referencial sobre tratamientos pasados.
-**Notas adicionales:** Las unidades de entrega se completan en S1; el catálogo es estrictamente descriptivo e identificatorio; no prescribe dosis automáticas; todo químico utilizado históricamente permanece visible en los expedientes archivados.
+**Notas adicionales:** La página se completa en S1; el catálogo es estrictamente descriptivo e identificatorio; no prescribe dosis automáticas; todo químico utilizado históricamente permanece visible en los expedientes archivados.
 
 #### Historia H12: Verificar cobros y gestionar documentos y entregas
 
-**Tareas técnicas relacionadas:** T068, T069, T070, T071, T072, T073, T074, T075, T076, T077
+**Tareas técnicas relacionadas:** T026, T068, T069, T070, T071, T072, T073, T074, T075, T076, T077, T086, T087, T089, T090, T091, T092, T093
 
 **Historia de usuario**
 
@@ -2320,7 +2317,7 @@ para asegurar que solo el dinero comprobado reduzca la deuda de las órdenes, ma
 **Prioridad:** Alta.
 **Estimación total:** 21 puntos, subtotal de H12.1–H12.4. Las subdivisiones se estiman individualmente y se suman una vez.
 **Justificación de la estimación:** Agrupación compleja de cierre administrativo que integra control transaccional de cobros bancarios, prevención de duplicados, gestión de almacenamiento binario para recibos, validación de formatos tributarios XML/PDF y auditoría de entregas.
-**Notas adicionales:** Las unidades de entrega se completan en S3, S4; solo los pagos confirmados modifican saldos; el sistema no realiza conciliación bancaria automática; las facturas se emiten externamente y se custodian en el sistema; descargar un archivo no acredita entrega sin confirmación explícita de César.
+**Notas adicionales:** La página y todas sus subdivisiones se completan juntas en S2; solo los pagos confirmados modifican saldos; el sistema no realiza conciliación bancaria automática; las facturas se emiten externamente y se custodian en el sistema; descargar un archivo no acredita entrega sin confirmación explícita de César.
 
 ##### H12.1 — Confirmar, rechazar y corregir cobros
 
@@ -2328,7 +2325,7 @@ para asegurar que solo el dinero comprobado reduzca la deuda de las órdenes, ma
 
 **Historia:** Como César, quiero revisar reportes de pago y registrar cobros recibidos directamente, para actualizar los saldos solo con dinero comprobado.
 
-**Tareas asociadas:** T068, T069, T070. **Dependencias clave:** T086, T087.
+**Tareas asociadas:** T068, T069, T070. **Dependencias clave:** T079, T081, T087.
 
 **Criterios de aceptación:**
 
@@ -2344,7 +2341,7 @@ para asegurar que solo el dinero comprobado reduzca la deuda de las órdenes, ma
 
 **Historia:** Como César, quiero adjuntar recibos y conservar sus versiones vinculadas al pago, para entregar constancias verificables de los cobros.
 
-**Tareas asociadas:** T071, T072, T073, T074. **Dependencias clave:** T079, T081, T086.
+**Tareas asociadas:** T071, T072, T073, T074. **Dependencias clave:** T068, T079, T081, T086, T101.
 
 **Criterios de aceptación:**
 
@@ -2360,7 +2357,7 @@ para asegurar que solo el dinero comprobado reduzca la deuda de las órdenes, ma
 
 **Historia:** Como César, quiero adjuntar facturas externas, respuestas y documentos correctivos a cada orden, para conservar los originales tributarios de forma segura.
 
-**Tareas asociadas:** T075, T076. **Dependencias clave:** T072, T086, T090.
+**Tareas asociadas:** T075, T076. **Dependencias clave:** T079, T081, T101.
 
 **Criterios de aceptación:**
 
@@ -2376,7 +2373,7 @@ para asegurar que solo el dinero comprobado reduzca la deuda de las órdenes, ma
 
 **Historia:** Como César, quiero registrar a quién, cuándo y por qué canal entregué documentos o recomendaciones, para conservar seguimiento de la atención al cliente.
 
-**Tareas asociadas:** T077. **Dependencias clave:** T073, T075.
+**Tareas asociadas:** T077. **Dependencias clave:** T079, T081, T086, T101.
 
 **Criterios de aceptación:**
 
@@ -2390,21 +2387,21 @@ para asegurar que solo el dinero comprobado reduzca la deuda de las órdenes, ma
 
 El catálogo reúne 12 historias principales y 16 subdivisiones dentro de cuatro de ellas. Los subtotales siguientes incluyen sus partes; el total de 124 puntos de historia se contabiliza una sola vez. Las tareas técnicas mantienen sus asignaciones en los cinco sprints:
 
-| Código | Título de la historia de usuario | Prioridad | Estimación (pts) | Tareas técnicas asociadas | Entregas previstas |
-|:---:|:---|:---:|:---:|:---|:---:|
-| **H01** | Conocer RYC y contactar desde la Landing Page | Alta | 5 | T001, T002, T083 | S1 |
-| **H02** | Iniciar sesión en la aplicación web | Alta | 5 | T003, T004, T082 | S1 |
-| **H03** | Crear una cuenta de cliente | Alta | 5 | T005, T006, T082 | S1 |
-| **H04** | Recuperar el acceso desde Olvidé mi contraseña | Media | 5 | T007, T008, T082 | S2 |
-| **H05** | Consultar mi resumen y gestionar mis atenciones | Media | 18 (subtotal) | T009–T021, T084–T086 | S2, S3 |
-| **H06** | Consultar mis pagos y documentos | Media | 8 | T022–T026 | S4 |
-| **H07** | Consultar pendientes y gestionar las atenciones | Alta | 20 (subtotal) | T027–T040, T084–T086 | S2, S3, S4 |
-| **H08** | Consultar y administrar Mi cuenta | Media | 3 | T041, T042 | S2 |
-| **H09** | Gestionar clientes, ubicaciones y cuentas autorizadas | Alta | 21 (subtotal) | T043–T055 | S1, S2, S4 |
-| **H10** | Programar visitas y administrar la disponibilidad | Alta | 8 | T056–T063 | S3 |
-| **H11** | Administrar los catálogos de plagas y productos | Alta | 5 | T064–T067 | S1 |
-| **H12** | Verificar cobros y gestionar documentos y entregas | Alta | 21 (subtotal) | T068–T077 | S3, S4 |
-| **Total** | **12 historias principales; 16 subdivisiones en 4 de ellas** | **8 principales Alta / 4 principales Media** | **124 pts** | **105 tareas técnicas (T001–T105)** | **5 Sprints** |
+| Código | Título de la historia de usuario | Prioridad | Estimación (pts) | Tareas técnicas propias y componentes | Entrega completa |
+| --- | --- | --- | --- | --- | --- |
+| **H01** | Conocer RYC y contactar desde la Landing Page | Alta | 5 | T001, T002; componentes de su ficha | S1 |
+| **H02** | Iniciar sesión en la aplicación web | Alta | 5 | T003, T004; componentes de su ficha | S1 |
+| **H03** | Crear una cuenta de cliente | Alta | 5 | T005, T006; componentes de su ficha | S1 |
+| **H04** | Recuperar el acceso desde Olvidé mi contraseña | Alta | 5 | T007, T008; componentes de su ficha | S1 |
+| **H05** | Consultar mi resumen y gestionar mis atenciones | Media | 18 (subtotal) | T010–T021; componentes de su ficha | S4 |
+| **H06** | Consultar mis pagos y documentos | Media | 8 | T022–T025; componentes de su ficha | S4 |
+| **H07** | Consultar pendientes y gestionar las atenciones | Alta | 20 (subtotal) | T027–T040; componentes de su ficha | S3 |
+| **H08** | Consultar y administrar Mi cuenta | Alta | 3 | T041, T042; componentes de su ficha | S1 |
+| **H09** | Gestionar clientes, ubicaciones y cuentas autorizadas | Alta | 21 (subtotal) | T043–T055; componentes de su ficha | S2 |
+| **H10** | Programar visitas y administrar la disponibilidad | Alta | 8 | T056–T063; componentes de su ficha | S3 |
+| **H11** | Administrar los catálogos de plagas y productos | Alta | 5 | T064–T067; componentes de su ficha | S1 |
+| **H12** | Verificar cobros y gestionar documentos y entregas | Alta | 21 (subtotal) | T068–T077; componentes de su ficha | S2 |
+| **Total** | **12 historias principales; 16 subdivisiones en 4 de ellas** | **10 principales Alta / 2 principales Media** | **124 pts** | **75 tareas propias + 30 comunes = 105** | **5 sprints** |
 
 ---
 
@@ -2416,7 +2413,7 @@ Las 12 historias principales y sus 16 subdivisiones describen el comportamiento 
 
 **Estimaciones y presupuesto:** las horas y los costos se controlan en [Estimación y asignación de las tareas](#estimación-y-asignación-de-las-tareas) y [Presupuesto del proyecto simulado](#presupuesto-del-proyecto-simulado). Sus revisiones justificadas se registran y recalculan según el control del expediente. La DoD evalúa la calidad del trabajo y sus comprobaciones.
 
-**Nota metodológica sobre INVEST y entrega progresiva:** las 24 unidades de entrega —ocho historias sin subdividir y dieciséis subdivisiones— concentran sus tareas propias dentro de un sprint y se aceptan con sus criterios y la DoD. H05, H07, H09 y H12 conservan el alcance de sus cuatro partes y pueden abarcar varios sprints. Los componentes comunes previos se reutilizan; T094, T098 y T103 se completan por etapas según su tabla. [Guía de Scrum: elementos preparados para un sprint](https://scrumguides.org/scrum-guide.html#product-backlog).
+**Entrega por página completa:** se conservan las 24 unidades de estimación y sus criterios. Las cuatro subdivisiones de H05, H07, H09 y H12 se construyen y aceptan juntas, en el sprint de su principal. Se comprueba la página de principio a fin, con componentes comunes ya terminados, pruebas e integración. No se acepta una subdivisión para justificar una página que todavía necesita funciones en otro sprint. [Criterios de la DoD](#criterios-de-terminación-y-aceptación).
 
 ---
 
@@ -2449,36 +2446,36 @@ El proyecto contiene **12 historias principales**. **H05, H07, H09 y H12 se desg
 | Historia o subdivisión | Funcionalidad | Puntos | Prioridad | Tareas técnicas | Dependencias de referencia | Entrega prevista |
 | --- | --- | ---: | --- | --- | --- | --- |
 | H01 | Contacto público y WhatsApp | 5 | Alta | T001, T002 | T080, T083 | S1 |
-| H02 | Iniciar sesión | 5 | Alta | T003, T004 | T079, T081, T082 | S1 |
-| H03 | Crear cuenta | 5 | Alta | T005, T006 | T079, T082 | S1 |
-| H04 | Recuperar acceso | 5 | Media | T007, T008 | T006 | S2 |
-| **H05** | **Consultar mi resumen y gestionar mis atenciones — historia principal** | **18 (subtotal)** | Media | Se detalla en H05.1–H05.4 | Ver subdivisiones | Ver subdivisiones |
-| H05.1 | Solicitar consultorías con correo verificado | 5 | Media | T009, T011, T012, T014 | T006, T083, T088, T089, T092 | S2 |
-| H05.2 | Solicitar nuevas visitas y cambios de agenda | 5 | Media | T017, T018, T019 | T048, T051, T059, T060 | S3 |
-| H05.3 | Consultar solicitudes y decidir propuestas | 5 | Media | T013, T015, T016 | T009, T012, T084, T086, T089 | S2 |
-| H05.4 | Consultar resumen e historial de atenciones | 3 | Media | T010, T020, T021 | T009, T041, T079, T089 | S3 |
-| H06 | Pagos y documentos del cliente | 8 | Media | T022, T023, T024, T025, T026 | T068, T070, T079, T087, T089 | S4 |
-| **H07** | **Consultar pendientes y gestionar las atenciones — historia principal** | **20 (subtotal)** | Alta | Se detalla en H07.1–H07.4 | Ver subdivisiones | Ver subdivisiones |
-| H07.1 | Registrar contactos y valorar consultorías | 5 | Alta | T028, T029, T031 | T012, T079, T092 | S2 |
+| H02 | Iniciar sesión | 5 | Alta | T003, T004 | T079, T081, T082, T092 | S1 |
+| H03 | Crear cuenta | 5 | Alta | T005, T006 | T009, T079, T082 | S1 |
+| H04 | Recuperar acceso | 5 | Alta | T007, T008 | T079, T081, T082, T101 | S1 |
+| **H05** | **Consultar mi resumen y gestionar mis atenciones — historia principal** | **18 (subtotal)** | Media | Se detalla en H05.1–H05.4 | Ver subdivisiones | S4 |
+| H05.1 | Solicitar consultorías con correo verificado | 5 | Media | T011, T012, T014 | T009, T083, T088, T089, T092 | S4 |
+| H05.2 | Solicitar nuevas visitas y cambios de agenda | 5 | Media | T017, T018, T019 | T048, T051, T059, T060 | S4 |
+| H05.3 | Consultar solicitudes y decidir propuestas | 5 | Media | T013, T015, T016 | T009, T012, T084, T086, T089 | S4 |
+| H05.4 | Consultar resumen e historial de atenciones | 3 | Media | T010, T020, T021 | T009, T013, T018, T022, T041, T079, T089 | S4 |
+| H06 | Pagos y documentos del cliente | 8 | Media | T022, T023, T024, T025 | T026, T068, T070, T086, T087, T089, T090, T091, T092, T093 | S4 |
+| **H07** | **Consultar pendientes y gestionar las atenciones — historia principal** | **20 (subtotal)** | Alta | Se detalla en H07.1–H07.4 | Ver subdivisiones | S3 |
+| H07.1 | Registrar contactos y valorar consultorías | 5 | Alta | T028, T029, T031 | T045, T048, T079, T089, T092 | S3 |
 | H07.2 | Gestionar consultorías y comprobar el anticipo | 5 | Alta | T030, T033, T040 | T028, T029, T031, T068, T085, T086, T087 | S3 |
-| H07.3 | Registrar el tratamiento y las recomendaciones reales | 5 | Alta | T034, T035, T036, T037 | T033, T045, T048, T065, T067, T086 | S4 |
-| H07.4 | Publicar y corregir atenciones desde el panel operativo | 5 | Alta | T027, T032, T038, T039 | T029, T033, T034, T059, T068, T075, T077, T079, T084, T086 | S4 |
-| H08 | Mi cuenta (referencia) | 3 | Media | T041, T042 | T004 | S2 |
-| **H09** | **Gestionar clientes, ubicaciones y cuentas autorizadas — historia principal** | **21 (subtotal)** | Alta | Se detalla en H09.1–H09.4 | Ver subdivisiones | Ver subdivisiones |
-| H09.1 | Registrar y mantener clientes particulares y empresas | 5 | Alta | T043, T044, T045, T046 | T079, T080, T081, T092 | S1 |
-| H09.2 | Administrar ubicaciones y frecuencias de visita | 3 | Alta | T047, T048, T049 | T045, T079, T092 | S2 |
-| H09.3 | Asociar y revocar cuentas con permisos por sede | 8 | Alta | T050, T051, T052 | T006, T009, T045, T048, T079, T089 | S2 |
-| H09.4 | Incorporar antecedentes y clasificarlos por sede | 5 | Alta | T053, T054, T055 | T034, T051, T073, T075, T089 | S4 |
-| H10 | Programación y calendario | 8 | Alta | T056, T057, T058, T059, T060, T061, T062, T063 | T017, T019, T048, T049, T079, T086, T092 | S3 |
-| H11 | Catálogos de plagas y productos | 5 | Alta | T064, T065, T066, T067 | T079, T080 | S1 |
-| **H12** | **Verificar cobros y gestionar documentos y entregas — historia principal** | **21 (subtotal)** | Alta | Se detalla en H12.1–H12.4 | Ver subdivisiones | Ver subdivisiones |
-| H12.1 | Confirmar, rechazar y corregir cobros | 5 | Alta | T068, T069, T070 | T086, T087 | S3 |
-| H12.2 | Guardar y versionar recibos de pagos confirmados | 5 | Alta | T071, T072, T073, T074 | T079, T081, T086 | S3 |
-| H12.3 | Custodiar facturas electrónicas externas y correcciones | 8 | Alta | T075, T076 | T072, T086, T090 | S4 |
-| H12.4 | Registrar la entrega de documentos y recomendaciones | 3 | Alta | T077 | T073, T075 | S4 |
+| H07.3 | Registrar el tratamiento y las recomendaciones reales | 5 | Alta | T034, T035, T036, T037 | T045, T048, T065, T067, T079, T080, T086 | S3 |
+| H07.4 | Publicar y corregir atenciones desde el panel operativo | 5 | Alta | T027, T032, T038, T039 | T029, T033, T034, T035, T036, T037, T059, T068, T075, T077, T079, T084, T086 | S3 |
+| H08 | Mi cuenta (referencia) | 3 | Alta | T041, T042 | T079, T092 | S1 |
+| **H09** | **Gestionar clientes, ubicaciones y cuentas autorizadas — historia principal** | **21 (subtotal)** | Alta | Se detalla en H09.1–H09.4 | Ver subdivisiones | S2 |
+| H09.1 | Registrar y mantener clientes particulares y empresas | 5 | Alta | T043, T044, T045, T046 | T079, T080, T081, T089, T092, T093 | S2 |
+| H09.2 | Administrar ubicaciones y frecuencias de visita | 3 | Alta | T047, T048, T049 | T045, T079, T088, T092 | S2 |
+| H09.3 | Asociar y revocar cuentas con permisos por sede | 8 | Alta | T050, T051, T052 | T006, T009, T079, T081, T089 | S2 |
+| H09.4 | Incorporar antecedentes y clasificarlos por sede | 5 | Alta | T053, T054, T055 | T045, T048, T051, T073, T075, T079, T089 | S2 |
+| H10 | Programación y calendario | 8 | Alta | T056, T057, T058, T059, T060, T061, T062, T063 | T045, T048, T049, T079, T086, T087, T091, T092, T093 | S3 |
+| H11 | Catálogos de plagas y productos | 5 | Alta | T064, T065, T066, T067 | T079, T080, T092, T093 | S1 |
+| **H12** | **Verificar cobros y gestionar documentos y entregas — historia principal** | **21 (subtotal)** | Alta | Se detalla en H12.1–H12.4 | Ver subdivisiones | S2 |
+| H12.1 | Confirmar, rechazar y corregir cobros | 5 | Alta | T068, T069, T070 | T079, T081, T087 | S2 |
+| H12.2 | Guardar y versionar recibos de pagos confirmados | 5 | Alta | T071, T072, T073, T074 | T068, T079, T081, T086, T101 | S2 |
+| H12.3 | Custodiar facturas electrónicas externas y correcciones | 8 | Alta | T075, T076 | T079, T081, T101 | S2 |
+| H12.4 | Registrar la entrega de documentos y recomendaciones | 3 | Alta | T077 | T079, T081, T086, T101 | S2 |
 | **Total** | **12 historias principales; 16 subdivisiones dentro de 4 de ellas** | **124** | — | **105 tareas propias y comunes** | — | **5 sprints** |
 
-**Lectura de la matriz:** las filas principales H05, H07, H09 y H12 muestran subtotales de sus partes. Para obtener 124 se suman las ocho historias sin subdividir y las dieciséis subdivisiones; los subtotales no se añaden otra vez. Cada unidad concentra sus tareas propias en el sprint indicado y exige criterios de aceptación y DoD. Las principales desglosadas se completan al aceptar sus cuatro partes. Las tareas comunes se utilizan como dependencias y se construyen y estiman una vez. Las dependencias completas figuran en el [backlog técnico de Semana 5](#backlog-técnico-de-implementación); horas y ejecutores, en [Estimación y asignación de las tareas](#estimación-y-asignación-de-las-tareas).
+**Lectura de la matriz:** las filas principales H05, H07, H09 y H12 muestran subtotales de sus partes. Para obtener 124 se suman las ocho historias sin subdividir y las dieciséis subdivisiones; los subtotales no se añaden otra vez. Cada principal concentra todas sus tareas y las cuatro subdivisiones que le correspondan en el sprint indicado. Se acepta la página completa con sus criterios y DoD; sus componentes deben estar terminados antes o dentro de ese sprint. Las tareas comunes se utilizan como dependencias y se construyen y estiman una vez. Las dependencias completas figuran en el [backlog técnico de Semana 5](#backlog-técnico-de-implementación); horas y ejecutores, en [Estimación y asignación de las tareas](#estimación-y-asignación-de-las-tareas).
 
 ### Desglose de puntos de las historias subdivididas
 
@@ -2497,179 +2494,181 @@ Las ocho historias sin subdividir suman **44 puntos** y las dieciséis subdivisi
 **Horas-persona:** O = favorable, Base = esfuerzo previsto y P = desfavorable. Las cifras conservan implementación, validaciones, pruebas, revisión y documentación. Coordinación y ceremonias usan la reserva de disponibilidad; los autores académicos no son los profesionales contratados del escenario.
 
 - **O:** Base × 0,65, redondeada hacia abajo a pares, mínimo 2 h.
-- **P:** Base × 1,5; × 1,8 en las tareas de mayor riesgo, redondeada hacia arriba a pares. T101, T102 y las etapas de T094/T098/T103 conservan la suma de sus actividades.
+- **P:** Base × 1,5; × 1,8 en las tareas de mayor riesgo, redondeada hacia arriba a pares. T101, T102, T094, T098 y T103 conservan la suma de sus actividades, dentro de un solo sprint cada una.
 - **Bloque reservado:** posición dentro de 64 h efectivas por sprint, dimensionada con P. Se conserva el inicio y se usa la duración O/Base/P correspondiente; un esfuerzo menor libera parte del bloque. No son horas del reloj.
-- **Asignación:** los códigos identifican personas. D4 combina desarrollo y DevOps con una sola bolsa y sin tareas simultáneas. Las etapas comunes indican profesional y bloque en su tabla; se contabilizan una vez.
+- **Asignación:** los códigos identifican personas. D4 combina desarrollo y DevOps con una sola bolsa y sin tareas simultáneas. Cada tarea indica un único profesional, sprint y bloque; los componentes se contabilizan una vez.
 
 | ID | Historia o común | Sprint | Profesional | O (h) | Base (h) | P (h) | Bloque reservado |
-| --- | --- | --- | --- | ---: | ---: | ---: | --- |
-| T001 | H01 | S1 | D5 | 6 | 12 | 18 | S1: 18–36 |
-| T002 | H01 | S1 | D4 | 4 | 8 | 12 | S1: 52–64 |
-| T003 | H02 | S1 | D2 | 2 | 6 | 10 | S1: 40–50 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| T001 | H01 | S1 | LT | 6 | 12 | 18 | S1: 18–36 |
+| T002 | H01 | S1 | D5 | 4 | 8 | 12 | S1: 52–64 |
+| T003 | H02 | S1 | D3 | 2 | 6 | 10 | S1: 30–40 |
 | T004 | H02 | S1 | D3 | 4 | 8 | 12 | S1: 52–64 |
-| T005 | H03 | S1 | D3 | 4 | 8 | 12 | S1: 30–42 |
-| T006 | H03 | S1 | D2 | 4 | 8 | 12 | S1: 52–64 |
-| T007 | H04 | S2 | D1 | 2 | 4 | 6 | S2: 30–36 |
-| T008 | H04 | S2 | D2 | 2 | 4 | 6 | S2: 52–58 |
-| T009 | H05.1 | S2 | D5 | 2 | 6 | 10 | S2: 16–26 |
-| T010 | H05.4 | S3 | D1 | 2 | 6 | 10 | S3: 54–64 |
-| T011 | H05.1 | S2 | D2 | 6 | 10 | 16 | S2: 10–26 |
-| T012 | H05.1 | S2 | D5 | 4 | 8 | 12 | S2: 30–42 |
-| T013 | H05.3 | S2 | D3 | 2 | 6 | 10 | S2: 42–52 |
-| T014 | H05.1 | S2 | D1 | 2 | 4 | 6 | S2: 58–64 |
-| T015 | H05.3 | S2 | D5 | 4 | 8 | 12 | S2: 42–54 |
-| T016 | H05.3 | S2 | D5 | 2 | 4 | 6 | S2: 54–60 |
-| T017 | H05.2 | S3 | D4 | 4 | 8 | 12 | S3: 6–18 |
-| T018 | H05.2 | S3 | D3 | 2 | 6 | 10 | S3: 32–42 |
-| T019 | H05.2 | S3 | D3 | 2 | 6 | 10 | S3: 42–52 |
-| T020 | H05.4 | S3 | D3 | 4 | 8 | 12 | S3: 0–12 |
-| T021 | H05.4 | S3 | D4 | 2 | 6 | 10 | S3: 42–52 |
-| T022 | H06 | S4 | D2 | 6 | 10 | 16 | S4: 48–64 |
-| T023 | H06 | S4 | D1 | 2 | 6 | 10 | S4: 54–64 |
+| T005 | H03 | S1 | D1 | 4 | 8 | 12 | S1: 30–42 |
+| T006 | H03 | S1 | D2 | 4 | 8 | 12 | S1: 42–54 |
+| T007 | H04 | S1 | D6 | 2 | 4 | 6 | S1: 52–58 |
+| T008 | H04 | S1 | D6 | 2 | 4 | 6 | S1: 58–64 |
+| T009 | Común | S1 | D2 | 2 | 6 | 10 | S1: 54–64 |
+| T010 | H05.4 | S4 | D6 | 2 | 6 | 10 | S4: 38–48 |
+| T011 | H05.1 | S4 | D1 | 6 | 10 | 16 | S4: 0–16 |
+| T012 | H05.1 | S4 | D2 | 4 | 8 | 12 | S4: 16–28 |
+| T013 | H05.3 | S4 | LT | 2 | 6 | 10 | S4: 28–38 |
+| T014 | H05.1 | S4 | D6 | 2 | 4 | 6 | S4: 28–34 |
+| T015 | H05.3 | S4 | D2 | 4 | 8 | 12 | S4: 28–40 |
+| T016 | H05.3 | S4 | D5 | 2 | 4 | 6 | S4: 28–34 |
+| T017 | H05.2 | S4 | D5 | 4 | 8 | 12 | S4: 0–12 |
+| T018 | H05.2 | S4 | LT | 2 | 6 | 10 | S4: 0–10 |
+| T019 | H05.2 | S4 | LT | 2 | 6 | 10 | S4: 10–20 |
+| T020 | H05.4 | S4 | D2 | 4 | 8 | 12 | S4: 0–12 |
+| T021 | H05.4 | S4 | D6 | 2 | 6 | 10 | S4: 12–22 |
+| T022 | H06 | S4 | D3 | 6 | 10 | 16 | S4: 16–32 |
+| T023 | H06 | S4 | D6 | 2 | 6 | 10 | S4: 0–10 |
 | T024 | H06 | S4 | D3 | 6 | 10 | 16 | S4: 0–16 |
-| T025 | H06 | S4 | D3 | 4 | 8 | 12 | S4: 16–28 |
-| T026 | H06 | S4 | D1 | 6 | 12 | 18 | S4: 10–28 |
-| T027 | H07.4 | S4 | D5 | 4 | 8 | 12 | S4: 48–60 |
-| T028 | H07.1 | S2 | LT | 6 | 10 | 16 | S2: 26–42 |
-| T029 | H07.1 | S2 | D3 | 4 | 8 | 12 | S2: 52–64 |
-| T030 | H07.2 | S3 | LT | 6 | 12 | 22 | S3: 42–64 |
-| T031 | H07.1 | S2 | D1 | 6 | 10 | 16 | S2: 42–58 |
-| T032 | H07.4 | S4 | D1 | 2 | 6 | 10 | S4: 0–10 |
-| T033 | H07.2 | S3 | D1 | 6 | 10 | 18 | S3: 22–40 |
-| T034 | H07.3 | S4 | D5 | 6 | 10 | 16 | S4: 0–16 |
-| T035 | H07.3 | S4 | D4 | 6 | 12 | 18 | S4: 16–34 |
-| T036 | H07.3 | S4 | D2 | 2 | 6 | 10 | S4: 34–44 |
-| T037 | H07.3 | S4 | D2 | 2 | 4 | 6 | S4: 16–22 |
-| T038 | H07.4 | S4 | D3 | 6 | 10 | 18 | S4: 28–46 |
-| T039 | H07.4 | S4 | D3 | 2 | 6 | 10 | S4: 54–64 |
-| T040 | H07.2 | S3 | LT | 6 | 12 | 18 | S3: 22–40 |
-| T041 | H08 | S2 | D2 | 2 | 6 | 10 | S2: 0–10 |
-| T042 | H08 | S2 | D5 | 2 | 4 | 6 | S2: 10–16 |
-| T043 | H09.1 | S1 | D2 | 4 | 8 | 12 | S1: 28–40 |
-| T044 | H09.1 | S1 | D1 | 4 | 8 | 12 | S1: 28–40 |
-| T045 | H09.1 | S1 | D1 | 6 | 12 | 18 | S1: 46–64 |
-| T046 | H09.1 | S1 | LT | 4 | 8 | 12 | S1: 52–64 |
-| T047 | H09.2 | S2 | D1 | 4 | 8 | 12 | S2: 0–12 |
-| T048 | H09.2 | S2 | D3 | 4 | 8 | 12 | S2: 12–24 |
-| T049 | H09.2 | S2 | D1 | 2 | 4 | 6 | S2: 24–30 |
+| T025 | H06 | S4 | D1 | 4 | 8 | 12 | S4: 16–28 |
+| T026 | Común | S2 | D6 | 6 | 12 | 18 | S2: 36–54 |
+| T027 | H07.4 | S3 | D2 | 4 | 8 | 12 | S3: 52–64 |
+| T028 | H07.1 | S3 | LT | 6 | 10 | 16 | S3: 0–16 |
+| T029 | H07.1 | S3 | D3 | 4 | 8 | 12 | S3: 16–28 |
+| T030 | H07.2 | S3 | D3 | 6 | 12 | 22 | S3: 42–64 |
+| T031 | H07.1 | S3 | D2 | 6 | 10 | 16 | S3: 16–32 |
+| T032 | H07.4 | S3 | D5 | 2 | 6 | 10 | S3: 54–64 |
+| T033 | H07.2 | S3 | D5 | 6 | 10 | 18 | S3: 16–34 |
+| T034 | H07.3 | S3 | D5 | 6 | 10 | 16 | S3: 0–16 |
+| T035 | H07.3 | S3 | D4 | 6 | 12 | 18 | S3: 0–18 |
+| T036 | H07.3 | S3 | D6 | 2 | 6 | 10 | S3: 0–10 |
+| T037 | H07.3 | S3 | D4 | 2 | 4 | 6 | S3: 18–24 |
+| T038 | H07.4 | S3 | LT | 6 | 10 | 18 | S3: 34–52 |
+| T039 | H07.4 | S3 | LT | 2 | 6 | 10 | S3: 54–64 |
+| T040 | H07.2 | S3 | D4 | 6 | 12 | 18 | S3: 46–64 |
+| T041 | H08 | S1 | LT | 2 | 6 | 10 | S1: 42–52 |
+| T042 | H08 | S1 | D1 | 2 | 4 | 6 | S1: 58–64 |
+| T043 | H09.1 | S2 | D2 | 4 | 8 | 12 | S2: 0–12 |
+| T044 | H09.1 | S2 | D1 | 4 | 8 | 12 | S2: 0–12 |
+| T045 | H09.1 | S2 | D5 | 6 | 12 | 18 | S2: 12–30 |
+| T046 | H09.1 | S2 | D4 | 4 | 8 | 12 | S2: 44–56 |
+| T047 | H09.2 | S2 | D2 | 4 | 8 | 12 | S2: 12–24 |
+| T048 | H09.2 | S2 | LT | 4 | 8 | 12 | S2: 30–42 |
+| T049 | H09.2 | S2 | D3 | 2 | 4 | 6 | S2: 56–62 |
 | T050 | H09.3 | S2 | D1 | 2 | 6 | 10 | S2: 12–22 |
 | T051 | H09.3 | S2 | D2 | 6 | 12 | 22 | S2: 30–52 |
-| T052 | H09.3 | S2 | D2 | 2 | 4 | 6 | S2: 58–64 |
-| T053 | H09.4 | S4 | D5 | 4 | 8 | 12 | S4: 16–28 |
-| T054 | H09.4 | S4 | D4 | 2 | 6 | 10 | S4: 54–64 |
-| T055 | H09.4 | S4 | D4 | 2 | 6 | 10 | S4: 36–46 |
-| T056 | H10 | S3 | D2 | 2 | 6 | 10 | S3: 52–62 |
-| T057 | H10 | S3 | D5 | 2 | 6 | 10 | S3: 54–64 |
-| T058 | H10 | S3 | D5 | 4 | 8 | 12 | S3: 0–12 |
-| T059 | H10 | S3 | D2 | 6 | 12 | 18 | S3: 12–30 |
-| T060 | H10 | S3 | D4 | 4 | 8 | 12 | S3: 30–42 |
-| T061 | H10 | S3 | D2 | 8 | 14 | 22 | S3: 30–52 |
-| T062 | H10 | S3 | D4 | 2 | 4 | 6 | S3: 0–6 |
-| T063 | H10 | S3 | D4 | 4 | 8 | 12 | S3: 52–64 |
+| T052 | H09.3 | S2 | D4 | 2 | 4 | 6 | S2: 58–64 |
+| T053 | H09.4 | S2 | D5 | 4 | 8 | 12 | S2: 30–42 |
+| T054 | H09.4 | S2 | LT | 2 | 6 | 10 | S2: 54–64 |
+| T055 | H09.4 | S2 | D5 | 2 | 6 | 10 | S2: 42–52 |
+| T056 | H10 | S3 | D6 | 2 | 6 | 10 | S3: 54–64 |
+| T057 | H10 | S3 | D6 | 2 | 6 | 10 | S3: 42–52 |
+| T058 | H10 | S3 | D2 | 4 | 8 | 12 | S3: 0–12 |
+| T059 | H10 | S3 | D6 | 6 | 12 | 18 | S3: 12–30 |
+| T060 | H10 | S3 | D3 | 4 | 8 | 12 | S3: 30–42 |
+| T061 | H10 | S3 | D1 | 8 | 14 | 22 | S3: 30–52 |
+| T062 | H10 | S3 | D3 | 2 | 4 | 6 | S3: 0–6 |
+| T063 | H10 | S3 | D1 | 4 | 8 | 12 | S3: 52–64 |
 | T064 | H11 | S1 | D1 | 2 | 6 | 10 | S1: 18–28 |
-| T065 | H11 | S1 | LT | 2 | 6 | 10 | S1: 42–52 |
-| T066 | H11 | S1 | D2 | 2 | 6 | 10 | S1: 18–28 |
-| T067 | H11 | S1 | D4 | 2 | 6 | 10 | S1: 42–52 |
-| T068 | H12.1 | S3 | LT | 6 | 12 | 22 | S3: 0–22 |
-| T069 | H12.1 | S3 | D3 | 2 | 6 | 10 | S3: 22–32 |
-| T070 | H12.1 | S3 | D1 | 4 | 8 | 12 | S3: 40–52 |
-| T071 | H12.2 | S3 | D5 | 4 | 8 | 12 | S3: 12–24 |
-| T072 | H12.2 | S3 | D5 | 6 | 10 | 18 | S3: 24–42 |
-| T073 | H12.2 | S3 | D5 | 2 | 6 | 10 | S3: 42–52 |
-| T074 | H12.2 | S3 | D3 | 2 | 6 | 10 | S3: 52–62 |
-| T075 | H12.3 | S4 | LT | 12 | 20 | 36 | S4: 0–36 |
-| T076 | H12.3 | S4 | D5 | 4 | 8 | 12 | S4: 36–48 |
-| T077 | H12.4 | S4 | D1 | 4 | 8 | 12 | S4: 36–48 |
+| T065 | H11 | S1 | D6 | 2 | 6 | 10 | S1: 42–52 |
+| T066 | H11 | S1 | D3 | 2 | 6 | 10 | S1: 18–28 |
+| T067 | H11 | S1 | D3 | 2 | 6 | 10 | S1: 42–52 |
+| T068 | H12.1 | S2 | D4 | 6 | 12 | 22 | S2: 22–44 |
+| T069 | H12.1 | S2 | D1 | 2 | 6 | 10 | S2: 54–64 |
+| T070 | H12.1 | S2 | D5 | 4 | 8 | 12 | S2: 52–64 |
+| T071 | H12.2 | S2 | D5 | 4 | 8 | 12 | S2: 0–12 |
+| T072 | H12.2 | S2 | D1 | 6 | 10 | 18 | S2: 24–42 |
+| T073 | H12.2 | S2 | D1 | 2 | 6 | 10 | S2: 44–54 |
+| T074 | H12.2 | S2 | D6 | 2 | 6 | 10 | S2: 54–64 |
+| T075 | H12.3 | S2 | D6 | 12 | 20 | 36 | S2: 0–36 |
+| T076 | H12.3 | S2 | D3 | 4 | 8 | 12 | S2: 44–56 |
+| T077 | H12.4 | S2 | LT | 4 | 8 | 12 | S2: 42–54 |
 | T078 | Común | S1 | D4 | 4 | 8 | 12 | S1: 0–12 |
-| T079 | Común | S1 | D4 | 10 | 16 | 30 | S1: 12–42 |
+| T079 | Común | S1 | D6 | 10 | 16 | 30 | S1: 12–42 |
 | T080 | Común | S1 | UX | 6 | 12 | 18 | S1: 0–18 |
-| T081 | Común | S1 | D3 | 2 | 4 | 8 | S1: 44–52 |
-| T082 | Común | S1 | D3 | 4 | 8 | 12 | S1: 18–30 |
-| T083 | Común | S1 | D5 | 2 | 4 | 6 | S1: 36–42 |
-| T084 | Común | S2 | D3 | 6 | 10 | 16 | S2: 26–42 |
-| T085 | Común | S3 | D3 | 2 | 6 | 10 | S3: 12–22 |
-| T086 | Común | S2 | LT | 8 | 14 | 26 | S2: 0–26 |
-| T087 | Común | S2 | LT | 6 | 12 | 22 | S2: 42–64 |
-| T088 | Común | S1 | D5 | 6 | 10 | 16 | S1: 48–64 |
-| T089 | Común | S2 | D4 | 10 | 16 | 30 | S2: 0–30 |
-| T090 | Común | S3 | D2 | 4 | 8 | 12 | S3: 0–12 |
-| T091 | Común | S4 | LT | 6 | 10 | 18 | S4: 46–64 |
-| T092 | Común | S1 | LT | 10 | 16 | 24 | S1: 18–42 |
-| T093 | Común | S3 | D1 | 6 | 10 | 16 | S3: 0–16 |
-| T094 | Común | S3, S4 | QSM | 8 | 14 | 22 | S3: 54–64 (Casos de pagos, anticipo y efectivo); S4: 48–60 (Casos de documentos y correcciones) |
-| T095 | Común | S5 | QSM | 10 | 16 | 24 | S5: 18–42 |
-| T096 | Común | S5 | QA2 | 10 | 16 | 24 | S5: 8–32 |
-| T097 | Común | S5 | QSM | 6 | 12 | 18 | S5: 0–18 |
-| T098 | Común | S4, S5 | QA2 | 6 | 12 | 18 | S4: 48–58 (Continuidad sin cuenta y entrega); S5: 0–8 (Asociación posterior y acceso al mismo historial) |
-| T099 | Común | S4 | QSM | 6 | 12 | 18 | S4: 0–18 |
-| T100 | Común | S2 | D3 | 4 | 8 | 12 | S2: 0–12 |
-| T101 | Común | S2 | D4 | 10 | 22 | 34 | S2: 30–64 |
-| T102 | Común | S5 | D4 | 12 | 24 | 38 | S5: 0–38 |
-| T103 | Común | S4, S5 | PO | 6 | 10 | 16 | S4: 0–10 (Redacción y preparación de guía); S5: 38–44 (Ajuste y revisión final de guía) |
-| T104 | Común | S5 | PO | 4 | 8 | 12 | S5: 44–56 |
-| T105 | Común | S5 | QSM | 2 | 4 | 6 | S5: 56–62 |
+| T081 | Común | S1 | D5 | 2 | 4 | 8 | S1: 42–50 |
+| T082 | Común | S1 | D2 | 4 | 8 | 12 | S1: 18–30 |
+| T083 | Común | S1 | LT | 2 | 4 | 6 | S1: 36–42 |
+| T084 | Común | S3 | D1 | 6 | 10 | 16 | S3: 0–16 |
+| T085 | Común | S3 | D4 | 2 | 6 | 10 | S3: 32–42 |
+| T086 | Común | S2 | D3 | 8 | 14 | 26 | S2: 0–26 |
+| T087 | Común | S2 | D4 | 6 | 12 | 22 | S2: 0–22 |
+| T088 | Común | S1 | D4 | 6 | 10 | 16 | S1: 48–64 |
+| T089 | Común | S2 | LT | 10 | 16 | 30 | S2: 0–30 |
+| T090 | Común | S2 | D2 | 4 | 8 | 12 | S2: 52–64 |
+| T091 | Común | S2 | D3 | 6 | 10 | 18 | S2: 26–44 |
+| T092 | Común | S1 | D5 | 10 | 16 | 24 | S1: 18–42 |
+| T093 | Común | S1 | D1 | 6 | 10 | 16 | S1: 42–58 |
+| T094 | Común | S4 | QSM | 8 | 14 | 22 | S4: 28–50 |
+| T095 | Común | S5 | QA2 | 10 | 16 | 24 | S5: 0–24 |
+| T096 | Común | S5 | QSM | 10 | 16 | 24 | S5: 18–42 |
+| T097 | Común | S5 | QA2 | 6 | 12 | 18 | S5: 24–42 |
+| T098 | Común | S4 | QA2 | 6 | 12 | 18 | S4: 34–52 |
+| T099 | Común | S5 | QSM | 6 | 12 | 18 | S5: 0–18 |
+| T100 | Común | S1 | LT | 4 | 8 | 12 | S1: 52–64 |
+| T101 | Común | S1 | D4 | 10 | 22 | 34 | S1: 12–46 |
+| T102 | Común | S4 | D4 | 12 | 24 | 38 | S4: 0–38 |
+| T103 | Común | S5 | PO | 6 | 10 | 16 | S5: 0–16 |
+| T104 | Común | S5 | PO | 4 | 8 | 12 | S5: 42–54 |
+| T105 | Común | S5 | QA2 | 2 | 4 | 6 | S5: 54–60 |
 
-**Totales O/Base/P: 466 / 926 / 1.482 h.** Las 105 tareas se estiman una vez. Sus etapas internas se incluyen en esos totales.
+**Totales O/Base/P: 466 / 926 / 1.482 h.** Cada una de las 105 tareas se estima y asigna una sola vez. T009 y T026 conservan sus horas al pasar a componentes comunes.
 
-T101 — Railway: publicación 4/8/12, correo 2/6/10 y archivos privados 4/8/12; total **10/22/34 h**, en S2, con actualización de los incrementos posteriores.
+T101 — Railway: publicación 4/8/12, correo 2/6/10 y archivos privados 4/8/12; total **10/22/34 h**, completo en S1. Las páginas siguientes se despliegan al integrarse, dentro de sus tareas.
 
-T102 — Respaldos: diario 4/8/12, externo cifrado 2/6/10 y restauración 6/10/16; total **12/24/38 h**, en S5. T101 y T102 conservan **46 h base**.
+T102 — Respaldos: diario 4/8/12, externo cifrado 2/6/10 y restauración 6/10/16; total **12/24/38 h**, completo en S4. T101 y T102 conservan **46 h base**.
 
 ### Equipo profesional y capacidad
 
 #### Puestos, experiencia y dedicación
 
-**Diez profesionales hipotéticos con dedicaciones parciales:** seis desarrolladores, incluidos el líder técnico y D4 con DevOps; dos profesionales de calidad/facilitación; UX y Product Owner. **2.152 h brutas ≈ 5,38 personas a tiempo completo durante diez semanas**. Brian y Jeremy elaboran el expediente; César aporta decisiones del negocio.
+**Once profesionales hipotéticos con dedicaciones parciales:** siete desarrolladores, incluidos LT, D4 con DevOps y D6 como refuerzo senior; dos profesionales de calidad/facilitación; UX y Product Owner. **2.220 h brutas ≈ 5,55 personas a tiempo completo durante diez semanas**. Brian y Jeremy elaboran el expediente; César aporta decisiones del negocio.
 
 | Código | Puesto y experiencia supuesta | Horas brutas reservadas |
-| --- | --- | ---: |
-| LT | Líder técnico/full stack senior, ≥5 años: arquitectura, seguridad, revisión e integración. | 304 |
-| D1 | Full stack intermedio, 2–4 años: Laravel, Livewire, SQL y pruebas. | 276 |
-| D2 | Full stack intermedio, 2–4 años: formularios, portal y archivos privados. | 268 |
-| D3 | Full stack intermedio, 2–4 años: componentes, integración y validaciones. | 304 |
-| D4 | Full stack senior y DevOps, ≥5 años en desarrollo y ≥4 en despliegue, correo, persistencia y restauración; una sola persona. | 324 |
-| D5 | Full stack intermedio, 2–4 años: administración, agenda y pruebas. | 276 |
-| QSM | QA y facilitación Scrum, ≥3 años en pruebas y experiencia facilitando equipos; una sola bolsa. | 196 |
-| QA2 | QA intermedio, ≥3 años: aislamiento, archivos y recorridos integrales. | 56 |
+| --- | --- | --- |
+| LT | Líder técnico/full stack senior, ≥5 años: arquitectura, seguridad, revisión e integración. | 252 |
+| D1 | Full stack intermedio, 2–4 años: Laravel, Livewire, SQL y pruebas. | 248 |
+| D2 | Full stack intermedio, 2–4 años: formularios, portal y archivos privados. | 236 |
+| D3 | Full stack intermedio, 2–4 años: componentes, integración y validaciones. | 260 |
+| D4 | Full stack senior y DevOps, ≥5 años en desarrollo y ≥4 en despliegue, correo, persistencia y restauración; una sola persona. | 292 |
+| D5 | Full stack intermedio, 2–4 años: administración, agenda y pruebas. | 232 |
+| D6 | Full stack senior, ≥5 años: permisos, pagos, XML e integración; refuerzo parcial para completar páginas sin repartirlas entre sprints. | 272 |
+| QSM | QA y facilitación Scrum, ≥3 años en pruebas y experiencia facilitando equipos; una sola bolsa. | 184 |
+| QA2 | QA intermedio, ≥3 años: aislamiento, archivos y recorridos integrales. | 84 |
 | UX | Diseño UX/UI intermedio, ≥2 años: formularios, accesibilidad y revisión de uso. | 44 |
-| PO | Product Owner/analista, ≥3 años: negocio, prioridades, guía y aceptación. | 104 |
+| PO | Product Owner/analista, ≥3 años: negocio, prioridades, guía y aceptación. | 116 |
 
-La selección incluye perfiles intermedios capaces de usar los componentes del framework; LT y D4 atienden las tareas de arquitectura, autorización, órdenes, dinero y XML de mayor riesgo. Revisión por pares y pruebas están incluidas en las estimaciones.
+D6 refuerza la concentración de trabajo al entregar páginas completas. LT, D4 y D6 atienden arquitectura, permisos, revisión de dinero y XML de mayor riesgo. Los perfiles intermedios implementan formularios, órdenes y cálculos con revisión técnica; revisión y pruebas están incluidas en sus estimaciones. Esta combinación es una solución factible, sin afirmar que sea el equipo mínimo.
 
 #### Disponibilidad y carga por sprint
 
-Máximo **80 h brutas por persona y sprint**: 80% planificable y 20% reservado para coordinación, ceremonias e interrupciones. Las bolsas se redondean hacia arriba a bloques de 4 h a partir de la carga desfavorable. Además se reserva continuidad: LT/D4 al menos 16 h por sprint; desarrolladores al menos 8 h y 16 h en S5; QSM 32 h; PO 20 h; UX 24 h iniciales, 4 h en S2–S4 y 8 h en S5. Son supuestos de contratación del ejercicio, incluidos en el costo.
+Máximo **80 h brutas por persona y sprint**: 80% planificable y 20% para coordinación, ceremonias e interrupciones. Cada bolsa se calcula como **máximo entre continuidad y carga P ÷ 0,8, redondeada hacia arriba a bloques de 4 h**. Continuidad: LT/D4/D6, 16 h por sprint; los otros desarrolladores, 8 h y 16 h en S5; QSM, 32 h; PO, 20 h; UX, 24 h en S1, 4 h en S2–S4 y 8 h en S5. QA2 se reserva cuando tiene tareas. Son supuestos del ejercicio incluidos en el costo.
 
-Los profesionales deben estar disponibles en los bloques indicados, aunque su bolsa sea parcial. D4 atiende infraestructura y desarrollo en momentos diferentes; QSM no duplica horas por sus dos funciones.
+Los profesionales deben estar disponibles en sus bloques; una bolsa parcial no autoriza superponer actividades. D4 combina infraestructura y desarrollo sin duplicar horas.
 
 | Persona | S1 (h) | S2 (h) | S3 (h) | S4 (h) | S5 (h) | Total (h) |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| LT | 60 | 80 | 80 | 68 | 16 | 304 |
-| D1 | 52 | 72 | 72 | 64 | 16 | 276 |
-| D2 | 56 | 76 | 80 | 40 | 16 | 268 |
-| D3 | 56 | 80 | 80 | 72 | 16 | 304 |
-| D4 | 80 | 80 | 68 | 48 | 48 | 324 |
-| D5 | 52 | 60 | 80 | 68 | 16 | 276 |
-| QSM | 32 | 32 | 32 | 40 | 60 | 196 |
-| QA2 | 0 | 0 | 0 | 16 | 40 | 56 |
+| --- | --- | --- | --- | --- | --- | --- |
+| LT | 60 | 80 | 56 | 40 | 16 | 252 |
+| D1 | 56 | 76 | 64 | 36 | 16 | 248 |
+| D2 | 44 | 76 | 52 | 48 | 16 | 236 |
+| D3 | 56 | 80 | 68 | 40 | 16 | 260 |
+| D4 | 80 | 80 | 68 | 48 | 16 | 292 |
+| D5 | 56 | 80 | 56 | 24 | 16 | 232 |
+| D6 | 68 | 80 | 60 | 48 | 16 | 272 |
+| QSM | 32 | 32 | 32 | 32 | 56 | 184 |
+| QA2 | 0 | 0 | 0 | 24 | 60 | 84 |
 | UX | 24 | 4 | 4 | 4 | 8 | 44 |
-| PO | 20 | 20 | 20 | 20 | 24 | 104 |
+| PO | 20 | 20 | 20 | 20 | 36 | 116 |
 
-| Sprint | Actividades o partes | Base (h) | P reservado (h) | Disponibilidad bruta (h) | Capacidad al 80% (h) | Libre tras P (h) |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| S1 | 22 | 188 | 296 | 432 | 345,6 | 49,6 |
-| S2 | 26 | 216 | 352 | 504 | 403,2 | 51,2 |
-| S3 | 28 | 226 | 366 | 516 | 412,8 | 46,8 |
-| S4 | 24 | 206 | 332 | 440 | 352,0 | 20,0 |
-| S5 | 8 | 90 | 136 | 260 | 208,0 | 72,0 |
+| Sprint | Tareas únicas | Base (h) | P reservado (h) | Disponibilidad bruta (h) | Capacidad al 80% (h) | Libre tras P (h) |
+| --- | --- | --- | --- | --- | --- | --- |
+| S1 | 26 | 216 | 342 | 496 | 396,8 | 54,8 |
+| S2 | 29 | 262 | 434 | 608 | 486,4 | 52,4 |
+| S3 | 24 | 206 | 330 | 480 | 384,0 | 54,0 |
+| S4 | 19 | 164 | 258 | 364 | 291,2 | 33,2 |
+| S5 | 7 | 78 | 118 | 272 | 217,6 | 99,6 |
 
-**2.152 h brutas** proporcionan **1.721,6 h planificables** para **1.482 h desfavorables**: quedan **239,6 h planificables de apoyo/ajustes**, además de **430,4 h reservadas para coordinación e interrupciones**. Se paga la disponibilidad completa; estas bolsas no se descuentan otra vez del presupuesto.
+**2.220 h brutas** proporcionan **1.776,0 h planificables** para **1.482 h desfavorables**: quedan **294,0 h planificables de apoyo/ajustes**, además de **444,0 h reservadas para coordinación e interrupciones**. Se paga la disponibilidad completa; estas bolsas no se descuentan otra vez.
 
 #### Secuencia, capacidad y sensibilidad del plazo
 
-La secuencia comprueba todas las dependencias por etapa, una tarea por persona a la vez y los límites de cada sprint. Las 24 unidades de entrega concentran sus tareas propias en un solo sprint. El plazo permanece en **10 semanas y 5 sprints**, con jornada ordinaria de 40 h semanales y 32 h planificables.
+La secuencia comprueba las 105 tareas, sus dependencias y una actividad por persona a la vez. Las 12 historias principales se entregan completas en un sprint, con sus subdivisiones y componentes; las 24 unidades conservan sus puntos sin duplicar los subtotales. El plazo sigue siendo **10 semanas y 5 sprints**, con jornada ordinaria de 40 h semanales y 32 h planificables.
 
-La cadena técnica sin esperas suma **134 h base y 224 h desfavorables**. Con los bloques, recursos y revisiones del plan, **T105 termina en la hora efectiva 318 de 320** en el desfavorable; el margen de cierre es de **2 h efectivas**. Es una secuencia factible bajo los supuestos, no una prueba de que diez personas sean el mínimo ni una ejecución real.
+La cadena técnica sin esperas suma **116 h base y 180 h desfavorables**. Con bloques, recursos y fechas del plan, **T105 termina en la hora efectiva 316 de 320** en P, con **4 h efectivas de margen final**. Los márgenes de otras especialidades no sustituyen una dependencia ni garantizan cubrir un esfuerzo superior al supuesto.
 
 | Riesgo | Respuesta dentro de cinco sprints | Responsable |
 | --- | --- | --- |
@@ -2686,19 +2685,20 @@ La cadena técnica sin esperas suma **134 h base y 224 h desfavorables**. Con lo
 **CRC, antes de impuestos.** Son bloques de servicios profesionales y tarifas académicas, no salarios de Brian/Jeremy ni cotizaciones oficiales. Una relación laboral exigiría sus cargas y provisiones. Las bolsas recomendadas cubren el escenario desfavorable y se reservan desde el inicio; no dependen de contratar a una persona desconocida cuando aparezca el problema.
 
 | Persona | Horas base comparativas | Horas reservadas para P | Rango supuesto/h | Tarifa de referencia/h | Costo reservado |
-| --- | ---: | ---: | --- | ---: | ---: |
-| LT | 192 | 304 | ₡10.000–₡16.000 | ₡12.000 | ₡3.648.000 |
-| D1 | 184 | 276 | ₡6.000–₡10.000 | ₡8.000 | ₡2.208.000 |
-| D2 | 180 | 268 | ₡6.000–₡10.000 | ₡8.000 | ₡2.144.000 |
-| D3 | 196 | 304 | ₡6.000–₡10.000 | ₡8.000 | ₡2.432.000 |
-| D4 | 204 | 324 | ₡10.000–₡16.000 | ₡12.000 | ₡3.888.000 |
-| D5 | 184 | 276 | ₡6.000–₡10.000 | ₡8.000 | ₡2.208.000 |
-| QSM | 168 | 196 | ₡6.000–₡10.000 | ₡8.000 | ₡1.568.000 |
-| QA2 | 36 | 56 | ₡6.000–₡10.000 | ₡8.000 | ₡448.000 |
+| --- | --- | --- | --- | --- | --- |
+| LT | 164 | 252 | ₡10.000–₡16.000 | ₡12.000 | ₡3.024.000 |
+| D1 | 164 | 248 | ₡6.000–₡10.000 | ₡8.000 | ₡1.984.000 |
+| D2 | 160 | 236 | ₡6.000–₡10.000 | ₡8.000 | ₡1.888.000 |
+| D3 | 168 | 260 | ₡6.000–₡10.000 | ₡8.000 | ₡2.080.000 |
+| D4 | 192 | 292 | ₡10.000–₡16.000 | ₡12.000 | ₡3.504.000 |
+| D5 | 160 | 232 | ₡6.000–₡10.000 | ₡8.000 | ₡1.856.000 |
+| D6 | 172 | 272 | ₡10.000–₡16.000 | ₡12.000 | ₡3.264.000 |
+| QSM | 164 | 184 | ₡6.000–₡10.000 | ₡8.000 | ₡1.472.000 |
+| QA2 | 56 | 84 | ₡6.000–₡10.000 | ₡8.000 | ₡672.000 |
 | UX | 44 | 44 | ₡6.000–₡10.000 | ₡8.000 | ₡352.000 |
-| PO | 100 | 104 | ₡8.000–₡14.000 | ₡10.000 | ₡1.040.000 |
+| PO | 104 | 116 | ₡8.000–₡14.000 | ₡10.000 | ₡1.160.000 |
 
-**Capacidad para el esfuerzo base: ₡13.688.000. Refuerzo de disponibilidad para cubrir P: ₡6.248.000. Equipo reservado recomendado: ₡19.936.000.** D4 incluye DevOps; no se agrega otra factura de OPS para las mismas horas.
+**Capacidad para el esfuerzo base: ₡14.704.000. Refuerzo para cubrir P: ₡6.552.000. Equipo reservado recomendado: ₡21.256.000.** D4 incluye DevOps; D6 es una persona adicional con su propia bolsa. No se duplican funciones ni horas. Las tarifas de D6 usan el mismo rango académico de los perfiles senior, sin afirmar una nueva cotización.
 
 #### Infraestructura y operación prevista
 
@@ -2720,12 +2720,12 @@ Después: **₡25.000/mes + ₡10.000/año = ₡310.000 por doce meses**, antes 
 Se propone **un presupuesto a autorizar**, con el refuerzo de capacidad identificado. La columna base permite comparar el costo de contratar solo la dedicación esperada; la recomendada financia la disponibilidad necesaria para mantener cinco sprints también con las horas desfavorables. No son dos proyectos ni dos cobros acumulables.
 
 | Componente | Referencia base | Refuerzo para cubrir P | Recomendado |
-| --- | ---: | ---: | ---: |
-| Equipo profesional | ₡13.688.000 | ₡6.248.000 | **₡19.936.000** |
+| --- | --- | --- | --- |
+| Equipo profesional | ₡14.704.000 | ₡6.552.000 | **₡21.256.000** |
 | Infraestructura | ₡85.000 | ₡0 | **₡85.000** |
-| Subtotal | ₡13.773.000 | ₡6.248.000 | **₡20.021.000** |
-| Contingencia financiera del 15% | ₡2.065.950 | ₡937.200 | **₡3.003.150** |
-| Total antes de impuestos | ₡15.838.950 | ₡7.185.200 | **₡23.024.150** |
+| Subtotal | ₡14.789.000 | ₡6.552.000 | **₡21.341.000** |
+| Contingencia financiera del 15% | ₡2.218.350 | ₡982.800 | **₡3.201.150** |
+| Total antes de impuestos | ₡17.007.350 | ₡7.534.800 | **₡24.542.150** |
 
 El 20% de disponibilidad ya está incluido en las bolsas. El refuerzo cubre la diferencia de capacidad entre Base y P. La contingencia financiera del 15% atiende variaciones de tarifas, servicios u otros costos no incluidos; no vuelve a cobrar las mismas horas desfavorables ni el mismo 20%. No representa un nivel estadístico de confianza. [Criterio general de presupuesto base, incertidumbre y contingencia](https://www.gov.uk/government/publications/cost-estimating-guidance/cost-estimating-guidance).
 
@@ -2734,59 +2734,59 @@ El favorable reduce esfuerzo, pero no es la base recomendada para comprometer un
 **Sensibilidad a tarifas, con las mismas personas y bolsas reservadas:**
 
 | Tarifa | Equipo | Infraestructura | Contingencia 15% | Total antes de impuestos |
-| --- | ---: | ---: | ---: | ---: |
-| Inferior | ₡15.632.000 | ₡85.000 | ₡2.357.550 | ₡18.074.550 |
-| Referencia | ₡19.936.000 | ₡85.000 | ₡3.003.150 | ₡23.024.150 |
-| Superior | ₡25.704.000 | ₡85.000 | ₡3.868.350 | ₡29.657.350 |
+| --- | --- | --- | --- | --- |
+| Inferior | ₡16.816.000 | ₡85.000 | ₡2.535.150 | ₡19.436.150 |
+| Referencia | ₡21.256.000 | ₡85.000 | ₡3.201.150 | ₡24.542.150 |
+| Superior | ₡27.560.000 | ₡85.000 | ₡4.146.750 | ₡31.791.750 |
 
 | Sprint | Equipo reservado | Infraestructura | Contingencia | Presupuesto recomendado |
-| --- | ---: | ---: | ---: | ---: |
-| S1 | ₡4.056.000 | ₡25.000 | ₡612.150 | ₡4.693.150 |
-| S2 | ₡4.712.000 | ₡25.000 | ₡710.550 | ₡5.447.550 |
-| S3 | ₡4.760.000 | ₡25.000 | ₡717.750 | ₡5.502.750 |
-| S4 | ₡4.024.000 | ₡0 | ₡603.600 | ₡4.627.600 |
-| S5 | ₡2.384.000 | ₡10.000 | ₡359.100 | ₡2.753.100 |
+| --- | --- | --- | --- | --- |
+| S1 | ₡4.840.000 | ₡25.000 | ₡729.750 | ₡5.594.750 |
+| S2 | ₡5.864.000 | ₡25.000 | ₡883.350 | ₡6.772.350 |
+| S3 | ₡4.616.000 | ₡25.000 | ₡696.150 | ₡5.337.150 |
+| S4 | ₡3.496.000 | ₡0 | ₡524.400 | ₡4.020.400 |
+| S5 | ₡2.440.000 | ₡10.000 | ₡367.500 | ₡2.817.500 |
 
-La distribución suma **₡23.024.150** antes de impuestos, incluidos los mismos ₡85.000 de infraestructura y la contingencia; no se agregan renovaciones o compras duplicadas.
+La distribución suma **₡24.542.150** antes de impuestos, con los mismos **₡85.000** de infraestructura y contingencia del 15%. La preparación de páginas completas requiere D6 y nuevas bolsas por sprint; las 926 h base y las 1.482 h desfavorables del alcance se conservan.
 
 ### Supuestos, dependencias y riesgos de la estimación
 
-Las **12 historias principales** organizan la documentación; H05, H07, H09 y H12 contienen las **16 subdivisiones**. Se conservan las páginas, formularios y reglas del sistema. Las **105 tareas** conservan **926 horas base** y se asignan según la secuencia reservada para P; T094, T098 y T103 se detallan por etapas sin aumentar esfuerzo. Cada subdivisión aplica los criterios de su principal que correspondan a su alcance y sus criterios específicos. La validación de una principal desglosada comprende todas sus partes y las tareas comunes aplicables.
+Las **12 historias principales** organizan la documentación; H05, H07, H09 y H12 contienen las **16 subdivisiones**. Se conservan las páginas, formularios y reglas del sistema. Las **105 tareas** conservan **926 horas base** y se asignan según la secuencia reservada para P; cada tarea se completa en un único sprint sin aumentar esfuerzo. Cada subdivisión aplica los criterios de su principal que correspondan a su alcance y sus criterios específicos. La validación de una principal desglosada comprende todas sus partes y las tareas comunes aplicables.
 
 Los principales riesgos son la dependencia de permisos por sede (H09.3), la verificación de dinero (H12.1 y H07.2), la custodia de XML/PDF (H12.3), las aprobaciones de César y la integración necesaria para publicar servicios. Algunas historias pequeñas dependen de tareas que se completan antes, dentro de otras historias o como componentes comunes; eso no implica duplicar esfuerzo. Las dependencias del backlog técnico de Semana 5 y las asignaciones de esta semana conservan la secuencia técnica de referencia.
 
-El ejercicio de clase **N08/N10: 16 puntos, 2 Sprints y ₡240.000** corresponde solo a dos funcionalidades y a supuestos de dos integrantes. **N08 no equivale a toda H09**, porque H09 incluye cuentas autorizadas e historiales; los importes y la velocidad del ejercicio parcial no sustituyen el plan completo de diez profesionales hipotéticos.
+El ejercicio de clase **N08/N10: 16 puntos, 2 Sprints y ₡240.000** corresponde solo a dos funcionalidades y a supuestos de dos integrantes. **N08 no equivale a toda H09**, porque H09 incluye cuentas autorizadas e historiales; los importes y la velocidad del ejercicio parcial no sustituyen el plan completo de once profesionales hipotéticos.
 
 ### Capacidad y cierre en cinco sprints
 
-**Plazo fijo: 10 semanas y cinco sprints de dos semanas**, incluida la aceptación y el cierre. Los tres escenarios usan la misma secuencia reservada; cambian las horas de ejecución dentro de cada bloque, no los requisitos ni la fecha comprometida.
+**Plazo fijo: 10 semanas y cinco sprints de dos semanas**, incluida la aceptación y el cierre. Los escenarios mantienen los inicios reservados y utilizan la duración O/Base/P de cada tarea. Los componentes previos se reutilizan; ninguna página se declara completa si todavía necesita tareas de otro sprint.
 
-Los 124 puntos expresan tamaño relativo; 124 ÷ 5 = **24,8 puntos por sprint como promedio del proyecto**, no un límite de capacidad. Las entregas previstas suman **25 / 34 / 31 / 34 / 0 puntos**. S5 contiene trabajo común de comprobación y cierre, sin contar otra vez las historias. No existe velocidad observada de un equipo real: todo el caso es teórico.
+Los **124 puntos** expresan tamaño relativo; 124 ÷ 5 = **24,8 puntos por sprint como promedio**, no un límite de capacidad. Las páginas completas entregan **28 / 42 / 28 / 26 / 0 puntos**. S5 agrega comprobación global y cierre sin repetir puntos. No existe velocidad observada de un equipo real: el caso es teórico.
 
-| Escenario | Horas-persona | Cierre manteniendo los inicios reservados | Resultado |
-| --- | ---: | --- | --- |
-| Favorable: menos dificultad/correcciones | 466 | Hora efectiva 314 de 320, en S5 | Cabe en cinco sprints con las bolsas reservadas. |
-| Base: esfuerzo previsto | 926 | Hora efectiva 316 de 320, en S5 | Cabe en cinco sprints con las bolsas reservadas. |
-| Desfavorable: mayor dificultad/integración | 1.482 | Hora efectiva 318 de 320, en S5 | Cabe en cinco sprints con las bolsas reservadas. |
+| Escenario | Horas-persona | Cierre con inicios reservados | Resultado |
+| --- | --- | --- | --- |
+| Favorable | 466 | Hora efectiva 312 de 320, en S5 | Cabe en cinco sprints con las bolsas reservadas. |
+| Base | 926 | Hora efectiva 314 de 320, en S5 | Cabe en cinco sprints con las bolsas reservadas. |
+| Desfavorable | 1.482 | Hora efectiva 316 de 320, en S5 | Cabe en cinco sprints con las bolsas reservadas. |
 
-**Plan recomendado:** diez profesionales parciales, **2.152 h brutas y 1.721,6 h planificables**, con presupuesto de **₡23.024.150 antes de impuestos**. La comparación base de **₡15.838.950** ayuda a identificar el refuerzo; no es otra suma que se añada al recomendado.
+**Plan recomendado:** once profesionales parciales, **2.220 h brutas y 1.776,0 h planificables**, con presupuesto de **₡24.542.150 antes de impuestos**. La referencia base de **₡17.007.350** permite comparar el refuerzo; no se añade al recomendado.
 
-La reorganización permite construir componentes en paralelo contra modelos comunes, preparar Railway antes y repartir comprobaciones y guía en etapas. Los permisos, aceptación comercial, pago previo, tratamiento real y entrega siguen siendo obligatorios al utilizar el sistema. La factibilidad comprobada depende de las horas y disponibilidades declaradas; una desviación fuera de ese rango exige una decisión de respuesta dentro del plazo, no una ampliación automática ni una aceptación ficticia.
+Las dependencias de construcción revisadas permiten trabajar en paralelo sobre modelos comunes, sin eliminar aceptación comercial, pagos previos, permisos ni validaciones. Cada página se acepta al terminar sus funciones y componentes. Los resúmenes esperan sus fuentes de datos. La factibilidad depende de las horas, competencias y disponibilidad declaradas; cualquier desviación que las exceda requiere una respuesta justificada dentro del plazo.
 
 ### Cronograma de entregas (Release Plan)
 
-Los cinco sprints mantienen las fechas de referencia. Cada una de las ocho historias sin subdividir y las dieciséis subdivisiones se construye y acepta en un sprint con sus criterios y DoD. Las cuatro principales desglosadas se completan al aceptar sus partes; sus subtotales no se añaden otra vez. La comprobación integral y aceptación conjunta de S5 no duplican puntos.
+Los cinco sprints conservan sus fechas de referencia. Las cuatro partes de H05, H07, H09 y H12 se completan en el mismo sprint de su principal. La aceptación incluye todas sus tareas y componentes comunes; el trabajo común posterior de regresión no completa páginas pendientes ni duplica puntos.
 
-| Sprint | Fechas previstas | Incremento principal | Unidades de entrega previstas | Puntos | Presupuesto recomendado |
-| --- | --- | --- | --- | ---: | ---: |
-| **S1** | 10–23 sep. 2026 | Base técnica, acceso y datos iniciales | H01, H02, H03, H09.1, H11 | **25** | ₡4.693.150 |
-| **S2** | 24 sep.–7 oct. 2026 | Solicitudes, asociaciones y condiciones | H04, H05.1, H05.3, H07.1, H08, H09.2, H09.3 | **34** | ₡5.447.550 |
-| **S3** | 8–21 oct. 2026 | Agenda, cobros y recibos | H05.2, H05.4, H07.2, H10, H12.1, H12.2 | **31** | ₡5.502.750 |
-| **S4** | 22 oct.–4 nov. 2026 | Tratamientos, documentos e integración | H06, H07.3, H07.4, H09.4, H12.3, H12.4 | **34** | ₡4.627.600 |
-| **S5** | 5–18 nov. 2026 | Validación, respaldo y cierre | Comprobaciones comunes, restauración, guía, aceptación y cierre | **0** | ₡2.753.100 |
-| **Total** | **10 semanas** | **105 tareas únicas; 108 actividades al detallar tres tareas comunes** | **12 historias principales, 16 subdivisiones y 24 unidades de entrega** | **124** | **₡23.024.150** |
+| Sprint | Fechas previstas | Incremento principal | Historias completas | Puntos | Presupuesto recomendado |
+| --- | --- | --- | --- | --- | --- |
+| **S1** | 10–23 sep. 2026 | Base técnica, acceso completo, landing y catálogos | H01, H02, H03, H04, H08, H11 | **28** | ₡5.594.750 |
+| **S2** | 24 sep.–7 oct. 2026 | Clientes, cobros y documentos completos | H09, H12 | **42** | ₡6.772.350 |
+| **S3** | 8–21 oct. 2026 | Agenda y atención administrativa completas | H07, H10 | **28** | ₡5.337.150 |
+| **S4** | 22 oct.–4 nov. 2026 | Portal del cliente completo y respaldos | H05, H06 | **26** | ₡4.020.400 |
+| **S5** | 5–18 nov. 2026 | Validación integral y cierre | Regresión, guía, aceptación y cierre de las páginas ya completas | **0** | ₡2.817.500 |
+| **Total** | **10 semanas** | **105 tareas únicas, completas y contadas una vez** | **12 historias principales, 16 subdivisiones y 13 páginas** | **124** | **₡24.542.150** |
 
-**Seguimiento:** revisar por sprint tareas y etapas terminadas, carga, criterios, presupuesto y riesgos. Un burndown comienza con 124 puntos y descuenta únicamente unidades aceptadas, una vez cada una. Se registran los cambios y la evidencia del expediente en Git; los resultados hipotéticos se rotulan simulados. Las modificaciones nuevas de alcance, dependencias, personas o costos se consultan antes de aplicarlas y se propagan a todos los apartados afectados.
+**Seguimiento:** revisar páginas completas, componentes, tareas, carga, pruebas, presupuesto y riesgos. El burndown parte de 124 puntos y descuenta las unidades aceptadas una sola vez, cuando la página completa cumple criterios y DoD. Se registran cambios y evidencia en Git; los resultados hipotéticos se rotulan simulados. Los cambios nuevos de alcance, dependencias, personas o costo se consultan y se propagan a los apartados afectados.
 
 ---
 
@@ -2800,7 +2800,7 @@ Esta sección aplica la guía de Semana 7 —diapositivas 16 y 17 del archivo, n
 
 ### Plan de Comunicaciones
 
-Brian y Jeremy elaboran y revisan el expediente real. Los diez profesionales de [Semana 6](#puestos-experiencia-y-dedicación) representan la ejecución técnica hipotética; sus reuniones y avances no se presentan como hechos observados. Las frecuencias siguientes son acuerdos de trabajo propuestos para el ejercicio, sujetos a disponibilidad cuando interviene una persona externa.
+Brian y Jeremy elaboran y revisan el expediente real. Los once profesionales de [Semana 6](#puestos-experiencia-y-dedicación) representan la ejecución técnica hipotética; sus reuniones y avances no se presentan como hechos observados. Las frecuencias siguientes son acuerdos de trabajo propuestos para el ejercicio, sujetos a disponibilidad cuando interviene una persona externa.
 
 #### Interesados y comunicaciones académicas
 
@@ -2844,26 +2844,24 @@ PO es el analista/Product Owner del caso; QSM combina calidad y facilitación Sc
 
 ### Tablero de Trabajo del Sprint 1
 
-El tablero y sus tarjetas se consultan y actualizan en esta misma sección del README. Para cambiar un estado se edita la tabla y la tarjeta correspondiente y se guarda un commit.
+El tablero y sus tarjetas permanecen en este README. Al representar un cambio se actualizan la tabla y su tarjeta, con evidencia identificada como simulada cuando corresponda.
 
-**Carga inicial:** 1 de noviembre de 2026. **Periodo representado:** S1, del 10 al 23 de septiembre de 2026. Son fechas del caso; no acreditan programación ejecutada.
+**Carga inicial:** 1 de noviembre de 2026. **Periodo representado:** S1, del 10 al 23 de septiembre de 2026. Son fechas del caso, no programación ejecutada.
 
-Se cargan las cinco unidades del [Sprint Backlog 1](#sprint-1-base-técnica-acceso-y-datos-iniciales): **H01, H02, H03, H09.1 y H11**, con responsable documental, revisor, tareas y profesionales previstos. Reúnen **25 puntos**. El sprint completo incluye 22 tareas —188 h base y 296 h desfavorables—, con sus componentes comunes contados una vez.
+Se cargan las **seis páginas/historias completas** de [Sprint Backlog 1](#sprint-1-base-técnica-acceso-completo-landing-y-catálogos): **H01, H02, H03, H04, H08, H11**, con **28 puntos**. H04 reúne los dos pasos de recuperación. El sprint contiene **26 tareas únicas, 216 h base y 342 h desfavorables**; los componentes comunes se cuentan una vez. Clientes H09 se entrega completa en S2, no mediante una tarjeta parcial H09.1.
 
-En las tarjetas, LT identifica al líder técnico y D1–D5, a los desarrolladores hipotéticos; D4 también atiende DevOps dentro de su misma disponibilidad. Sus dedicaciones figuran en [Equipo profesional](#puestos-experiencia-y-dedicación). Brian y Jeremy son los autores documentales.
+LT identifica al líder técnico; D1–D6 son desarrolladores hipotéticos, con D4 también en DevOps y D6 como refuerzo senior. Brian y Jeremy son autores documentales; las bolsas profesionales están en [Equipo y capacidad](#puestos-experiencia-y-dedicación).
 
 #### Columnas, límites y responsabilidades
 
-| Columna | Significado | Límite acordado para el escenario |
+| Columna | Significado | Límite del escenario |
 | --- | --- | --- |
-| Por hacer | Unidad seleccionada todavía no iniciada. | Las cinco unidades cargadas; no es trabajo en curso. |
-| En progreso | Sus tareas se están ejecutando en la simulación, con responsable y dependencias comprobados. | Máximo 5 tarjetas: corresponde a las cinco entregas coordinadas por los seis desarrolladores; no amplía la capacidad individual. |
-| En revisión | Está pendiente comprobar criterios, integración y DoD. | Máximo 2 tarjetas; cada revisión tiene responsable identificado. |
-| Hecho | Cumple criterios y DoD dentro de la ejecución representada. | Sin límite WIP; una tarjeta se cuenta una sola vez. |
+| Por hacer | Página seleccionada todavía no iniciada. | Las seis tarjetas cargadas; no es trabajo en curso. |
+| En progreso | Sus tareas se ejecutan con dependencias y profesionales comprobados. | Máximo 5 tarjetas para siete desarrolladores; obliga a terminar trabajo antes de iniciar la sexta y no amplía su capacidad. |
+| En revisión | Página completa pendiente de criterios, integración y DoD. | Máximo 2 tarjetas, con revisor identificado. |
+| Hecho | Página completa con tareas propias y comunes, criterios y DoD. | Sin límite WIP; se cuenta una sola vez. |
 
-WIP significa trabajo en curso. El límite se aplica a tarjetas, mientras la [asignación técnica](#estimación-y-asignación-de-las-tareas) mantiene una actividad por profesional a la vez. Una tarjeta puede reunir varias tareas y profesionales. Los autores documentales no se contabilizan como ejecutores contratados.
-
-Para cambiar los límites WIP, registrar el motivo y comprobar la capacidad y la calidad antes de aplicarlos.
+WIP significa trabajo en curso. El límite se aplica a tarjetas; la [asignación técnica](#estimación-y-asignación-de-las-tareas) conserva una actividad por profesional a la vez. Una tarjeta puede utilizar varias personas y componentes construidos una vez. Para cambiar el WIP se registra motivo y se comprueban capacidad y calidad.
 
 #### Vista del tablero
 
@@ -2872,24 +2870,23 @@ Para cambiar los límites WIP, registrar el motivo y comprobar la capacidad y la
 | [H01 — Landing Page](#tarjeta-h01-landing-page) · Jeremy Rodríguez Esquivel | — | — | — |
 | [H02 — Inicio de sesión](#tarjeta-h02-inicio-de-sesión) · Jeremy Rodríguez Esquivel | — | — | — |
 | [H03 — Registro de cliente](#tarjeta-h03-registro-de-cliente) · Jeremy Rodríguez Esquivel | — | — | — |
-| [H09.1 — Clientes](#tarjeta-h091-clientes) · Brian Rodríguez Pérez | — | — | — |
+| [H04 — Recuperación de acceso](#tarjeta-h04-recuperación-de-acceso) · Jeremy Rodríguez Esquivel | — | — | — |
+| [H08 — Mi cuenta](#tarjeta-h08-mi-cuenta) · Jeremy Rodríguez Esquivel | — | — | — |
 | [H11 — Catálogos](#tarjeta-h11-catálogos) · Brian Rodríguez Pérez | — | — | — |
 
-**Conteo inicial:** 5 Por hacer; 0 En progreso; 0 En revisión; 0 Hecho. **Puntos:** 25 planificados y 0 terminados. Preparar el expediente no equivale a programar estas funciones.
+**Conteo inicial:** 6 Por hacer; 0 En progreso; 0 En revisión; 0 Hecho. **Puntos:** 28 planificados y 0 terminados. Preparar el expediente no equivale a programar estas funciones.
 
 #### Carga inicial y condición de terminado
 
-Las cinco tarjetas comienzan **Por hacer**: cargar su planificación no demuestra programación realizada. El tablero distingue la evidencia documental de los resultados que solo se representarían en el caso.
-
-Para mover una tarjeta a Hecho se comprueban sus criterios, tareas y dependencias, los seis criterios de [DoD](#criterios-de-terminación-y-aceptación) y la revisión correspondiente. Brian o Jeremy registra la evidencia y su carácter simulado; una revisión del expediente no se presenta como una prueba real del software. Las reglas de movimiento y las tarjetas se describen en esta misma sección.
+Todas las tarjetas comienzan Por hacer. Para pasar a Hecho se comprueban todas las tareas propias, componentes y criterios de la página, los seis criterios de [DoD](#criterios-de-terminación-y-aceptación) y la revisión. H04 exige las dos páginas de recuperación completas. Se registra evidencia y su carácter simulado; una revisión documental no se presenta como una prueba real del software.
 
 #### Reglas de movimiento y bloqueos
 
-1. **Por hacer → En progreso:** identificar responsable, tareas y dependencias del escenario; comprobar su disponibilidad y el WIP.
-2. **En progreso → En revisión:** adjuntar la referencia a los criterios, casos y evidencia prevista o representada, y asignar revisor.
-3. **En revisión → Hecho:** revisar criterios y los seis puntos de [DoD](#criterios-de-terminación-y-aceptación). Registrar fecha, revisor y evidencia; los resultados supuestos se identifican como simulados y no se atribuyen a ejecución real.
-4. Si hay observaciones, devolver a En progreso con el motivo. Una tarjeta bloqueada permanece en su columna y cuenta para su WIP; registrar causa, impacto, responsable y siguiente consulta.
-5. Editar la fila de la tarjeta para cambiarla de columna y actualizar los conteos y su ficha. Guardar el cambio mediante commit; conservar la historia del archivo. No duplicar una tarjeta en dos columnas.
+1. **Por hacer → En progreso:** identificar tareas, profesional, dependencias, disponibilidad y WIP.
+2. **En progreso → En revisión:** comprobar la página completa y sus componentes; adjuntar casos y evidencia y asignar revisor.
+3. **En revisión → Hecho:** revisar criterios y DoD; registrar fecha, revisor y resultados simulados cuando corresponda. Una tarea pendiente impide aceptar la página.
+4. Una observación devuelve la tarjeta a En progreso con motivo. Un bloqueo conserva la columna y cuenta para el WIP; se anotan causa, efecto y siguiente acción.
+5. Actualizar fila, conteos y tarjeta; guardar mediante commit cuando se autorice. No duplicar tarjeta, tarea común ni puntos.
 
 #### Tarjetas del Sprint 1
 
@@ -2899,13 +2896,13 @@ Para mover una tarjeta a Hecho se comprueban sus criterios, tareas y dependencia
 
 **Responsable documental:** Jeremy Rodríguez Esquivel. **Revisor documental:** Brian Rodríguez Pérez.
 
-Presentar RYC y preparar el contacto por WhatsApp sin cuenta. El formulario público prepara el mensaje; no registra una solicitud.
+Presentar RYC y preparar contacto por WhatsApp sin cuenta; el formulario público prepara el mensaje sin guardar una solicitud.
 
-**Tareas propias:** T001, T002. **Profesionales previstos:** D4, D5. **Esfuerzo propio:** 20 h base / 30 h desfavorables.
+**Tareas propias:** T001, T002. **Profesionales previstos:** D5, LT. **Esfuerzo propio:** 20 h base / 30 h desfavorables.
 
-**Criterios y reglas:** [Conocer RYC y contactar desde la Landing Page](#historia-h01-conocer-ryc-y-contactar-desde-la-landing-page). Aplicar también la DoD y los componentes comunes de su ficha.
+**Componentes comunes:** T083 — WhatsApp. **Criterios:** [Conocer RYC y contactar desde la Landing Page](#historia-h01-conocer-ryc-y-contactar-desde-la-landing-page), más DoD.
 
-**Bloqueos:** ninguno registrado en la carga inicial; comprobar las dependencias antes de iniciar. **Evidencia de ejecución:** no registrada.
+**Bloqueos:** ninguno registrado en la carga inicial; comprobar dependencias antes de iniciar. **Evidencia de ejecución:** no registrada.
 
 ##### Tarjeta H02: Inicio de sesión
 
@@ -2913,13 +2910,13 @@ Presentar RYC y preparar el contacto por WhatsApp sin cuenta. El formulario púb
 
 **Responsable documental:** Jeremy Rodríguez Esquivel. **Revisor documental:** Brian Rodríguez Pérez.
 
-Ingresar con correo y contraseña, aplicar límites de intentos y gestionar la sesión y el acceso según el rol.
+Ingresar con correo y contraseña, controlar intentos y sesión y ofrecer enlaces de registro y recuperación operativos; solo se muestran páginas entregadas.
 
-**Tareas propias:** T003, T004. **Profesionales previstos:** D2, D3. **Esfuerzo propio:** 14 h base / 22 h desfavorables.
+**Tareas propias:** T003, T004. **Profesionales previstos:** D3. **Esfuerzo propio:** 14 h base / 22 h desfavorables.
 
-**Criterios y reglas:** [Iniciar sesión en la aplicación web](#historia-h02-iniciar-sesión-en-la-aplicación-web). Aplicar también la DoD y los componentes comunes de su ficha.
+**Componentes comunes:** T082 — Diseño de acceso; T092 — Menús. **Criterios:** [Iniciar sesión en la aplicación web](#historia-h02-iniciar-sesión-en-la-aplicación-web), más DoD.
 
-**Bloqueos:** ninguno registrado en la carga inicial; comprobar las dependencias antes de iniciar. **Evidencia de ejecución:** no registrada.
+**Bloqueos:** ninguno registrado en la carga inicial; comprobar dependencias antes de iniciar. **Evidencia de ejecución:** no registrada.
 
 ##### Tarjeta H03: Registro de cliente
 
@@ -2927,27 +2924,41 @@ Ingresar con correo y contraseña, aplicar límites de intentos y gestionar la s
 
 **Responsable documental:** Jeremy Rodríguez Esquivel. **Revisor documental:** Brian Rodríguez Pérez.
 
-Registrar una cuenta de cliente con correo único, UUID y contraseña protegida con Argon2id. No autoriza historial previo.
+Guardar cuenta de cliente con correo único, UUID y Argon2id; reutilizar la verificación de correo sin otorgar acceso a un historial ajeno.
 
-**Tareas propias:** T005, T006. **Profesionales previstos:** D2, D3. **Esfuerzo propio:** 16 h base / 24 h desfavorables.
+**Tareas propias:** T005, T006. **Profesionales previstos:** D1, D2. **Esfuerzo propio:** 16 h base / 24 h desfavorables.
 
-**Criterios y reglas:** [Crear una cuenta de cliente](#historia-h03-crear-una-cuenta-de-cliente). Aplicar también la DoD y los componentes comunes de su ficha.
+**Componentes comunes:** T009 — Verificación de correo; T082 — Diseño de acceso. **Criterios:** [Crear una cuenta de cliente](#historia-h03-crear-una-cuenta-de-cliente), más DoD.
 
-**Bloqueos:** ninguno registrado en la carga inicial; comprobar las dependencias antes de iniciar. **Evidencia de ejecución:** no registrada.
+**Bloqueos:** ninguno registrado en la carga inicial; comprobar dependencias antes de iniciar. **Evidencia de ejecución:** no registrada.
 
-##### Tarjeta H09.1: Clientes
+##### Tarjeta H04: Recuperación de acceso
 
 **Estado:** Por hacer. **Puntos:** 5.
 
-**Responsable documental:** Brian Rodríguez Pérez. **Revisor documental:** Jeremy Rodríguez Esquivel.
+**Responsable documental:** Jeremy Rodríguez Esquivel. **Revisor documental:** Brian Rodríguez Pérez.
 
-Registrar, editar, listar y desactivar clientes conservando sus datos e historial, sin exigir cuenta en el portal.
+Solicitar el enlace por correo y guardar la nueva contraseña; ambas páginas, vencimiento, uso único e invalidación de sesiones completos.
 
-**Tareas propias:** T043, T044, T045, T046. **Profesionales previstos:** D1, D2, LT. **Esfuerzo propio:** 36 h base / 54 h desfavorables.
+**Tareas propias:** T007, T008. **Profesionales previstos:** D6. **Esfuerzo propio:** 8 h base / 12 h desfavorables.
 
-**Criterios y reglas:** [Registrar y mantener clientes particulares y empresas](#h091--registrar-y-mantener-clientes-particulares-y-empresas). Aplicar también la DoD y los componentes comunes de su ficha.
+**Componentes comunes:** T082 — Diseño de acceso; T101 — Railway, HTTPS y correo. **Criterios:** [Recuperar el acceso desde Olvidé mi contraseña](#historia-h04-recuperar-el-acceso-desde-olvidé-mi-contraseña), más DoD.
 
-**Bloqueos:** ninguno registrado en la carga inicial; comprobar las dependencias antes de iniciar. **Evidencia de ejecución:** no registrada.
+**Bloqueos:** ninguno registrado en la carga inicial; comprobar dependencias antes de iniciar. **Evidencia de ejecución:** no registrada.
+
+##### Tarjeta H08: Mi cuenta
+
+**Estado:** Por hacer. **Puntos:** 3.
+
+**Responsable documental:** Jeremy Rodríguez Esquivel. **Revisor documental:** Brian Rodríguez Pérez.
+
+Mostrar/copiar UUID y editar nombre/teléfono; conservar correo e ID de solo lectura y la sesión protegida.
+
+**Tareas propias:** T041, T042. **Profesionales previstos:** D1, LT. **Esfuerzo propio:** 10 h base / 16 h desfavorables.
+
+**Componentes comunes:** T092 — Menús. **Criterios:** [Consultar y administrar Mi cuenta](#historia-h08-consultar-y-administrar-mi-cuenta), más DoD.
+
+**Bloqueos:** ninguno registrado en la carga inicial; comprobar dependencias antes de iniciar. **Evidencia de ejecución:** no registrada.
 
 ##### Tarjeta H11: Catálogos
 
@@ -2955,20 +2966,20 @@ Registrar, editar, listar y desactivar clientes conservando sus datos e historia
 
 **Responsable documental:** Brian Rodríguez Pérez. **Revisor documental:** Jeremy Rodríguez Esquivel.
 
-Mantener plagas y productos con estado activo o inactivo, conservando referencias históricas y sin prescribir dosis.
+Mantener plagas y productos activos/inactivos, con listados en celular/computadora y referencias históricas conservadas.
 
-**Tareas propias:** T064, T065, T066, T067. **Profesionales previstos:** D1, D2, D4, LT. **Esfuerzo propio:** 24 h base / 40 h desfavorables.
+**Tareas propias:** T064, T065, T066, T067. **Profesionales previstos:** D1, D3, D6. **Esfuerzo propio:** 24 h base / 40 h desfavorables.
 
-**Criterios y reglas:** [Administrar los catálogos de plagas y productos](#historia-h11-administrar-los-catálogos-de-plagas-y-productos). Aplicar también la DoD y los componentes comunes de su ficha.
+**Componentes comunes:** T092 — Menús; T093 — Listados por rol. **Criterios:** [Administrar los catálogos de plagas y productos](#historia-h11-administrar-los-catálogos-de-plagas-y-productos), más DoD.
 
-**Bloqueos:** ninguno registrado en la carga inicial; comprobar las dependencias antes de iniciar. **Evidencia de ejecución:** no registrada.
+**Bloqueos:** ninguno registrado en la carga inicial; comprobar dependencias antes de iniciar. **Evidencia de ejecución:** no registrada.
 
 #### Componentes comunes y seguimiento
 
-S1 incluye ocho tareas comunes: **T078 — Preparar el proyecto; T079 — Relaciones de datos; T080 — Estilos; T081 — Cuenta administrativa; T082 — Diseño de acceso; T083 — Contacto por WhatsApp; T088 — Selectores territoriales; T092 — Menús**. Se consultan en el Sprint Backlog y la tabla de asignación; no crean otras historias ni puntos adicionales. Las cinco tarjetas reúnen 14 tareas propias y estas 8 comunes: **22 tareas** en total.
+S1 contiene **12 tareas comunes: T009, T078–T083, T088, T092, T093, T100, T101**. Sus descripciones y profesionales figuran en [Componentes y tareas comunes](#componentes-y-tareas-comunes) y [Estimación y asignación](#estimación-y-asignación-de-las-tareas). Las seis tarjetas reúnen **14 tareas propias**; sumadas a las comunes son **26 tareas únicas**. Una tarjeta puede reutilizar un componente ya terminado sin volver a construirlo ni sumar horas.
 
-Los responsables documentales actualizan el tablero al representar un cambio o resolver una revisión. Cada entrada conserva fecha, tarjeta, columna anterior/nueva, responsable, motivo y referencia a la evidencia. Las decisiones de negocio se consultan con César y las académicas con Yesenia, según el Plan de Comunicaciones.
+Cada cambio representado conserva fecha, tarjeta, columna anterior/nueva, responsable, motivo y evidencia. Las decisiones de negocio se consultan con César y las académicas con Yesenia según el Plan de Comunicaciones.
 
 ### Relación con calidad y recursos
 
-La DoD y los criterios de cada historia son la referencia de calidad. Las pruebas y la revisión acompañan cada incremento; S5 agrega regresión integral, restauración y aceptación conjunta. Las observaciones del tablero y de la retrospectiva retroalimentan el Sprint Backlog. Se conservan las diez personas, 105 tareas, 124 puntos y el presupuesto de Semana 6.
+La DoD y los criterios de cada historia son la referencia de calidad. Las pruebas y la revisión acompañan cada incremento; S5 agrega regresión integral, restauración y aceptación conjunta. Las observaciones del tablero y de la retrospectiva retroalimentan el Sprint Backlog. Se conservan las once personas, 105 tareas, 124 puntos y el presupuesto actualizado de Semana 6. Las páginas se completan en S1–S4; S5 añade comprobaciones globales y cierre.
