@@ -250,6 +250,18 @@ Sede Regional San Carlos
         - [Tarjeta H11: Catálogos](#tarjeta-h11-catálogos)
       - [Componentes comunes y seguimiento](#componentes-comunes-y-seguimiento)
     - [Relación con calidad y recursos](#relación-con-calidad-y-recursos)
+  - [Semana 8 · Riesgos y adquisiciones](#semana-8--riesgos-y-adquisiciones)
+    - [Criterios de valoración de riesgos](#criterios-de-valoración-de-riesgos)
+    - [Matriz de Riesgos](#matriz-de-riesgos)
+      - [Mapa de calor de riesgos](#mapa-de-calor-de-riesgos)
+    - [Plan de Mitigación](#plan-de-mitigación)
+      - [Respuesta prioritaria R02: margen de cierre](#respuesta-prioritaria-r02-margen-de-cierre)
+      - [Respuesta prioritaria R01: decisiones del negocio](#respuesta-prioritaria-r01-decisiones-del-negocio)
+      - [Respuestas para los demás riesgos](#respuestas-para-los-demás-riesgos)
+      - [Fechas de revisión y riesgo residual](#fechas-de-revisión-y-riesgo-residual)
+    - [Acciones de riesgo en los Sprint Backlogs](#acciones-de-riesgo-en-los-sprint-backlogs)
+    - [Adquisiciones críticas y plan de salida](#adquisiciones-críticas-y-plan-de-salida)
+    - [Monitoreo y actualización de riesgos](#monitoreo-y-actualización-de-riesgos)
 
 ---
 
@@ -1392,6 +1404,8 @@ Cada página se integra, prueba y documenta en su sprint según la DoD. La reuti
 | H11 — Administrar los catálogos de plagas y productos | T064–T067 | 24 | 40 |
 | Componentes y tareas comunes | T009, T078–T083, T088, T092, T093, T100, T101 | 124 | 198 |
 
+**Acciones de riesgo del Sprint Backlog:** AR01, AR02, AR06, AR08, AR09, AR10 y AR12, con estado inicial **Por hacer**, conforme al [plan de Semana 8](#acciones-de-riesgo-en-los-sprint-backlogs). Detallan controles de las tareas existentes; se conservan sus responsables técnicos, estimaciones y puntos.
+
 **Aceptación:** verificar la página completa, sus componentes, pruebas, permisos, precedencia y carga profesional. Ninguna tarea propia o componente necesario queda pendiente para aceptar esa página.
 
 #### Sprint 2: clientes, cobros y documentos completos
@@ -1409,6 +1423,8 @@ Cada página se integra, prueba y documenta en su sprint según la DoD. La reuti
 | H09 — Gestionar clientes, ubicaciones y cuentas autorizadas | T043–T055 | 98 | 154 |
 | H12 — Verificar cobros y gestionar documentos y entregas | T068–T077 | 92 | 154 |
 | Componentes y tareas comunes | T026, T086, T087, T089–T091 | 72 | 126 |
+
+**Acciones de riesgo del Sprint Backlog:** AR01–AR06, AR08, AR09, AR11 y AR12, con estado inicial **Por hacer**, conforme al [plan de Semana 8](#acciones-de-riesgo-en-los-sprint-backlogs). Detallan controles de las tareas existentes; se conservan sus responsables técnicos, estimaciones y puntos.
 
 **Aceptación:** verificar la página completa, sus componentes, pruebas, permisos, precedencia y carga profesional. Ninguna tarea propia o componente necesario queda pendiente para aceptar esa página.
 
@@ -1428,6 +1444,8 @@ Cada página se integra, prueba y documenta en su sprint según la DoD. La reuti
 | H10 — Programar visitas y administrar la disponibilidad | T056–T063 | 66 | 102 |
 | Componentes y tareas comunes | T084, T085 | 16 | 26 |
 
+**Acciones de riesgo del Sprint Backlog:** AR01, AR02, AR04, AR06, AR08–AR10 y AR12, con estado inicial **Por hacer**, conforme al [plan de Semana 8](#acciones-de-riesgo-en-los-sprint-backlogs). Detallan controles de las tareas existentes; se conservan sus responsables técnicos, estimaciones y puntos.
+
 **Aceptación:** verificar la página completa, sus componentes, pruebas, permisos, precedencia y carga profesional. Ninguna tarea propia o componente necesario queda pendiente para aceptar esa página.
 
 #### Sprint 4: Portal del cliente completo y respaldos
@@ -1446,6 +1464,8 @@ Cada página se integra, prueba y documenta en su sprint según la DoD. La reuti
 | H06 — Consultar mis pagos y documentos | T022–T025 | 34 | 54 |
 | Componentes y tareas comunes | T094, T098, T102 | 50 | 78 |
 
+**Acciones de riesgo del Sprint Backlog:** AR01–AR12, según las dependencias de H05/H06 y T094/T098/T102, con estado inicial **Por hacer**, conforme al [plan de Semana 8](#acciones-de-riesgo-en-los-sprint-backlogs). Detallan controles de las tareas existentes; se conservan sus responsables técnicos, estimaciones y puntos.
+
 **Aceptación:** verificar la página completa, sus componentes, pruebas, permisos, precedencia y carga profesional. Ninguna tarea propia o componente necesario queda pendiente para aceptar esa página.
 
 #### Sprint 5: validación integral y cierre
@@ -1461,6 +1481,8 @@ Cada página se integra, prueba y documenta en su sprint según la DoD. La reuti
 | Historia o trabajo común | Tareas incluidas | Base (h) | Desfavorable (h) |
 | --- | --- | --- | --- |
 | Componentes y tareas comunes | T095–T097, T099, T103–T105 | 78 | 118 |
+
+**Acciones de riesgo del Sprint Backlog:** revisión final de AR01–AR12 y de los riesgos residuales, con estado inicial **Por hacer**, conforme al [plan de Semana 8](#acciones-de-riesgo-en-los-sprint-backlogs). Detallan controles de las tareas existentes; se conservan sus responsables técnicos, estimaciones y puntos.
 
 **Aceptación:** contrastar los resultados del conjunto y la guía con las páginas ya completas; corregir y volver a verificar cualquier fallo antes del cierre simulado.
 
@@ -2983,3 +3005,153 @@ Cada cambio representado conserva fecha, tarjeta, columna anterior/nueva, respon
 ### Relación con calidad y recursos
 
 La DoD y los criterios de cada historia son la referencia de calidad. Las pruebas y la revisión acompañan cada incremento; S5 agrega regresión integral, restauración y aceptación conjunta. Las observaciones del tablero y de la retrospectiva retroalimentan el Sprint Backlog. Se conservan las once personas, 105 tareas, 124 puntos y el presupuesto actualizado de Semana 6. Las páginas se completan en S1–S4; S5 añade comprobaciones globales y cierre.
+
+---
+
+## Semana 8 · Riesgos y adquisiciones
+
+> **Fecha lectiva y registro documental:** miércoles 4 de noviembre de 2026.
+>
+> **Entregables:** Matriz de Riesgos y Plan de Mitigación, integrados al expediente y vinculados a los Sprint Backlogs
+
+### Criterios de valoración de riesgos
+
+Se adopta la escala de 1 a 3 de la presentación. La prioridad es **probabilidad × impacto**; no representa una probabilidad porcentual ni una pérdida monetaria esperada.
+
+| Valor | Probabilidad propuesta | Impacto propuesto sobre los objetivos |
+| --- | --- | --- |
+| 1 — Bajo | Evento posible, con exposición limitada en las condiciones del plan. | Efecto localizado, absorbible dentro de la tarea y de la disponibilidad del perfil correspondiente, sin comprometer aceptación ni entrega. |
+| 2 — Medio | Evento plausible por una dependencia o validación todavía pendiente. | Obliga a coordinar o rehacer trabajo relevante; puede afectar una historia o la provisión de un servicio. |
+| 3 — Alto | Exposición importante por una dependencia concentrada o un margen especialmente reducido. | Puede impedir aceptar una página o cerrar S5, comprometer datos privados, saldos o documentos, o superar el presupuesto autorizado del escenario. |
+
+Se toma el mayor impacto relevante en alcance, plazo, calidad, seguridad o costo. En una oportunidad, el impacto mide el beneficio posible sobre esos objetivos.
+
+- **Verde — 1–2:** aceptar y vigilar, conservando responsable.
+- **Amarillo — 3–4:** vigilar y preparar respuesta.
+- **Rojo — 6–9:** atender primero. Para una oportunidad significa priorizar su aprovechamiento.
+
+Los colores reproducen la matriz de la presentación. Ante igual puntuación se consideran la proximidad de la dependencia, la posibilidad de detectar el fallo antes de aceptar y el efecto sobre el cierre. La calificación inicial considera lo previsto en Semanas 3–7; las respuestas de esta sección hacen explícitos sus controles y contingencias.
+
+### Matriz de Riesgos
+
+| ID | Riesgo: si ocurre X, entonces Y | Categoría | Tipo | P | I | P × I / zona | Dueño propuesto | Fundamento en el expediente |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| R01 | Si una decisión necesaria de César no se obtiene antes de la actividad que depende de ella, se bloquearían validaciones o habría retrabajo en reglas comerciales y aceptación. | Negocio | Amenaza | 3 | 3 | **9 — Rojo** | PO | [Restricciones](#contexto-y-restricciones-del-proyecto): César concentra conocimiento y validación; no hay plazo externo de respuesta acordado. |
+| R02 | Si una espera o esfuerzo adicional consume el margen de la secuencia final, T104–T105 podrían terminar después de los cinco sprints. | Equipo / planificación | Amenaza | 3 | 3 | **9 — Rojo** | LT | [Secuencia y sensibilidad](#secuencia-capacidad-y-sensibilidad-del-plazo): el caso desfavorable termina en la hora efectiva 316 de 320, con solo 4 h de margen final. |
+| R03 | Si se implementa o aplica incorrectamente la asociación de cuentas y permisos por sede, una cuenta podría consultar o descargar información ajena. | Técnico | Amenaza | 2 | 3 | **6 — Rojo** | LT | H09.3, T051–T052, T089 y T095; la información empresarial sin sede tiene acceso restringido. |
+| R04 | Si un pago se confirma dos veces o se descuenta antes de comprobar el dinero, el saldo y la condición de anticipo quedarían incorrectos. | Técnico / negocio | Amenaza | 2 | 3 | **6 — Rojo** | D4 | H12.1, H07.2, T068–T070 y T087; solo dinero confirmado modifica el saldo. |
+| R05 | Si un archivo se pierde, queda relacionado con otra orden o se sustituye sin conservar su original, faltaría documentación verificable de la atención. | Técnico | Amenaza | 2 | 3 | **6 — Rojo** | D6 | H12.2–H12.3, T071–T076 y T101: recibos y XML/PDF privados, vinculados y persistentes. |
+| R06 | Si el alojamiento no está disponible o la configuración contratada impide enviar correo, podrían fallar el acceso, la verificación y la recuperación de cuentas. | Tercero / adquisiciones | Amenaza | 2 | 3 | **6 — Rojo** | D4 | T009 y T101; Railway y SMTP son dependencias, pero no hay contratación ni proveedor SMTP acreditados. |
+| R07 | Si las copias no incluyen datos y archivos coherentes, no conservan las claves necesarias o no pueden restaurarse, una incidencia podría dejar información irrecuperable. | Técnico / tercero | Amenaza | 2 | 3 | **6 — Rojo** | D4 | T102 y [Respaldo y entrega](#respaldo-y-entrega): copia externa cifrada y restauración comprobable antes de entregar. |
+| R08 | Si un especialista parcial no está disponible en su bloque reservado, se retrasarían tareas dependientes aunque otros perfiles tengan horas libres. | Equipo | Amenaza | 2 | 3 | **6 — Rojo** | QSM | [Disponibilidad y carga](#disponibilidad-y-carga-por-sprint): una actividad por persona; D4 combina desarrollo y DevOps, sin duplicar su bolsa. |
+| R09 | Si las cotizaciones, el consumo o las condiciones de los servicios superan las provisiones, el costo de infraestructura podría exceder lo previsto. | Tercero / adquisiciones | Amenaza | 2 | 2 | **4 — Amarillo** | PO | [Infraestructura prevista](#infraestructura-y-operación-prevista): ₡85.000 son provisiones académicas, no cotizaciones. |
+| R10 | Si WhatsApp deja de estar disponible o un contacto recibido no se registra, podría perderse el seguimiento comercial de una atención sin cuenta. | Tercero / negocio | Amenaza | 2 | 2 | **4 — Amarillo** | PO | H01, T083 y T028: el formulario público prepara el mensaje; solo el registro de César o el portal guarda la solicitud. |
+| R11 | Si se incorpora información histórica incompleta como si estuviera confirmada o se asigna a una sede incorrecta, el historial sería poco confiable o visible para la cuenta equivocada. | Alcance / datos | Amenaza | 3 | 2 | **6 — Rojo** | PO | [Información histórica](#información-histórica), H09.4 y T053–T055: fuentes dispersas, datos desconocidos explícitos y clasificación por sede. |
+| R12 | Si las revisiones de uso con César detectan simplificaciones válidas antes de aceptar cada página, podrían reducirse correcciones posteriores y mejorar la adopción sin reducir el alcance. | Negocio / calidad | Oportunidad | 2 | 2 | **4 — Amarillo** | UX | [Experiencia de uso](#experiencia-de-uso-de-césar), DoD y T097: el flujo debe funcionar en celular y computadora; la disponibilidad de César condiciona la validación. |
+
+#### Mapa de calor de riesgos
+
+| Probabilidad / impacto | Bajo — 1 | Medio — 2 | Alto — 3 |
+| --- | --- | --- | --- |
+| **Alta — 3** | 🟨 3 · — | 🟥 6 · **R11** | 🟥 9 · **R01, R02** |
+| **Media — 2** | 🟩 2 · — | 🟨 4 · **R09, R10, R12 (oportunidad)** | 🟥 6 · **R03, R04, R05, R06, R07, R08** |
+| **Baja — 1** | 🟩 1 · — | 🟩 2 · — | 🟨 3 · — |
+
+Se ubican **12 riesgos: 11 amenazas y 1 oportunidad**. Hay nueve amenazas en rojo y tres registros en amarillo. Cada ID aparece una sola vez.
+
+**Orden de atención:** R02 y R01 empatan con 9. Se atiende primero R02 por el margen final de 4 h y R01 inmediatamente después, porque una aprobación pendiente puede consumirlo. R03–R08 están en rojo por el impacto alto de un fallo plausible; R11, por la alta exposición a datos históricos incompletos y su posible retrabajo. Se conservan los controles de confidencialidad aunque R11 tenga impacto global medio: una exposición efectiva también activa R03. R12 se gestiona para aumentar el beneficio, sin presentarla como una amenaza.
+
+### Plan de Mitigación
+
+Las acciones AR01–AR12 identifican el seguimiento de riesgos dentro del backlog; **no son nuevas tareas T ni nuevos puntos de historia**. Detallan controles, revisiones o contingencias vinculados a trabajo ya previsto. La coordinación utiliza el 20% reservado y la ejecución técnica se contrasta con la bolsa del perfil y la tarea correspondiente. Si una respuesta requiere esfuerzo, recursos o costo adicionales, LT y PO deben documentar y tramitar ese cambio antes de incorporarlo a la línea de planificación.
+
+#### Respuesta prioritaria R02: margen de cierre
+
+- **Estrategia:** mitigar. **Dueño propuesto:** LT. QSM facilita el tratamiento del bloqueo y PO evalúa el efecto sobre compromisos.
+- **AR02 — Acción:** en cada Planning contrastar dependencias, disponibilidad por perfil y proyección de T104–T105 con los bloques de [Semana 6](#estimación-y-asignación-de-las-tareas). Registrar la espera o desviación en la tarjeta afectada; recalcular la secuencia después de cada bloqueo relevante y comprobar el margen restante. Utilizar apoyo competente solo cuando su bloque esté disponible y se conserve una actividad por persona.
+- **Disparador:** proyección de T105 posterior a la hora efectiva 320, o una espera de la secuencia de cierre que consuma las 4 h finales sin recuperación demostrada. Las horas libres de otro perfil no bastan para declarar resuelto el riesgo.
+- **Contingencia:** LT propone reasignación entre perfiles con competencia y disponibilidad comprobadas; QSM coordina desbloqueos y PO registra el efecto en costo, dependencias y entrega. Se vuelve a calcular antes de aceptar la solución.
+- **Respaldo:** si no cabe en las bolsas existentes, presentar una decisión explícita sobre recursos o compromiso de entrega a quienes corresponda. El plazo de cinco sprints sigue siendo el objetivo; una solución que lo exceda se registra como desviación pendiente de decisión y no como cumplimiento.
+- **Vínculo al backlog:** seguimiento de las 105 tareas, especialmente T078, T079, T101 y T103–T105, en sus sprints originales. No se trasladan partes pendientes de páginas a S5.
+- **Revisión de referencia:** 23/09, 07/10, 21/10, 04/11 y 18/11 de 2026; adicionalmente, al aparecer un bloqueo. **Residual proyectado:** P2 × I3 = **6, rojo**; solo puede revisarse a la baja con una nueva secuencia comprobada.
+
+#### Respuesta prioritaria R01: decisiones del negocio
+
+- **Estrategia:** mitigar. **Dueño propuesto:** PO. Brian coordina las consultas y Jeremy registra respuestas, según el [Plan de Comunicaciones](#plan-de-comunicaciones).
+- **AR01 — Acción:** preparar preguntas concretas antes de comenzar la tarea dependiente, indicando H/T, regla por confirmar, alternativas y fecha del bloque afectado. Mantener un registro de decisiones con consulta, respuesta, fecha y efecto. Proponer consultas y revisiones con César según su disponibilidad; las decisiones que falten continúan pendientes.
+- **Disparador:** una tarea llega al inicio de su bloque y necesita una decisión todavía no confirmada, o una respuesta modifica criterios que ya estaban planificados.
+- **Contingencia:** aclarar la consulta y coordinar otro contacto; avanzar únicamente en trabajo independiente ya autorizado y con capacidad disponible. Recalcular el efecto sobre la secuencia y activar R02 si se amenaza el cierre.
+- **Respaldo:** elevar la decisión pendiente y su efecto a César; si afecta la entrega académica, Brian y Jeremy registran la limitación y consultan la instrucción con la docente. El silencio no equivale a aprobación y una validación ficticia no sustituye la real.
+- **Vínculo al backlog:** H01 y datos iniciales en S1; H09/H12 en S2; H07/H10 en S3; H05/H06 en S4; guía y aceptación T103–T105 en S5.
+- **Revisión de referencia:** las cinco fechas de cierre del plan y antes de cada tarea bloqueada. **Residual proyectado:** P2 × I3 = **6, rojo**; el plan no garantiza la disponibilidad de César.
+
+#### Respuestas para los demás riesgos
+
+| ID / acción | Estrategia y acción concreta vinculada al backlog | Disparador propuesto | Contingencia y respaldo |
+| --- | --- | --- | --- |
+| **R03 / AR03** | **Mitigar.** LT coordina con los ejecutores de T051–T052 y T089 casos de cuenta sin asociación, sede propia/ajena y asociación revocada. Comprobar consultas, acciones y descargas al aceptar H09/H12 en S2 y H05/H06 en S4; T095 añade regresión global en S5. | Una consulta, acción o descarga permite datos fuera del alcance autorizado. | Restringir la función afectada, corregir y repetir los casos antes de aceptar. Si persiste, mantener bloqueada su aceptación; no desactivar controles para entregar. |
+| **R04 / AR04** | **Mitigar.** D4 revisa T068–T070/T087 con pagos pendientes, rechazados, confirmados, referencias repetidas y correcciones. Comprobar que solo la confirmación real descuenta una vez y que el anticipo controla el inicio; T094/T096 verifican integración. | El mismo dinero reduce dos veces el saldo, un reporte pendiente lo modifica o se inicia trabajo sin el anticipo exigido. | Detener la confirmación afectada, contrastar con registros comprobados por César y corregir con motivo y trazabilidad. Si no se puede conciliar, conservar pendiente y bloquear aceptación de ese recorrido. |
+| **R05 / AR05** | **Mitigar.** D6 coordina T071–T076: archivo permitido, relación con orden/cliente, versión original y descarga autorizada. D4 comprueba persistencia tras reinicio/actualización en T101; T094 revisa integración. | Falta un original, la relación es incorrecta o el archivo no permanece o no puede descargarse con autorización. | Recuperar desde copia válida o fuente comprobable y verificar relaciones. Si no existe original recuperable, registrar la falta y solicitarlo; no inventar XML, PDF ni respuesta fiscal. |
+| **R06 / AR06** | **Mitigar.** D4 comprueba en T101 HTTPS, persistencia y envío real de prueba para T009/H04 desde el entorno de entrega. Revisar condiciones de Railway y del SMTP elegido antes de contratar; documentar configuración reproducible sin publicar secretos. | No se puede acceder al entorno, enviar verificación o completar recuperación en la comprobación. | Revisar configuración y soporte. Si no se recupera, evaluar otro alojamiento o SMTP compatible, exportando datos/archivos y repitiendo la aceptación; requiere decisión sobre costo. El correo de prueba local sirve para diagnóstico, no acredita entrega pública. |
+| **R07 / AR07** | **Mitigar.** D4 ejecutaría T102 con datos y archivos relacionados, copia externa cifrada y claves disponibles para el autorizado. Comprobar siete copias diarias/cuatro semanales y restaurar en entorno de prueba; verificar consultas y archivos antes de T104. | Falta una copia prevista, no se puede descifrar/restaurar o los registros y archivos recuperados no coinciden. | Usar la última copia íntegra, identificar el intervalo no recuperable y reconstruir solo con fuentes verificables. Si no hay copia válida, detener el uso de datos reales y la aceptación hasta resolver; el repositorio de código no sustituye el respaldo. |
+| **R08 / AR08** | **Mitigar.** QSM confirma los bloques con LT y cada perfil al preparar el sprint; mantener instrucciones y revisión cruzada en las tareas críticas. Contrastar especialmente D4/D6/LT y no duplicar la bolsa DevOps. | Un perfil no confirma su bloque o una ausencia impide iniciar una tarea dependiente. | Reasignar solo a una persona competente con horas libres comprobadas y recalcular. Si no existe sustitución factible, PO tramita el cambio de recursos/costo y se activa R02. |
+| **R09 / AR09** | **Mitigar.** PO y D4 contrastan plan, consumo, almacenamiento, SMTP, copia externa y dominio con las provisiones antes de contratar; registrar cotización, moneda, impuestos y límites. Revisar consumo al cerrar cada sprint. | Una oferta o proyección de consumo supera la provisión de su concepto o introduce un cargo no previsto. | Ajustar configuración sin perder requisitos y evaluar una oferta compatible. Si persiste, proponer uso justificado de contingencia o cambio presupuestario; no contratar ni presentar el gasto como autorizado. |
+| **R10 / AR10** | **Mitigar.** PO coordina la confirmación del número/textos; LT comprueba T083 en ambos dispositivos. T028 conserva los contactos recibidos; T098 comprueba el recorrido sin cuenta y la asociación posterior sin duplicar registros. | El enlace no abre el contacto correcto, el canal no está disponible o se detecta una atención recibida sin registro. | César coordinaría otro canal disponible y acordado; registrar el contacto al recuperar acceso. Si sigue bloqueado, mantener identificadas las atenciones pendientes de confirmar; no afirmar que el formulario público guardó una solicitud. |
+| **R11 / AR11** | **Mitigar.** PO coordina con César qué antecedentes incorporar. T053–T055 conservan fuente, datos desconocidos y clasificación; comprobar con T089 que una historia sin sede solo queda para César/cuenta principal hasta clasificarla. | Un dato sin fuente aparece confirmado, una sede no está comprobada o se duplica un antecedente. | Corregir con trazabilidad y volver a validar. Mientras no haya confirmación, conservar «No registrado»/«Fecha no registrada» y el acceso restringido; si no se resuelve, dejar el pendiente explícito sin fabricar información. |
+| **R12 / AR12** | **Mejorar la oportunidad.** UX prepara recorridos concretos de las páginas que se aceptan en cada sprint; PO solicita la revisión con César según disponibilidad. Documentar dificultades y mejoras dentro de los criterios existentes; T097 consolida la validación de uso. | César participa en una revisión y se identifica una mejora verificable que conserva funciones y reglas. | Incorporar la mejora solo si cabe en la tarea y se comprueba la DoD. Si no hay revisión o no se observa beneficio, mantener el diseño documentado y registrar la oportunidad pendiente; una función nueva requiere control de cambios. |
+
+#### Fechas de revisión y riesgo residual
+
+El residual es una **proyección posterior a aplicar y verificar la respuesta**, no el estado actual del riesgo. Hasta contar con evidencia se conserva la puntuación inicial. Los residuales rojos requieren seguimiento prioritario; la aceptación de una exposición con datos reales o de un cambio económico no se presume.
+
+| ID | Fechas de revisión de referencia, 2026 | P/I posteriores propuestos | Resultado residual o beneficio esperado | Evidencia mínima para actualizar |
+| --- | --- | --- | --- | --- |
+| R01 | 23/09, 07/10, 21/10, 04/11 y 18/11; antes de cada decisión necesaria. | 2 / 3 | **6 — Rojo.** Persiste dependencia de la disponibilidad externa. | Registro de decisiones y tareas pendientes/desbloqueadas. |
+| R02 | 23/09, 07/10, 21/10, 04/11 y 18/11; ante bloqueos. | 2 / 3 | **6 — Rojo.** El margen sigue siendo limitado hasta recalcular. | Secuencia actualizada con carga por perfil y cierre proyectado. |
+| R03 | 07/10, 04/11 y 18/11. | 1 / 3 | **3 — Amarillo.** El impacto de una exposición sigue siendo alto. | Casos de aislamiento y revocación con resultado y revisor. |
+| R04 | 07/10, 21/10, 04/11 y 18/11. | 1 / 3 | **3 — Amarillo.** Un error de dinero mantiene impacto alto. | Casos de confirmación única, anticipo y corrección trazable. |
+| R05 | 07/10, 04/11 y 18/11. | 1 / 3 | **3 — Amarillo.** La pérdida de un original conserva impacto alto. | Carga, relación, versiones, persistencia y descarga comprobadas. |
+| R06 | 23/09 y cada cierre posterior. | 1 / 3 | **3 — Amarillo.** Permanece la dependencia del servicio. | Acceso HTTPS, correo recibido y recuperación comprobados. |
+| R07 | 04/11 y 18/11; ante fallo de copia. | 1 / 3 | **3 — Amarillo.** Subsiste el intervalo entre copias válidas. | Inventario de copias, retención y restauración verificable. |
+| R08 | Cada Planning y las cinco fechas de cierre. | 2 / 3 | **6 — Rojo.** Una sustitución todavía no acordada no reduce la exposición. | Disponibilidad confirmada y reasignación factible, si procede. |
+| R09 | Antes de contratar y en cada cierre del plan. | 2 / 2 | **4 — Amarillo.** Sin cotizaciones ni consumo comprobado no se justifica reducirlo. | Comparación de ofertas/proyección con provisiones y decisión. |
+| R10 | 23/09, 21/10 y 04/11; ante fallo del canal. | 1 / 2 | **2 — Verde.** Se mantiene vigilancia del contacto y registro. | Enlace comprobado y contactos guardados por el canal correcto. |
+| R11 | 07/10, 04/11 y 18/11. | 2 / 2 | **4 — Amarillo.** Puede persistir información no disponible. | Fuente, clasificación y permisos del antecedente revisados. |
+| R12 | Cada cierre de página y consolidación 18/11. | 3 / 2 | **6 — Prioridad para aprovechar.** Beneficio objetivo, no exposición negativa residual. | Observaciones de uso y mejora aceptada sin ampliar alcance. |
+
+### Acciones de riesgo en los Sprint Backlogs
+
+Las referencias siguientes quedan incorporadas también en los cinco [Sprint Backlogs](#sprints-y-sprint-backlogs). Todas conservan estado **Por hacer** y remiten a las respuestas AR anteriores. El dueño coordina la respuesta; los ejecutores de las tareas siguen siendo los asignados en Semana 6.
+
+| Sprint / revisión de referencia | Acciones de seguimiento | Tareas e historias del backlog vinculadas | Evidencia prevista |
+| --- | --- | --- | --- |
+| **S1 — 23/09/2026** | AR01, AR02, AR06, AR08, AR09, AR10 y AR12. | H01–H04, H08, H11; T009, T078–T083, T100 y T101. La comprobación de contacto en S1 es T083; T028 conserva su asignación a S3. | Decisiones y capacidad; acceso/correo; enlace WhatsApp; criterios de uso y ofertas pendientes. |
+| **S2 — 07/10/2026** | AR01–AR06, AR08, AR09, AR11 y AR12. | H09/H12; T026, T043–T055, T068–T077, T086–T091. | Aislamiento por sede, dinero confirmado, originales/descargas y antecedentes con fuente. |
+| **S3 — 21/10/2026** | AR01, AR02, AR04, AR06, AR08–AR10 y AR12. | H07/H10; T027–T040 y T056–T063; T084–T085. | Decisiones, registros de contactos, propuesta/anticipo y uso de los recorridos administrativos. |
+| **S4 — 04/11/2026** | AR01–AR12, según las dependencias de las páginas. | H05/H06; T010–T025, T094, T098 y T102. | Continuidad sin cuenta, pagos/documentos del portal y restauración del respaldo. |
+| **S5 — 18/11/2026** | Revisión final de AR01–AR12 y residuales; las verificaciones técnicas corresponden a las tareas del sprint. | T095–T097, T099 y T103–T105. Se reutiliza evidencia de T094/T098/T102 sin volver a contar su construcción. | Regresión, guía, decisión de aceptación y riesgos pendientes en el cierre. |
+
+Cada entrada de evidencia indicará fecha, responsable, H/T, resultado y revisor; si el resultado es hipotético se rotula **simulado**. Una previsión de prueba no equivale a una prueba ejecutada.
+
+### Adquisiciones críticas y plan de salida
+
+La decisión de hacer/comprar conserva las tecnologías y el alcance de Semana 3: desarrollar la lógica de negocio de RYC; utilizar los componentes ya elegidos e integrar alojamiento, correo y respaldo.
+
+Los tipos de acuerdo de esta tabla son **clasificaciones propuestas para el ejercicio**. Una suscripción de consumo se trata como servicio con costo variable; no se afirma que jurídicamente sea un contrato T&M negociado. No hay proveedores nuevos seleccionados ni contrataciones efectuadas. Los acuerdos de desarrollo profesional también son hipotéticos; sus tarifas y bolsas están en Semana 6.
+
+| Dependencia / riesgo | Proveedor o estado | Tipo de acuerdo previsto | Criterios antes de contratar y control | Plan de salida propuesto |
+| --- | --- | --- | --- | --- |
+| **Alojamiento, MySQL y archivos — R05/R06/R09** | **Railway**, plataforma elegida en el plan; contratación no acreditada. | Suscripción por plan y recursos consumidos; presupuesto sujeto a revisión. | D4 comprueba Laravel/MySQL, HTTPS, volúmenes privados/persistentes, SMTP permitido y recuperación; PO contrasta la provisión de ₡15.000/mes con costo total. El SMTP saliente exige Pro o superior según [Railway](https://docs.railway.com/networking/outbound-networking); la [tarifa publicada](https://railway.com/pricing) depende del plan y consumo. No se presume un SLA contractual. | Conservar código e instrucciones, exportar MySQL y archivos privados y probar restauración en otro alojamiento compatible; proveedor alternativo por evaluar. Confirmar integridad antes de cambiar acceso o cerrar el servicio. |
+| **Correo — R06/R09** | **Proveedor SMTP por seleccionar.** | Suscripción o consumo; condiciones y límites pendientes. | D4 comprueba envío/recepción de verificación y recuperación, remitente/dominio, límites, registros de fallos y soporte. PO contrasta la provisión de ₡5.000/mes; no se asigna marca ni cuota no documentada. | Documentar configuración y cambiar a otro SMTP compatible tras decisión de costo; repetir verificación/recuperación. Un cambio a API HTTPS requeriría revisar la solución documentada. |
+| **Copia externa — R07/R09** | **Proveedor o medio externo por definir**, bajo control de RYC. | Servicio de almacenamiento por suscripción/consumo, si se contrata; acuerdo pendiente. | D4 comprueba cifrado, acceso a claves, independencia del alojamiento, exportación y retención de siete copias diarias/cuatro semanales. Contrastar ₡5.000/mes. Los respaldos nativos no sustituyen la copia externa prevista; revisar su [retención oficial](https://docs.railway.com/enterprise/security). | Descargar/verificar copias y claves en otro medio autorizado, restaurar datos y archivos y comprobar retención antes de cancelar el anterior. |
+| **Dominio — R06/R09** | **Registrador y nombre por seleccionar.** | Registro/renovación anual; condiciones pendientes. | D4 comprueba control de DNS, acceso de RYC y renovación; PO contrasta ₡10.000/año. Verificar que el dominio pueda usarse con el alojamiento elegido. | Conservar acceso y configuración DNS; cambiar apuntamientos o tramitar transferencia cuando proceda según las condiciones del registrador. |
+| **Calendario — R02/R09** | **FullCalendar Standard**, elegido en Semana 3. | Licencia de software de terceros; Standard utiliza MIT. | LT verifica que las vistas Mes/Semana/Lista se implementen con los componentes Standard, versiones fijadas y avisos de licencia conservados. La [licencia oficial](https://fullcalendar.io/license) distingue Standard de Premium; no hay licencia Premium presupuestada. | Mantener reglas y datos de visitas en la aplicación y MySQL; sustituir el componente visual si fuera necesario mediante cambio estimado y nueva comprobación de H10. |
+| **Canal comercial — R10** | **WhatsApp**, canal ya previsto; número sujeto a confirmación de César. | Uso del servicio bajo sus condiciones; no se prevé contratación de API. | PO confirma número y contenido; LT comprueba enlace/mensaje en ambos dispositivos. César registra contactos recibidos; el enlace no ofrece garantía de entrega ni guarda una solicitud. | Acordar otro canal con César y mantener contactos, órdenes e historial en el sistema. No depender de la conversación para reconstruir el registro de atención. |
+
+### Monitoreo y actualización de riesgos
+
+1. En cada Planning revisar riesgos abiertos, próximos disparadores, disponibilidad, adquisiciones y acciones del sprint; el dueño propone ajustes sustentados. En la Retrospective revisar eficacia y riesgos nuevos/residuales.
+2. Ante un disparador, registrar fecha, hecho observado, H/T, efecto y respuesta. Si el evento ocurre, se registra como problema y se gestiona la contingencia; el riesgo residual se vuelve a valorar por separado.
+3. Mantener el seguimiento en las tarjetas y esta sección, con estado, dueño, evidencia, revisión siguiente y motivo del cambio. Registrar una acción completada solo al contar con evidencia; revisar una oportunidad por el beneficio observado.
+4. Escalar bloqueos según el Plan de Comunicaciones. R01/R02/R08 conservan prioridad alta después de la respuesta proyectada; no se cierran por redactar el plan.
+5. En T104–T105 informar controles comprobados, pendientes, riesgo residual y decisiones de aceptación. Brian y Jeremy mantienen la revisión documental y el historial en Git; los profesionales y resultados del caso se identifican como simulados cuando corresponda.
