@@ -161,8 +161,8 @@ Sede Regional San Carlos
       - [Sprint 1: base técnica, acceso completo, Landing y catálogos](#sprint-1-base-técnica-acceso-completo-landing-y-catálogos)
       - [Sprint 2: clientes, cobros y documentos completos](#sprint-2-clientes-cobros-y-documentos-completos)
       - [Sprint 3: agenda y atención administrativa completas](#sprint-3-agenda-y-atención-administrativa-completas)
-      - [Sprint 4: Portal del cliente completo y respaldos](#sprint-4-portal-del-cliente-completo-y-respaldos)
-      - [Sprint 5: validación integral y cierre](#sprint-5-validación-integral-y-cierre)
+      - [Sprint 4: Panel del cliente completo y respaldos](#sprint-4-panel-del-cliente-completo-y-respaldos)
+      - [Sprint 5: Pagos y documentos, validación integral y cierre](#sprint-5-pagos-y-documentos-validación-integral-y-cierre)
     - [Backlog técnico de implementación](#backlog-técnico-de-implementación)
       - [Simbología de las historias y las tareas](#simbología-de-las-historias-y-las-tareas)
       - [Dependencias de construcción y reglas de uso](#dependencias-de-construcción-y-reglas-de-uso)
@@ -353,6 +353,7 @@ Capacidades previstas del producto:
 | 04/11/2026 | `cbc9350` | jrodriguezes | Nombres de T082 y T085 | M `README.md` | Precisa los nombres de las tareas T082 y T085. |
 | 04/11/2026 | `cd5d5dc` | Jeremy | Semana 8: riesgos y adquisiciones | M `README.md` | Agrega la Semana 8: criterios de valoración, Matriz de Riesgos, Plan de Mitigación, acciones de riesgo, adquisiciones y monitoreo. |
 | 05/11/2026 | `21a6467` | Brian Rodriguez | Bitácora de cambios del proyecto | M `README.md` | Agrega la bitácora de cambios debajo de la Semana 1 con archivos incorporados/eliminados e historial de commits. |
+| 05/11/2026 | `a8264ad` | Brian Rodriguez | Scrum Master QSM, Sprint Reviews y subdivisiones | M `README.md` | Formaliza a QSM como único Scrum Master ficticio, incorpora las cinco Sprint Reviews planificadas y alinea la entrega prevista de las 16 subdivisiones con su historia principal. |
 
 ### Cambios pendientes de commit
 
@@ -529,7 +530,7 @@ Consultar [H07 — Panel administrativo](#h07-consultar-pendientes-y-gestionar-l
 
 #### Necesidades de RYC como empresa
 
-En Sprint 5 se aceptaría aplicación validada, guía, archivos privados persistentes y recuperación comprobada, mediante las [tareas comunes](#componentes-y-tareas-comunes).
+En Sprint 5 se completa [H06 — Pagos/documentos](#h06-consultar-mis-pagos-y-documentos) y se aceptaría la aplicación validada, guía, archivos privados persistentes y recuperación comprobada, mediante las [tareas comunes](#componentes-y-tareas-comunes).
 
 ### Registro e inicio de sesión
 
@@ -1403,7 +1404,7 @@ Terminar una historia principal desglosada exige comprobar todas sus subdivision
 
 1. **Preparación y acceso completos:** modelo, estilos, permisos necesarios, correo, cuenta de César, registro, recuperación y Mi cuenta antes de depender de ellos. La Landing y los catálogos aportan valor desde el primer sprint.
 2. **Datos administrativos antes del autoservicio:** particulares, empresas, sedes, cuentas autorizadas, antecedentes, cobros y documentos permiten operar sin exigir una cuenta al cliente.
-3. **Operación antes de resúmenes:** agenda, contacto, cotización manual, aceptación, pago previo y tratamiento antes del resumen administrativo; el resumen del cliente espera sus consultas de solicitudes, visitas, historial y pagos.
+3. **Operación antes de resúmenes:** agenda, contacto, cotización manual, aceptación, pago previo y tratamiento antes del resumen administrativo; el resumen del cliente espera sus consultas de solicitudes, visitas, historial y el cálculo de pagado/pendiente (T087), mientras que el enlace a Pagos y documentos se habilita al entregarse H06 en S5.
 4. **Páginas completas:** todas las tareas propias, subdivisiones, componentes, validaciones y acciones de una página deben estar listas al aceptarla. No se traslada una parte pendiente al sprint siguiente.
 5. **Reutilización comprobada:** cada componente se construye y estima una vez, antes de su primera página o en ese mismo sprint. Las páginas siguientes verifican su integración dentro de sus propias tareas.
 6. **Capacidad y calidad:** respetar dependencias, disponibilidad por especialidad, revisión y DoD. Si el conjunto no cabe, revisar recursos y presupuesto manteniendo los cinco sprints, sin declarar trabajo incompleto como terminado.
@@ -1509,47 +1510,47 @@ Cada página se integra, prueba y documenta en su sprint según la DoD. La reuti
 
 **Sprint Review planificada — 21/10/2026 (simulada):** dura hasta 2 h y la facilita QSM como Scrum Master. Participan PO, el equipo del sprint y César, unos 30 min según su disponibilidad. Se revisarían Calendario y el Panel de administración (H07 con sus cuatro subdivisiones y H10; 28 puntos), desde el contacto hasta el servicio publicado, incluido el bloqueo del inicio sin pago previo confirmado. Todavía no se ha realizado y no tiene resultados registrados.
 
-#### Sprint 4: Portal del cliente completo y respaldos
+#### Sprint 4: Panel del cliente completo y respaldos
 
 **Semanas simuladas 7–8; revisión de referencia 04/11/2026.**
 
-**Objetivo:** Completar el Panel del cliente y Pagos y documentos, reutilizando la administración ya terminada.
+**Objetivo:** Completar el Panel del cliente y los respaldos verificables, reutilizando la administración y los cálculos de cobro ya terminados.
 
-**Incremento previsto:** El cliente consulta su resumen, solicitudes, propuestas, visitas, historial y pagos; envía solicitudes propias sin exigir WhatsApp, informa pagos y descarga documentos. Se comprueban la continuidad de canales y las descargas compartidas. Se configura y prueba el respaldo completo.
+**Incremento previsto:** El cliente consulta su resumen (incluidos importes pagados y pendientes por moneda mediante T087), solicitudes, propuestas, visitas e historial; envía solicitudes propias sin exigir WhatsApp, decide propuestas y descarga documentos de sus atenciones con T026. Conforme a la regla de menús y navegación (T092), el acceso a Pagos y documentos se habilita en S5 cuando se entrega H06. Se comprueban los cobros y documentos administrativos (T094), la continuidad sin cuenta (T098) y el respaldo completo con restauración (T102).
 
-**Sprint Backlog:** 19 tareas únicas; **164 h base y 258 h reservadas** para cubrir el caso desfavorable. **Puntos:** 26.
+**Sprint Backlog:** 15 tareas únicas; **130 h base y 204 h reservadas** para cubrir el caso desfavorable. **Puntos:** 18.
 
 | Historia o trabajo común | Tareas incluidas | Base (h) | Desfavorable (h) |
 | --- | --- | --- | --- |
 | H05 — Consultar mi resumen y gestionar mis atenciones | T010–T021 | 80 | 126 |
-| H06 — Consultar mis pagos y documentos | T022–T025 | 34 | 54 |
 | Componentes y tareas comunes | T094, T098, T102 | 50 | 78 |
 
-**Acciones de riesgo del Sprint Backlog:** AR01–AR12, según las dependencias de H05/H06 y T094/T098/T102, con estado inicial **Por hacer**, conforme al [plan de Semana 8](#acciones-de-riesgo-en-los-sprint-backlogs). Detallan controles de las tareas existentes; se conservan sus responsables técnicos, estimaciones y puntos.
+**Acciones de riesgo del Sprint Backlog:** AR01–AR12, según las dependencias de H05 y T094/T098/T102, con estado inicial **Por hacer**, conforme al [plan de Semana 8](#acciones-de-riesgo-en-los-sprint-backlogs). Detallan controles de las tareas existentes; se conservan sus responsables técnicos, estimaciones y puntos.
 
 **Aceptación:** verificar la página completa, sus componentes, pruebas, permisos, precedencia y carga profesional. Ninguna tarea propia o componente necesario queda pendiente para aceptar esa página.
 
-**Sprint Review planificada — 04/11/2026 (simulada):** dura hasta 2 h y la facilita QSM como Scrum Master. Participan PO, el equipo del sprint y César, unos 30 min según su disponibilidad. Se revisarían el Panel del cliente y Pagos y documentos (H05 con sus cuatro subdivisiones y H06; 26 puntos), además de la evidencia de respaldos de T102. Todavía no se ha realizado y no tiene resultados registrados.
+**Sprint Review planificada — 04/11/2026 (simulada):** dura hasta 2 h y la facilita QSM como Scrum Master. Participan PO, el equipo del sprint y César, unos 30 min según su disponibilidad. Se revisarían el Panel del cliente (H05 con sus cuatro subdivisiones; 18 puntos), las comprobaciones de T094 y T098 y la evidencia de respaldos de T102. Todavía no se ha realizado y no tiene resultados registrados.
 
-#### Sprint 5: validación integral y cierre
+#### Sprint 5: Pagos y documentos, validación integral y cierre
 
 **Semanas simuladas 9–10; revisión de referencia 18/11/2026.**
 
-**Objetivo:** Revisar el conjunto, la recuperación, la guía y la aceptación del escenario.
+**Objetivo:** Completar Pagos y documentos del cliente y ejecutar la validación integral, la guía definitiva y la aceptación conjunta del escenario.
 
-**Incremento previsto:** Todas las páginas están completas desde S1–S4. Este sprint añade regresión de aislamiento, recorridos y uso, guía completa y aceptación conjunta; no contiene campos, acciones o componentes aplazados de una página anterior.
+**Incremento previsto:** El cliente busca y filtra sus pagos por moneda, consulta el estado y los motivos de rechazo, informa pagos realizados y adjunta comprobantes privados en Pagos y documentos (H06), habilitándose el enlace correspondiente desde el Panel del cliente. Dentro de H06, T022 (D3) y T024 (D2) se construyen en paralelo (`0–16`) contra los componentes ya terminados en S2 (T068, T070, T087 y T089) y se integran en T025 (`16–28`) antes de preparar la guía definitiva (T103, `28–44`) y finalizar la validación de uso con César (T097, `28–46`). El sprint completa además la regresión de aislamiento, atención e interfaz (T095, T096 y T099), la aceptación conjunta (T104) y el cierre documental (T105).
 
-**Sprint Backlog:** 7 tareas únicas; **78 h base y 118 h reservadas** para cubrir el caso desfavorable. **Puntos:** 0.
+**Sprint Backlog:** 11 tareas únicas; **112 h base y 172 h reservadas** para cubrir el caso desfavorable. **Puntos:** 8.
 
 | Historia o trabajo común | Tareas incluidas | Base (h) | Desfavorable (h) |
 | --- | --- | --- | --- |
+| H06 — Consultar mis pagos y documentos | T022–T025 | 34 | 54 |
 | Componentes y tareas comunes | T095–T097, T099, T103–T105 | 78 | 118 |
 
-**Acciones de riesgo del Sprint Backlog:** revisión final de AR01–AR12 y de los riesgos residuales, con estado inicial **Por hacer**, conforme al [plan de Semana 8](#acciones-de-riesgo-en-los-sprint-backlogs). Detallan controles de las tareas existentes; se conservan sus responsables técnicos, estimaciones y puntos.
+**Acciones de riesgo del Sprint Backlog:** ejecución de controles en H06 y revisión final de AR01–AR12 y de los riesgos residuales, con estado inicial **Por hacer**, conforme al [plan de Semana 8](#acciones-de-riesgo-en-los-sprint-backlogs). Detallan controles de las tareas existentes; se conservan sus responsables técnicos, estimaciones y puntos.
 
-**Aceptación:** contrastar los resultados del conjunto y la guía con las páginas ya completas; corregir y volver a verificar cualquier fallo antes del cierre simulado.
+**Aceptación:** verificar la página completa de H06 y su integración con el panel, contrastar los resultados de la regresión integral y la guía definitiva con todas las páginas terminadas, y corregir y volver a verificar cualquier fallo antes del cierre simulado.
 
-**Sprint Review planificada — 18/11/2026 (simulada):** dura hasta 2 h y la facilita QSM como Scrum Master. Participan PO, el equipo del sprint y César, unos 30 min según su disponibilidad. Se revisarían los resultados de la regresión integral (T095–T097 y T099), la guía de T103 y la aceptación conjunta de T104 antes del cierre de T105. Todavía no se ha realizado y no tiene resultados registrados.
+**Sprint Review planificada — 18/11/2026 (simulada):** dura hasta 2 h y la facilita QSM como Scrum Master. Participan PO, el equipo del sprint y César, unos 30 min según su disponibilidad. Se revisarían Pagos y documentos (H06; 8 puntos), los resultados de la regresión integral (T095–T097 y T099), la guía de T103 y la aceptación conjunta de T104 antes del cierre de T105. Todavía no se ha realizado y no tiene resultados registrados.
 
 ### Backlog técnico de implementación
 
@@ -1592,7 +1593,7 @@ Formularios y consultas pueden construirse con el modelo y probarse con datos fi
 
 **Dependencias revisadas:** T093 — Listados usa modelo, estilos y menús; T046 — Listado de clientes la reutiliza, por lo que se invierte la espera anterior. T091 — Actualización responde a cambios del modelo y no necesita esperar las pantallas que los provocan. La carga anterior de H09 utiliza su excepción histórica, no los controles de un servicio nuevo. La consulta administrativa de solicitudes/cambios usa sus registros del modelo; los formularios del cliente se integran en S4.
 
-Los grupos de datos generales, plagas/productos, tratamiento y recomendaciones se construyen en paralelo dentro de H07; T038 — Publicación espera todos ellos y el pago previo. Recibos y XML tienen validaciones propias y no esperan la pantalla de otro tipo de documento. Los formularios de órdenes, asociación y entrega se apoyan en el modelo; al utilizarse comprueban clientes, sedes, dinero y archivos existentes. Antes de aceptar H09/H12 se integran todas esas acciones y sus permisos en S2. El resumen administrativo espera publicación, agenda, cobros y documentos; el resumen del cliente espera sus consultas y pagos.
+Los grupos de datos generales, plagas/productos, tratamiento y recomendaciones se construyen en paralelo dentro de H07; T038 — Publicación espera todos ellos y el pago previo. Recibos y XML tienen validaciones propias y no esperan la pantalla de otro tipo de documento. Los formularios de órdenes, asociación y entrega se apoyan en el modelo; al utilizarse comprueban clientes, sedes, dinero y archivos existentes. Antes de aceptar H09/H12 se integran todas esas acciones y sus permisos en S2. El resumen administrativo espera publicación, agenda, cobros y documentos; el resumen del cliente en S4 espera sus consultas de solicitudes, visitas e historial y el cálculo de pagado/pendiente (T087), mientras que en S5 se construyen en paralelo T022 (D3) y T024 (D2) contra los componentes de S2 y se integran en T025 antes de aceptar H06 y habilitar su enlace desde el panel.
 
 #### H01: Conocer RYC y contactar desde la Landing Page
 
@@ -1656,7 +1657,7 @@ Los grupos de datos generales, plagas/productos, tratamiento y recomendaciones s
 
 | ID   | Tarea                               | Resultado comprobable                                                                      | Dependencias           |
 | ---- | ----------------------------------- | ------------------------------------------------------------------------------------------ | ---------------------- |
-| T010 | Mostrar resumen y pestañas. | Resumen y pestañas completos después de solicitudes, visitas, historial y pagos; conservar filtros y acceso a pagos. | T009, T013, T018, T021, T022, T041, T089 |
+| T010 | Mostrar resumen y pestañas. | Resumen y pestañas completos después de solicitudes, visitas, historial y saldos con T087; conservar filtros. El enlace a Pagos y documentos se habilita al entregar H06 en S5. | T009, T013, T018, T021, T041, T087, T089 |
 | T011 | Construir solicitud de consultoría. | Formulario territorial integrado; distinguir solicitud de visita. | T088, T092 |
 | T012 | Guardar solicitud de consultoría. | Solicitante/lugar autorizados; fecha preferida no reserva. | T009, T011, T089 |
 | T013 | Consultar solicitudes propias. | Listado, detalle y propuesta dentro del panel, conservando contexto. | T012, T089 |
@@ -1679,10 +1680,10 @@ Los grupos de datos generales, plagas/productos, tratamiento y recomendaciones s
 
 | ID   | Tarea                                   | Resultado comprobable                                                            | Dependencias           |
 | ---- | --------------------------------------- | -------------------------------------------------------------------------------- | ---------------------- |
-| T022 | Mostrar y filtrar pagos. | Filtros, detalle y suma por moneda según [Pagos](#pagos-y-reportes-del-cliente). | T024, T068, T070, T087 |
+| T022 | Mostrar y filtrar pagos. | Filtros, detalle, suma por moneda según [Pagos](#pagos-y-reportes-del-cliente) y enlace desde el panel; se construye en paralelo con T024 contra los componentes de S2. | T068, T070, T087 |
 | T023 | Mostrar estado y rechazo. | Estado actualizado, motivo y opción de corregir reporte. | T068 |
-| T024 | Informar pago realizado. | [Reporte](#datos-del-reporte-de-pago) con orden fija; Pendiente de revisión. | T087, T089 |
-| T025 | Guardar comprobante. | Archivo privado, tipo/tamaño según medio; efectivo sin archivo. | T024 |
+| T024 | Informar pago realizado. | [Reporte](#datos-del-reporte-de-pago) con orden fija en estado Pendiente de revisión; se construye en paralelo con T022 contra T087 y T089. | T087, T089 |
+| T025 | Guardar comprobante. | Archivo privado, tipo/tamaño según medio y efectivo sin archivo; integra T022 y T024 antes de aceptar H06. | T022, T024 |
 
 **Componentes comunes:** T026 — Descargas de documentos; T086 — Orden; T087 — Pagado/pendiente; T089 — Permisos; T090 — Facturación; T091 — Actualización; T092 — Menús; T093 — Listados por rol. [Uso por persona](#componentes-utilizados-en-las-páginas).
 
@@ -1868,10 +1869,10 @@ T009, T026 y T078–T105 cubren correo, descargas, preparación, componentes reu
 
 | ID   | Tarea                                    | Resultado comprobable                                                                                                                                               | Dependencias                                                   |
 | ---- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
-| T094 | Comprobar cobros/documentos. | Comprobación integrada de pagos, anticipo, efectivo, documentos y correcciones en S4; cada página ya incluye sus pruebas específicas. | T025, T026, T033, T069, T070, T075, T076 |
+| T094 | Comprobar cobros/documentos. | Comprobación integrada de cobros, anticipo, efectivo, recibos, documentos y correcciones en S4; el reporte y comprobante del portal (T024–T025) se comprueban en S5. | T026, T033, T069, T070, T075, T076 |
 | T095 | Comprobar aislamiento. | Servicios/visitas/pagos/XML/PDF de dos clientes y sedes; orden propia no abre historial ajeno. | T018, T021, T026, T055 |
 | T096 | Comprobar atención completa. | Contacto sin cuenta, consulta gratis/cobrada, decisiones, anticipo, servicio, saldo, entrega e historial opcional. | T015, T026, T032, T038, T056, T094, T098 |
-| T097 | Validar uso con César. | César en Administración y equipo en Portal: paneles completos en celular/computadora, pestañas, filtros, guardar/cancelar; dificultades/correcciones registradas. | T010, T014, T022, T023, T027, T042, T077, T091, T093, T094, T099 |
+| T097 | Validar uso con César. | César en Administración y equipo en Portal: paneles y páginas completos en celular/computadora, pestañas, filtros, comprobantes y guardar/cancelar; dificultades/correcciones registradas. | T010, T014, T022, T023, T025, T027, T042, T077, T091, T093, T094, T099 |
 | T098 | Comprobar continuidad sin cuenta/portal. | Comprobar juntos en S4 el recorrido sin cuenta y la asociación posterior: un historial, archivos y dinero sin duplicados. | T002, T014, T021, T026, T028, T032, T051, T054, T069, T077 |
 | T099 | Comprobar interfaz integrada. | S5: regresión de acceso, menús, paneles y calendario en celular/computadora, teclado, foco, etiquetas y áreas táctiles; cada página ya fue comprobada al entregarse. | T008, T010, T018, T029, T061, T082, T092 |
 
@@ -1891,7 +1892,7 @@ T009, T026 y T078–T105 cubren correo, descargas, preparación, componentes reu
 
 | ID   | Tarea                      | Resultado comprobable                                                                                                           | Dependencias          |
 | ---- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
-| T103 | Preparar guía para César. | Guía completa en S5 basada en todas las páginas y respaldos ya disponibles; revisar su concordancia durante la aceptación conjunta. | T010, T027, T042, T061, T077, T101, T102 |
+| T103 | Preparar guía para César. | Guía definitiva en S5 después de completar H06 y con todas las páginas y respaldos disponibles; revisar su concordancia durante la aceptación conjunta. | T010, T022, T023, T025, T027, T042, T061, T077, T101, T102 |
 | T104 | Validar entrega con César. | Aceptación simulada de las 12 historias principales, incluidas las 16 subdivisiones de H05, H07, H09 y H12, y las tareas comunes tras T001–T103, según [criterios](#criterios-de-terminación-y-aceptación). | T001–T103 |
 | T105 | Documentar cierre. | Aceptación, resultados y lecciones conservados. | T104 |
 
@@ -2042,7 +2043,7 @@ para coordinar de forma integral la atención de plagas en mis inmuebles y conta
 **Prioridad:** Media.
 **Estimación total:** 18 puntos, subtotal de H05.1–H05.4. Las subdivisiones se estiman individualmente y se suman una vez.
 **Justificación de la estimación:** Agrupación de gran amplitud funcional que integra verificación de correos, lógica territorial de consultorías, validación de permisos por sede para evitar acceso a registros ajenos, aceptación de condiciones con esquemas 50/50, gestión de agenda y consulta de historiales técnicos.
-**Notas adicionales:** La página y todas sus subdivisiones se completan juntas en S4; solicitar atención no reserva automáticamente citas en el calendario; aceptar una propuesta genera la orden pero el anticipo del 50 % debe confirmarse antes de iniciar el tratamiento; César decide si aprueba las reprogramaciones.
+**Notas adicionales:** La página y todas sus subdivisiones se completan juntas en S4, mostrando el resumen de importes pagados y pendientes mediante T087 y habilitando el enlace a Pagos y documentos cuando se entrega H06 en S5; solicitar atención no reserva automáticamente citas en el calendario; aceptar una propuesta genera la orden pero el anticipo del 50 % debe confirmarse antes de iniciar el tratamiento; César decide si aprueba las reprogramaciones.
 
 ##### H05.1 — Solicitar consultorías con correo verificado
 
@@ -2098,7 +2099,7 @@ para coordinar de forma integral la atención de plagas en mis inmuebles y conta
 
 **Historia:** Como cliente autorizado, quiero ver mi resumen y los servicios publicados de mis ubicaciones, para consultar tratamientos y recomendaciones sin solicitar otra vez la información.
 
-**Tareas asociadas:** T010, T020, T021. **Dependencias clave:** T009, T013, T018, T022, T041, T079, T089.
+**Tareas asociadas:** T010, T020, T021. **Dependencias clave:** T009, T013, T018, T041, T079, T087, T089.
 
 **Criterios de aceptación:**
 
@@ -2129,7 +2130,7 @@ para conocer mis saldos pendientes, acreditar transferencias y conservar el resp
 **Prioridad:** Media.
 **Estimación:** 8 puntos de historia.
 **Justificación de la estimación:** Manejo de información financiera con monedas segregadas (CRC y USD), carga segura de archivos con validación de tipo real y límites de tamaño, y descargas controladas mediante endpoints autenticados.
-**Notas adicionales:** Reportar un pago no extingue la deuda; solo los pagos confirmados por César descuentan saldo; los documentos fiscales se generan externamente y se consultan a modo de repositorio.
+**Notas adicionales:** La página se completa en S5 (construyendo T022 y T024 en paralelo e integrándolas en T025 antes de su aceptación); reportar un pago no extingue la deuda; solo los pagos confirmados por César descuentan saldo; los documentos fiscales se generan externamente y se consultan a modo de repositorio.
 
 #### Historia H07: Consultar pendientes y gestionar las atenciones
 
@@ -2481,7 +2482,7 @@ El catálogo reúne 12 historias principales y 16 subdivisiones dentro de cuatro
 | **H03** | Crear una cuenta de cliente | Alta | 5 | T005, T006; componentes de su ficha | S1 |
 | **H04** | Recuperar el acceso desde Olvidé mi contraseña | Alta | 5 | T007, T008; componentes de su ficha | S1 |
 | **H05** | Consultar mi resumen y gestionar mis atenciones | Media | 18 (subtotal) | T010–T021; componentes de su ficha | S4 |
-| **H06** | Consultar mis pagos y documentos | Media | 8 | T022–T025; componentes de su ficha | S4 |
+| **H06** | Consultar mis pagos y documentos | Media | 8 | T022–T025; componentes de su ficha | S5 |
 | **H07** | Consultar pendientes y gestionar las atenciones | Alta | 20 (subtotal) | T027–T040; componentes de su ficha | S3 |
 | **H08** | Consultar y administrar Mi cuenta | Alta | 3 | T041, T042; componentes de su ficha | S1 |
 | **H09** | Gestionar clientes, ubicaciones y cuentas autorizadas | Alta | 21 (subtotal) | T043–T055; componentes de su ficha | S2 |
@@ -2540,8 +2541,8 @@ El proyecto contiene **12 historias principales**. **H05, H07, H09 y H12 se desg
 | H05.1 | Solicitar consultorías con correo verificado | 5 | Media | T011, T012, T014 | T009, T083, T088, T089, T092 | S4 |
 | H05.2 | Solicitar nuevas visitas y cambios de agenda | 5 | Media | T017, T018, T019 | T048, T051, T059, T060 | S4 |
 | H05.3 | Consultar solicitudes y decidir propuestas | 5 | Media | T013, T015, T016 | T009, T012, T084, T086, T089 | S4 |
-| H05.4 | Consultar resumen e historial de atenciones | 3 | Media | T010, T020, T021 | T009, T013, T018, T022, T041, T079, T089 | S4 |
-| H06 | Pagos y documentos del cliente | 8 | Media | T022, T023, T024, T025 | T026, T068, T070, T086, T087, T089, T090, T091, T092, T093 | S4 |
+| H05.4 | Consultar resumen e historial de atenciones | 3 | Media | T010, T020, T021 | T009, T013, T018, T041, T079, T087, T089 | S4 |
+| H06 | Pagos y documentos del cliente | 8 | Media | T022, T023, T024, T025 | T026, T068, T070, T086, T087, T089, T090, T091, T092, T093 | S5 |
 | **H07** | **Consultar pendientes y gestionar las atenciones — historia principal** | **20 (subtotal)** | Alta | Se detalla en H07.1–H07.4 | Ver subdivisiones | S3 |
 | H07.1 | Registrar contactos y valorar consultorías | 5 | Alta | T028, T029, T031 | T045, T048, T079, T089, T092 | S3 |
 | H07.2 | Gestionar consultorías y comprobar el anticipo | 5 | Alta | T030, T033, T040 | T028, T029, T031, T068, T085, T086, T087 | S3 |
@@ -2608,10 +2609,10 @@ Las ocho historias sin subdividir suman **44 puntos** y las dieciséis subdivisi
 | T019 | H05.2 | S4 | LT | 2 | 6 | 10 | S4: 10–20 |
 | T020 | H05.4 | S4 | D2 | 4 | 8 | 12 | S4: 0–12 |
 | T021 | H05.4 | S4 | D6 | 2 | 6 | 10 | S4: 12–22 |
-| T022 | H06 | S4 | D3 | 6 | 10 | 16 | S4: 16–32 |
-| T023 | H06 | S4 | D6 | 2 | 6 | 10 | S4: 0–10 |
-| T024 | H06 | S4 | D3 | 6 | 10 | 16 | S4: 0–16 |
-| T025 | H06 | S4 | D1 | 4 | 8 | 12 | S4: 16–28 |
+| T022 | H06 | S5 | D3 | 6 | 10 | 16 | S5: 0–16 |
+| T023 | H06 | S5 | D6 | 2 | 6 | 10 | S5: 0–10 |
+| T024 | H06 | S5 | D2 | 6 | 10 | 16 | S5: 0–16 |
+| T025 | H06 | S5 | D1 | 4 | 8 | 12 | S5: 16–28 |
 | T026 | Común | S2 | D6 | 6 | 12 | 18 | S2: 36–54 |
 | T027 | H07.4 | S3 | D2 | 4 | 8 | 12 | S3: 52–64 |
 | T028 | H07.1 | S3 | LT | 6 | 10 | 16 | S3: 0–16 |
@@ -2683,15 +2684,15 @@ Las ocho historias sin subdividir suman **44 puntos** y las dieciséis subdivisi
 | T094 | Común | S4 | QSM | 8 | 14 | 22 | S4: 28–50 |
 | T095 | Común | S5 | QA2 | 10 | 16 | 24 | S5: 0–24 |
 | T096 | Común | S5 | QSM | 10 | 16 | 24 | S5: 18–42 |
-| T097 | Común | S5 | QA2 | 6 | 12 | 18 | S5: 24–42 |
+| T097 | Común | S5 | QA2 | 6 | 12 | 18 | S5: 28–46 |
 | T098 | Común | S4 | QA2 | 6 | 12 | 18 | S4: 34–52 |
 | T099 | Común | S5 | QSM | 6 | 12 | 18 | S5: 0–18 |
 | T100 | Común | S1 | LT | 4 | 8 | 12 | S1: 52–64 |
 | T101 | Común | S1 | D4 | 10 | 22 | 34 | S1: 12–46 |
 | T102 | Común | S4 | D4 | 12 | 24 | 38 | S4: 0–38 |
-| T103 | Común | S5 | PO | 6 | 10 | 16 | S5: 0–16 |
-| T104 | Común | S5 | PO | 4 | 8 | 12 | S5: 42–54 |
-| T105 | Común | S5 | QA2 | 2 | 4 | 6 | S5: 54–60 |
+| T103 | Común | S5 | PO | 6 | 10 | 16 | S5: 28–44 |
+| T104 | Común | S5 | PO | 4 | 8 | 12 | S5: 46–58 |
+| T105 | Común | S5 | QA2 | 2 | 4 | 6 | S5: 58–64 |
 
 **Totales O/Base/P: 466 / 926 / 1.482 h.** Cada una de las 105 tareas se estima y asigna una sola vez. T009 y T026 conservan sus horas al pasar a componentes comunes.
 
@@ -2709,8 +2710,8 @@ T102 — Respaldos: diario 4/8/12, externo cifrado 2/6/10 y restauración 6/10/1
 | --- | --- | --- |
 | LT | Líder técnico/full stack senior, ≥5 años: arquitectura, seguridad, revisión e integración. | 252 |
 | D1 | Full stack intermedio, 2–4 años: Laravel, Livewire, SQL y pruebas. | 248 |
-| D2 | Full stack intermedio, 2–4 años: formularios, portal y archivos privados. | 236 |
-| D3 | Full stack intermedio, 2–4 años: componentes, integración y validaciones. | 260 |
+| D2 | Full stack intermedio, 2–4 años: formularios, portal y archivos privados. | 240 |
+| D3 | Full stack intermedio, 2–4 años: componentes, integración y validaciones. | 256 |
 | D4 | Full stack senior y DevOps, ≥5 años en desarrollo y ≥4 en despliegue, correo, persistencia y restauración; una sola persona. | 292 |
 | D5 | Full stack intermedio, 2–4 años: administración, agenda y pruebas. | 232 |
 | D6 | Full stack senior, ≥5 años: permisos, pagos, XML e integración; refuerzo parcial para completar páginas sin repartirlas entre sprints. | 272 |
@@ -2723,19 +2724,19 @@ D6 refuerza la concentración de trabajo al entregar páginas completas. LT, D4 
 
 #### Disponibilidad y carga por sprint
 
-Máximo **80 h brutas por persona y sprint**: 80% planificable y 20% para coordinación, ceremonias e interrupciones. Cada bolsa se calcula como **máximo entre continuidad y carga P ÷ 0,8, redondeada hacia arriba a bloques de 4 h**. Continuidad: LT/D4/D6, 16 h por sprint; los otros desarrolladores, 8 h y 16 h en S5; QSM, 32 h; PO, 20 h; UX, 24 h en S1, 4 h en S2–S4 y 8 h en S5. QA2 se reserva cuando tiene tareas. Son supuestos del ejercicio incluidos en el costo.
+Máximo **80 h brutas por persona y sprint**: 80% planificable y 20% para coordinación, ceremonias e interrupciones. Cada bolsa se calcula como **máximo entre continuidad y carga P ÷ 0,8, redondeada hacia arriba a bloques de 4 h**. Continuidad: LT/D4/D6, 16 h por sprint; los otros desarrolladores, 8 h y 16 h en S5; QSM, 32 h; PO, 20 h; UX, 24 h en S1, 4 h en S2–S4 y 8 h en S5. QA2 se reserva cuando tiene tareas. Al trasladar H06 a S5 con T022 (D3) y T024 (D2) en paralelo, las horas brutas de H06 de D1 (16 h), D3 (20 h) y D6 (12 h) pasan de S4 a S5 junto con su reserva de continuidad y cierre, y D3 cede 4 h brutas a D2 (D2 pasa de 236 a 240 h y D3 de 260 a 256 h), manteniendo las 2.220 h brutas del equipo. Son supuestos del ejercicio incluidos en el costo.
 
 Los profesionales deben estar disponibles en sus bloques; una bolsa parcial no autoriza superponer actividades. D4 combina infraestructura y desarrollo sin duplicar horas. QSM actúa como único Scrum Master en los cinco sprints: en S1–S3 dedica su bolsa de 32 h brutas por sprint a facilitación, seguimiento del tablero, verificación de la DoD y preparación de pruebas; en S4 ejecuta además T094 (14 h base / 22 h P) y en S5 ejecuta T096 y T099 (28 h base / 42 h P) dentro de sus 56 h brutas reservadas.
 
 | Persona | S1 (h) | S2 (h) | S3 (h) | S4 (h) | S5 (h) | Total (h) |
 | --- | --- | --- | --- | --- | --- | --- |
 | LT | 60 | 80 | 56 | 40 | 16 | 252 |
-| D1 | 56 | 76 | 64 | 36 | 16 | 248 |
-| D2 | 44 | 76 | 52 | 48 | 16 | 236 |
-| D3 | 56 | 80 | 68 | 40 | 16 | 260 |
+| D1 | 56 | 76 | 64 | 20 | 32 | 248 |
+| D2 | 44 | 76 | 52 | 48 | 20 | 240 |
+| D3 | 56 | 80 | 68 | 16 | 36 | 256 |
 | D4 | 80 | 80 | 68 | 48 | 16 | 292 |
 | D5 | 56 | 80 | 56 | 24 | 16 | 232 |
-| D6 | 68 | 80 | 60 | 48 | 16 | 272 |
+| D6 | 68 | 80 | 60 | 36 | 28 | 272 |
 | QSM | 32 | 32 | 32 | 32 | 56 | 184 |
 | QA2 | 0 | 0 | 0 | 24 | 60 | 84 |
 | UX | 24 | 4 | 4 | 4 | 8 | 44 |
@@ -2746,8 +2747,8 @@ Los profesionales deben estar disponibles en sus bloques; una bolsa parcial no a
 | S1 | 26 | 216 | 342 | 496 | 396,8 | 54,8 |
 | S2 | 29 | 262 | 434 | 608 | 486,4 | 52,4 |
 | S3 | 24 | 206 | 330 | 480 | 384,0 | 54,0 |
-| S4 | 19 | 164 | 258 | 364 | 291,2 | 33,2 |
-| S5 | 7 | 78 | 118 | 272 | 217,6 | 99,6 |
+| S4 | 15 | 130 | 204 | 312 | 249,6 | 45,6 |
+| S5 | 11 | 112 | 172 | 324 | 259,2 | 87,2 |
 
 **2.220 h brutas** proporcionan **1.776,0 h planificables** para **1.482 h desfavorables**: quedan **294,0 h planificables de apoyo/ajustes**, además de **444,0 h reservadas para coordinación e interrupciones**. Se paga la disponibilidad completa; estas bolsas no se descuentan otra vez.
 
@@ -2755,7 +2756,7 @@ Los profesionales deben estar disponibles en sus bloques; una bolsa parcial no a
 
 La secuencia comprueba las 105 tareas, sus dependencias y una actividad por persona a la vez. Las 12 historias principales se entregan completas en un sprint, con sus subdivisiones y componentes; las 24 unidades conservan sus puntos sin duplicar los subtotales. El plazo sigue siendo **10 semanas y 5 sprints**, con jornada ordinaria de 40 h semanales y 32 h planificables.
 
-La cadena técnica sin esperas suma **116 h base y 180 h desfavorables**. Con bloques, recursos y fechas del plan, **T105 termina en la hora efectiva 316 de 320** en P, con **4 h efectivas de margen final**. Los márgenes de otras especialidades no sustituyen una dependencia ni garantizan cubrir un esfuerzo superior al supuesto.
+La cadena técnica sin esperas suma **116 h base y 180 h desfavorables**. Con bloques, recursos y fechas del plan, **T105 termina en la hora efectiva 320 de 320** en P, **sin margen final (0 h efectivas)**, en **318 de 320** en Base (2 h de margen) y en **316 de 320** en O (4 h de margen). Los márgenes de otras especialidades no sustituyen una dependencia ni garantizan cubrir un esfuerzo superior al supuesto.
 
 | Riesgo | Respuesta dentro de cinco sprints | Responsable |
 | --- | --- | --- |
@@ -2775,8 +2776,8 @@ La cadena técnica sin esperas suma **116 h base y 180 h desfavorables**. Con bl
 | --- | --- | --- | --- | --- | --- |
 | LT | 164 | 252 | ₡10.000–₡16.000 | ₡12.000 | ₡3.024.000 |
 | D1 | 164 | 248 | ₡6.000–₡10.000 | ₡8.000 | ₡1.984.000 |
-| D2 | 160 | 236 | ₡6.000–₡10.000 | ₡8.000 | ₡1.888.000 |
-| D3 | 168 | 260 | ₡6.000–₡10.000 | ₡8.000 | ₡2.080.000 |
+| D2 | 164 | 240 | ₡6.000–₡10.000 | ₡8.000 | ₡1.920.000 |
+| D3 | 164 | 256 | ₡6.000–₡10.000 | ₡8.000 | ₡2.048.000 |
 | D4 | 192 | 292 | ₡10.000–₡16.000 | ₡12.000 | ₡3.504.000 |
 | D5 | 160 | 232 | ₡6.000–₡10.000 | ₡8.000 | ₡1.856.000 |
 | D6 | 172 | 272 | ₡10.000–₡16.000 | ₡12.000 | ₡3.264.000 |
@@ -2831,8 +2832,8 @@ El favorable reduce esfuerzo, pero no es la base recomendada para comprometer un
 | S1 | ₡4.840.000 | ₡25.000 | ₡729.750 | ₡5.594.750 |
 | S2 | ₡5.864.000 | ₡25.000 | ₡883.350 | ₡6.772.350 |
 | S3 | ₡4.616.000 | ₡25.000 | ₡696.150 | ₡5.337.150 |
-| S4 | ₡3.496.000 | ₡0 | ₡524.400 | ₡4.020.400 |
-| S5 | ₡2.440.000 | ₡10.000 | ₡367.500 | ₡2.817.500 |
+| S4 | ₡3.032.000 | ₡0 | ₡454.800 | ₡3.486.800 |
+| S5 | ₡2.904.000 | ₡10.000 | ₡437.100 | ₡3.351.100 |
 
 La distribución suma **₡24.542.150** antes de impuestos, con los mismos **₡85.000** de infraestructura y contingencia del 15%. La preparación de páginas completas requiere D6 y nuevas bolsas por sprint; las 926 h base y las 1.482 h desfavorables del alcance se conservan.
 
@@ -2848,13 +2849,13 @@ El ejercicio de clase **N08/N10: 16 puntos, 2 Sprints y ₡240.000** corresponde
 
 **Plazo fijo: 10 semanas y cinco sprints de dos semanas**, incluida la aceptación y el cierre. Los escenarios mantienen los inicios reservados y utilizan la duración O/Base/P de cada tarea. Los componentes previos se reutilizan; ninguna página se declara completa si todavía necesita tareas de otro sprint.
 
-Los **124 puntos** expresan tamaño relativo; 124 ÷ 5 = **24,8 puntos por sprint como promedio**, no un límite de capacidad. Las páginas completas entregan **28 / 42 / 28 / 26 / 0 puntos**. S5 agrega comprobación global y cierre sin repetir puntos. No existe velocidad observada de un equipo real: el caso es teórico.
+Los **124 puntos** expresan tamaño relativo; 124 ÷ 5 = **24,8 puntos por sprint como promedio**, no un límite de capacidad. Las páginas completas entregan **28 / 42 / 28 / 18 / 8 puntos**. S5 entrega H06 y agrega comprobación global y cierre sin repetir puntos. No existe velocidad observada de un equipo real: el caso es teórico.
 
 | Escenario | Horas-persona | Cierre con inicios reservados | Resultado |
 | --- | --- | --- | --- |
-| Favorable | 466 | Hora efectiva 312 de 320, en S5 | Cabe en cinco sprints con las bolsas reservadas. |
-| Base | 926 | Hora efectiva 314 de 320, en S5 | Cabe en cinco sprints con las bolsas reservadas. |
-| Desfavorable | 1.482 | Hora efectiva 316 de 320, en S5 | Cabe en cinco sprints con las bolsas reservadas. |
+| Favorable | 466 | Hora efectiva 316 de 320, en S5 | Cabe en cinco sprints con las bolsas reservadas (4 h de margen). |
+| Base | 926 | Hora efectiva 318 de 320, en S5 | Cabe en cinco sprints con las bolsas reservadas (2 h de margen). |
+| Desfavorable | 1.482 | Hora efectiva 320 de 320, en S5 | Cabe al límite en cinco sprints con las bolsas reservadas (0 h de margen). |
 
 **Plan recomendado:** once profesionales parciales, **2.220 h brutas y 1.776,0 h planificables**, con presupuesto de **₡24.542.150 antes de impuestos**. La referencia base de **₡17.007.350** permite comparar el refuerzo; no se añade al recomendado.
 
@@ -2869,8 +2870,8 @@ Los cinco sprints conservan sus fechas de referencia. Las cuatro partes de H05, 
 | **S1** | 10–23 sep. 2026 | Base técnica, acceso completo, landing y catálogos | H01, H02, H03, H04, H08, H11 | **28** | ₡5.594.750 |
 | **S2** | 24 sep.–7 oct. 2026 | Clientes, cobros y documentos completos | H09, H12 | **42** | ₡6.772.350 |
 | **S3** | 8–21 oct. 2026 | Agenda y atención administrativa completas | H07, H10 | **28** | ₡5.337.150 |
-| **S4** | 22 oct.–4 nov. 2026 | Portal del cliente completo y respaldos | H05, H06 | **26** | ₡4.020.400 |
-| **S5** | 5–18 nov. 2026 | Validación integral y cierre | Regresión, guía, aceptación y cierre de las páginas ya completas | **0** | ₡2.817.500 |
+| **S4** | 22 oct.–4 nov. 2026 | Panel del cliente completo y respaldos | H05 | **18** | ₡3.486.800 |
+| **S5** | 5–18 nov. 2026 | Pagos y documentos, validación integral y cierre | H06 (más tareas comunes T095–T097, T099 y T103–T105) | **8** | ₡3.351.100 |
 | **Total** | **10 semanas** | **105 tareas únicas, completas y contadas una vez** | **12 historias principales, 16 subdivisiones y 13 páginas** | **124** | **₡24.542.150** |
 
 **Seguimiento:** revisar páginas completas, componentes, tareas, carga, pruebas, presupuesto y riesgos. El burndown parte de 124 puntos y descuenta las unidades aceptadas una sola vez, cuando la página completa cumple criterios y DoD. Se registran cambios y evidencia en Git; los resultados hipotéticos se rotulan simulados. Los cambios nuevos de alcance, dependencias, personas o costo se consultan y se propagan a los apartados afectados.
@@ -3069,7 +3070,7 @@ Cada cambio representado conserva fecha, tarjeta, columna anterior/nueva, respon
 
 ### Relación con calidad y recursos
 
-La DoD y los criterios de cada historia son la referencia de calidad. Las pruebas y la revisión acompañan cada incremento; S5 agrega regresión integral, restauración y aceptación conjunta. Las observaciones del tablero y de la retrospectiva retroalimentan el Sprint Backlog. Se conservan las once personas, 105 tareas, 124 puntos y el presupuesto actualizado de Semana 6. Las páginas se completan en S1–S4; S5 añade comprobaciones globales y cierre.
+La DoD y los criterios de cada historia son la referencia de calidad. Las pruebas y la revisión acompañan cada incremento; S5 completa H06 y agrega regresión integral, restauración verificada y aceptación conjunta. Las observaciones del tablero y de la retrospectiva retroalimentan el Sprint Backlog. Se conservan las once personas, 105 tareas, 124 puntos y el presupuesto actualizado de Semana 6. Las páginas se completan entre S1 y S5 (con H06 en S5 junto con las comprobaciones globales y el cierre).
 
 ---
 
@@ -3102,7 +3103,7 @@ Los colores reproducen la matriz de la presentación. Ante igual puntuación se 
 | ID | Riesgo: si ocurre X, entonces Y | Categoría | Tipo | P | I | P × I / zona | Dueño propuesto | Fundamento en el expediente |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | R01 | Si una decisión necesaria de César no se obtiene antes de la actividad que depende de ella, se bloquearían validaciones o habría retrabajo en reglas comerciales y aceptación. | Negocio | Amenaza | 3 | 3 | **9 — Rojo** | PO | [Restricciones](#contexto-y-restricciones-del-proyecto): César concentra conocimiento y validación; no hay plazo externo de respuesta acordado. |
-| R02 | Si una espera o esfuerzo adicional consume el margen de la secuencia final, T104–T105 podrían terminar después de los cinco sprints. | Equipo / planificación | Amenaza | 3 | 3 | **9 — Rojo** | LT | [Secuencia y sensibilidad](#secuencia-capacidad-y-sensibilidad-del-plazo): el caso desfavorable termina en la hora efectiva 316 de 320, con solo 4 h de margen final. |
+| R02 | Si una espera o esfuerzo adicional retrasa la secuencia de cierre, T104–T105 terminarían después de los cinco sprints. | Equipo / planificación | Amenaza | 3 | 3 | **9 — Rojo** | LT | [Secuencia y sensibilidad](#secuencia-capacidad-y-sensibilidad-del-plazo): el caso desfavorable termina en la hora efectiva 320 de 320, sin margen final (0 h). |
 | R03 | Si se implementa o aplica incorrectamente la asociación de cuentas y permisos por sede, una cuenta podría consultar o descargar información ajena. | Técnico | Amenaza | 2 | 3 | **6 — Rojo** | LT | H09.3, T051–T052, T089 y T095; la información empresarial sin sede tiene acceso restringido. |
 | R04 | Si un pago se confirma dos veces o se descuenta antes de comprobar el dinero, el saldo y la condición de anticipo quedarían incorrectos. | Técnico / negocio | Amenaza | 2 | 3 | **6 — Rojo** | D4 | H12.1, H07.2, T068–T070 y T087; solo dinero confirmado modifica el saldo. |
 | R05 | Si un archivo se pierde, queda relacionado con otra orden o se sustituye sin conservar su original, faltaría documentación verificable de la atención. | Técnico | Amenaza | 2 | 3 | **6 — Rojo** | D6 | H12.2–H12.3, T071–T076 y T101: recibos y XML/PDF privados, vinculados y persistentes. |
@@ -3124,7 +3125,7 @@ Los colores reproducen la matriz de la presentación. Ante igual puntuación se 
 
 Se ubican **12 riesgos: 11 amenazas y 1 oportunidad**. Hay nueve amenazas en rojo y tres registros en amarillo. Cada ID aparece una sola vez.
 
-**Orden de atención:** R02 y R01 empatan con 9. Se atiende primero R02 por el margen final de 4 h y R01 inmediatamente después, porque una aprobación pendiente puede consumirlo. R03–R08 están en rojo por el impacto alto de un fallo plausible; R11, por la alta exposición a datos históricos incompletos y su posible retrabajo. Se conservan los controles de confidencialidad aunque R11 tenga impacto global medio: una exposición efectiva también activa R03. R12 se gestiona para aumentar el beneficio, sin presentarla como una amenaza.
+**Orden de atención:** R02 y R01 empatan con 9. Se atiende primero R02 porque el cierre desfavorable termina en la hora efectiva 320 de 320 sin margen final (0 h), y R01 inmediatamente después, porque una aprobación pendiente atrasaría la cadena crítica. R03–R08 están en rojo por el impacto alto de un fallo plausible; R11, por la alta exposición a datos históricos incompletos y su posible retrabajo. Se conservan los controles de confidencialidad aunque R11 tenga impacto global medio: una exposición efectiva también activa R03. R12 se gestiona para aumentar el beneficio, sin presentarla como una amenaza.
 
 ### Plan de Mitigación
 
@@ -3133,11 +3134,11 @@ Las acciones AR01–AR12 identifican el seguimiento de riesgos dentro del backlo
 #### Respuesta prioritaria R02: margen de cierre
 
 - **Estrategia:** mitigar. **Dueño propuesto:** LT. QSM facilita el tratamiento del bloqueo y PO evalúa el efecto sobre compromisos.
-- **AR02 — Acción:** en cada Planning contrastar dependencias, disponibilidad por perfil y proyección de T104–T105 con los bloques de [Semana 6](#estimación-y-asignación-de-las-tareas). Registrar la espera o desviación en la tarjeta afectada; recalcular la secuencia después de cada bloqueo relevante y comprobar el margen restante. Utilizar apoyo competente solo cuando su bloque esté disponible y se conserve una actividad por persona.
-- **Disparador:** proyección de T105 posterior a la hora efectiva 320, o una espera de la secuencia de cierre que consuma las 4 h finales sin recuperación demostrada. Las horas libres de otro perfil no bastan para declarar resuelto el riesgo.
+- **AR02 — Acción:** en cada Planning contrastar dependencias, disponibilidad por perfil y proyección de T104–T105 con los bloques de [Semana 6](#estimación-y-asignación-de-las-tareas). Registrar la espera o desviación en la tarjeta afectada; recalcular la secuencia después de cada bloqueo relevante y comprobar el impacto en el cierre. Utilizar apoyo competente solo cuando su bloque esté disponible y se conserve una actividad por persona.
+- **Disparador:** proyección de T105 posterior a la hora efectiva 320, o cualquier espera o desviación en la cadena crítica de cierre (que en P termina en la hora 320 de 320, sin margen libre) sin recuperación demostrada. Las horas libres de otro perfil no bastan para declarar resuelto el riesgo.
 - **Contingencia:** LT propone reasignación entre perfiles con competencia y disponibilidad comprobadas; QSM coordina desbloqueos y PO registra el efecto en costo, dependencias y entrega. Se vuelve a calcular antes de aceptar la solución.
 - **Respaldo:** si no cabe en las bolsas existentes, presentar una decisión explícita sobre recursos o compromiso de entrega a quienes corresponda. El plazo de cinco sprints sigue siendo el objetivo; una solución que lo exceda se registra como desviación pendiente de decisión y no como cumplimiento.
-- **Vínculo al backlog:** seguimiento de las 105 tareas, especialmente T078, T079, T101 y T103–T105, en sus sprints originales. No se trasladan partes pendientes de páginas a S5.
+- **Vínculo al backlog:** seguimiento de las 105 tareas, especialmente T078, T079, T101, H06 (T022–T025) y T097/T103–T105, en sus sprints asignados. No se trasladan partes pendientes de páginas entre sprints.
 - **Revisión de referencia:** 23/09, 07/10, 21/10, 04/11 y 18/11 de 2026; adicionalmente, al aparecer un bloqueo. **Residual proyectado:** P2 × I3 = **6, rojo**; solo puede revisarse a la baja con una nueva secuencia comprobada.
 
 #### Respuesta prioritaria R01: decisiones del negocio
@@ -3147,14 +3148,14 @@ Las acciones AR01–AR12 identifican el seguimiento de riesgos dentro del backlo
 - **Disparador:** una tarea llega al inicio de su bloque y necesita una decisión todavía no confirmada, o una respuesta modifica criterios que ya estaban planificados.
 - **Contingencia:** aclarar la consulta y coordinar otro contacto; avanzar únicamente en trabajo independiente ya autorizado y con capacidad disponible. Recalcular el efecto sobre la secuencia y activar R02 si se amenaza el cierre.
 - **Respaldo:** elevar la decisión pendiente y su efecto a César; si afecta la entrega académica, Brian y Jeremy registran la limitación y consultan la instrucción con la docente. El silencio no equivale a aprobación y una validación ficticia no sustituye la real.
-- **Vínculo al backlog:** H01 y datos iniciales en S1; H09/H12 en S2; H07/H10 en S3; H05/H06 en S4; guía y aceptación T103–T105 en S5.
+- **Vínculo al backlog:** H01 y datos iniciales en S1; H09/H12 en S2; H07/H10 en S3; H05 en S4; H06, guía y aceptación T103–T105 en S5.
 - **Revisión de referencia:** las cinco fechas de cierre del plan y antes de cada tarea bloqueada. **Residual proyectado:** P2 × I3 = **6, rojo**; el plan no garantiza la disponibilidad de César.
 
 #### Respuestas para los demás riesgos
 
 | ID / acción | Estrategia y acción concreta vinculada al backlog | Disparador propuesto | Contingencia y respaldo |
 | --- | --- | --- | --- |
-| **R03 / AR03** | **Mitigar.** LT coordina con los ejecutores de T051–T052 y T089 casos de cuenta sin asociación, sede propia/ajena y asociación revocada. Comprobar consultas, acciones y descargas al aceptar H09/H12 en S2 y H05/H06 en S4; T095 añade regresión global en S5. | Una consulta, acción o descarga permite datos fuera del alcance autorizado. | Restringir la función afectada, corregir y repetir los casos antes de aceptar. Si persiste, mantener bloqueada su aceptación; no desactivar controles para entregar. |
+| **R03 / AR03** | **Mitigar.** LT coordina con los ejecutores de T051–T052 y T089 casos de cuenta sin asociación, sede propia/ajena y asociación revocada. Comprobar consultas, acciones y descargas al aceptar H09/H12 en S2, H05 en S4 y H06 en S5; T095 añade regresión global en S5. | Una consulta, acción o descarga permite datos fuera del alcance autorizado. | Restringir la función afectada, corregir y repetir los casos antes de aceptar. Si persiste, mantener bloqueada su aceptación; no desactivar controles para entregar. |
 | **R04 / AR04** | **Mitigar.** D4 revisa T068–T070/T087 con pagos pendientes, rechazados, confirmados, referencias repetidas y correcciones. Comprobar que solo la confirmación real descuenta una vez y que el anticipo controla el inicio; T094/T096 verifican integración. | El mismo dinero reduce dos veces el saldo, un reporte pendiente lo modifica o se inicia trabajo sin el anticipo exigido. | Detener la confirmación afectada, contrastar con registros comprobados por César y corregir con motivo y trazabilidad. Si no se puede conciliar, conservar pendiente y bloquear aceptación de ese recorrido. |
 | **R05 / AR05** | **Mitigar.** D6 coordina T071–T076: archivo permitido, relación con orden/cliente, versión original y descarga autorizada. D4 comprueba persistencia tras reinicio/actualización en T101; T094 revisa integración. | Falta un original, la relación es incorrecta o el archivo no permanece o no puede descargarse con autorización. | Recuperar desde copia válida o fuente comprobable y verificar relaciones. Si no existe original recuperable, registrar la falta y solicitarlo; no inventar XML, PDF ni respuesta fiscal. |
 | **R06 / AR06** | **Mitigar.** D4 comprueba en T101 HTTPS, persistencia y envío real de prueba para T009/H04 desde el entorno de entrega. Revisar condiciones de Railway y del SMTP elegido antes de contratar; documentar configuración reproducible sin publicar secretos. | No se puede acceder al entorno, enviar verificación o completar recuperación en la comprobación. | Revisar configuración y soporte. Si no se recupera, evaluar otro alojamiento o SMTP compatible, exportando datos/archivos y repitiendo la aceptación; requiere decisión sobre costo. El correo de prueba local sirve para diagnóstico, no acredita entrega pública. |
@@ -3172,7 +3173,7 @@ El residual es una **proyección posterior a aplicar y verificar la respuesta**,
 | ID | Fechas de revisión de referencia, 2026 | P/I posteriores propuestos | Resultado residual o beneficio esperado | Evidencia mínima para actualizar |
 | --- | --- | --- | --- | --- |
 | R01 | 23/09, 07/10, 21/10, 04/11 y 18/11; antes de cada decisión necesaria. | 2 / 3 | **6 — Rojo.** Persiste dependencia de la disponibilidad externa. | Registro de decisiones y tareas pendientes/desbloqueadas. |
-| R02 | 23/09, 07/10, 21/10, 04/11 y 18/11; ante bloqueos. | 2 / 3 | **6 — Rojo.** El margen sigue siendo limitado hasta recalcular. | Secuencia actualizada con carga por perfil y cierre proyectado. |
+| R02 | 23/09, 07/10, 21/10, 04/11 y 18/11; ante bloqueos. | 2 / 3 | **6 — Rojo.** El cierre desfavorable queda sin margen libre (0 h) hasta comprobar el avance real. | Secuencia actualizada con carga por perfil y cierre proyectado. |
 | R03 | 07/10, 04/11 y 18/11. | 1 / 3 | **3 — Amarillo.** El impacto de una exposición sigue siendo alto. | Casos de aislamiento y revocación con resultado y revisor. |
 | R04 | 07/10, 21/10, 04/11 y 18/11. | 1 / 3 | **3 — Amarillo.** Un error de dinero mantiene impacto alto. | Casos de confirmación única, anticipo y corrección trazable. |
 | R05 | 07/10, 04/11 y 18/11. | 1 / 3 | **3 — Amarillo.** La pérdida de un original conserva impacto alto. | Carga, relación, versiones, persistencia y descarga comprobadas. |
@@ -3193,8 +3194,8 @@ Las referencias siguientes quedan incorporadas también en los cinco [Sprint Bac
 | **S1 — 23/09/2026** | AR01, AR02, AR06, AR08, AR09, AR10 y AR12. | H01–H04, H08, H11; T009, T078–T083, T100 y T101. La comprobación de contacto en S1 es T083; T028 conserva su asignación a S3. | Decisiones y capacidad; acceso/correo; enlace WhatsApp; criterios de uso y ofertas pendientes. |
 | **S2 — 07/10/2026** | AR01–AR06, AR08, AR09, AR11 y AR12. | H09/H12; T026, T043–T055, T068–T077, T086–T091. | Aislamiento por sede, dinero confirmado, originales/descargas y antecedentes con fuente. |
 | **S3 — 21/10/2026** | AR01, AR02, AR04, AR06, AR08–AR10 y AR12. | H07/H10; T027–T040 y T056–T063; T084–T085. | Decisiones, registros de contactos, propuesta/anticipo y uso de los recorridos administrativos. |
-| **S4 — 04/11/2026** | AR01–AR12, según las dependencias de las páginas. | H05/H06; T010–T025, T094, T098 y T102. | Continuidad sin cuenta, pagos/documentos del portal y restauración del respaldo. |
-| **S5 — 18/11/2026** | Revisión final de AR01–AR12 y residuales; las verificaciones técnicas corresponden a las tareas del sprint. | T095–T097, T099 y T103–T105. Se reutiliza evidencia de T094/T098/T102 sin volver a contar su construcción. | Regresión, guía, decisión de aceptación y riesgos pendientes en el cierre. |
+| **S4 — 04/11/2026** | AR01–AR12, según las dependencias de H05 y las tareas comunes del sprint. | H05; T010–T021, T094, T098 y T102. | Continuidad sin cuenta, panel del cliente y restauración del respaldo. |
+| **S5 — 18/11/2026** | Ejecución de controles en H06 y revisión final de AR01–AR12 y residuales; las verificaciones técnicas corresponden a las tareas del sprint. | H06; T022–T025, T095–T097, T099 y T103–T105. Se reutiliza evidencia de T094/T098/T102 sin volver a contar su construcción. | Pagos/documentos del portal, regresión, guía, decisión de aceptación y riesgos pendientes en el cierre. |
 
 Cada entrada de evidencia indicará fecha, responsable, H/T, resultado y revisor; si el resultado es hipotético se rotula **simulado**. Una previsión de prueba no equivale a una prueba ejecutada.
 
