@@ -352,6 +352,7 @@ Capacidades previstas del producto:
 | 04/11/2026 | `6605ec5` | jrodriguezes | Páginas completas por sprint, consultoría y recursos | M `README.md` | Ajustes de contenido, sin cambios de secciones principales. |
 | 04/11/2026 | `cbc9350` | jrodriguezes | Nombres de T082 y T085 | M `README.md` | Precisa los nombres de las tareas T082 y T085. |
 | 04/11/2026 | `cd5d5dc` | Jeremy | Semana 8: riesgos y adquisiciones | M `README.md` | Agrega la Semana 8: criterios de valoración, Matriz de Riesgos, Plan de Mitigación, acciones de riesgo, adquisiciones y monitoreo. |
+| 05/11/2026 | `21a6467` | Brian Rodriguez | Bitácora de cambios del proyecto | M `README.md` | Agrega la bitácora de cambios debajo de la Semana 1 con archivos incorporados/eliminados e historial de commits. |
 
 ### Cambios pendientes de commit
 
@@ -1430,6 +1431,8 @@ En el curso se documentan los casos y la evidencia esperada de esa ejecución; l
 
 El escenario termina en **10 semanas y 5 sprints de 2 semanas**, incluido el cierre. **Cada una de las 12 historias principales se construye y acepta completa en un solo sprint**, con todas sus tareas propias, subdivisiones y componentes necesarios. H04 reúne dos páginas que se entregan juntas; las demás historias conservan su página. Son **13 páginas, 16 subdivisiones y 105 tareas únicas**.
 
+Cada sprint incluye una **Sprint Review planificada** en su fecha de revisión de referencia, facilitada por QSM como Scrum Master del escenario. Son reuniones previstas en la simulación, no reuniones realizadas: sus observaciones solo se registrarán si la revisión ocurre y se rotularán como simuladas.
+
 Las ocho historias sin subdividir y las dieciséis subdivisiones conservan las 24 unidades de estimación y los **124 puntos**, contados una vez. Las cuatro subdivisiones de cada principal se entregan juntas; no se acepta una página a medias para completar sus otras partes después.
 
 Se reservan bloques para las **1.482 horas-persona desfavorables**, sin reducir las estimaciones **466 / 926 / 1.482 h**. Cada tarea tiene un sprint, profesional y bloque. **T009 — Verificación de correo y T026 — Descargas de documentos** se tratan como componentes comunes: se preparan antes de las páginas que los reutilizan y mantienen sus ID y horas. T094, T098 y T103 se completan cada una en un solo sprint; ya no se reparten en etapas de sprints distintos.
@@ -1460,6 +1463,8 @@ Cada página se integra, prueba y documenta en su sprint según la DoD. La reuti
 
 **Aceptación:** verificar la página completa, sus componentes, pruebas, permisos, precedencia y carga profesional. Ninguna tarea propia o componente necesario queda pendiente para aceptar esa página.
 
+**Sprint Review planificada — 23/09/2026 (simulada):** dura hasta 2 h y la facilita QSM como Scrum Master. Participan PO, el equipo del sprint y César, unos 30 min según su disponibilidad, conforme al [Plan de Comunicaciones](#interesados-y-comunicaciones-académicas). Se revisarían Landing, inicio de sesión, registro, recuperación, Mi cuenta y Catálogos (H01–H04, H08 y H11; 28 puntos) frente al Sprint Goal, los criterios de aceptación y la DoD. Las observaciones se usarían para ajustar el Product Backlog. Todavía no se ha realizado y no tiene resultados registrados.
+
 #### Sprint 2: clientes, cobros y documentos completos
 
 **Semanas simuladas 3–4; revisión de referencia 07/10/2026.**
@@ -1479,6 +1484,8 @@ Cada página se integra, prueba y documenta en su sprint según la DoD. La reuti
 **Acciones de riesgo del Sprint Backlog:** AR01–AR06, AR08, AR09, AR11 y AR12, con estado inicial **Por hacer**, conforme al [plan de Semana 8](#acciones-de-riesgo-en-los-sprint-backlogs). Detallan controles de las tareas existentes; se conservan sus responsables técnicos, estimaciones y puntos.
 
 **Aceptación:** verificar la página completa, sus componentes, pruebas, permisos, precedencia y carga profesional. Ninguna tarea propia o componente necesario queda pendiente para aceptar esa página.
+
+**Sprint Review planificada — 07/10/2026 (simulada):** dura hasta 2 h y la facilita QSM como Scrum Master. Participan PO, el equipo del sprint y César, unos 30 min según su disponibilidad. Se revisarían Clientes y Cobros y documentos (H09 y H12 con sus ocho subdivisiones; 42 puntos), en especial los permisos por sede y que solo el dinero confirmado reduzca saldos. Todavía no se ha realizado y no tiene resultados registrados.
 
 #### Sprint 3: agenda y atención administrativa completas
 
@@ -1500,6 +1507,8 @@ Cada página se integra, prueba y documenta en su sprint según la DoD. La reuti
 
 **Aceptación:** verificar la página completa, sus componentes, pruebas, permisos, precedencia y carga profesional. Ninguna tarea propia o componente necesario queda pendiente para aceptar esa página.
 
+**Sprint Review planificada — 21/10/2026 (simulada):** dura hasta 2 h y la facilita QSM como Scrum Master. Participan PO, el equipo del sprint y César, unos 30 min según su disponibilidad. Se revisarían Calendario y el Panel de administración (H07 con sus cuatro subdivisiones y H10; 28 puntos), desde el contacto hasta el servicio publicado, incluido el bloqueo del inicio sin pago previo confirmado. Todavía no se ha realizado y no tiene resultados registrados.
+
 #### Sprint 4: Portal del cliente completo y respaldos
 
 **Semanas simuladas 7–8; revisión de referencia 04/11/2026.**
@@ -1520,6 +1529,8 @@ Cada página se integra, prueba y documenta en su sprint según la DoD. La reuti
 
 **Aceptación:** verificar la página completa, sus componentes, pruebas, permisos, precedencia y carga profesional. Ninguna tarea propia o componente necesario queda pendiente para aceptar esa página.
 
+**Sprint Review planificada — 04/11/2026 (simulada):** dura hasta 2 h y la facilita QSM como Scrum Master. Participan PO, el equipo del sprint y César, unos 30 min según su disponibilidad. Se revisarían el Panel del cliente y Pagos y documentos (H05 con sus cuatro subdivisiones y H06; 26 puntos), además de la evidencia de respaldos de T102. Todavía no se ha realizado y no tiene resultados registrados.
+
 #### Sprint 5: validación integral y cierre
 
 **Semanas simuladas 9–10; revisión de referencia 18/11/2026.**
@@ -1537,6 +1548,8 @@ Cada página se integra, prueba y documenta en su sprint según la DoD. La reuti
 **Acciones de riesgo del Sprint Backlog:** revisión final de AR01–AR12 y de los riesgos residuales, con estado inicial **Por hacer**, conforme al [plan de Semana 8](#acciones-de-riesgo-en-los-sprint-backlogs). Detallan controles de las tareas existentes; se conservan sus responsables técnicos, estimaciones y puntos.
 
 **Aceptación:** contrastar los resultados del conjunto y la guía con las páginas ya completas; corregir y volver a verificar cualquier fallo antes del cierre simulado.
+
+**Sprint Review planificada — 18/11/2026 (simulada):** dura hasta 2 h y la facilita QSM como Scrum Master. Participan PO, el equipo del sprint y César, unos 30 min según su disponibilidad. Se revisarían los resultados de la regresión integral (T095–T097 y T099), la guía de T103 y la aceptación conjunta de T104 antes del cierre de T105. Todavía no se ha realizado y no tiene resultados registrados.
 
 ### Backlog técnico de implementación
 
@@ -2033,7 +2046,7 @@ para coordinar de forma integral la atención de plagas en mis inmuebles y conta
 
 ##### H05.1 — Solicitar consultorías con correo verificado
 
-**Puntos:** 5. **Prioridad:** Media. **Entrega prevista:** S2.
+**Puntos:** 5. **Prioridad:** Media. **Entrega prevista:** S4, junto con su historia principal.
 
 **Historia:** Como cliente, quiero verificar mi correo y enviar una consultoría con una referencia única, para solicitar atención sin tener que registrar directamente una cita.
 
@@ -2049,7 +2062,7 @@ para coordinar de forma integral la atención de plagas en mis inmuebles y conta
 
 ##### H05.2 — Solicitar nuevas visitas y cambios de agenda
 
-**Puntos:** 5. **Prioridad:** Media. **Entrega prevista:** S3.
+**Puntos:** 5. **Prioridad:** Media. **Entrega prevista:** S4, junto con su historia principal.
 
 **Historia:** Como cliente autorizado, quiero solicitar nuevas visitas y pedir cambios sobre las programadas, para coordinar la atención sin modificar la agenda de César por mi cuenta.
 
@@ -2065,7 +2078,7 @@ para coordinar de forma integral la atención de plagas en mis inmuebles y conta
 
 ##### H05.3 — Consultar solicitudes y decidir propuestas
 
-**Puntos:** 5. **Prioridad:** Media. **Entrega prevista:** S2.
+**Puntos:** 5. **Prioridad:** Media. **Entrega prevista:** S4, junto con su historia principal.
 
 **Historia:** Como cliente, quiero revisar mis solicitudes y aceptar o rechazar propuestas de trabajo, para conocer y decidir las condiciones antes de contratar.
 
@@ -2081,7 +2094,7 @@ para coordinar de forma integral la atención de plagas en mis inmuebles y conta
 
 ##### H05.4 — Consultar resumen e historial de atenciones
 
-**Puntos:** 3. **Prioridad:** Media. **Entrega prevista:** S3.
+**Puntos:** 3. **Prioridad:** Media. **Entrega prevista:** S4, junto con su historia principal.
 
 **Historia:** Como cliente autorizado, quiero ver mi resumen y los servicios publicados de mis ubicaciones, para consultar tratamientos y recomendaciones sin solicitar otra vez la información.
 
@@ -2146,7 +2159,7 @@ para organizar integralmente el ciclo de atención comercial y técnico de la em
 
 ##### H07.1 — Registrar contactos y valorar consultorías
 
-**Puntos:** 5. **Prioridad:** Alta. **Entrega prevista:** S2.
+**Puntos:** 5. **Prioridad:** Alta. **Entrega prevista:** S3, junto con su historia principal.
 
 **Historia:** Como César, quiero registrar contactos recibidos y calcular las condiciones iniciales de una consultoría, para dar seguimiento a personas con o sin cuenta web.
 
@@ -2162,7 +2175,7 @@ para organizar integralmente el ciclo de atención comercial y técnico de la em
 
 ##### H07.2 — Gestionar consultorías y comprobar el anticipo
 
-**Puntos:** 5. **Prioridad:** Alta. **Entrega prevista:** S3.
+**Puntos:** 5. **Prioridad:** Alta. **Entrega prevista:** S3, junto con su historia principal.
 
 **Historia:** Como César, quiero actualizar consultorías y verificar el pago requerido antes de iniciar una atención, para cumplir las condiciones aceptadas por el cliente.
 
@@ -2178,7 +2191,7 @@ para organizar integralmente el ciclo de atención comercial y técnico de la em
 
 ##### H07.3 — Registrar el tratamiento y las recomendaciones reales
 
-**Puntos:** 5. **Prioridad:** Alta. **Entrega prevista:** S4.
+**Puntos:** 5. **Prioridad:** Alta. **Entrega prevista:** S3, junto con su historia principal.
 
 **Historia:** Como César, quiero documentar el servicio realizado con plagas, productos, cantidades y recomendaciones, para conservar evidencia técnica fiel de cada tratamiento.
 
@@ -2194,7 +2207,7 @@ para organizar integralmente el ciclo de atención comercial y técnico de la em
 
 ##### H07.4 — Publicar y corregir atenciones desde el panel operativo
 
-**Puntos:** 5. **Prioridad:** Alta. **Entrega prevista:** S4.
+**Puntos:** 5. **Prioridad:** Alta. **Entrega prevista:** S3, junto con su historia principal.
 
 **Historia:** Como César, quiero gestionar decisiones externas y publicar o corregir servicios desde mi panel, para mantener visible el estado real de las atenciones.
 
@@ -2258,7 +2271,7 @@ para estructurar la base maestra de clientes, controlar quién accede digitalmen
 
 ##### H09.1 — Registrar y mantener clientes particulares y empresas
 
-**Puntos:** 5. **Prioridad:** Alta. **Entrega prevista:** S1.
+**Puntos:** 5. **Prioridad:** Alta. **Entrega prevista:** S2, junto con su historia principal.
 
 **Historia:** Como César, quiero crear, editar y desactivar fichas de clientes particulares y empresas, para mantener sus datos comerciales sin exigirles una cuenta.
 
@@ -2274,7 +2287,7 @@ para estructurar la base maestra de clientes, controlar quién accede digitalmen
 
 ##### H09.2 — Administrar ubicaciones y frecuencias de visita
 
-**Puntos:** 3. **Prioridad:** Alta. **Entrega prevista:** S2.
+**Puntos:** 3. **Prioridad:** Alta. **Entrega prevista:** S2, junto con su historia principal.
 
 **Historia:** Como César, quiero registrar las ubicaciones y frecuencias de visita de cada cliente, para programar trabajos en el inmueble correcto.
 
@@ -2290,7 +2303,7 @@ para estructurar la base maestra de clientes, controlar quién accede digitalmen
 
 ##### H09.3 — Asociar y revocar cuentas con permisos por sede
 
-**Puntos:** 8. **Prioridad:** Alta. **Entrega prevista:** S2.
+**Puntos:** 8. **Prioridad:** Alta. **Entrega prevista:** S2, junto con su historia principal.
 
 **Historia:** Como César, quiero asociar o retirar cuentas del portal verificando identidad y alcance por sede, para proteger el historial privado de cada cliente.
 
@@ -2306,7 +2319,7 @@ para estructurar la base maestra de clientes, controlar quién accede digitalmen
 
 ##### H09.4 — Incorporar antecedentes y clasificarlos por sede
 
-**Puntos:** 5. **Prioridad:** Alta. **Entrega prevista:** S4.
+**Puntos:** 5. **Prioridad:** Alta. **Entrega prevista:** S2, junto con su historia principal.
 
 **Historia:** Como César, quiero ingresar servicios anteriores y relacionarlos con sus ubicaciones cuando se conozcan, para conservar un historial real sin inventar datos.
 
@@ -2395,7 +2408,7 @@ para asegurar que solo el dinero comprobado reduzca la deuda de las órdenes, ma
 
 ##### H12.1 — Confirmar, rechazar y corregir cobros
 
-**Puntos:** 5. **Prioridad:** Alta. **Entrega prevista:** S3.
+**Puntos:** 5. **Prioridad:** Alta. **Entrega prevista:** S2, junto con su historia principal.
 
 **Historia:** Como César, quiero revisar reportes de pago y registrar cobros recibidos directamente, para actualizar los saldos solo con dinero comprobado.
 
@@ -2411,7 +2424,7 @@ para asegurar que solo el dinero comprobado reduzca la deuda de las órdenes, ma
 
 ##### H12.2 — Guardar y versionar recibos de pagos confirmados
 
-**Puntos:** 5. **Prioridad:** Alta. **Entrega prevista:** S3.
+**Puntos:** 5. **Prioridad:** Alta. **Entrega prevista:** S2, junto con su historia principal.
 
 **Historia:** Como César, quiero adjuntar recibos y conservar sus versiones vinculadas al pago, para entregar constancias verificables de los cobros.
 
@@ -2427,7 +2440,7 @@ para asegurar que solo el dinero comprobado reduzca la deuda de las órdenes, ma
 
 ##### H12.3 — Custodiar facturas electrónicas externas y correcciones
 
-**Puntos:** 8. **Prioridad:** Alta. **Entrega prevista:** S4.
+**Puntos:** 8. **Prioridad:** Alta. **Entrega prevista:** S2, junto con su historia principal.
 
 **Historia:** Como César, quiero adjuntar facturas externas, respuestas y documentos correctivos a cada orden, para conservar los originales tributarios de forma segura.
 
@@ -2443,7 +2456,7 @@ para asegurar que solo el dinero comprobado reduzca la deuda de las órdenes, ma
 
 ##### H12.4 — Registrar la entrega de documentos y recomendaciones
 
-**Puntos:** 3. **Prioridad:** Alta. **Entrega prevista:** S4.
+**Puntos:** 3. **Prioridad:** Alta. **Entrega prevista:** S2, junto con su historia principal.
 
 **Historia:** Como César, quiero registrar a quién, cuándo y por qué canal entregué documentos o recomendaciones, para conservar seguimiento de la atención al cliente.
 
@@ -2701,7 +2714,7 @@ T102 — Respaldos: diario 4/8/12, externo cifrado 2/6/10 y restauración 6/10/1
 | D4 | Full stack senior y DevOps, ≥5 años en desarrollo y ≥4 en despliegue, correo, persistencia y restauración; una sola persona. | 292 |
 | D5 | Full stack intermedio, 2–4 años: administración, agenda y pruebas. | 232 |
 | D6 | Full stack senior, ≥5 años: permisos, pagos, XML e integración; refuerzo parcial para completar páginas sin repartirlas entre sprints. | 272 |
-| QSM | QA y facilitación Scrum, ≥3 años en pruebas y experiencia facilitando equipos; una sola bolsa. | 184 |
+| QSM | **Scrum Master ficticio** y QA, ≥3 años en pruebas y facilitación Scrum; **único Scrum Master del escenario** (facilita Sprint Planning, Daily Scrum, Sprint Review y Sprint Retrospective, coordina la atención de impedimentos y vigila el WIP y la DoD), en una sola bolsa junto con T094, T096 y T099. | 184 |
 | QA2 | QA intermedio, ≥3 años: aislamiento, archivos y recorridos integrales. | 84 |
 | UX | Diseño UX/UI intermedio, ≥2 años: formularios, accesibilidad y revisión de uso. | 44 |
 | PO | Product Owner/analista, ≥3 años: negocio, prioridades, guía y aceptación. | 116 |
@@ -2712,7 +2725,7 @@ D6 refuerza la concentración de trabajo al entregar páginas completas. LT, D4 
 
 Máximo **80 h brutas por persona y sprint**: 80% planificable y 20% para coordinación, ceremonias e interrupciones. Cada bolsa se calcula como **máximo entre continuidad y carga P ÷ 0,8, redondeada hacia arriba a bloques de 4 h**. Continuidad: LT/D4/D6, 16 h por sprint; los otros desarrolladores, 8 h y 16 h en S5; QSM, 32 h; PO, 20 h; UX, 24 h en S1, 4 h en S2–S4 y 8 h en S5. QA2 se reserva cuando tiene tareas. Son supuestos del ejercicio incluidos en el costo.
 
-Los profesionales deben estar disponibles en sus bloques; una bolsa parcial no autoriza superponer actividades. D4 combina infraestructura y desarrollo sin duplicar horas.
+Los profesionales deben estar disponibles en sus bloques; una bolsa parcial no autoriza superponer actividades. D4 combina infraestructura y desarrollo sin duplicar horas. QSM actúa como único Scrum Master en los cinco sprints: en S1–S3 dedica su bolsa de 32 h brutas por sprint a facilitación, seguimiento del tablero, verificación de la DoD y preparación de pruebas; en S4 ejecuta además T094 (14 h base / 22 h P) y en S5 ejecuta T096 y T099 (28 h base / 42 h P) dentro de sus 56 h brutas reservadas.
 
 | Persona | S1 (h) | S2 (h) | S3 (h) | S4 (h) | S5 (h) | Total (h) |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -2888,7 +2901,7 @@ Se reutiliza el poder/interés del [registro de Semana 2](#registro-de-interesad
 
 #### Comunicación del escenario profesional
 
-PO es el analista/Product Owner del caso; QSM combina calidad y facilitación Scrum; D4 combina desarrollo senior y DevOps. Estos códigos identifican profesionales hipotéticos, no reemplazan a los autores del expediente.
+PO es el analista/Product Owner del caso; QSM es el **único Scrum Master ficticio** del escenario y combina esa facilitación Scrum con aseguramiento de calidad; D4 combina desarrollo senior y DevOps. Estos códigos identifican profesionales hipotéticos, no reemplazan a los autores del expediente.
 
 | Interesado — poder/interés | Información y momento | Canal del escenario | Responsable previsto |
 | --- | --- | --- | --- |
