@@ -26,6 +26,10 @@ Sede Regional San Carlos
     - [Valor esperado](#valor-esperado)
     - [Objetivo general](#objetivo-general)
     - [Objetivos específicos](#objetivos-específicos)
+  - [Bitácora de cambios del proyecto](#bitácora-de-cambios-del-proyecto)
+    - [Archivos incorporados y eliminados](#archivos-incorporados-y-eliminados)
+    - [Historial de commits](#historial-de-commits)
+    - [Cambios pendientes de commit](#cambios-pendientes-de-commit)
   - [Semana 2 · Taller: interesados de nuestro proyecto](#semana-2--taller-interesados-de-nuestro-proyecto)
     - [Contexto y restricciones del proyecto](#contexto-y-restricciones-del-proyecto)
     - [Registro de interesados](#registro-de-interesados)
@@ -310,6 +314,54 @@ Capacidades previstas del producto:
 - Adjuntar documentos fiscales externos y registrar su entrega y la de recomendaciones sin exigir cuenta.
 - Ofrecer portal opcional para solicitudes, reportes de pago y consulta de historial, pagos, documentos y próximas visitas.
 - Asociar historial por ID sin duplicarlo; autorizar toda una empresa o solo la sede asignada.
+
+## Bitácora de cambios del proyecto
+
+> **Fuente:** historial de Git de la rama `main` publicada en GitHub (`origin/main`), consultado el 05/11/2026 con `git log --name-status`. Se registran los 20 commits de esa rama, incluida una fusión, y todos los archivos agregados (A), modificados (M) o eliminados (D). Las secciones indicadas como agregadas o retiradas se comprobaron comparando los encabezados de cada commit con los de su versión anterior.
+
+### Archivos incorporados y eliminados
+
+| Archivo | Incorporado en | Eliminado en | Estado actual | Observación |
+| --- | --- | --- | --- | --- |
+| `README.md` | `146f5b3` | — | Vigente | Expediente principal; se modifica en todos los commits posteriores. |
+| `img/mapa-poder-interes.png` | `33f3266` | — | Vigente | Mapa Poder–Interés de la Semana 2. |
+| `CHANGELOG.md` | `ec8cc4c` | `66c115e` | Eliminado | Historial de cambios de la Semana 7; al eliminarse, se retiraron sus enlaces del README. |
+| `docs/semana-07/tablero-sprint-1.md` | `ec8cc4c` | `66c115e` | Eliminado | Tablero del Sprint 1; su contenido se integró en la sección [Tablero de Trabajo del Sprint 1](#tablero-de-trabajo-del-sprint-1) del README. |
+
+### Historial de commits
+
+| Fecha | Commit | Autor en Git | Cambio | Archivos | Secciones agregadas, reemplazadas o retiradas |
+| --- | --- | --- | --- | --- | --- |
+| 26/09/2026 | `146f5b3` | Brian Rodríguez Pérez | Semana 1: definición inicial del proyecto | A `README.md` | Problema, proyecto propuesto, valor esperado y objetivos. |
+| 26/09/2026 | `33f3266` | jrodriguezes | Taller de la Semana 2 | M `README.md`; A `img/mapa-poder-interes.png` | Agrega el índice y la Semana 2 (registro de interesados, mapa Poder–Interés, preguntas de análisis y enfoque de gestión); da formato de secciones a la Semana 1. |
+| 04/10/2026 | `0eab7cf` | jrodriguezes | Planeamiento de la Semana 3 | M `README.md` | Agrega la Semana 3: alcance, página pública, registro e ingreso, diseño, empresas y sedes, consultoría, visitas, tecnología, páginas y comprobaciones. |
+| 05/10/2026 | `1dbdacf` | Brian Rodriguez | Cronograma general | M `README.md` | Agrega «Cronograma general del proyecto». |
+| 13/10/2026 | `299fd90` | Brian Rodriguez | Semana 4 inicial | M `README.md` | Agrega la Semana 4 con Product Backlog inicial, Sprint Goal, Sprint Backlog y seguimiento del sprint. |
+| 16/10/2026 | `3066ddf` | jrodriguezes | Planificación de 10 semanas y 5 sprints | M `README.md` | En una rama paralela, agrega la Semana 4 con Product Backlog priorizado, Sprints y Sprint Backlogs y backlog técnico. |
+| 16/10/2026 | `8e555d3` | jrodriguezes | Fusión de ramas | M `README.md` | Conserva la versión de `3066ddf`; **se retiran** «Cronograma general del proyecto» (`1dbdacf`) y la Semana 4 inicial (`299fd90`). |
+| 18/10/2026 | `d0bb8cb` | jrodriguezes | Reorganización de historias, tareas y planificación | M `README.md` | «Página pública y contacto por WhatsApp» pasa a «Landing Page y contacto por WhatsApp»; agrega equipo profesional, presupuesto y alcance de la simulación; **se retira** «Preparación de cada sprint y capacidad». |
+| 21/10/2026 | `5da0e0f` | jrodriguezes | Coherencia, dependencias y reglas | M `README.md` | **Se retiran** «Alcance de la simulación y entrega académica», «Mecanismo de seguimiento del Sprint», «Tratamiento de cambios durante el Sprint», «Interacción entre los procesos», «Integración y toma de decisiones» y «Resultado documentado en la Semana 4». |
+| 21/10/2026 | `6009cfb` | Brian Rodriguez | Historias de usuario detalladas | M `README.md` | Agrega «Historias de usuario desarrolladas» (H01–H12, criterios de aceptación y estimación Fibonacci). |
+| 24/10/2026 | `f355ab9` | Brian Rodriguez | Semana 6 | M `README.md` | Agrega la Semana 6: matriz de estimación de 24 historias entregables y 124 puntos, división de historias grandes, velocidad y Release Plan. |
+| 24/10/2026 | `6368159` | Brian Rodriguez | Profesora del curso | M `README.md` | Agrega a Yesenia Calvo Araya en la portada. |
+| 28/10/2026 | `fd28ae5` | jrodriguezes | Pagos, moneda por orden y criterios de calidad | M `README.md` | Ajustes de contenido, sin cambios de secciones. |
+| 01/11/2026 | `92aa764` | jrodriguezes | Formalización de historias, puntos y semanas | M `README.md` | Crea la Semana 5; traslada allí las historias desarrolladas y lleva equipo y presupuesto a la Semana 6. **Se retiran** «Velocidad inicial y proyección» y «División y reestimación de las cuatro historias grandes», reemplazadas por «Desglose de puntos de las historias subdivididas», «Estimación y asignación de las tareas» y «Capacidad y cierre en cinco sprints». |
+| 01/11/2026 | `a2dbd0c` | jrodriguezes | Capacidad y presupuesto para cinco sprints | M `README.md` | Ajustes de capacidad y presupuesto, sin cambios de secciones. |
+| 01/11/2026 | `ec8cc4c` | jrodriguezes | Semana 7: comunicaciones y tablero Scrum | M `README.md`; A `CHANGELOG.md`; A `docs/semana-07/tablero-sprint-1.md` | Agrega la Semana 7: Plan de Comunicaciones, tablero del Sprint 1, relación con calidad y recursos, y evidencia de la entrega. |
+| 01/11/2026 | `66c115e` | jrodriguezes | Actualización de la Semana 7 | M `README.md`; D `CHANGELOG.md`; D `docs/semana-07/tablero-sprint-1.md` | Integra el tablero en el README; **se retira** «Evidencia y registro de la entrega». |
+| 04/11/2026 | `6605ec5` | jrodriguezes | Páginas completas por sprint, consultoría y recursos | M `README.md` | Ajustes de contenido, sin cambios de secciones principales. |
+| 04/11/2026 | `cbc9350` | jrodriguezes | Nombres de T082 y T085 | M `README.md` | Precisa los nombres de las tareas T082 y T085. |
+| 04/11/2026 | `cd5d5dc` | Jeremy | Semana 8: riesgos y adquisiciones | M `README.md` | Agrega la Semana 8: criterios de valoración, Matriz de Riesgos, Plan de Mitigación, acciones de riesgo, adquisiciones y monitoreo. |
+
+### Cambios pendientes de commit
+
+Revisión del 05/11/2026 con base en las observaciones de la profesora. Solo modifica `README.md`; no agrega ni elimina archivos. Cuando se confirme, se agregará su commit al historial.
+
+- Se agrega esta bitácora debajo de la Semana 1.
+- Se identifica a QSM como el **único Scrum Master** del escenario, con sus responsabilidades y las horas disponibles para facilitar en cada sprint. Se mantienen los once profesionales, las horas y el presupuesto.
+- Se agrega una **Sprint Review planificada** a cada uno de los cinco Sprint Backlogs. Ninguna se presenta como una reunión realizada.
+- Se traslada **H06 — Consultar mis pagos y documentos (8 puntos)** del Sprint 4 al Sprint 5 para que los cinco sprints tengan historias y puntos asignados (**28 / 42 / 28 / 18 / 8 = 124 puntos**), ejecutando T022 (D3) y T024 (D2) en paralelo en S5 (`0–16`), integrándolas en T025 (`16–28`) antes de T103 (`28–44`) y T097 (`28–46`), y cediendo 4 h brutas de D3 a D2. Se corrige además la entrega prevista de las dieciséis subdivisiones para que coincida con el sprint de su historia principal.
+- No cambian las 105 tareas, las 926 h base, las 1.482 h desfavorables, las 24 unidades estimadas, los 124 puntos, las 2.220 h brutas del equipo ni el presupuesto total de ₡24.542.150.
 
 ## Semana 2 · Taller: interesados de nuestro proyecto
 
