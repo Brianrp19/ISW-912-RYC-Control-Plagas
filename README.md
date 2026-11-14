@@ -28,8 +28,8 @@ Sede Regional San Carlos
     - [Objetivos específicos](#objetivos-específicos)
   - [Bitácora de cambios del proyecto](#bitácora-de-cambios-del-proyecto)
     - [Archivos incorporados y eliminados](#archivos-incorporados-y-eliminados)
-    - [Historial de commits](#historial-de-commits)
-    - [Cambios pendientes de commit](#cambios-pendientes-de-commit)
+    - [Historial de commits y entregas](#historial-de-commits-y-entregas)
+    - [Correcciones de la entrega del 05/11/2026](#correcciones-de-la-entrega-del-05112026)
   - [Semana 2 · Taller: interesados de nuestro proyecto](#semana-2--taller-interesados-de-nuestro-proyecto)
     - [Contexto y restricciones del proyecto](#contexto-y-restricciones-del-proyecto)
     - [Registro de interesados](#registro-de-interesados)
@@ -266,6 +266,14 @@ Sede Regional San Carlos
     - [Acciones de riesgo en los Sprint Backlogs](#acciones-de-riesgo-en-los-sprint-backlogs)
     - [Adquisiciones críticas y plan de salida](#adquisiciones-críticas-y-plan-de-salida)
     - [Monitoreo y actualización de riesgos](#monitoreo-y-actualización-de-riesgos)
+  - [Semana 9 · Funciones, responsabilidades y equipo del proyecto](#semana-9--funciones-responsabilidades-y-equipo-del-proyecto)
+    - [Roles de la simulación](#roles-de-la-simulación)
+    - [Acta de Sprint Review del Sprint 1](#acta-de-sprint-review-del-sprint-1)
+      - [Incremento y comprobación de la DoD](#incremento-y-comprobación-de-la-dod)
+      - [Retroalimentación y decisiones sobre el backlog](#retroalimentación-y-decisiones-sobre-el-backlog)
+    - [Acta de Sprint Retrospective del Sprint 1](#acta-de-sprint-retrospective-del-sprint-1)
+      - [Observaciones y seguimiento anterior](#observaciones-y-seguimiento-anterior)
+      - [Acciones de mejora para el Sprint 2](#acciones-de-mejora-para-el-sprint-2)
 
 ---
 
@@ -317,20 +325,20 @@ Capacidades previstas del producto:
 
 ## Bitácora de cambios del proyecto
 
-> **Fuente:** historial de Git de la rama `main` publicada en GitHub (`origin/main`), consultado el 05/11/2026 con `git log --name-status`. Se registran los commits de esa rama, incluida una fusión, y todos los archivos agregados (A), modificados (M) o eliminados (D). Las secciones indicadas como agregadas o retiradas se comprobaron comparando los encabezados de cada commit con los de su versión anterior.
+> **Fuente:** historial de Git de `main`, revisado el 14/11/2026 hasta `b37dbb5`, más la entrega de Semana 9 identificada en esta tabla. Los archivos agregados (A), modificados (M) o eliminados (D) se comparan con el primer padre de cada commit; las diferencias respecto de otra rama se explican aparte.
 
 ### Archivos incorporados y eliminados
 
 | Archivo | Incorporado en | Eliminado en | Estado actual | Observación |
 | --- | --- | --- | --- | --- |
-| `README.md` | `146f5b3` | — | Vigente | Expediente principal; se modifica en todos los commits posteriores. |
+| `README.md` | `146f5b3` | — | Vigente | Expediente principal; sus modificaciones se registran abajo. La fusión `8e555d3` conserva la versión de su primer padre. |
 | `img/mapa-poder-interes.png` | `33f3266` | — | Vigente | Mapa Poder–Interés de la Semana 2. |
 | `CHANGELOG.md` | `ec8cc4c` | `66c115e` | Eliminado | Historial de cambios de la Semana 7; al eliminarse, se retiraron sus enlaces del README. |
 | `docs/semana-07/tablero-sprint-1.md` | `ec8cc4c` | `66c115e` | Eliminado | Tablero del Sprint 1; su contenido se integró en la sección [Tablero de Trabajo del Sprint 1](#tablero-de-trabajo-del-sprint-1) del README. |
 
-### Historial de commits
+### Historial de commits y entregas
 
-| Fecha | Commit | Autor en Git | Cambio | Archivos | Secciones agregadas, reemplazadas o retiradas |
+| Fecha | Commit o entrega | Autor en Git | Cambio | Archivos | Secciones agregadas, reemplazadas o retiradas |
 | --- | --- | --- | --- | --- | --- |
 | 26/09/2026 | `146f5b3` | Brian Rodríguez Pérez | Semana 1: definición inicial del proyecto | A `README.md` | Problema, proyecto propuesto, valor esperado y objetivos. |
 | 26/09/2026 | `33f3266` | jrodriguezes | Taller de la Semana 2 | M `README.md`; A `img/mapa-poder-interes.png` | Agrega el índice y la Semana 2 (registro de interesados, mapa Poder–Interés, preguntas de análisis y enfoque de gestión); da formato de secciones a la Semana 1. |
@@ -338,7 +346,7 @@ Capacidades previstas del producto:
 | 05/10/2026 | `1dbdacf` | Brian Rodriguez | Cronograma general | M `README.md` | Agrega «Cronograma general del proyecto». |
 | 13/10/2026 | `299fd90` | Brian Rodriguez | Semana 4 inicial | M `README.md` | Agrega la Semana 4 con Product Backlog inicial, Sprint Goal, Sprint Backlog y seguimiento del sprint. |
 | 16/10/2026 | `3066ddf` | jrodriguezes | Planificación de 10 semanas y 5 sprints | M `README.md` | En una rama paralela, agrega la Semana 4 con Product Backlog priorizado, Sprints y Sprint Backlogs y backlog técnico. |
-| 16/10/2026 | `8e555d3` | jrodriguezes | Fusión de ramas | M `README.md` | Conserva la versión de `3066ddf`; **se retiran** «Cronograma general del proyecto» (`1dbdacf`) y la Semana 4 inicial (`299fd90`). |
+| 16/10/2026 | `8e555d3` | jrodriguezes | Fusión de ramas | Sin cambios respecto del primer padre (`3066ddf`) | Integra la rama de `299fd90` conservando íntegramente el árbol de `3066ddf`. El cronograma general y la Semana 4 inicial de la rama entrante no se incorporan; no son eliminaciones nuevas respecto del primer padre. |
 | 18/10/2026 | `d0bb8cb` | jrodriguezes | Reorganización de historias, tareas y planificación | M `README.md` | «Página pública y contacto por WhatsApp» pasa a «Landing Page y contacto por WhatsApp»; agrega equipo profesional, presupuesto y alcance de la simulación; **se retira** «Preparación de cada sprint y capacidad». |
 | 21/10/2026 | `5da0e0f` | jrodriguezes | Coherencia, dependencias y reglas | M `README.md` | **Se retiran** «Alcance de la simulación y entrega académica», «Mecanismo de seguimiento del Sprint», «Tratamiento de cambios durante el Sprint», «Interacción entre los procesos», «Integración y toma de decisiones» y «Resultado documentado en la Semana 4». |
 | 21/10/2026 | `6009cfb` | Brian Rodriguez | Historias de usuario detalladas | M `README.md` | Agrega «Historias de usuario desarrolladas» (H01–H12, criterios de aceptación y estimación Fibonacci). |
@@ -355,10 +363,12 @@ Capacidades previstas del producto:
 | 05/11/2026 | `21a6467` | Brian Rodriguez | Bitácora de cambios del proyecto | M `README.md` | Agrega la bitácora de cambios debajo de la Semana 1 con archivos incorporados/eliminados e historial de commits. |
 | 05/11/2026 | `a8264ad` | Brian Rodriguez | Scrum Master QSM, Sprint Reviews y subdivisiones | M `README.md` | Formaliza a QSM como único Scrum Master ficticio, incorpora las cinco Sprint Reviews planificadas y alinea la entrega prevista de las 16 subdivisiones con su historia principal. |
 | 05/11/2026 | `e9fc1f7` | Brian Rodriguez | Redistribución de H06 al Sprint 5 y recálculo | M `README.md` | Traslada H06 (8 puntos) al Sprint 5 (28 / 42 / 28 / 18 / 8 = 124 puntos), paraleliza T022 y T024, ajusta dependencias, bolsas de D2 y D3, presupuestos de S4 y S5 y riesgo R02. |
+| 05/11/2026 | `b37dbb5` | Brian Rodriguez | Precisiones de H05 y comprobaciones de S5 | M `README.md` | Aclara la disponibilidad de «Ver mis pagos» y el alcance de T095/T097. |
+| 14/11/2026 | Entrega de Semana 9 | jrodriguezes | Actas del Sprint 1 y aclaraciones documentales | M `README.md`; sin archivos nuevos o eliminados | Agrega las actas de Review y Retrospective, roles y tres mejoras en el Sprint Backlog 2; actualiza índice, referencias y bitácora, y explica las bolsas superiores al mínimo sin cambiar cifras. |
 
-### Cambios pendientes de commit
+### Correcciones de la entrega del 05/11/2026
 
-Resumen de la revisión del 05/11/2026 con base en las observaciones de la profesora (incorporada en los commits anteriores y cerrada en este último commit con la precisión del enlace «Ver mis pagos» en H05 y del alcance de T095/T097 en S5). Solo modifica `README.md`; no agrega ni elimina archivos.
+Resumen de la revisión del 05/11/2026 con base en las observaciones de la profesora, incorporada en `21a6467`, `a8264ad`, `e9fc1f7` y `b37dbb5`, ya publicados. El último precisa el enlace «Ver mis pagos» en H05 y el alcance de T095/T097 en S5. Estas correcciones solo modifican `README.md`; no agregan ni eliminan archivos.
 
 - Se agrega esta bitácora debajo de la Semana 1.
 - Se identifica a QSM como el **único Scrum Master** del escenario, con sus responsabilidades y las horas disponibles para facilitar en cada sprint. Se mantienen los once profesionales, las horas y el presupuesto.
@@ -1433,7 +1443,7 @@ En el curso se documentan los casos y la evidencia esperada de esa ejecución; l
 
 El escenario termina en **10 semanas y 5 sprints de 2 semanas**, incluido el cierre. **Cada una de las 12 historias principales se construye y acepta completa en un solo sprint**, con todas sus tareas propias, subdivisiones y componentes necesarios. H04 reúne dos páginas que se entregan juntas; las demás historias conservan su página. Son **13 páginas, 16 subdivisiones y 105 tareas únicas**.
 
-Cada sprint incluye una **Sprint Review planificada** en su fecha de revisión de referencia, facilitada por QSM como Scrum Master del escenario. Son reuniones previstas en la simulación, no reuniones realizadas: sus observaciones solo se registrarán si la revisión ocurre y se rotularán como simuladas.
+Cada sprint incluye una **Sprint Review planificada** en su fecha de referencia, facilitada por QSM como Scrum Master del escenario. La [Semana 9](#semana-9--funciones-responsabilidades-y-equipo-del-proyecto) desarrolla las actas de Review y Retrospective de S1 como caso documental, con resultados y comentarios supuestos identificados. Las demás revisiones permanecen planificadas; ninguna se presenta como una reunión real realizada.
 
 Las ocho historias sin subdividir y las dieciséis subdivisiones conservan las 24 unidades de estimación y los **124 puntos**, contados una vez. Las cuatro subdivisiones de cada principal se entregan juntas; no se acepta una página a medias para completar sus otras partes después.
 
@@ -1465,7 +1475,7 @@ Cada página se integra, prueba y documenta en su sprint según la DoD. La reuti
 
 **Aceptación:** verificar la página completa, sus componentes, pruebas, permisos, precedencia y carga profesional. Ninguna tarea propia o componente necesario queda pendiente para aceptar esa página.
 
-**Sprint Review planificada — 23/09/2026 (simulada):** dura hasta 2 h y la facilita QSM como Scrum Master. Participan PO, el equipo del sprint y César, unos 30 min según su disponibilidad, conforme al [Plan de Comunicaciones](#interesados-y-comunicaciones-académicas). Se revisarían Landing, inicio de sesión, registro, recuperación, Mi cuenta y Catálogos (H01–H04, H08 y H11; 28 puntos) frente al Sprint Goal, los criterios de aceptación y la DoD. Las observaciones se usarían para ajustar el Product Backlog. Todavía no se ha realizado y no tiene resultados registrados.
+**Sprint Review planificada — 23/09/2026 (simulada):** dura hasta 2 h y la facilita QSM como Scrum Master. Participan PO, el equipo del sprint y César, unos 30 min según su disponibilidad, conforme al [Plan de Comunicaciones](#interesados-y-comunicaciones-académicas). Se revisarían Landing, inicio de sesión, registro, recuperación, Mi cuenta y Catálogos (H01–H04, H08 y H11; 28 puntos) frente al Sprint Goal, los criterios de aceptación y la DoD. La [acta de Semana 9](#acta-de-sprint-review-del-sprint-1) representa ese cierre y sus observaciones como supuestos académicos; no acredita una reunión ni pruebas reales.
 
 #### Sprint 2: clientes, cobros y documentos completos
 
@@ -1484,6 +1494,8 @@ Cada página se integra, prueba y documenta en su sprint según la DoD. La reuti
 | Componentes y tareas comunes | T026, T086, T087, T089–T091 | 72 | 126 |
 
 **Acciones de riesgo del Sprint Backlog:** AR01–AR06, AR08, AR09, AR11 y AR12, con estado inicial **Por hacer**, conforme al [plan de Semana 8](#acciones-de-riesgo-en-los-sprint-backlogs). Detallan controles de las tareas existentes; se conservan sus responsables técnicos, estimaciones y puntos.
+
+**Mejoras incorporadas desde la Retrospective de S1:** [AM01 — Componentes, AM02 — Decisiones y AM03 — Evidencia](#acciones-de-mejora-para-el-sprint-2), con responsables y fechas del escenario en Semana 9. Permanecen **Por hacer**; son controles dentro del trabajo y las bolsas existentes, sin nuevos ID T, puntos ni horas duplicadas.
 
 **Aceptación:** verificar la página completa, sus componentes, pruebas, permisos, precedencia y carga profesional. Ninguna tarea propia o componente necesario queda pendiente para aceptar esa página.
 
@@ -2725,7 +2737,18 @@ D6 refuerza la concentración de trabajo al entregar páginas completas. LT, D4 
 
 #### Disponibilidad y carga por sprint
 
-Máximo **80 h brutas por persona y sprint**: 80% planificable y 20% para coordinación, ceremonias e interrupciones. Cada bolsa se calcula como **máximo entre continuidad y carga P ÷ 0,8, redondeada hacia arriba a bloques de 4 h**. Continuidad: LT/D4/D6, 16 h por sprint; los otros desarrolladores, 8 h y 16 h en S5; QSM, 32 h; PO, 20 h; UX, 24 h en S1, 4 h en S2–S4 y 8 h en S5. QA2 se reserva cuando tiene tareas. Al trasladar H06 a S5 con T022 (D3) y T024 (D2) en paralelo, las horas brutas de H06 de D1 (16 h), D3 (20 h) y D6 (12 h) pasan de S4 a S5 junto con su reserva de continuidad y cierre, y D3 cede 4 h brutas a D2 (D2 pasa de 236 a 240 h y D3 de 260 a 256 h), manteniendo las 2.220 h brutas del equipo. Son supuestos del ejercicio incluidos en el costo.
+Máximo **80 h brutas por persona y sprint**: 80% planificable y 20% para coordinación, ceremonias e interrupciones. La fórmula fija una **bolsa mínima**, no siempre la bolsa finalmente reservada: **máximo entre continuidad y carga P ÷ 0,8, redondeado hacia arriba a bloques de 4 h**. Continuidad: LT/D4/D6, 16 h por sprint; los otros desarrolladores, 8 h y 16 h en S5; QSM, 32 h; PO, 20 h; UX, 24 h en S1, 4 h en S2–S4 y 8 h en S5. QA2 se reserva cuando tiene tareas.
+
+La tabla de disponibilidad conserva estas bolsas superiores al mínimo tras redistribuir H06. La diferencia es disponibilidad adicional para apoyo, continuidad y cierre, ya contratada en el escenario:
+
+| Profesional y sprint | Mínimo según fórmula (h brutas) | Bolsa reservada (h brutas) | Diferencia incluida (h brutas) |
+| --- | --- | --- | --- |
+| D1 — S5 | 16 | 32 | 16 |
+| D3 — S4 | 8 | 16 | 8 |
+| D3 — S5 | 20 | 36 | 16 |
+| D6 — S5 | 16 | 28 | 12 |
+
+Las **52 h brutas de diferencia ya forman parte de las 2.220 h brutas y del presupuesto**; no se agregan otra vez. El reparto 80%/20% se aplica una sola vez a las bolsas reservadas. Al trasladar H06 a S5, las horas brutas de D1 (16 h), D3 (20 h) y D6 (12 h) pasan de S4 a S5 con su disponibilidad de continuidad y cierre; además, D3 cede 4 h brutas a D2, que pasa de 236 a 240 h, y D3 pasa de 260 a 256 h. No cambian las bolsas finales ni sus costos.
 
 Los profesionales deben estar disponibles en sus bloques; una bolsa parcial no autoriza superponer actividades. D4 combina infraestructura y desarrollo sin duplicar horas. QSM actúa como único Scrum Master en los cinco sprints: en S1–S3 dedica su bolsa de 32 h brutas por sprint a facilitación, seguimiento del tablero, verificación de la DoD y preparación de pruebas; en S4 ejecuta además T094 (14 h base / 22 h P) y en S5 ejecuta T096 y T099 (28 h base / 42 h P) dentro de sus 56 h brutas reservadas.
 
@@ -2963,7 +2986,7 @@ WIP significa trabajo en curso. El límite se aplica a tarjetas; la [asignación
 | [H08 — Mi cuenta](#tarjeta-h08-mi-cuenta) · Jeremy Rodríguez Esquivel | — | — | — |
 | [H11 — Catálogos](#tarjeta-h11-catálogos) · Brian Rodríguez Pérez | — | — | — |
 
-**Conteo inicial:** 6 Por hacer; 0 En progreso; 0 En revisión; 0 Hecho. **Puntos:** 28 planificados y 0 terminados. Preparar el expediente no equivale a programar estas funciones.
+**Conteo inicial:** 6 Por hacer; 0 En progreso; 0 En revisión; 0 Hecho. **Puntos:** 28 planificados y 0 terminados. Preparar el expediente no equivale a programar estas funciones. La [Review de Semana 9](#acta-de-sprint-review-del-sprint-1) representa un cierre posterior hipotético de S1; no cambia esta carga inicial ni acredita desarrollo real.
 
 #### Carga inicial y condición de terminado
 
@@ -3222,3 +3245,92 @@ Los tipos de acuerdo de esta tabla son **clasificaciones propuestas para el ejer
 3. Mantener el seguimiento en las tarjetas y esta sección, con estado, dueño, evidencia, revisión siguiente y motivo del cambio. Registrar una acción completada solo al contar con evidencia; revisar una oportunidad por el beneficio observado.
 4. Escalar bloqueos según el Plan de Comunicaciones. R01/R02/R08 conservan prioridad alta después de la respuesta proyectada; no se cierran por redactar el plan.
 5. En T104–T105 informar controles comprobados, pendientes, riesgo residual y decisiones de aceptación. Brian y Jeremy mantienen la revisión documental y el historial en Git; los profesionales y resultados del caso se identifican como simulados cuando corresponda.
+
+---
+
+## Semana 9 · Funciones, responsabilidades y equipo del proyecto
+
+> **Fecha lectiva de referencia:** miércoles 11 de noviembre de 2026. Preparación documental: 14 de noviembre de 2026.
+>
+> **Entregables:** Acta de Sprint Review y Acta de Sprint Retrospective del Sprint 1, con acciones incorporadas al Sprint Backlog 2.
+
+Se aplica la guía de Semana 9, diapositivas 14 y 15 del archivo, numeradas 13 y 14 en el pie. Se representa el cierre del [Sprint 1](#sprint-1-base-técnica-acceso-completo-landing-y-catálogos), del 10 al 23 de septiembre de 2026. Esta fecha pertenece al escenario de desarrollo; no sitúa la clase de Semana 9 en septiembre.
+
+**Alcance de las actas:** son una simulación documental preparada para el ejercicio. Los asistentes, resultados, comentarios y acuerdos siguientes son representados; no acreditan reuniones, respuestas de César, ejecución de software ni revisión humana realizadas. La evidencia real disponible es el expediente y sus cálculos. Los casos de prueba y la aceptación del incremento se suponen para practicar ambos eventos.
+
+### Roles de la simulación
+
+| Persona o código | Función en las actas |
+| --- | --- |
+| PO — Product Owner/analista | Expone el objetivo, ordena el backlog y representa las decisiones sobre aceptación según los criterios y la DoD. |
+| QSM — Scrum Master y QA | Único Scrum Master del escenario: facilita ambos eventos, registra impedimentos y sigue las mejoras. |
+| LT, D1–D6 y UX — Developers | Representan al equipo técnico del Sprint 1; muestran las páginas, sus componentes y las comprobaciones. LT coordina la explicación técnica. |
+| César — dueño de RYC | Interesado representado en la Review para revisar el valor y las reglas del negocio; no participa en la Retrospective. |
+| Brian y Jeremy | Autores del expediente académico; documentan la simulación. No se cuentan como profesionales adicionales ni como asistentes reales acreditados. |
+
+Se utilizan los [puestos y dedicaciones existentes](#puestos-experiencia-y-dedicación). QA2 no tiene trabajo asignado en S1 y no se añade como asistente de este caso. Preparar estas actas no acredita que Brian y Jeremy ya hayan realizado su revisión cruzada.
+
+### Acta de Sprint Review del Sprint 1
+
+**Fecha representada:** 23/09/2026, al finalizar S1. **Duración supuesta:** 60 minutos, dentro del máximo planificado de 2 h; César interviene en un bloque de 30 minutos. **Asistentes representados:** PO, QSM, LT, D1–D6, UX y César. QSM facilita; PO registra decisiones y Developers explican el incremento.
+
+**Sprint Goal:** Habilitar la Landing, el acceso completo, Mi cuenta y los catálogos de César, con correo y entorno disponibles.
+
+#### Incremento y comprobación de la DoD
+
+Para este caso se supone que las seis historias siguientes se han integrado y cumplen todos sus criterios y la [DoD](#criterios-de-terminación-y-aceptación). Cada fila resume qué se mostraría y qué evidencia sustentaría esa conclusión; no sustituye los criterios completos de Semana 5.
+
+| Historia y puntos | Demostración y evidencia previstas |
+| --- | --- |
+| H01 — Landing Page · 5 | Contenido y condiciones aprobados en el caso; formulario que prepara WhatsApp sin guardar solicitud, contacto directo y alternativa de copia; uso en celular y computadora. |
+| H02 — Inicio de sesión · 5 | Entrada de cliente y César, errores neutros, límite de intentos, cierre y vencimiento por inactividad; solo se ofrecen páginas disponibles en S1. |
+| H03 — Crear cuenta · 5 | Campos y duplicados validados, contraseña protegida con Argon2id, UUID y verificación de correo; el registro público crea solo cuentas de cliente. |
+| H04 — Recuperar acceso · 5 | Solicitud y cambio de contraseña completos; correo recibido en el entorno supuesto, enlace de un uso y 30 minutos, rechazo de enlaces usados o vencidos. |
+| H08 — Mi cuenta · 3 | Copiar ID y editar nombre/teléfono con validaciones; correo e ID de solo lectura, recuperación y cierre de sesión. |
+| H11 — Catálogos de César · 5 | Alta, edición y desactivación de plagas/productos sin perder referencias; tarjetas en celular y tablas en computadora mediante T093 — Listados por rol, disponible en S1. |
+
+**Evidencia común esperada:** las 26 tareas de S1 completas, incluidos sus componentes; casos unitarios, de integración y manuales, validaciones, permisos, teclado y adaptación; revisión técnica de otro profesional y documentación de resultados. T101 — Publicación proporciona HTTPS, correo y archivos privados; T100 — Datos de demostración permite recorrer las páginas con información ficticia. Ninguna tarea o evidencia se declara ejecutada realmente en estas actas.
+
+**Resultado representado:** objetivo cumplido y seis historias aceptadas por PO en el caso simulado, con **28 puntos** contados una vez. En S1, César inicia en Catálogos y el cliente en Mi cuenta. Los paneles y páginas de sprints posteriores no se presentan como construidos.
+
+#### Retroalimentación y decisiones sobre el backlog
+
+Los comentarios siguientes representan el punto de vista del rol de César a partir de reglas ya aprobadas; no son respuestas obtenidas de él.
+
+| Observación del caso | Decisión representada de PO |
+| --- | --- |
+| Contactar a RYC debe seguir siendo posible sin cuenta y abrir WhatsApp no debe guardar una solicitud. | Mantener H01 y sus criterios; no añadir chat ni integración automática de conversaciones. |
+| Antes de operar, César necesita clientes, sedes, permisos, cobros y documentos. | Mantener H09 y H12 completas como prioridad de S2, con sus ocho subdivisiones y componentes. |
+| Los formularios y documentos deben respetar los permisos de cada cliente y sede. | Conservar los controles previstos; revisar su trazabilidad y preparación mediante las acciones AM01–AM03 de la Retrospective. |
+
+**Cambio al Product Backlog:** no se añaden ni retiran funciones, historias o tareas técnicas. Se mantiene la prioridad de S2 y se incorporan sus tres controles de mejora al Sprint Backlog siguiente. Siguen vigentes **12 historias principales, 16 subdivisiones, 105 tareas y 124 puntos**; tampoco cambian fechas, estimaciones ni presupuesto.
+
+**Avance frente al [Release Plan](#cronograma-de-entregas-release-plan):** el cierre representado coincide con las seis historias y 28 puntos previstos para S1. Quedan **96 puntos por entregar en el escenario**: S2, 42; S3, 28; S4, 18; S5, 8. Estos 96 son trabajo pendiente después del S1 simulado. El [tablero de Semana 7](#vista-del-tablero) conserva su carga inicial de seis tarjetas Por hacer y cero puntos terminados; esta acta describe otro momento del caso y no registra desarrollo real.
+
+### Acta de Sprint Retrospective del Sprint 1
+
+**Fecha representada:** 23/09/2026, después de la Review. **Duración supuesta:** 45 minutos. **Asistentes representados:** PO, QSM, LT, D1–D6 y UX; QSM facilita. **Formato:** Empezar, dejar de hacer y continuar (Start/Stop/Continue). Se examina el proceso sin atribuir culpas personales.
+
+#### Observaciones y seguimiento anterior
+
+Las observaciones se basan en la planificación documentada y en el caso supuesto de la Review; no describen incidencias de programación observadas.
+
+| Enfoque | Observación y evidencia del expediente |
+| --- | --- |
+| Continuar — qué funciona | La lista de S1 vincula seis historias completas con 26 tareas y componentes disponibles. La DoD exige integración, revisión, permisos y uso en ambos dispositivos antes de aceptar páginas. |
+| Dejar de hacer — qué debe evitarse | Una explicación o previsión de prueba no acredita ejecución. El tablero inicial conserva cero terminados; al informar avances hay que indicar fecha, evidencia y si el resultado es supuesto. |
+| Empezar — qué falta reforzar | Antes de cada Review debe comprobarse en una sola revisión que tareas, componentes, decisiones y evidencia corresponden al sprint. Las estimaciones y el registro de decisiones ofrecen la base para ese control. |
+
+**Acciones del sprint anterior:** no aplica; este es el primer ciclo representado. No se inventan acuerdos ni resultados previos.
+
+#### Acciones de mejora para el Sprint 2
+
+Las fechas son compromisos del **escenario S2, del 24/09 al 07/10/2026**. Las tres acciones quedan **Por hacer** y se incorporan expresamente al [Sprint Backlog 2](#sprint-2-clientes-cobros-y-documentos-completos); no son tareas técnicas T nuevas ni historias adicionales.
+
+| Acción | Responsable | Fecha límite del escenario | Comprobación de cumplimiento |
+| --- | --- | --- | --- |
+| AM01 — Revisar la disponibilidad de componentes antes de iniciar H09 y H12. Contrastar tareas previas, bloques y reutilización. | LT | 24/09/2026, en Planning de S2. | Lista de ambas historias con todos sus componentes, sprint y dependencias; ningún componente necesario queda previsto después de la aceptación. Registrar cualquier bloqueo. |
+| AM02 — Registrar las decisiones de negocio de S2 y sus dudas con referencias H/T. Distinguir regla aprobada, supuesto y consulta pendiente. | PO | 25/09/2026 para el registro inicial; mantenerlo durante S2. | Cada decisión identifica origen, fecha, estado y efecto; los permisos por sede y el dinero confirmado conservan sus reglas. Una consulta sin respuesta sigue pendiente. |
+| AM03 — Revisar la evidencia y el estado de cada historia antes de la Review de S2. Separar resultados simulados, comprobaciones reales y pendientes. | QSM | 07/10/2026, antes de la Review de S2. | H09 y H12 tienen estado, criterios, componentes y evidencia identificada; PO puede justificar aceptación o rechazo sin declarar pruebas ni aprobaciones inexistentes. |
+
+**Seguimiento:** QSM comprueba estas tres acciones al preparar la Retrospective de S2. Una acción solo se cierra con su evidencia; si sigue pendiente, se explica el impedimento y se conserva su responsable. Son controles de planificación, calidad y coordinación dentro de las tareas y bolsas existentes; no se suman otra vez horas, puntos ni costos. La Review inspecciona el producto; la Retrospective mejora cómo se planifica y revisa el trabajo.
