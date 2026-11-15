@@ -108,6 +108,7 @@ Sede Regional San Carlos
       - [Convenciones de presentación](#convenciones-de-presentación)
       - [Mensajes de validación de campos](#mensajes-de-validación-de-campos)
       - [Navegación](#navegación)
+        - [Enlaces entre páginas de distintos sprints](#enlaces-entre-páginas-de-distintos-sprints)
       - [Cómo se organiza cada página](#cómo-se-organiza-cada-página)
       - [Landing Page y acceso a la aplicación web](#landing-page-y-acceso-a-la-aplicación-web)
         - [Landing Page de RYC](#landing-page-de-ryc)
@@ -325,7 +326,7 @@ Capacidades previstas del producto:
 
 ## Bitácora de cambios del proyecto
 
-> **Fuente:** historial de Git de `main`, revisado el 14/11/2026 hasta `b37dbb5`, más la entrega de Semana 9 identificada en esta tabla. Los archivos agregados (A), modificados (M) o eliminados (D) se comparan con el primer padre de cada commit; las diferencias respecto de otra rama se explican aparte.
+> **Fuente:** historial de Git de `main`, revisado el 14/11/2026 hasta `cc59464`, más la aclaración de navegación identificada en esta tabla. Los archivos agregados (A), modificados (M) o eliminados (D) se comparan con el primer padre de cada commit; las diferencias respecto de otra rama se explican aparte.
 
 ### Archivos incorporados y eliminados
 
@@ -364,7 +365,8 @@ Capacidades previstas del producto:
 | 05/11/2026 | `a8264ad` | Brian Rodriguez | Scrum Master QSM, Sprint Reviews y subdivisiones | M `README.md` | Formaliza a QSM como único Scrum Master ficticio, incorpora las cinco Sprint Reviews planificadas y alinea la entrega prevista de las 16 subdivisiones con su historia principal. |
 | 05/11/2026 | `e9fc1f7` | Brian Rodriguez | Redistribución de H06 al Sprint 5 y recálculo | M `README.md` | Traslada H06 (8 puntos) al Sprint 5 (28 / 42 / 28 / 18 / 8 = 124 puntos), paraleliza T022 y T024, ajusta dependencias, bolsas de D2 y D3, presupuestos de S4 y S5 y riesgo R02. |
 | 05/11/2026 | `b37dbb5` | Brian Rodriguez | Precisiones de H05 y comprobaciones de S5 | M `README.md` | Aclara la disponibilidad de «Ver mis pagos» y el alcance de T095/T097. |
-| 14/11/2026 | Entrega de Semana 9 | jrodriguezes | Actas del Sprint 1 y aclaraciones documentales | M `README.md`; sin archivos nuevos o eliminados | Agrega las actas de Review y Retrospective, roles y tres mejoras en el Sprint Backlog 2; actualiza índice, referencias y bitácora, y explica las bolsas superiores al mínimo sin cambiar cifras. |
+| 14/11/2026 | `cc59464` | jrodriguezes | Actas de Semana 9 y aclaraciones documentales | M `README.md`; sin archivos nuevos o eliminados | Agrega las actas de Review y Retrospective, roles y tres mejoras en el Sprint Backlog 2; actualiza índice, referencias y bitácora, y explica las bolsas superiores al mínimo sin cambiar cifras. |
+| 14/11/2026 | Aclaración de navegación entre sprints | jrodriguezes | Páginas completas y enlaces a destinos posteriores | M `README.md`; sin archivos nuevos o eliminados | Distingue funciones propias de redirecciones; aclara destinos iniciales, acceso a historial y Atenciones y enlace H05–H06. La integración se comprueba al entregar el destino; conserva tareas, fechas, horas y presupuesto. |
 
 ### Correcciones de la entrega del 05/11/2026
 
@@ -498,7 +500,7 @@ El cliente acepta propuestas e informa pagos; César registra respuestas externa
 
 #### Contenido y recorrido
 
-**Público.** Acción principal: **Contactar por WhatsApp**; secundaria: **Ver mi historial**.
+**Público.** Acción principal: **Contactar por WhatsApp**; secundaria: **Ver mi historial**, cuando H05 esté disponible según [Navegación](#enlaces-entre-páginas-de-distintos-sprints). Crear cuenta e iniciar sesión están disponibles desde S1.
 
 | Sección, en orden   | Contenido                                                                                      |
 | ------------------- | ---------------------------------------------------------------------------------------------- |
@@ -943,7 +945,7 @@ Los opcionales vacíos no generan error. Los valores introducidos cumplen format
 
 #### Navegación
 
-Esta sección describe la aplicación completa. En los [incrementos del plan](#sprints-y-sprint-backlogs), los enlaces se habilitan al entregar cada página completa: inicialmente César accede a Catálogos y el cliente a Mi cuenta; los paneles se convierten en el destino de entrada cuando están disponibles.
+Esta sección describe la aplicación completa. En los [incrementos del plan](#sprints-y-sprint-backlogs), los enlaces se habilitan al entregar cada página completa: inicialmente César accede a Catálogos y el cliente a Mi cuenta; los paneles se convierten en el destino de entrada cuando están disponibles. La disponibilidad por sprint se aplica también a los accesos entre páginas definidos abajo.
 
 | Área                    | Menú, en orden                                                                            |
 | ----------------------- | ----------------------------------------------------------------------------------------- |
@@ -955,6 +957,22 @@ Esta sección describe la aplicación completa. En los [incrementos del plan](#s
 RYC al inicio del encabezado. Lateral visible desde 1024 px; debajo, **Menú** abre/cierra, seleccionar y Escape cierran. La Landing utiliza su [encabezado público](#landing-page-de-ryc).
 
 Historial/próximas visitas requieren correo verificado y asociación activa; demás funciones según [permisos](#empresas-sedes-y-cuentas). Sin asociación: **Aún no tienes un historial asociado. Comunica tu ID a César si ya has recibido servicios.**
+
+##### Enlaces entre páginas de distintos sprints
+
+Una página se acepta cuando sus funciones propias y componentes necesarios están completos y utilizables. **El enlace a otra página independiente puede habilitarse después**, al entregarse esa historia. Hasta entonces, el acceso se mantiene oculto. La navegación y los permisos se comprueban al integrar la página de destino; se reutiliza T092 — Menús, sin reconstruir la página de origen ni volver a contar sus puntos.
+
+Esta regla solo permite diferir navegación. Un formulario, cálculo, permiso, dato o componente necesario para usar la página debe estar terminado en su sprint. La [Guía Scrum, Incremento y DoD](https://scrumguides.org/scrum-guide.html#increment), exige un incremento utilizable que cumpla la Definición de Terminado; la regla de enlaces es la forma acordada de aplicar ese criterio en este producto.
+
+| Página de origen | Comportamiento hasta entregar el destino | Activación e integración |
+| --- | --- | --- |
+| H01 — Landing, S1 | Permite registro e inicio de sesión desde S1; oculta el acceso «Ver mi historial» mientras no exista el panel del cliente. | H05, S4: habilitar el acceso al historial, pasando por login si falta sesión. |
+| H02 — Login y H03 — Registro, S1 | Tras entrar, el cliente va a H08 — Mi cuenta. César va a H11 — Catálogos. | H07, S3: César entra a su panel. H05, S4: el cliente entra al suyo; el registro también utiliza ese destino. |
+| H08 — Mi cuenta y H11 — Catálogos, S1 | Los menús muestran solo las páginas entregadas y permitidas para el rol. | Administración: Clientes/Cobros en S2 e Inicio/Calendario en S3. Cliente: Inicio en S4 y Pagos y documentos en S5. |
+| H09 — Clientes, S2 | Todas sus funciones propias e históricos están disponibles; oculta «Registrar contacto» y los accesos al panel de atenciones. | H07, S3: T028 — Contacto y T029 — Solicitudes integran esos accesos con el cliente precargado. |
+| H05 — Panel del cliente, S4 | Resumen, solicitudes, visitas e historial completos; pagado/pendiente mediante T087. «Ver mis pagos» permanece oculto. | H06, S5: T022 — Consulta de pagos habilita el enlace y comprueba navegación y permisos desde H05. |
+
+La verificación del correo utiliza T009 — Verificación de correo desde S1; mientras H05 no esté disponible, el aviso y el reenvío se presentan en Mi cuenta. H04 entrega sus dos páginas juntas en S1. Los accesos entre H07 y H10 se integran en S3; los de H07 hacia Clientes y Cobros usan páginas ya terminadas en S2. La reutilización de formularios de Cobros dentro de Atenciones se integra con H07 en S3, conservando H12 completa en S2.
 
 #### Cómo se organiza cada página
 
@@ -986,7 +1004,7 @@ Una fila por página; H04 reúne los dos pasos de recuperación.
 
 Encabezado con RYC, navegación, WhatsApp y **Ver mi historial**. Celular: **Menú** despliega sin tapar controles; contacto accesible. Enlaces internos, foco y teclado siguen el contenido.
 
-**Contactar por WhatsApp** prepara saludo; **Preparar mi consulta** abre el [formulario](#formulario-de-contacto-por-whatsapp); **Ver mi historial**, login; **Crear cuenta**, registro. Sin número autorizado y probado en ambos dispositivos se bloquea publicar contacto.
+**Contactar por WhatsApp** prepara saludo; **Preparar mi consulta** abre el [formulario](#formulario-de-contacto-por-whatsapp); **Crear cuenta**, registro. **Ver mi historial** se habilita con H05 en S4 y pasa por login si falta sesión, según [Navegación](#enlaces-entre-páginas-de-distintos-sprints). Sin número autorizado y probado en ambos dispositivos se bloquea publicar contacto.
 
 ###### Formulario de contacto por WhatsApp
 
@@ -996,7 +1014,7 @@ Una columna, máximo 640 px; [campos y comportamiento](#formulario-breve-para-pr
 
 **Público. Orden:** RYC, **Iniciar sesión**, correo, contraseña, **Entrar**, recuperación, registro. Campos obligatorios/vacíos; correo común y contraseña oculta con **Mostrar contraseña**.
 
-**Entrar** o Enter envían. César entra a Administración; cliente a su Panel con aviso de verificación si falta. **Olvidé mi contraseña** abre [Recuperar acceso](#recuperar-acceso); **Crear cuenta**, [registro](#crear-cuenta); **Volver a RYC**, Landing. WhatsApp sin sesión.
+**Entrar** o Enter envían. El destino depende del rol y las [páginas entregadas](#enlaces-entre-páginas-de-distintos-sprints): inicialmente César va a Catálogos y el cliente a Mi cuenta; después, a sus paneles. Se mantiene el aviso de verificación si falta. **Olvidé mi contraseña** abre [Recuperar acceso](#recuperar-acceso); **Crear cuenta**, [registro](#crear-cuenta); **Volver a RYC**, Landing. WhatsApp sin sesión.
 
 Errores: **El correo o la contraseña no coinciden.** / **Demasiados intentos. Espera un minuto y vuelve a intentarlo.** Aplicar [seguridad/sesión](#registro-e-inicio-de-sesión).
 
@@ -1004,7 +1022,7 @@ Errores: **El correo o la contraseña no coinciden.** / **Demasiados intentos. E
 
 **Público**, una columna, [campos del registro](#campos-del-registro) en orden; nombre/correo/teléfono de una línea y contraseñas ocultas con mostrar/ocultar.
 
-**Crear cuenta** valida, genera cuenta/ID y abre Panel con aviso de verificación; no crea empresa ni autoriza historial. **Ya tengo cuenta** abre login.
+**Crear cuenta** valida, genera cuenta/ID y abre Mi cuenta hasta que H05 esté disponible; desde S4 abre el Panel. El aviso de verificación usa T009 en ambos destinos. No crea empresa ni autoriza historial. **Ya tengo cuenta** abre login.
 
 Mensajes: **Escribe entre 8 y 128 caracteres.**, **Las contraseñas no coinciden.**, **Este correo ya está registrado. Inicia sesión o recupera tu acceso.**
 
@@ -1033,7 +1051,7 @@ Segundo paso con enlace válido. Nueva contraseña y Confirmar contraseña oblig
 
 **Ver solicitudes**, **Ver próxima visita** y **Ver historial** eligen pestaña y llevan al inicio de su contenido. Un listado visible; pestañas accesibles con teclado también en celular. Detalles/formularios permanecen dentro del panel según [contexto común](#cómo-se-organiza-cada-página).
 
-**Ver mis pagos** abre [Pagos y documentos](#pagos-y-documentos) (enlace que se habilita en Sprint 5 al completarse H06, conforme a la regla de navegación de mostrar solo páginas entregadas; en Sprint 4 la tarjeta de resumen ya presenta el estado pagado/pendiente mediante T087); atención consulta los mismos pagos/archivos. Aplicar [permisos](#empresas-sedes-y-cuentas); sin asociación, mostrar vínculo, acceso a Mi cuenta para copiar ID y solicitudes propias.
+**H05 se acepta completa en S4** con su resumen pagado/pendiente mediante T087 y todas sus funciones propias. **Ver mis pagos** permanece oculto hasta que H06 se entrega en S5; habilitar y comprobar ese acceso a [Pagos y documentos](#pagos-y-documentos) corresponde a H06, según la [regla de enlaces](#enlaces-entre-páginas-de-distintos-sprints). Atención consulta los mismos pagos/archivos. Aplicar [permisos](#empresas-sedes-y-cuentas); sin asociación, mostrar vínculo, acceso a Mi cuenta para copiar ID y solicitudes propias.
 
 ###### Verificación del correo en el portal
 
@@ -1045,7 +1063,7 @@ Enlace de **60 minutos** para esa cuenta; reenvío bloqueado **60 segundos** con
 
 Solo propias; no cambiar estados administrativos. Listado: fecha, tipo, lugar, estado, **Ver detalle**. Filtros Consultoría/Nueva visita y estado; **Limpiar filtros**. Detalle: datos enviados, costo, decisiones y programación.
 
-Costo pendiente: **Aceptar costo de consultoría** / **No aceptar costo**, confirmando total/lugar según [decisión](#consultoría-y-aceptación-del-servicio). **Ir a pagos** despliega orden en el detalle. WhatsApp conserva referencia y decisiones en la misma solicitud.
+Costo pendiente: **Aceptar costo de consultoría** / **No aceptar costo**, confirmando total/lugar según [decisión](#consultoría-y-aceptación-del-servicio). **Ir a pagos** muestra la orden y sus importes dentro del detalle, mediante T086/T087 ya disponibles: funciona en S4 y no redirige a H06. La consulta general, filtros y reporte de pagos de H06 llegan en S5. WhatsApp conserva referencia y decisiones en la misma solicitud.
 
 ###### Formulario de consultoría del portal
 
@@ -1226,7 +1244,7 @@ Elegir tipo y [campos](#clientes-ubicaciones-y-servicios). Primera fila: nombre/
 
 ###### Ficha del cliente y cuentas autorizadas
 
-Encabezado: nombre/razón social, tipo, estado. Secciones: Datos, Atenciones, Ubicaciones, Cuentas, Historial, Pagos y Documentos. Atenciones enlaza solicitud, propuesta, orden, visita, servicio/documentos por referencia, con datos precargados; **Registrar contacto** precarga cliente.
+Encabezado: nombre/razón social, tipo, estado. Secciones: Datos, Atenciones, Ubicaciones, Cuentas, Historial, Pagos y Documentos. H09 se acepta completa en S2 con sus funciones propias e históricos. Los accesos al panel de atenciones y **Registrar contacto** se habilitan con H07 en S3, manteniendo cliente y referencias precargados según la [regla de enlaces](#enlaces-entre-páginas-de-distintos-sprints).
 
 Cuentas: nombre, correo, ID, alcance, sede, fecha. **Asociar cuenta** pide ID; **Buscar cuenta** muestra nombre/correo verificado. Errores: **Introduce un ID de cuenta válido.** / **No se encontró una cuenta con ese ID.**
 
@@ -1338,7 +1356,7 @@ Archivos: nombre/tamaño, **Quitar archivo** antes de guardar. **Guardar documen
 
 ##### Mi cuenta
 
-**Cliente y César, perfil propio.** Nombre, correo, teléfono e ID; correo/ID de solo lectura. **Copiar ID** muestra **ID copiado**. **Editar datos** habilita nombre/teléfono con [reglas del registro](#campos-del-registro); **Guardar cambios/Cancelar**. **Recuperar contraseña** abre recuperación; **Cerrar sesión** invalida sesión y abre login.
+**Cliente y César, perfil propio.** Nombre, correo, teléfono e ID; correo/ID de solo lectura. **Copiar ID** muestra **ID copiado**. **Editar datos** habilita nombre/teléfono con [reglas del registro](#campos-del-registro); **Guardar cambios/Cancelar**. **Recuperar contraseña** abre recuperación; **Cerrar sesión** invalida sesión y abre login. Desde S1, una cuenta de cliente sin verificar dispone aquí del aviso y reenvío de T009 mientras H05 no esté entregada; se aplican las mismas [reglas de verificación](#verificación-del-correo-en-el-portal).
 
 ### Comprobaciones del sistema
 
@@ -1416,7 +1434,7 @@ Terminar una historia principal desglosada exige comprobar todas sus subdivision
 1. **Preparación y acceso completos:** modelo, estilos, permisos necesarios, correo, cuenta de César, registro, recuperación y Mi cuenta antes de depender de ellos. La Landing y los catálogos aportan valor desde el primer sprint.
 2. **Datos administrativos antes del autoservicio:** particulares, empresas, sedes, cuentas autorizadas, antecedentes, cobros y documentos permiten operar sin exigir una cuenta al cliente.
 3. **Operación antes de resúmenes:** agenda, contacto, cotización manual, aceptación, pago previo y tratamiento antes del resumen administrativo; el resumen del cliente espera sus consultas de solicitudes, visitas, historial y el cálculo de pagado/pendiente (T087), mientras que el enlace a Pagos y documentos se habilita al entregarse H06 en S5.
-4. **Páginas completas:** todas las tareas propias, subdivisiones, componentes, validaciones y acciones de una página deben estar listas al aceptarla. No se traslada una parte pendiente al sprint siguiente.
+4. **Páginas completas:** todas las tareas propias, subdivisiones, componentes, validaciones y acciones de una página deben estar listas al aceptarla. Los enlaces a otras páginas independientes siguen la [regla de navegación](#enlaces-entre-páginas-de-distintos-sprints); no permiten posponer funciones propias.
 5. **Reutilización comprobada:** cada componente se construye y estima una vez, antes de su primera página o en ese mismo sprint. Las páginas siguientes verifican su integración dentro de sus propias tareas.
 6. **Capacidad y calidad:** respetar dependencias, disponibilidad por especialidad, revisión y DoD. Si el conjunto no cabe, revisar recursos y presupuesto manteniendo los cinco sprints, sin declarar trabajo incompleto como terminado.
 
@@ -1424,7 +1442,7 @@ Terminar una historia principal desglosada exige comprobar todas sus subdivision
 
 **Calidad del producto representado — Definición de Terminado (DoD):**
 
-Cada historia y página debe cumplir todos sus criterios y tareas, incluidas las subdivisiones y los componentes comunes aplicables, dentro del sprint de entrega. Una página parcial no se acepta ni suma puntos. Además se aplican los siguientes criterios de calidad:
+Cada historia y página debe cumplir todos sus criterios y tareas propios, incluidas las subdivisiones y los componentes comunes necesarios, dentro del sprint de entrega. Una página parcial no se acepta ni suma puntos. Un enlace a otra página independiente puede activarse al entregarse su destino, conforme a la [regla de navegación](#enlaces-entre-páginas-de-distintos-sprints); esto no deja incompletas las funciones aceptadas ni permite aplazar validaciones o permisos. Además se aplican los siguientes criterios de calidad:
 
 1. **Pruebas:** definir los casos unitarios, de integración y manuales aplicables, con entradas, pasos y resultados esperados; resolver los fallos que impidan aceptar la historia.
 2. **Seguridad:** comprobar validaciones y permisos en el servidor para proteger los registros y archivos de cada cliente y sede.
@@ -1670,7 +1688,7 @@ Los grupos de datos generales, plagas/productos, tratamiento y recomendaciones s
 
 | ID   | Tarea                               | Resultado comprobable                                                                      | Dependencias           |
 | ---- | ----------------------------------- | ------------------------------------------------------------------------------------------ | ---------------------- |
-| T010 | Mostrar resumen y pestañas. | Resumen y pestañas completos después de solicitudes, visitas, historial y saldos con T087; conservar filtros. El enlace a Pagos y documentos se habilita al entregar H06 en S5. | T009, T013, T018, T021, T041, T087, T089 |
+| T010 | Mostrar resumen y pestañas. | Resumen y pestañas completos en S4, con solicitudes, visitas, historial y saldos de T087; conservar filtros. Ocultar el acceso a H06 hasta su entrega; H06 integra el enlace en S5 mediante T022. | T009, T013, T018, T021, T041, T087, T089 |
 | T011 | Construir solicitud de consultoría. | Formulario territorial integrado; distinguir solicitud de visita. | T088, T092 |
 | T012 | Guardar solicitud de consultoría. | Solicitante/lugar autorizados; fecha preferida no reserva. | T009, T011, T089 |
 | T013 | Consultar solicitudes propias. | Listado, detalle y propuesta dentro del panel, conservando contexto. | T012, T089 |
@@ -1693,7 +1711,7 @@ Los grupos de datos generales, plagas/productos, tratamiento y recomendaciones s
 
 | ID   | Tarea                                   | Resultado comprobable                                                            | Dependencias           |
 | ---- | --------------------------------------- | -------------------------------------------------------------------------------- | ---------------------- |
-| T022 | Mostrar y filtrar pagos. | Filtros, detalle, suma por moneda según [Pagos](#pagos-y-reportes-del-cliente) y enlace desde el panel; se construye en paralelo con T024 contra los componentes de S2. | T068, T070, T087 |
+| T022 | Mostrar y filtrar pagos. | Filtros, detalle y suma por moneda según [Pagos](#pagos-y-reportes-del-cliente); al entregar H06 en S5, habilitar y comprobar «Ver mis pagos» desde H05, con sus permisos. Construcción en paralelo con T024 contra los componentes de S2. | T068, T070, T087 |
 | T023 | Mostrar estado y rechazo. | Estado actualizado, motivo y opción de corregir reporte. | T068 |
 | T024 | Informar pago realizado. | [Reporte](#datos-del-reporte-de-pago) con orden fija en estado Pendiente de revisión; se construye en paralelo con T022 contra T087 y T089. | T087, T089 |
 | T025 | Guardar comprobante. | Archivo privado, tipo/tamaño según medio y efectivo sin archivo; integra T022 y T024 antes de aceptar H06. | T022, T024 |
@@ -1711,8 +1729,8 @@ Los grupos de datos generales, plagas/productos, tratamiento y recomendaciones s
 | ID   | Tarea                            | Resultado comprobable                                                                                       | Dependencias                 |
 | ---- | -------------------------------- | ----------------------------------------------------------------------------------------------------------- | ---------------------------- |
 | T027 | Mostrar pendientes de César. | Resumen administrativo después de las funciones de atención, agenda, dinero y documentos; tarjetas, ficha y filtros con datos reales disponibles o casos ficticios. | T029, T038, T059, T068, T075, T077 |
-| T028 | Registrar contacto recibido. | Guardar y abrir ficha; cliente/lugar pueden completarse después. | T079, T092 |
-| T029 | Listar solicitudes. | Contactos/solicitudes guardados y su ficha; enlace público no genera filas. | T028, T079, T089 |
+| T028 | Registrar contacto recibido. | Guardar y abrir ficha; cliente/lugar pueden completarse después. En S3 habilita «Registrar contacto» desde Clientes con el cliente precargado. | T079, T092 |
+| T029 | Listar solicitudes. | Contactos/solicitudes guardados y su ficha; en S3 integra los accesos desde Clientes por referencia. El enlace público no genera filas. | T028, T079, T089 |
 | T030 | Gestionar consultoría. | Estados, decisiones y cancelación conservan seguimiento y pago previo. | T029, T031, T033, T085 |
 | T031 | Registrar precio de consultoría. | San Carlos ₡0; fuera César introduce monto y moneda manualmente. La aceptación conserva cotización e instrucciones según [precio](#precio-de-la-consultoría). | T028, T045, T048 |
 | T032 | Registrar decisión externa. | Aceptación/rechazo con fecha y canal. | T084, T086 |
@@ -1738,7 +1756,7 @@ Los grupos de datos generales, plagas/productos, tratamiento y recomendaciones s
 | T041 | Mostrar/copiar ID. | Identificador visible y copia con ID copiado. | T079, T092 |
 | T042 | Editar perfil. | Nombre/teléfono validados; correo/ID de solo lectura. | T041 |
 
-**Componentes comunes:** T092 — Menús. [Uso por persona](#componentes-utilizados-en-las-páginas).
+**Componentes comunes:** T009 — Verificación de correo; T092 — Menús. [Uso por persona](#componentes-utilizados-en-las-páginas).
 
 #### H09: Gestionar clientes, ubicaciones y cuentas autorizadas
 
@@ -1873,7 +1891,7 @@ T009, T026 y T078–T105 cubren correo, descargas, preparación, componentes reu
 | T089 | Aplicar permisos a datos/archivos. | Comprobar correo y alcance en consultas/acciones/descargas según [permisos](#empresas-sedes-y-cuentas). | T006, T079 |
 | T090 | Recibir/revisar datos de factura. | Dentro de orden; César revisa sin alterar ficha maestra. | T086, T089 |
 | T091 | Actualizar seguimiento relacionado. | Componente común probado en S2: una confirmación actualiza los registros y vistas relacionados. Calendario, paneles y pagos lo reutilizan al integrar sus acciones. | T079, T086, T087 |
-| T092 | Construir menús adaptables. | Estructura según [Navegación](#navegación) y [Diseño](#diseño-y-comportamiento-en-dispositivos); solo páginas entregadas. Antes de sus paneles, César ingresa a Catálogos y el cliente a Mi cuenta. | T080 |
+| T092 | Construir menús adaptables. | Estructura según [Navegación](#navegación) y [Diseño](#diseño-y-comportamiento-en-dispositivos); ocultar destinos no entregados y reutilizar el componente al integrar cada página. Inicialmente César entra a Catálogos y el cliente a Mi cuenta. | T080 |
 | T093 | Construir tarjetas y tablas para cliente y César. | Tarjetas en celular y tablas en computadora desde S1, con los mismos datos y acciones por rol y sin ampliar sus permisos. | T079, T080, T092 |
 
 ##### Pruebas de la aplicación web
@@ -1976,7 +1994,7 @@ para acceder de forma segura a las funciones y datos que me corresponden según 
 
 **Criterios de aceptación**
 
-1. Dado que el usuario ingresa sus credenciales válidas, cuando el sistema las comprueba, entonces inicia su sesión y lo redirige automáticamente según su rol (César al área administrativa y clientes al portal).
+1. Dado que el usuario ingresa credenciales válidas, cuando el sistema las comprueba, entonces inicia su sesión y lo lleva al destino disponible para su rol: César a Catálogos hasta entregar H07 en S3; el cliente a Mi cuenta hasta entregar H05 en S4. Después utiliza el panel correspondiente, según [Navegación](#enlaces-entre-páginas-de-distintos-sprints).
 2. Dado que las credenciales son incorrectas, cuando el usuario intenta ingresar, entonces el sistema rechaza el acceso con un mensaje neutro sin revelar cuál dato falló.
 3. Dado que se registran múltiples intentos fallidos consecutivos, cuando se alcanza el umbral de seguridad establecido, entonces el sistema restringe temporalmente nuevos intentos.
 4. Dado que el usuario permanece inactivo durante sesenta minutos, cuando vence la sesión, entonces el sistema exige autenticarse nuevamente para continuar.
@@ -2002,7 +2020,7 @@ para ingresar a la plataforma y dar seguimiento digital a mis solicitudes, visit
 1. Dado que una persona ingresa a la opción de crear cuenta, cuando completa nombre, correo electrónico, teléfono opcional, contraseña y confirmación, entonces el sistema registra la cuenta con rol de cliente.
 2. Dado que el correo electrónico ya pertenece a una cuenta registrada, cuando se intenta registrarlo nuevamente, entonces el sistema impide el duplicado y muestra una advertencia adecuada.
 3. Dado que la contraseña no cumple las condiciones de seguridad o no coincide con su confirmación, cuando se intenta guardar, entonces el sistema solicita corregirla detallando los requisitos pendientes.
-4. Dado que el registro se completa exitosamente, cuando se almacena la cuenta, entonces el sistema le asigna un identificador único (ID de cuenta) y muestra el aviso para verificar el correo.
+4. Dado que el registro se completa exitosamente, cuando se almacena la cuenta, entonces asigna un ID único, muestra el aviso de verificación y abre Mi cuenta hasta entregar H05; desde S4 abre el Panel del cliente.
 
 **Prioridad:** Alta.
 **Estimación:** 5 puntos de historia.
@@ -2052,6 +2070,7 @@ para coordinar de forma integral la atención de plagas en mis inmuebles y conta
 7. Dado que el cliente tiene visitas en estado Programada, cuando solicita reprogramación o cancelación indicando su motivo, entonces se genera una solicitud de cambio para revisión de César sin alterar la cita activa en la agenda.
 8. Dado que una cuenta verificada aún no tiene historial asociado, cuando el cliente completa el formulario de consultoría cumpliendo las condiciones del territorio, entonces puede solicitar una consultoría inicial sin necesidad de que César haya asociado previamente registros a esa cuenta.
 9. Dado que el cliente consulta su historial, cuando revisa los servicios finalizados y publicados que está autorizado a consultar, entonces puede visualizar fecha, plagas identificadas, tratamiento aplicado, químicos y recomendaciones de sus sedes autorizadas, sin tener acceso a las notas internas privadas de César.
+10. Dado que H05 se entrega en S4 antes de H06, cuando el cliente utiliza el panel, entonces su resumen y funciones propias operan completos y «Ver mis pagos» permanece oculto. H06 habilita y comprueba ese acceso en S5, sin reabrir H05 como historia pendiente.
 
 **Prioridad:** Media.
 **Estimación total:** 18 puntos, subtotal de H05.1–H05.4. Las subdivisiones se estiman individualmente y se suman una vez.
@@ -2139,6 +2158,7 @@ para conocer mis saldos pendientes, acreditar transferencias y conservar el resp
 3. Dado que el cliente envía un reporte de pago, cuando se guarda el registro, entonces el saldo de la orden no se reduce hasta que César confirme que recibió el dinero: ingreso bancario para SINPE o transferencia y recepción física para efectivo.
 4. Dado que existen recibos o facturas electrónicas autorizadas para su atención, cuando el cliente selecciona descargar, entonces obtiene los archivos disponibles (PDF, XML de factura y respuesta de Hacienda, cuando exista) mediante descarga autenticada y segura.
 5. Dado que un reporte de pago fue rechazado por César, cuando el cliente consulta el detalle, entonces visualiza el motivo justificado y dispone de la opción para ingresar un nuevo reporte corregido.
+6. Dado que H06 se entrega en S5, cuando el cliente selecciona «Ver mis pagos» desde H05, entonces abre Pagos y documentos con los mismos permisos de su cuenta. H06 se acepta con ese acceso integrado.
 
 **Prioridad:** Media.
 **Estimación:** 8 puntos de historia.
@@ -2237,7 +2257,7 @@ para organizar integralmente el ciclo de atención comercial y técnico de la em
 
 #### Historia H08: Consultar y administrar Mi cuenta
 
-**Tareas técnicas relacionadas:** T041, T042, T092
+**Tareas técnicas relacionadas:** T009, T041, T042, T092
 
 **Historia de usuario**
 
@@ -2281,7 +2301,7 @@ para estructurar la base maestra de clientes, controlar quién accede digitalmen
 **Prioridad:** Alta.
 **Estimación total:** 21 puntos, subtotal de H09.1–H09.4. Las subdivisiones se estiman individualmente y se suman una vez.
 **Justificación de la estimación:** Modela la estructura relacional central del negocio (particulares, empresas, sedes múltiples), permisos por rol, cliente y sede, seguimiento de asociaciones y reglas para incorporar información anterior.
-**Notas adicionales:** La página y todas sus subdivisiones se completan juntas en S2; una empresa puede tener múltiples sedes independientes; el historial pertenece a la sede y al cliente, no a la cuenta de usuario empleada para consultarlo.
+**Notas adicionales:** La página y todas sus subdivisiones se completan juntas en S2; los accesos al panel de atenciones y al registro de contactos se integran con H07 en S3 según [Navegación](#enlaces-entre-páginas-de-distintos-sprints). Una empresa puede tener múltiples sedes independientes; el historial pertenece a la sede y al cliente, no a la cuenta que lo consulta.
 
 ##### H09.1 — Registrar y mantener clientes particulares y empresas
 
@@ -2514,7 +2534,7 @@ Las 12 historias principales y sus 16 subdivisiones describen el comportamiento 
 
 **Estimaciones y presupuesto:** las horas y los costos se controlan en [Estimación y asignación de las tareas](#estimación-y-asignación-de-las-tareas) y [Presupuesto del proyecto simulado](#presupuesto-del-proyecto-simulado). Sus revisiones justificadas se registran y recalculan según el control del expediente. La DoD evalúa la calidad del trabajo y sus comprobaciones.
 
-**Entrega por página completa:** se conservan las 24 unidades de estimación y sus criterios. Las cuatro subdivisiones de H05, H07, H09 y H12 se construyen y aceptan juntas, en el sprint de su principal. Se comprueba la página de principio a fin, con componentes comunes ya terminados, pruebas e integración. No se acepta una subdivisión para justificar una página que todavía necesita funciones en otro sprint. [Criterios de la DoD](#criterios-de-terminación-y-aceptación).
+**Entrega por página completa:** se conservan las 24 unidades de estimación y sus criterios. Las cuatro subdivisiones de H05, H07, H09 y H12 se construyen y aceptan juntas en el sprint de su principal, con todas sus funciones propias, componentes, pruebas e integración. Los enlaces a otras historias independientes se habilitan al entregar su destino según [Navegación](#enlaces-entre-páginas-de-distintos-sprints); esta regla no permite declarar terminados formularios, cálculos o permisos pendientes. [Criterios de la DoD](#criterios-de-terminación-y-aceptación).
 
 ---
 
@@ -3068,7 +3088,7 @@ Mostrar/copiar UUID y editar nombre/teléfono; conservar correo e ID de solo lec
 
 **Tareas propias:** T041, T042. **Profesionales previstos:** D1, LT. **Esfuerzo propio:** 10 h base / 16 h desfavorables.
 
-**Componentes comunes:** T092 — Menús. **Criterios:** [Consultar y administrar Mi cuenta](#historia-h08-consultar-y-administrar-mi-cuenta), más DoD.
+**Componentes comunes:** T009 — Verificación de correo; T092 — Menús. **Criterios:** [Consultar y administrar Mi cuenta](#historia-h08-consultar-y-administrar-mi-cuenta), más DoD.
 
 **Bloqueos:** ninguno registrado en la carga inicial; comprobar dependencias antes de iniciar. **Evidencia de ejecución:** no registrada.
 
