@@ -334,7 +334,7 @@ Capacidades previstas del producto:
 
 ## Bitácora de cambios del proyecto
 
-> **Fuente:** historial local de Git de `main` hasta `c47bb7f`. Los archivos agregados (A), modificados (M) o eliminados (D) se comparan con el primer padre de cada commit; las diferencias respecto de otra rama se explican aparte.
+> **Fuente:** El historial de Git de `main` anterior a R26 comprende hasta `c47bb7f`. R26 reúne los siete commits siguientes, hasta `793fdc4`. Los cambios editoriales posteriores a ese corte pueden consultarse en el historial de Git. Los archivos agregados (A), modificados (M) o eliminados (D) se comparan con el primer padre de cada commit; las diferencias respecto de otra rama se explican aparte.
 
 ### Archivos incorporados y eliminados
 
@@ -383,7 +383,7 @@ La numeración R01–R25 clasifica retrospectivamente las revisiones documentale
 | 18/11/2026 | R26 | 6 (seguimiento de 7 y 9) | `5463a06` | Brian Rodriguez | docs: mostrar el avance simulado del Release Plan | M `README.md` | Registra 28 puntos aceptados en simulación y 96 pendientes, con referencia al tablero y al acta. |
 | 18/11/2026 | R26 | 10 | `a1f8e50` | Brian Rodriguez | docs: incorporar las solicitudes de cambio de Semana 10 | M `README.md` | Incorpora el flujo de cambios y CR-01 y CR-02. |
 | 18/11/2026 | R26 | 10 | `284edd2` | Brian Rodriguez | docs: incorporar los Working Agreements y el puño de cinco | M `README.md` | Incorpora WA-01 a WA-10, la evaluación simulada y su seguimiento. |
-| Ver en Git | R26 | Transversal (bitácora) | Mensaje de commit en Git | Ver en Git | `docs: cerrar la revisión documental R26 en la bitácora` | M `README.md` | Sustituye las entradas provisionales con los commits de la revisión R26. |
+| 18/11/2026 | R26 | Transversal (bitácora) | `793fdc4` | Brian Rodriguez | `docs: cerrar la revisión documental R26 en la bitácora` | M `README.md` | Sustituye las entradas provisionales con los commits de la revisión R26. |
 
 ### Correcciones de la entrega del 05/11/2026
 
