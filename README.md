@@ -276,6 +276,10 @@ Sede Regional San Carlos
     - [Acta de Sprint Retrospective del Sprint 1](#acta-de-sprint-retrospective-del-sprint-1)
       - [Observaciones y seguimiento anterior](#observaciones-y-seguimiento-anterior)
       - [Acciones de mejora para el Sprint 2](#acciones-de-mejora-para-el-sprint-2)
+  - [Semana 10 · Liderazgo, toma de decisiones y manejo de conflictos](#semana-10--liderazgo-toma-de-decisiones-y-manejo-de-conflictos)
+    - [Registro de Solicitudes de Cambio](#registro-de-solicitudes-de-cambio)
+      - [Flujo de gestión de cambios](#flujo-de-gestión-de-cambios)
+      - [Solicitudes registradas](#solicitudes-registradas)
 
 ---
 
@@ -3375,3 +3379,37 @@ Las fechas son compromisos del **escenario S2, del 24/09 al 07/10/2026**. Las tr
 | AM03 — Revisar la evidencia y el estado de cada historia antes de la Review de S2. Separar resultados simulados, comprobaciones reales y pendientes. | QSM | 07/10/2026, antes de la Review de S2. | H09 y H12 tienen estado, criterios, componentes y evidencia identificada; PO puede justificar aceptación o rechazo sin declarar pruebas ni aprobaciones inexistentes. |
 
 **Seguimiento:** QSM comprueba estas tres acciones al preparar la Retrospective de S2. Una acción solo se cierra con su evidencia; si sigue pendiente, se explica el impedimento y se conserva su responsable. Son controles de planificación, calidad y coordinación dentro de las tareas y bolsas existentes; no se suman otra vez horas, puntos ni costos. La Review inspecciona el producto; la Retrospective mejora cómo se planifica y revisa el trabajo.
+
+---
+
+## Semana 10 · Liderazgo, toma de decisiones y manejo de conflictos
+
+> **Fecha lectiva de referencia:** miércoles 18 de noviembre de 2026.
+>
+> **Entregables de la Fase 3:** Registro de Solicitudes de Cambio y Working Agreements de RYC.
+
+La Fase 3 aplica la guía de las diapositivas 15 y 16 del archivo de Semana 10, numeradas 14 y 15 al pie. El registro permite decidir sobre cambios de producto con su impacto a la vista. Los acuerdos definen cómo el equipo del escenario comunica decisiones, resuelve desacuerdos y comprueba la calidad. Los dos casos y la evaluación de los acuerdos se desarrollan a partir del Word corregido de la actividad.
+
+### Registro de Solicitudes de Cambio
+
+#### Flujo de gestión de cambios
+
+1. **Solicitud.** César, clientes, otras personas interesadas o integrantes del equipo pueden plantear una necesidad ante PO. QSM facilita su registro. Jeremy documenta ID, fecha, solicitante, descripción, justificación y referencias H/T. Brian comprueba su trazabilidad con el alcance y los compromisos.
+2. **Evaluación.** Los Developers identifican las historias, tareas, dependencias y controles de calidad afectados y estiman el esfuerzo. PO evalúa valor, alcance, efecto en el [Release Plan](#cronograma-de-entregas-release-plan) y costo con apoyo técnico. César aporta las necesidades y reglas del negocio. QSM facilita la revisión y coordina impedimentos. Se revisan seguridad y [riesgos de Semana 8](#matriz-de-riesgos). Cualquier cifra aún sin sustento queda pendiente de estimación.
+3. **Decisión.** PO decide aprobar, diferir o rechazar y registra la justificación con el responsable y, cuando corresponda, el sprint previsto. PO incorpora y ordena los cambios aprobados en el [Product Backlog](#product-backlog-priorizado) con criterios de aceptación y referencias. PO y Developers revisan dependencias, capacidad, presupuesto y DoD antes de seleccionarlos para un Sprint Backlog.
+4. **Protección del Sprint Goal.** Las peticiones durante un sprint se registran y se evalúan para refinamiento. Si la necesidad es urgente, PO y Developers solo acuerdan un ajuste cuando el Sprint Goal y la DoD se pueden preservar, indicando qué trabajo se sustituiría y verificando capacidad e impacto. Si eso no es posible, la solicitud queda para una decisión posterior con su estado documentado.
+5. **Comunicación y seguimiento.** PO comunica la decisión y su efecto a los interesados según el [Plan de Comunicaciones](#plan-de-comunicaciones) y la lleva a la Sprint Review cuando corresponda. Jeremy registra fecha, fundamento, estado y referencias en el expediente. Brian comprueba que las decisiones aprobadas se reflejen en los apartados afectados. Una consulta pendiente de César conserva ese estado hasta recibir respuesta.
+
+#### Solicitudes registradas
+
+Los solicitantes y las decisiones corresponden a casos simulados con fecha de referencia de la actividad.
+
+| Campo | CR-01 · Exportación administrativa del historial de servicios a Excel para César | CR-02 · Recordatorios automáticos de fumigaciones mediante WhatsApp |
+| --- | --- | --- |
+| Fecha y solicitante simulado | 18/11/2026 · Propietario de RYC. | 18/11/2026 · Un cliente particular de RYC. |
+| Descripción y justificación | Permitir que César exporte a Excel el historial de servicios, visitas y tratamientos desde el área administrativa de RYC, con filtros por cliente y fecha para consulta operativa. | Enviar avisos automáticos de próximas visitas para facilitar su coordinación. |
+| Alcance | Añade una exportación tabular en la [Administración de César](#administración-de-césar). El [historial del cliente](#historial-de-servicios-del-cliente) es una vista de consulta de las atenciones autorizadas en el portal. Las [descargas vigentes](#documentos-y-descargas-del-cliente) entregan comprobantes y documentos individuales de la atención. | Añade reglas de envío programado e integración de mensajería. La [Landing](#landing-page-y-contacto-por-whatsapp) prepara mensajes y el contacto previsto se gestiona manualmente. |
+| Tiempo y costo | Requiere diseño de columnas y filtros, implementación y pruebas de integridad y permisos. Esfuerzo y costo pendientes de estimación. | Requiere diseño de reglas, integración, pruebas de entrega y operación continua. Deben evaluarse tarifas externas, consumo, soporte y mantenimiento. Esfuerzo y costo pendientes de estimación. |
+| Seguridad, calidad y riesgos | Una exportación puede exponer información de otros clientes o sedes, especialmente si se comparte fuera de la aplicación. Habría que comprobar permisos por sede, minimización de datos, exactitud de filtros y custodia de archivos, conforme al control de aislamiento R03. | Habría que verificar consentimiento y revocación, minimizar datos personales y proteger credenciales. Una reprogramación, un número incorrecto o un reintento pueden producir avisos erróneos o duplicados. Hay riesgo de fallos de entrega y dependencia del proveedor. |
+| Responsable y decisión simulada | PO, con evaluación de Developers. **Diferida para una versión futura** porque el cierre de las funciones comprometidas no depende de la exportación. | PO, con evaluación de Developers. **Rechazada para el alcance actual** por la integración, el mantenimiento y los riesgos adicionales de privacidad y entrega. |
+| Sprint de incorporación | Ninguno de S1–S5. Queda en el registro para una evaluación futura fuera del Product Backlog vigente. | Ninguno de S1–S5. Queda en el registro como solicitud rechazada para el alcance vigente. |
