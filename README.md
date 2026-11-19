@@ -1495,7 +1495,7 @@ Cada página se integra, prueba y documenta en su sprint según la DoD. La reuti
 
 **Aceptación:** verificar la página completa, sus componentes, pruebas, permisos, precedencia y carga profesional. Ninguna tarea propia o componente necesario queda pendiente para aceptar esa página.
 
-**Sprint Review planificada — 23/09/2026 (simulada):** dura hasta 2 h y la facilita QSM como Scrum Master. Participan PO, el equipo del sprint y César, unos 30 min según su disponibilidad, conforme al [Plan de Comunicaciones](#interesados-y-comunicaciones-académicas). Se revisarían Landing, inicio de sesión, registro, recuperación, Mi cuenta y Catálogos (H01–H04, H08 y H11; 28 puntos) frente al Sprint Goal, los criterios de aceptación y la DoD. La [acta de Semana 9](#acta-de-sprint-review-del-sprint-1) representa ese cierre y sus observaciones como supuestos académicos; no acredita una reunión ni pruebas reales.
+**Sprint Review planificada — 23/09/2026 (simulada):** dura hasta 2 h y la facilita QSM como Scrum Master. Participan PO, el equipo del sprint y César, con unos 30 min para César según su disponibilidad. Brian coordina el seguimiento documental y Jeremy registra acuerdos como [participantes académicos](#roles-de-la-simulación). La participación de César se coordina conforme al [Plan de Comunicaciones](#interesados-y-comunicaciones-académicas). Se revisarían Landing, inicio de sesión, registro, recuperación, Mi cuenta y Catálogos (H01–H04, H08 y H11; 28 puntos) frente al Sprint Goal, los criterios de aceptación y la DoD. La [acta de Semana 9](#acta-de-sprint-review-del-sprint-1) representa ese cierre y sus observaciones como supuestos académicos; no acredita una reunión ni pruebas reales.
 
 #### Sprint 2: clientes, cobros y documentos completos
 
@@ -1519,7 +1519,7 @@ Cada página se integra, prueba y documenta en su sprint según la DoD. La reuti
 
 **Aceptación:** verificar la página completa, sus componentes, pruebas, permisos, precedencia y carga profesional. Ninguna tarea propia o componente necesario queda pendiente para aceptar esa página.
 
-**Sprint Review planificada — 07/10/2026 (simulada):** dura hasta 2 h y la facilita QSM como Scrum Master. Participan PO, el equipo del sprint y César, unos 30 min según su disponibilidad. Se revisarían Clientes y Cobros y documentos (H09 y H12 con sus ocho subdivisiones; 42 puntos), en especial los permisos por sede y que solo el dinero confirmado reduzca saldos. Todavía no se ha realizado y no tiene resultados registrados.
+**Sprint Review planificada — 07/10/2026 (simulada):** dura hasta 2 h y la facilita QSM como Scrum Master. Participan PO, el equipo del sprint y César, con unos 30 min para César según su disponibilidad. Brian coordina el seguimiento documental y Jeremy registra acuerdos como [participantes académicos](#roles-de-la-simulación). Se revisarían Clientes y Cobros y documentos (H09 y H12 con sus ocho subdivisiones; 42 puntos), en especial los permisos por sede y que solo el dinero confirmado reduzca saldos. Todavía no se ha realizado y no tiene resultados registrados.
 
 #### Sprint 3: agenda y atención administrativa completas
 
@@ -1541,7 +1541,7 @@ Cada página se integra, prueba y documenta en su sprint según la DoD. La reuti
 
 **Aceptación:** verificar la página completa, sus componentes, pruebas, permisos, precedencia y carga profesional. Ninguna tarea propia o componente necesario queda pendiente para aceptar esa página.
 
-**Sprint Review planificada — 21/10/2026 (simulada):** dura hasta 2 h y la facilita QSM como Scrum Master. Participan PO, el equipo del sprint y César, unos 30 min según su disponibilidad. Se revisarían Calendario y el Panel de administración (H07 con sus cuatro subdivisiones y H10; 28 puntos), desde el contacto hasta el servicio publicado, incluido el bloqueo del inicio sin pago previo confirmado. Todavía no se ha realizado y no tiene resultados registrados.
+**Sprint Review planificada — 21/10/2026 (simulada):** dura hasta 2 h y la facilita QSM como Scrum Master. Participan PO, el equipo del sprint y César, con unos 30 min para César según su disponibilidad. Brian coordina el seguimiento documental y Jeremy registra acuerdos como [participantes académicos](#roles-de-la-simulación). Se revisarían Calendario y el Panel de administración (H07 con sus cuatro subdivisiones y H10; 28 puntos), desde el contacto hasta el servicio publicado, incluido el bloqueo del inicio sin pago previo confirmado. Todavía no se ha realizado y no tiene resultados registrados.
 
 #### Sprint 4: Panel del cliente completo y respaldos
 
@@ -1562,7 +1562,7 @@ Cada página se integra, prueba y documenta en su sprint según la DoD. La reuti
 
 **Aceptación:** verificar la página completa, sus componentes, pruebas, permisos, precedencia y carga profesional. Ninguna tarea propia o componente necesario queda pendiente para aceptar esa página.
 
-**Sprint Review planificada — 04/11/2026 (simulada):** dura hasta 2 h y la facilita QSM como Scrum Master. Participan PO, el equipo del sprint y César, unos 30 min según su disponibilidad. Se revisarían el Panel del cliente (H05 con sus cuatro subdivisiones; 18 puntos), las comprobaciones de T094 y T098 y la evidencia de respaldos de T102. Todavía no se ha realizado y no tiene resultados registrados.
+**Sprint Review planificada — 04/11/2026 (simulada):** dura hasta 2 h y la facilita QSM como Scrum Master. Participan PO, el equipo del sprint y César, con unos 30 min para César según su disponibilidad. Brian coordina el seguimiento documental y Jeremy registra acuerdos como [participantes académicos](#roles-de-la-simulación). Se revisarían el Panel del cliente (H05 con sus cuatro subdivisiones; 18 puntos), las comprobaciones de T094 y T098 y la evidencia de respaldos de T102. Todavía no se ha realizado y no tiene resultados registrados.
 
 #### Sprint 5: Pagos y documentos, validación integral y cierre
 
@@ -1583,7 +1583,7 @@ Cada página se integra, prueba y documenta en su sprint según la DoD. La reuti
 
 **Aceptación:** verificar la página completa de H06 y su integración con el panel, contrastar los resultados de la regresión integral y la guía definitiva con todas las páginas terminadas, y corregir y volver a verificar cualquier fallo antes del cierre simulado.
 
-**Sprint Review planificada — 18/11/2026 (simulada):** dura hasta 2 h y la facilita QSM como Scrum Master. Participan PO, el equipo del sprint y César, unos 30 min según su disponibilidad. Se revisarían Pagos y documentos (H06; 8 puntos), los resultados de la regresión integral (T095–T097 y T099), la guía de T103 y la aceptación conjunta de T104 antes del cierre de T105. Todavía no se ha realizado y no tiene resultados registrados.
+**Sprint Review planificada — 18/11/2026 (simulada):** dura hasta 2 h y la facilita QSM como Scrum Master. Participan PO, el equipo del sprint y César, con unos 30 min para César según su disponibilidad. Brian coordina el seguimiento documental y Jeremy registra acuerdos como [participantes académicos](#roles-de-la-simulación). Se revisarían Pagos y documentos (H06; 8 puntos), los resultados de la regresión integral (T095–T097 y T099), la guía de T103 y la aceptación conjunta de T104 antes del cierre de T105. Todavía no se ha realizado y no tiene resultados registrados.
 
 ### Backlog técnico de implementación
 
@@ -3288,13 +3288,14 @@ Se aplica la guía de Semana 9, diapositivas 14 y 15 del archivo, numeradas 13 y
 | QSM — Scrum Master y QA | Único Scrum Master del escenario: facilita ambos eventos, registra impedimentos y sigue las mejoras. |
 | LT, D1–D6 y UX — Developers | Representan al equipo técnico del Sprint 1; muestran las páginas, sus componentes y las comprobaciones. LT coordina la explicación técnica. |
 | César — dueño de RYC | Interesado representado en la Review para revisar el valor y las reglas del negocio; no participa en la Retrospective. |
-| Brian y Jeremy | Autores del expediente académico; documentan la simulación. No se cuentan como profesionales adicionales ni como asistentes reales acreditados. |
+| Brian Rodríguez Pérez — Coordinación y seguimiento documental | Autor académico. Da seguimiento al alcance, la planificación y los compromisos. Verifica que las observaciones y solicitudes de cambio se reflejen en el expediente. |
+| Jeremy Rodríguez Esquivel — Registro de acuerdos y control documental de reuniones | Autor académico. Documenta resultados, acuerdos, observaciones y acciones de mejora. Contrasta las actas con el Product Backlog y la planificación. |
 
-Se utilizan los [puestos y dedicaciones existentes](#puestos-experiencia-y-dedicación). QA2 no tiene trabajo asignado en S1 y no se añade como asistente de este caso. Preparar estas actas no acredita que Brian y Jeremy ya hayan realizado su revisión cruzada.
+Se utilizan los [puestos y dedicaciones existentes](#puestos-experiencia-y-dedicación). QA2 no tiene trabajo asignado en S1 y no se añade como asistente de este caso. Brian y Jeremy participan en la representación con funciones académicas y documentales, fuera de los puestos profesionales del Scrum Team. Preparar estas actas no acredita que hayan realizado su revisión cruzada.
 
 ### Acta de Sprint Review del Sprint 1
 
-**Fecha representada:** 23/09/2026, al finalizar S1. **Duración supuesta:** 60 minutos, dentro del máximo planificado de 2 h; César interviene en un bloque de 30 minutos. **Asistentes representados:** PO, QSM, LT, D1–D6, UX y César. QSM facilita; PO registra decisiones y Developers explican el incremento.
+**Fecha representada:** 23/09/2026, al finalizar S1. **Duración supuesta:** 60 minutos, dentro del máximo planificado de 2 h; César interviene en un bloque de 30 minutos. **Asistentes representados:** PO, QSM, LT, D1–D6, UX y César. **Participantes académicos de la representación:** Brian Rodríguez Pérez y Jeremy Rodríguez Esquivel. QSM facilita, PO registra las decisiones de producto y los Developers explican el incremento. En la representación académica, Brian da seguimiento al alcance, los compromisos y las observaciones. Jeremy documenta los resultados y su relación con el Product Backlog.
 
 **Sprint Goal:** Habilitar la Landing, el acceso completo, Mi cuenta y los catálogos de César, con correo y entorno disponibles.
 
@@ -3331,7 +3332,7 @@ Los comentarios siguientes representan el punto de vista del rol de César a par
 
 ### Acta de Sprint Retrospective del Sprint 1
 
-**Fecha representada:** 23/09/2026, después de la Review. **Duración supuesta:** 45 minutos. **Asistentes representados:** PO, QSM, LT, D1–D6 y UX; QSM facilita. **Formato:** Empezar, dejar de hacer y continuar (Start/Stop/Continue). Se examina el proceso sin atribuir culpas personales.
+**Fecha representada:** 23/09/2026, después de la Review. **Duración supuesta:** 45 minutos. **Asistentes representados del Scrum Team:** PO, QSM, LT, D1–D6 y UX. **Participantes académicos de la representación:** Brian Rodríguez Pérez y Jeremy Rodríguez Esquivel. QSM facilita. Brian verifica la trazabilidad de los compromisos y Jeremy documenta las mejoras y comprueba su incorporación al Sprint Backlog 2. **Formato:** Empezar, dejar de hacer y continuar (Start/Stop/Continue). Se examina el proceso sin atribuir culpas personales.
 
 #### Observaciones y seguimiento anterior
 
