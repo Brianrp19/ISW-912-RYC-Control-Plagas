@@ -2920,6 +2920,8 @@ Los cinco sprints conservan sus fechas de referencia. Las cuatro partes de H05, 
 | **S5** | 5–18 nov. 2026 | Pagos y documentos, validación integral y cierre | H06 (más tareas comunes T095–T097, T099 y T103–T105) | **8** | ₡3.351.100 |
 | **Total** | **10 semanas** | **105 tareas únicas, completas y contadas una vez** | **12 historias principales, 16 subdivisiones y 13 páginas** | **124** | **₡24.542.150** |
 
+**Equilibrio de la distribución.** S1 entrega el acceso y los catálogos (28 puntos). S2 concentra H09 y H12 completas (21 puntos cada una) para habilitar permisos por sede, cobros y documentos antes de la atención de S3. Es el sprint de mayor carga técnica con 434 h desfavorables sobre 486,4 h planificables. S3 combina agenda y atención (28 puntos), fuentes de datos para el Panel del cliente de S4 (18). S5 entrega H06 (8) y dedica 118 de sus 172 h desfavorables a regresión, guía, aceptación y cierre, actividades comunes sin puntos propios. La capacidad depende de las bolsas por perfil y del orden de las tareas. Se conserva el reparto vigente mientras se evalúa cualquier cambio de esa secuencia.
+
 **Seguimiento:** revisar páginas completas, componentes, tareas, carga, pruebas, presupuesto y riesgos. El burndown parte de 124 puntos y descuenta las unidades aceptadas una sola vez, cuando la página completa cumple criterios y DoD. Se registran cambios y evidencia en Git; los resultados hipotéticos se rotulan simulados. Los cambios nuevos de alcance, dependencias, personas o costo se consultan y se propagan a los apartados afectados.
 
 ---
