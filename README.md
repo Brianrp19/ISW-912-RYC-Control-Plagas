@@ -280,6 +280,9 @@ Sede Regional San Carlos
     - [Registro de Solicitudes de Cambio](#registro-de-solicitudes-de-cambio)
       - [Flujo de gestión de cambios](#flujo-de-gestión-de-cambios)
       - [Solicitudes registradas](#solicitudes-registradas)
+    - [Working Agreements](#working-agreements)
+      - [Evaluación mediante puño de cinco](#evaluación-mediante-puño-de-cinco)
+      - [Seguimiento de los acuerdos](#seguimiento-de-los-acuerdos)
 
 ---
 
@@ -3413,3 +3416,47 @@ Los solicitantes y las decisiones corresponden a casos simulados con fecha de re
 | Seguridad, calidad y riesgos | Una exportación puede exponer información de otros clientes o sedes, especialmente si se comparte fuera de la aplicación. Habría que comprobar permisos por sede, minimización de datos, exactitud de filtros y custodia de archivos, conforme al control de aislamiento R03. | Habría que verificar consentimiento y revocación, minimizar datos personales y proteger credenciales. Una reprogramación, un número incorrecto o un reintento pueden producir avisos erróneos o duplicados. Hay riesgo de fallos de entrega y dependencia del proveedor. |
 | Responsable y decisión simulada | PO, con evaluación de Developers. **Diferida para una versión futura** porque el cierre de las funciones comprometidas no depende de la exportación. | PO, con evaluación de Developers. **Rechazada para el alcance actual** por la integración, el mantenimiento y los riesgos adicionales de privacidad y entrega. |
 | Sprint de incorporación | Ninguno de S1–S5. Queda en el registro para una evaluación futura fuera del Product Backlog vigente. | Ninguno de S1–S5. Queda en el registro como solicitud rechazada para el alcance vigente. |
+
+### Working Agreements
+
+Los acuerdos se aplican al escenario profesional según la [DoD y los criterios de aceptación](#criterios-de-terminación-y-aceptación), los [Sprint Backlogs](#sprints-y-sprint-backlogs) y los canales de Semana 7. Brian y Jeremy dan seguimiento documental conforme a sus [funciones académicas](#roles-de-la-simulación).
+
+| ID | Tema | Acuerdo verificable |
+| --- | --- | --- |
+| WA-01 | Comunicación y decisiones | Registrar el mismo día las decisiones, los cambios y los bloqueos en el expediente o la tarjeta que corresponda, con fecha, responsable y referencias H/T. Resumir en el expediente las conversaciones que cambien requisitos o compromisos. |
+| WA-02 | Daily y ausencias | Participar en el Daily de hasta 15 minutos cuando haya trabajo activo. Si un integrante no puede asistir, avisa al equipo y deja en el tablero su avance, siguiente paso y bloqueos en la misma jornada. QSM consulta en privado ante ausencias repetidas. |
+| WA-03 | Impedimentos | Registrar el bloqueo en la tarjeta el mismo día, con causa, impacto y siguiente acción. Avisar a QSM y escalar si sigue abierto tras un día hábil, según el Plan de Comunicaciones. Comunicar en la misma jornada cualquier amenaza a la DoD, el presupuesto o el cierre. |
+| WA-04 | Definition of Done | Antes de mover una historia a Hecho, comprobar criterios de aceptación, integración, pruebas, permisos y demás requisitos de la DoD. Adjuntar a la tarjeta la evidencia y el resultado de la revisión. |
+| WA-05 | Revisión técnica | Solicitar revisión de otro profesional antes de integrar cambios. Dejar constancia del revisor y resolver las observaciones que bloqueen la aceptación antes de integrar. |
+| WA-06 | Responsabilidades Scrum | Registrar quién resolvió cada decisión. PO responde por valor y prioridad, los Developers deciden la solución técnica y responden por la calidad, y QSM facilita el proceso y da seguimiento a impedimentos. |
+| WA-07 | Resolución colaborativa | Exponer el desacuerdo con hechos observables, criterios verificables y su efecto en el Sprint Goal. Escuchar las alternativas y registrar la opción acordada. QSM facilita el diálogo en un día hábil del escenario cuando haga falta. |
+| WA-08 | Escalamiento | Si el diálogo no resuelve el desacuerdo, QSM canaliza los temas técnicos a Developers con apoyo de LT y los de alcance o prioridad a PO. Registrar alternativas y responsable. Si falta PO o una confirmación de César, conservar la decisión pendiente y avanzar solo en trabajo independiente autorizado. |
+| WA-09 | Control de cambios | Registrar una solicitud con ID y evaluar su impacto antes de modificar alcance, plazo o costo. PO deja constancia de la decisión y todo ajuste de sprint se acuerda con Developers protegiendo el Sprint Goal. |
+| WA-10 | Mejora continua | Revisar los acuerdos en cada Retrospective prevista y registrar de una a tres mejoras con responsable, fecha y evidencia esperada. En la siguiente Retrospective, comprobar su estado y documentar los impedimentos abiertos. |
+
+#### Evaluación mediante puño de cinco
+
+Cada persona expresa simultáneamente su apoyo de 0 a 5. Una valoración de 0 o 1 requiere discutir la objeción y preguntar qué permitiría aumentar el apoyo. Un 2 deja la decisión abierta a discusión. Con al menos 3 de todas las personas, el acuerdo puede cerrarse en el escenario.
+
+Las puntuaciones son propuestas para la simulación académica. La ratificación efectiva requiere que Brian y Jeremy revisen los acuerdos y expresen su conformidad. La tabla deja constancia exclusiva de la aprobación simulada.
+
+| Acuerdo | Brian | Jeremy | Resultado del caso |
+|---|---:|---:|---|
+| WA-01 | 5 | 5 | Aprobado (simulado) |
+| WA-02 | 4 | 4 | Aprobado (simulado) |
+| WA-03 | 5 | 4 | Aprobado (simulado) |
+| WA-04 | 5 | 5 | Aprobado (simulado) |
+| WA-05 | 4 | 5 | Aprobado (simulado) |
+| WA-06 | 5 | 5 | Aprobado (simulado) |
+| WA-07 | 5 | 4 | Aprobado (simulado) |
+| WA-08 | 4 | 4 | Aprobado (simulado) |
+| WA-09 | 5 | 5 | Aprobado (simulado) |
+| WA-10 | 4 | 5 | Aprobado (simulado) |
+
+WA-01, WA-04, WA-06 y WA-09 obtienen 5 de ambos en el caso porque fijan cómo rastrear decisiones, qué evidencia exige Hecho, quién decide y cómo se protege la planificación ante cambios. Los demás reciben 4 o 5 porque hacen verificables la comunicación de ausencias, el seguimiento de bloqueos, la revisión entre pares, el escalamiento y la mejora continua, con compromisos que requieren coordinación sostenida.
+
+#### Seguimiento de los acuerdos
+
+En las Retrospectives previstas, QSM facilitaría la revisión de tarjetas con impedimentos y ausencias, decisiones con referencias, comprobaciones de la DoD y revisiones técnicas, y solicitudes CR con su resolución. El equipo contrastaría esas evidencias con los acuerdos y seleccionaría de una a tres mejoras para el Sprint Backlog siguiente. Brian seguiría los compromisos y Jeremy documentaría cada acuerdo revisado, la acción, su responsable, fecha y comprobación.
+
+La [Retrospective de S1 de Semana 9](#acta-de-sprint-retrospective-del-sprint-1) sirve como referencia para ese seguimiento con AM01–AM03. Sus resultados pertenecen al cierre simulado de S1. La revisión de los acuerdos de Semana 10 queda prevista para las Retrospectives futuras del escenario.
