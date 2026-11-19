@@ -235,6 +235,7 @@ Sede Regional San Carlos
     - [Supuestos, dependencias y riesgos de la estimación](#supuestos-dependencias-y-riesgos-de-la-estimación)
     - [Capacidad y cierre en cinco sprints](#capacidad-y-cierre-en-cinco-sprints)
     - [Cronograma de entregas (Release Plan)](#cronograma-de-entregas-release-plan)
+      - [Seguimiento de puntos aceptados](#seguimiento-de-puntos-aceptados)
   - [Semana 7 · Calidad, recursos humanos y comunicación](#semana-7--calidad-recursos-humanos-y-comunicación)
     - [Plan de Comunicaciones](#plan-de-comunicaciones)
       - [Interesados y comunicaciones académicas](#interesados-y-comunicaciones-académicas)
@@ -2921,6 +2922,21 @@ Los cinco sprints conservan sus fechas de referencia. Las cuatro partes de H05, 
 | **Total** | **10 semanas** | **105 tareas únicas, completas y contadas una vez** | **12 historias principales, 16 subdivisiones y 13 páginas** | **124** | **₡24.542.150** |
 
 **Equilibrio de la distribución.** S1 entrega el acceso y los catálogos (28 puntos). S2 concentra H09 y H12 completas (21 puntos cada una) para habilitar permisos por sede, cobros y documentos antes de la atención de S3. Es el sprint de mayor carga técnica con 434 h desfavorables sobre 486,4 h planificables. S3 combina agenda y atención (28 puntos), fuentes de datos para el Panel del cliente de S4 (18). S5 entrega H06 (8) y dedica 118 de sus 172 h desfavorables a regresión, guía, aceptación y cierre, actividades comunes sin puntos propios. La capacidad depende de las bolsas por perfil y del orden de las tareas. Se conserva el reparto vigente mientras se evalúa cualquier cambio de esa secuencia.
+
+#### Seguimiento de puntos aceptados
+
+Al inicio, los **124 puntos** estaban pendientes. El [tablero de Semana 7](#vista-del-tablero) conserva la carga inicial de S1 con seis tarjetas Por hacer y cero puntos aceptados. La [Review de Semana 9](#acta-de-sprint-review-del-sprint-1) representa el cierre posterior de S1. Las cifras de la siguiente tabla corresponden al escenario documental.
+
+| Sprint | Puntos planificados | Puntos aceptados en el escenario | Puntos pendientes | Estado de avance | Evidencia documental |
+| --- | ---: | ---: | ---: | --- | --- |
+| S1 | 28 | 28 | 0 | Hecho (simulado) | [Review de Semana 9 y comprobación supuesta de la DoD](#incremento-y-comprobación-de-la-dod) |
+| S2 | 42 | 0 | 42 | Pendiente de aceptación | [Sprint Backlog 2 y Review planificada](#sprint-2-clientes-cobros-y-documentos-completos) |
+| S3 | 28 | 0 | 28 | Pendiente de aceptación | [Sprint Backlog 3 y Review planificada](#sprint-3-agenda-y-atención-administrativa-completas) |
+| S4 | 18 | 0 | 18 | Pendiente de aceptación | [Sprint Backlog 4 y Review planificada](#sprint-4-panel-del-cliente-completo-y-respaldos) |
+| S5 | 8 | 0 | 8 | Pendiente de aceptación | [Sprint Backlog 5 y Review planificada](#sprint-5-pagos-y-documentos-validación-integral-y-cierre) |
+| **Total** | **124** | **28** | **96** | **Después de S1** | **Aceptación simulada** |
+
+El burndown del caso pasa de 124 a 96 puntos al descontar una sola vez las historias completas aceptadas en la Review representada. La fecha de una Review planificada no acredita aceptación. La evidencia disponible documenta el escenario académico.
 
 **Seguimiento:** revisar páginas completas, componentes, tareas, carga, pruebas, presupuesto y riesgos. El burndown parte de 124 puntos y descuenta las unidades aceptadas una sola vez, cuando la página completa cumple criterios y DoD. Se registran cambios y evidencia en Git; los resultados hipotéticos se rotulan simulados. Los cambios nuevos de alcance, dependencias, personas o costo se consultan y se propagan a los apartados afectados.
 
