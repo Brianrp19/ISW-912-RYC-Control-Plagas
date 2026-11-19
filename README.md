@@ -347,7 +347,7 @@ Capacidades previstas del producto:
 
 ### Historial de commits y entregas
 
-La numeración R01–R25 clasifica retrospectivamente las revisiones documentales en el orden de este historial. Es independiente de las etiquetas y publicaciones de Git. La fusión `8e555d3` conserva la revisión del primer padre. La columna Semana identifica el tema académico de cada cambio a partir del contenido, incluso cuando la sección recibió su numeración definitiva más tarde.
+La numeración R01–R25 clasifica retrospectivamente las revisiones documentales en el orden de este historial. Es independiente de las etiquetas y publicaciones de Git. La fusión `8e555d3` conserva la revisión del primer padre. R26 agrupa los commits de esta revisión documental. La columna Semana identifica el tema académico de cada cambio a partir del contenido, incluso cuando la sección recibió su numeración definitiva más tarde.
 
 | Fecha | Versión documental | Semana académica | Commit o entrega | Autor | Cambio | Archivos | Secciones agregadas, reemplazadas o retiradas |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -377,6 +377,13 @@ La numeración R01–R25 clasifica retrospectivamente las revisiones documentale
 | 05/11/2026 | R23 | 3, 5–6, 8 (transversal) | `b37dbb5` | Brian Rodriguez | Precisiones de H05 y comprobaciones de S5 | M `README.md` | Aclara la disponibilidad de «Ver mis pagos» y el alcance de T095/T097. |
 | 14/11/2026 | R24 | 6, 9 (transversal) | `cc59464` | jrodriguezes | Actas de Semana 9 y aclaraciones documentales | M `README.md`; sin archivos nuevos o eliminados | Agrega las actas de Review y Retrospective, roles y tres mejoras en el Sprint Backlog 2; actualiza índice, referencias y bitácora, y explica las bolsas superiores al mínimo sin cambiar cifras. |
 | 14/11/2026 | R25 | 3, 5–6 (transversal) | `c47bb7f` · Aclaración de navegación entre sprints | jrodriguezes | Páginas completas y enlaces a destinos posteriores | M `README.md`; sin archivos nuevos o eliminados | Distingue funciones propias de redirecciones; aclara destinos iniciales, acceso a historial y Atenciones y enlace H05–H06. La integración se comprueba al entregar el destino; conserva tareas, fechas, horas y presupuesto. |
+| 18/11/2026 | R26 | Transversal (bitácora) | `c38b4e5` | Brian Rodriguez | docs: incorporar versiones y semanas a la bitácora de RYC | M `README.md` | Clasifica retrospectivamente el historial por versión y semana. |
+| 18/11/2026 | R26 | 5 y 9 (transversal) | `3e6d39b` | Brian Rodriguez | docs: registrar la participación académica en las reuniones Scrum | M `README.md` | Incorpora a los autores en las cinco Reviews planificadas y en las actas de S1. |
+| 18/11/2026 | R26 | 6 (Release Plan) | `6db9758` | Brian Rodriguez | docs: justificar la distribución vigente de puntos del Release Plan | M `README.md` | Documenta el equilibrio de puntos, esfuerzo y capacidad de la distribución vigente. |
+| 18/11/2026 | R26 | 6 (seguimiento de 7 y 9) | `5463a06` | Brian Rodriguez | docs: mostrar el avance simulado del Release Plan | M `README.md` | Registra 28 puntos aceptados en simulación y 96 pendientes, con referencia al tablero y al acta. |
+| 18/11/2026 | R26 | 10 | `a1f8e50` | Brian Rodriguez | docs: incorporar las solicitudes de cambio de Semana 10 | M `README.md` | Incorpora el flujo de cambios y CR-01 y CR-02. |
+| 18/11/2026 | R26 | 10 | `284edd2` | Brian Rodriguez | docs: incorporar los Working Agreements y el puño de cinco | M `README.md` | Incorpora WA-01 a WA-10, la evaluación simulada y su seguimiento. |
+| Ver en Git | R26 | Transversal (bitácora) | Mensaje de commit en Git | Ver en Git | `docs: cerrar la revisión documental R26 en la bitácora` | M `README.md` | Sustituye las entradas provisionales con los commits de la revisión R26. |
 
 ### Correcciones de la entrega del 05/11/2026
 
